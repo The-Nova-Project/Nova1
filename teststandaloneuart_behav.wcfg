@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="teststandaloneuart_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="ipif_pkg" />
+            <top_module name="lib_pkg" />
+            <top_module name="teststandaloneuart" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="235.001 ns"></ZoomEndTime>
+      <Cursor1Time time="0.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="243"></NameColumnWidth>
+      <ValueColumnWidth column_width="114"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="23" />
+   <wvobject type="array" fp_name="/teststandaloneuart/S_AXI_0_araddr">
+      <obj_property name="ElementShortName">S_AXI_0_araddr[3:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_0_araddr[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/teststandaloneuart/S_AXI_0_arready">
+      <obj_property name="ElementShortName">S_AXI_0_arready</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_0_arready</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/teststandaloneuart/S_AXI_0_arvalid">
+      <obj_property name="ElementShortName">S_AXI_0_arvalid</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_0_arvalid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/teststandaloneuart/S_AXI_0_awaddr">
+      <obj_property name="ElementShortName">S_AXI_0_awaddr[3:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_0_awaddr[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/teststandaloneuart/S_AXI_0_awready">
+      <obj_property name="ElementShortName">S_AXI_0_awready</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_0_awready</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/teststandaloneuart/S_AXI_0_awvalid">
+      <obj_property name="ElementShortName">S_AXI_0_awvalid</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_0_awvalid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/teststandaloneuart/S_AXI_0_bready">
+      <obj_property name="ElementShortName">S_AXI_0_bready</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_0_bready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/teststandaloneuart/S_AXI_0_bresp">
+      <obj_property name="ElementShortName">S_AXI_0_bresp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_0_bresp[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/teststandaloneuart/S_AXI_0_bvalid">
+      <obj_property name="ElementShortName">S_AXI_0_bvalid</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_0_bvalid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/teststandaloneuart/S_AXI_0_rdata">
+      <obj_property name="ElementShortName">S_AXI_0_rdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_0_rdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/teststandaloneuart/S_AXI_0_rready">
+      <obj_property name="ElementShortName">S_AXI_0_rready</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_0_rready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/teststandaloneuart/S_AXI_0_rresp">
+      <obj_property name="ElementShortName">S_AXI_0_rresp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_0_rresp[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/teststandaloneuart/S_AXI_0_rvalid">
+      <obj_property name="ElementShortName">S_AXI_0_rvalid</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_0_rvalid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/teststandaloneuart/S_AXI_0_wdata">
+      <obj_property name="ElementShortName">S_AXI_0_wdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_0_wdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/teststandaloneuart/S_AXI_0_wready">
+      <obj_property name="ElementShortName">S_AXI_0_wready</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_0_wready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/teststandaloneuart/S_AXI_0_wstrb">
+      <obj_property name="ElementShortName">S_AXI_0_wstrb[3:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_0_wstrb[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/teststandaloneuart/S_AXI_0_wvalid">
+      <obj_property name="ElementShortName">S_AXI_0_wvalid</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_0_wvalid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/teststandaloneuart/UART_0_txd">
+      <obj_property name="ElementShortName">UART_0_txd</obj_property>
+      <obj_property name="ObjectShortName">UART_0_txd</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/teststandaloneuart/interrupt_0">
+      <obj_property name="ElementShortName">interrupt_0</obj_property>
+      <obj_property name="ObjectShortName">interrupt_0</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/teststandaloneuart/s_axi_aclk_0">
+      <obj_property name="ElementShortName">s_axi_aclk_0</obj_property>
+      <obj_property name="ObjectShortName">s_axi_aclk_0</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/teststandaloneuart/s_axi_aresetn_0">
+      <obj_property name="ElementShortName">s_axi_aresetn_0</obj_property>
+      <obj_property name="ObjectShortName">s_axi_aresetn_0</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/teststandaloneuart/uart/axi_uartlite_0/U0/UARTLITE_CORE_I/UARTLITE_TX_I/fifo_DOut">
+      <obj_property name="ElementShortName">fifo_DOut[0:7]</obj_property>
+      <obj_property name="ObjectShortName">fifo_DOut[0:7]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/teststandaloneuart/uart/axi_uartlite_0/U0/UARTLITE_CORE_I/UARTLITE_TX_I/tx_Start">
+      <obj_property name="ElementShortName">tx_Start</obj_property>
+      <obj_property name="ObjectShortName">tx_Start</obj_property>
+   </wvobject>
+</wave_config>
