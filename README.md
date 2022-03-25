@@ -26,12 +26,6 @@ Then make the environment for simulation and compilation
 make TEST = 'test_file'
 ```
 
-for snapshot of Project change the directory and run the xsim command
-```
-cd ../sim/vivado/test_file_name/
-xsim -gui tb
-```
-
 
 # Block Diagram
 ![Block Diagram](https://user-images.githubusercontent.com/81433387/160123688-4e167296-8104-4c32-89f9-1c53b9c22632.png)
