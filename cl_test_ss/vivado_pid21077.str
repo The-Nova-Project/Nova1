@@ -1,0 +1,984 @@
+/*
+
+Xilinx Vivado v2021.1 (64-bit) [Major: 2021, Minor: 1]
+SW Build: 3247384 on Thu Jun 10 19:36:07 MDT 2021
+IP Build: 3246043 on Fri Jun 11 00:30:35 MDT 2021
+
+Process ID (PID): 21077
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Fri Mar 25 07:55:00 UTC 2022
+Time zone: 	Coordinated Universal Time (UTC)
+
+OS: CentOS Linux release 7.9.2009 (Core)
+OS Version: 3.10.0-1160.49.1.el7.x86_64
+OS Architecture: amd64
+Available processors (cores): 8
+
+Display: 3.0
+Screen size: 1360x768
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+
+Java version: 	11.0.2 64-bit
+Java home: 	/opt/Xilinx/Vivado/2021.1/tps/lnx64/jre11.0.2
+Java executable: 	/opt/Xilinx/Vivado/2021.1/tps/lnx64/jre11.0.2/bin/java
+Java initial memory (-Xms): 	256 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	muheet
+User home directory: /home/muheet
+User working directory: /home/muheet/stableEnv/cl_test_ss
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /opt/Xilinx/Vivado
+HDI_APPROOT: /opt/Xilinx/Vivado/2021.1
+RDI_DATADIR: /opt/Xilinx/Vivado/2021.1/data
+RDI_BINDIR: /opt/Xilinx/Vivado/2021.1/bin
+
+Vivado preferences file: /home/muheet/.Xilinx/Vivado/2021.1/vivado.xml
+Vivado preferences directory: /home/muheet/.Xilinx/Vivado/2021.1/
+Vivado layouts directory: /home/muheet/.Xilinx/Vivado/2021.1/data/layouts
+PlanAhead jar file: 	/opt/Xilinx/Vivado/2021.1/lib/classes/planAhead.jar
+Vivado log file: 	/home/muheet/stableEnv/cl_test_ss/vivado.log
+Vivado journal file: 	/home/muheet/stableEnv/cl_test_ss/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-21077-ip-172-32-20-153.ap-southeast-1.compute.internal
+
+Xilinx Environment Variables
+----------------------------
+XILINX_DSP: 
+XILINX_HLS: /opt/Xilinx/Vitis_HLS/2021.1
+XILINX_PLANAHEAD: /opt/Xilinx/Vivado/2021.1
+XILINX_SDK: /opt/Xilinx/Vitis/2021.1
+XILINX_VITIS: /opt/Xilinx/Vitis/2021.1
+XILINX_VIVADO: /opt/Xilinx/Vivado/2021.1
+XILINX_VIVADO_HLS: /opt/Xilinx/Vivado/2021.1
+
+
+GUI allocated memory:	308 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 5,763 MB
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bz (cs):  Open Project : addNotify
+// Opening Vivado Project: cl_test_ss.xpr. Version: Vivado v2021.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// Tcl Message: open_project cl_test_ss.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project cl_test_ss.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2021.1/data/ip'. 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 76 MB (+77413kb) [00:00:11]
+// [Engine Memory]: 5,813 MB (+5943847kb) [00:00:11]
+// [GUI Memory]: 99 MB (+19609kb) [00:00:12]
+// [GUI Memory]: 121 MB (+17827kb) [00:00:12]
+// WARNING: HEventQueue.dispatchEvent() is taking  2981 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 5,847 MB. GUI used memory: 60 MB. Current time: 3/25/22, 7:55:04 AM UTC
+// Project name: cl_test_ss; location: /home/muheet/stableEnv/cl_test_ss; part: xcvu9p-flga2104-1-e
+// Tcl Message: open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:07 . Memory (MB): peak = 7618.453 ; gain = 80.242 ; free physical = 21889 ; free virtual = 38802 
+dismissDialog("Open Project"); // bz
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator, Open Block Design]", 7, false); // o
+// Run Command: PAResourceCommand.PACommandNames_OPEN_BLOCK_DESIGN
+// bz (cs):  Open Block Design : addNotify
+// TclEventType: LOAD_FEATURE
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: open_bd_design {/home/muheet/stableEnv/cl_test_ss/cl_test_ss.srcs/sources_1/bd/AXIcrossbar1/AXIcrossbar1.bd} 
+// Tcl Message: Reading block design file </home/muheet/stableEnv/cl_test_ss/cl_test_ss.srcs/sources_1/bd/AXIcrossbar1/AXIcrossbar1.bd>... 
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: LOAD_FEATURE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_OPEN_DIAGRAM
+// Tcl Message: Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - axi_crossbar_2 Adding component instance block -- xilinx.com:ip:axi_uartlite:2.0 - axi_uartlite_1 Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - axi_crossbar_3 Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - axi_dwidth_converter_1 Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - axi_protocol_convert_0 Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - axi_dwidth_converter_0 Successfully read diagram <AXIcrossbar1> from block design file </home/muheet/stableEnv/cl_test_ss/cl_test_ss.srcs/sources_1/bd/AXIcrossbar1/AXIcrossbar1.bd> 
+// TclEventType: RSB_OPEN_DIAGRAM
+// WARNING: HEventQueue.dispatchEvent() is taking  1131 ms.
+// [GUI Memory]: 133 MB (+6234kb) [00:00:25]
+// JavaFX intialization before: 1648194916259
+// [GUI Memory]: 153 MB (+14297kb) [00:00:26]
+// JavaFX initialization after: 1648194916715
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// [Engine Memory]: 7,040 MB (+981720kb) [00:00:26]
+// 'bF' command handler elapsed time: 3 seconds
+dismissDialog("Open Block Design"); // bz
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // Q
+// HMemoryUtils.trashcanNow. Engine heap size: 7,195 MB. GUI used memory: 113 MB. Current time: 3/25/22, 7:55:21 AM UTC
+selectButton(PAResourceCommand.PACommandNames_ZOOM_FIT, "System_zoom_fit"); // E
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_FIT
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_PIN
+// r (cs): Customize Port: addNotify
+// [GUI Memory]: 172 MB (+11850kb) [00:00:38]
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Customize Port"); // r
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_PIN
+// r (cs): Customize Port: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Customize Port"); // r
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// r (cs): Re-customize IP: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Re-customize IP"); // r
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// r (cs): Re-customize IP: addNotify
+// Elapsed time: 10 seconds
+selectComboBox("SI ID Width (SI_ID_WIDTH)", "16", 16); // bY
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Re-customize IP"); // r
+// Tcl Command: 'set_property -dict [list CONFIG.SI_ID_WIDTH {16}] [get_bd_cells axi_dwidth_converter_0]'
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: startgroup 
+// Tcl Message: set_property -dict [list CONFIG.SI_ID_WIDTH {16}] [get_bd_cells axi_dwidth_converter_0] 
+// Tcl Message: endgroup 
+// Run Command: PAResourceCommand.PACommandNames_SAVE_RSB_DESIGN
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: save_bd_design 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// bz (cs):  Save Design : addNotify
+// TclEventType: RSB_SAVE_DIAGRAM
+// HMemoryUtils.trashcanNow. Engine heap size: 7,212 MB. GUI used memory: 156 MB. Current time: 3/25/22, 7:56:06 AM UTC
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: Wrote  : </home/muheet/stableEnv/cl_test_ss/cl_test_ss.srcs/sources_1/bd/AXIcrossbar1/AXIcrossbar1.bd>  
+dismissDialog("Save Design"); // bz
+selectButton(PAResourceCommand.PACommandNames_ZOOM_FIT, "System_zoom_fit"); // E
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_FIT
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_PIN
+// r (cs): Customize Port: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Customize Port"); // r
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// r (cs): Re-customize IP: addNotify
+// Elapsed time: 12 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// [GUI Memory]: 185 MB (+4127kb) [00:01:46]
+dismissDialog("Re-customize IP"); // r
+// Tcl Message: startgroup 
+// Tcl Message: endgroup 
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_PIN
+// r (cs): Customize Port: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Customize Port"); // r
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_PIN
+// r (cs): Customize Port: addNotify
+// Elapsed time: 58 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Customize Port"); // r
+unmaximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // Q
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AXIcrossbar1_wrapper (AXIcrossbar1_wrapper.v)]", 1); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AXIcrossbar1_wrapper (AXIcrossbar1_wrapper.v), AXIcrossbar1_i : AXIcrossbar1 (AXIcrossbar1.bd)]", 2, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AXIcrossbar1_wrapper (AXIcrossbar1_wrapper.v), AXIcrossbar1_i : AXIcrossbar1 (AXIcrossbar1.bd)]", 2, true, false, false, false, true, false); // D - Popup Trigger - Node
+selectMenuItem(PAResourceCommand.PACommandNames_GENERATE_COMPOSITE_FILE, "Generate Output Products..."); // an
+// Run Command: PAResourceCommand.PACommandNames_GENERATE_COMPOSITE_FILE
+// aI (cs): Generate Output Products: addNotify
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY, "Generate"); // a
+// bz (cs):  Managing Output Products : addNotify
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: generate_target all [get_files  /home/muheet/stableEnv/cl_test_ss/cl_test_ss.srcs/sources_1/bd/AXIcrossbar1/AXIcrossbar1.bd] 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: Wrote  : </home/muheet/stableEnv/cl_test_ss/cl_test_ss.srcs/sources_1/bd/AXIcrossbar1/AXIcrossbar1.bd>  Wrote  : </home/muheet/stableEnv/cl_test_ss/cl_test_ss.srcs/sources_1/bd/AXIcrossbar1/ui/bd_cc354dec.ui>  
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: VHDL Output written to : /home/muheet/stableEnv/cl_test_ss/cl_test_ss.gen/sources_1/bd/AXIcrossbar1/synth/AXIcrossbar1.v VHDL Output written to : /home/muheet/stableEnv/cl_test_ss/cl_test_ss.gen/sources_1/bd/AXIcrossbar1/sim/AXIcrossbar1.v VHDL Output written to : /home/muheet/stableEnv/cl_test_ss/cl_test_ss.gen/sources_1/bd/AXIcrossbar1/hdl/AXIcrossbar1_wrapper.v 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created. INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created. INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dwidth_converter_0 . 
+// Tcl Message: Exporting to file /home/muheet/stableEnv/cl_test_ss/cl_test_ss.gen/sources_1/bd/AXIcrossbar1/hw_handoff/AXIcrossbar1.hwh Generated Block Design Tcl file /home/muheet/stableEnv/cl_test_ss/cl_test_ss.gen/sources_1/bd/AXIcrossbar1/hw_handoff/AXIcrossbar1_bd.tcl Generated Hardware Definition File /home/muheet/stableEnv/cl_test_ss/cl_test_ss.gen/sources_1/bd/AXIcrossbar1/synth/AXIcrossbar1.hwdef 
+// Tcl Message: generate_target: Time (s): cpu = 00:00:20 ; elapsed = 00:00:17 . Memory (MB): peak = 9374.043 ; gain = 0.000 ; free physical = 17360 ; free virtual = 34312 
+// Tcl Message: export_ip_user_files -of_objects [get_files /home/muheet/stableEnv/cl_test_ss/cl_test_ss.srcs/sources_1/bd/AXIcrossbar1/AXIcrossbar1.bd] -no_script -sync -force -quiet 
+// TclEventType: PROJECT_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: FILE_SET_CHANGE
+// 'br' command handler elapsed time: 29 seconds
+// Elapsed time: 26 seconds
+selectButton("OptionPane.button", "OK"); // JButton
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AXIcrossbar1_wrapper (AXIcrossbar1_wrapper.v)]", 1, true); // D - Node
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (cs): Remove Sources: addNotify
+selectCheckBox(PAResourceQtoS.RemoveSourcesDialog_ALSO_DELETE, "Also delete the project local file/directory from disk", false); // g: FALSE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Remove Sources"); // aE
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/muheet/stableEnv/cl_test_ss/cl_test_ss.gen/sources_1/bd/AXIcrossbar1/hdl/AXIcrossbar1_wrapper.v] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  /home/muheet/stableEnv/cl_test_ss/cl_test_ss.gen/sources_1/bd/AXIcrossbar1/hdl/AXIcrossbar1_wrapper.v 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AXIcrossbar1 (AXIcrossbar1.bd)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AXIcrossbar1 (AXIcrossbar1.bd)]", 1, true, false, false, false, true, false); // D - Popup Trigger - Node
+selectMenuItem(PAResourceCommand.PACommandNames_CREATE_TOP_HDL, "Create HDL Wrapper..."); // an
+// Run Command: PAResourceCommand.PACommandNames_CREATE_TOP_HDL
+// a (cs): Create HDL Wrapper: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Create HDL Wrapper"); // a
+// Tcl Message: make_wrapper -files [get_files /home/muheet/stableEnv/cl_test_ss/cl_test_ss.srcs/sources_1/bd/AXIcrossbar1/AXIcrossbar1.bd] -top 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse /home/muheet/stableEnv/cl_test_ss/cl_test_ss.gen/sources_1/bd/AXIcrossbar1/hdl/AXIcrossbar1_wrapper.v 
+// HMemoryUtils.trashcanNow. Engine heap size: 7,246 MB. GUI used memory: 115 MB. Current time: 3/25/22, 7:58:56 AM UTC
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AXIcrossbar1_wrapper (AXIcrossbar1_wrapper.v), AXIcrossbar1_i : AXIcrossbar1 (AXIcrossbar1.bd)]", 2, true, false, false, false, false, true); // D - Double Click - Node
+// WARNING: HEventQueue.dispatchEvent() is taking  1916 ms.
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AXIcrossbar1_wrapper (AXIcrossbar1_wrapper.v)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AXIcrossbar1_wrapper (AXIcrossbar1_wrapper.v)]", 1, true, false, false, false, false, true); // D - Double Click - Node
+// Elapsed time: 15 seconds
+selectCodeEditor("AXIcrossbar1_wrapper.v", 240, 134); // bP
+selectCodeEditor("AXIcrossbar1_wrapper.v", 240, 134); // bP
+selectCodeEditor("AXIcrossbar1_wrapper.v", 240, 134); // bP
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // Q
+// Elapsed time: 10 seconds
+selectCodeEditor("AXIcrossbar1_wrapper.v", 475, 218); // bP
+// Elapsed time: 62 seconds
+unmaximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // Q
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AXIcrossbar1_wrapper (AXIcrossbar1_wrapper.v)]", 1); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AXIcrossbar1_wrapper (AXIcrossbar1_wrapper.v), AXIcrossbar1_i : AXIcrossbar1 (AXIcrossbar1.bd), AXIcrossbar1 (AXIcrossbar1.v)]", 3, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AXIcrossbar1_wrapper (AXIcrossbar1_wrapper.v), AXIcrossbar1_i : AXIcrossbar1 (AXIcrossbar1.bd), AXIcrossbar1 (AXIcrossbar1.v), axi_crossbar_3 : AXIcrossbar1_axi_crossbar_1_0 (AXIcrossbar1_axi_crossbar_1_0.xci)]", 5, false, false, false, false, false, true); // D - Double Click
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // Q
+// Elapsed time: 36 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "AXIcrossbar1_wrapper.v", 3); // m
+selectCodeEditor("AXIcrossbar1_wrapper.v", 525, 239); // bP
+unmaximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // Q
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator, Open Block Design]", 7, false); // o
+// Run Command: PAResourceCommand.PACommandNames_OPEN_BLOCK_DESIGN
+// bz (cs):  Open Block Design : addNotify
+// TclEventType: RSB_OPEN_DIAGRAM
+// Tcl Message: open_bd_design {/home/muheet/stableEnv/cl_test_ss/cl_test_ss.srcs/sources_1/bd/AXIcrossbar1/AXIcrossbar1.bd} 
+dismissDialog("Open Block Design"); // bz
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // Q
+selectButton(PAResourceCommand.PACommandNames_ZOOM_FIT, "System_zoom_fit"); // E
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_FIT
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_PIN
+// r (cs): Customize Port: addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 7,299 MB. GUI used memory: 128 MB. Current time: 3/25/22, 8:01:51 AM UTC
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Customize Port"); // r
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_PIN
+// r (cs): Customize Port: addNotify
+// Elapsed time: 10 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Customize Port"); // r
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_PIN
+// r (cs): Customize Port: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Customize Port"); // r
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// r (cs): Re-customize IP: addNotify
+// Elapsed time: 32 seconds
+selectComboBox("SI ID Width (SI_ID_WIDTH)", "5", 5); // bY
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Re-customize IP"); // r
+// Tcl Command: 'set_property -dict [list CONFIG.SI_ID_WIDTH {5}] [get_bd_cells axi_dwidth_converter_0]'
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: startgroup 
+// Tcl Message: set_property -dict [list CONFIG.SI_ID_WIDTH {5}] [get_bd_cells axi_dwidth_converter_0] 
+// Tcl Message: endgroup 
+// Run Command: PAResourceCommand.PACommandNames_SAVE_RSB_DESIGN
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: save_bd_design 
+// Tcl Message: Wrote  : </home/muheet/stableEnv/cl_test_ss/cl_test_ss.srcs/sources_1/bd/AXIcrossbar1/AXIcrossbar1.bd>  Wrote  : </home/muheet/stableEnv/cl_test_ss/cl_test_ss.srcs/sources_1/bd/AXIcrossbar1/ui/bd_cc354dec.ui>  
+// HMemoryUtils.trashcanNow. Engine heap size: 7,333 MB. GUI used memory: 127 MB. Current time: 3/25/22, 8:02:56 AM UTC
+// Elapsed time: 30 seconds
+unmaximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // Q
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AXIcrossbar1_wrapper (AXIcrossbar1_wrapper.v)]", 1, true); // D - Node
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (cs): Remove Sources: addNotify
+selectCheckBox(PAResourceQtoS.RemoveSourcesDialog_ALSO_DELETE, "Also delete the project local file/directory from disk", false); // g: FALSE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Remove Sources"); // aE
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/muheet/stableEnv/cl_test_ss/cl_test_ss.gen/sources_1/bd/AXIcrossbar1/hdl/AXIcrossbar1_wrapper.v] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [GUI Memory]: 195 MB (+1692kb) [00:08:37]
+// Tcl Message: remove_files  /home/muheet/stableEnv/cl_test_ss/cl_test_ss.gen/sources_1/bd/AXIcrossbar1/hdl/AXIcrossbar1_wrapper.v 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AXIcrossbar1 (AXIcrossbar1.bd)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AXIcrossbar1 (AXIcrossbar1.bd)]", 1, true, false, false, false, true, false); // D - Popup Trigger - Node
+selectMenuItem(PAResourceCommand.PACommandNames_GENERATE_COMPOSITE_FILE, "Generate Output Products..."); // an
+// HMemoryUtils.trashcanNow. Engine heap size: 7,349 MB. GUI used memory: 121 MB. Current time: 3/25/22, 8:03:36 AM UTC
+// Run Command: PAResourceCommand.PACommandNames_GENERATE_COMPOSITE_FILE
+// aI (cs): Generate Output Products: addNotify
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY, "Generate"); // a
+// bz (cs):  Managing Output Products : addNotify
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: generate_target all [get_files  /home/muheet/stableEnv/cl_test_ss/cl_test_ss.srcs/sources_1/bd/AXIcrossbar1/AXIcrossbar1.bd] 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: Wrote  : </home/muheet/stableEnv/cl_test_ss/cl_test_ss.srcs/sources_1/bd/AXIcrossbar1/AXIcrossbar1.bd>  VHDL Output written to : /home/muheet/stableEnv/cl_test_ss/cl_test_ss.gen/sources_1/bd/AXIcrossbar1/synth/AXIcrossbar1.v VHDL Output written to : /home/muheet/stableEnv/cl_test_ss/cl_test_ss.gen/sources_1/bd/AXIcrossbar1/sim/AXIcrossbar1.v VHDL Output written to : /home/muheet/stableEnv/cl_test_ss/cl_test_ss.gen/sources_1/bd/AXIcrossbar1/hdl/AXIcrossbar1_wrapper.v 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created. INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created. INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dwidth_converter_0 . 
+// Tcl Message: Exporting to file /home/muheet/stableEnv/cl_test_ss/cl_test_ss.gen/sources_1/bd/AXIcrossbar1/hw_handoff/AXIcrossbar1.hwh Generated Block Design Tcl file /home/muheet/stableEnv/cl_test_ss/cl_test_ss.gen/sources_1/bd/AXIcrossbar1/hw_handoff/AXIcrossbar1_bd.tcl Generated Hardware Definition File /home/muheet/stableEnv/cl_test_ss/cl_test_ss.gen/sources_1/bd/AXIcrossbar1/synth/AXIcrossbar1.hwdef 
+// Tcl Message: generate_target: Time (s): cpu = 00:00:16 ; elapsed = 00:00:12 . Memory (MB): peak = 9492.727 ; gain = 0.000 ; free physical = 14370 ; free virtual = 31787 
+// Tcl Message: export_ip_user_files -of_objects [get_files /home/muheet/stableEnv/cl_test_ss/cl_test_ss.srcs/sources_1/bd/AXIcrossbar1/AXIcrossbar1.bd] -no_script -sync -force -quiet 
+// HMemoryUtils.trashcanNow. Engine heap size: 7,401 MB. GUI used memory: 123 MB. Current time: 3/25/22, 8:03:56 AM UTC
+// [Engine Memory]: 7,401 MB (+9180kb) [00:09:06]
+// TclEventType: PROJECT_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// HMemoryUtils.trashcanNow. Engine heap size: 7,336 MB. GUI used memory: 123 MB. Current time: 3/25/22, 8:04:38 AM UTC
+// HMemoryUtils.trashcanNow. Engine heap size: 7,320 MB. GUI used memory: 123 MB. Current time: 3/25/22, 8:05:38 AM UTC
+// 'br' command handler elapsed time: 147 seconds
+// Elapsed time: 145 seconds
+selectButton("OptionPane.button", "OK"); // JButton
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AXIcrossbar1 (AXIcrossbar1.bd)]", 1); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AXIcrossbar1 (AXIcrossbar1.bd), AXIcrossbar1 (AXIcrossbar1.v)]", 2, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AXIcrossbar1 (AXIcrossbar1.bd), AXIcrossbar1 (AXIcrossbar1.v), axi_crossbar_3 : AXIcrossbar1_axi_crossbar_1_0 (AXIcrossbar1_axi_crossbar_1_0.xci)]", 4, false, false, false, false, false, true); // D - Double Click
+selectCodeEditor("AXIcrossbar1.v", 93, 72); // E
+selectCodeEditor("AXIcrossbar1.v", 93, 72); // E
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // Q
+selectCodeEditor("AXIcrossbar1.v", 798, 203); // E
+unmaximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // Q
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AXIcrossbar1 (AXIcrossbar1.bd)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AXIcrossbar1 (AXIcrossbar1.bd)]", 1, true, false, false, false, true, false); // D - Popup Trigger - Node
+selectMenuItem(PAResourceCommand.PACommandNames_RESET_COMPOSITE_FILE, "Reset Output Products..."); // an
+// Run Command: PAResourceCommand.PACommandNames_RESET_COMPOSITE_FILE
+// aI (cs): Reset Output Products: addNotify
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_RESET_OUTPUT_PRODUCTS, "Reset"); // a
+// bz (cs):  Managing Output Products : addNotify
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: reset_target all [get_files  /home/muheet/stableEnv/cl_test_ss/cl_test_ss.srcs/sources_1/bd/AXIcrossbar1/AXIcrossbar1.bd] 
+// TclEventType: PROJ_DESIGN_MODE_SET
+// Tcl Message: export_ip_user_files -of_objects  [get_files  /home/muheet/stableEnv/cl_test_ss/cl_test_ss.srcs/sources_1/bd/AXIcrossbar1/AXIcrossbar1.bd] -sync -no_script -force -quiet 
+// 'br' command handler elapsed time: 7 seconds
+dismissDialog("Managing Output Products"); // bz
+// Elapsed time: 11 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AXIcrossbar1 (AXIcrossbar1.bd)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AXIcrossbar1 (AXIcrossbar1.bd)]", 1, true, false, false, false, true, false); // D - Popup Trigger - Node
+selectMenuItem(PAResourceCommand.PACommandNames_GENERATE_COMPOSITE_FILE, "Generate Output Products..."); // an
+// Run Command: PAResourceCommand.PACommandNames_GENERATE_COMPOSITE_FILE
+// aI (cs): Generate Output Products: addNotify
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY, "Generate"); // a
+// bz (cs):  Managing Output Products : addNotify
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: generate_target all [get_files  /home/muheet/stableEnv/cl_test_ss/cl_test_ss.srcs/sources_1/bd/AXIcrossbar1/AXIcrossbar1.bd] 
+// Tcl Message: Wrote  : </home/muheet/stableEnv/cl_test_ss/cl_test_ss.srcs/sources_1/bd/AXIcrossbar1/AXIcrossbar1.bd>  
+// Tcl Message: VHDL Output written to : /home/muheet/stableEnv/cl_test_ss/cl_test_ss.gen/sources_1/bd/AXIcrossbar1/synth/AXIcrossbar1.v 
+// Tcl Message: VHDL Output written to : /home/muheet/stableEnv/cl_test_ss/cl_test_ss.gen/sources_1/bd/AXIcrossbar1/sim/AXIcrossbar1.v 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: VHDL Output written to : /home/muheet/stableEnv/cl_test_ss/cl_test_ss.gen/sources_1/bd/AXIcrossbar1/hdl/AXIcrossbar1_wrapper.v 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_crossbar_2 . INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_uartlite_1 . INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_crossbar_3 . INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created. INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created. INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dwidth_converter_1 . 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_protocol_convert_0 . INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created. INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created. INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dwidth_converter_0 . 
+// Tcl Message: Exporting to file /home/muheet/stableEnv/cl_test_ss/cl_test_ss.gen/sources_1/bd/AXIcrossbar1/hw_handoff/AXIcrossbar1.hwh Generated Block Design Tcl file /home/muheet/stableEnv/cl_test_ss/cl_test_ss.gen/sources_1/bd/AXIcrossbar1/hw_handoff/AXIcrossbar1_bd.tcl Generated Hardware Definition File /home/muheet/stableEnv/cl_test_ss/cl_test_ss.gen/sources_1/bd/AXIcrossbar1/synth/AXIcrossbar1.hwdef 
+// Tcl Message: generate_target: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 9549.805 ; gain = 0.000 ; free physical = 14133 ; free virtual = 31773 
+// Tcl Message: export_ip_user_files -of_objects [get_files /home/muheet/stableEnv/cl_test_ss/cl_test_ss.srcs/sources_1/bd/AXIcrossbar1/AXIcrossbar1.bd] -no_script -sync -force -quiet 
+// TclEventType: PROJECT_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// HMemoryUtils.trashcanNow. Engine heap size: 7,482 MB. GUI used memory: 149 MB. Current time: 3/25/22, 8:07:41 AM UTC
+// HMemoryUtils.trashcanNow. Engine heap size: 7,482 MB. GUI used memory: 125 MB. Current time: 3/25/22, 8:07:44 AM UTC
+// HMemoryUtils.trashcanNow. Engine heap size: 7,358 MB. GUI used memory: 150 MB. Current time: 3/25/22, 8:08:13 AM UTC
+// HMemoryUtils.trashcanNow. Engine heap size: 7,358 MB. GUI used memory: 125 MB. Current time: 3/25/22, 8:08:43 AM UTC
+// 'br' command handler elapsed time: 135 seconds
+// Elapsed time: 131 seconds
+selectButton("OptionPane.button", "OK"); // JButton
+maximizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // az
+unMaximizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // az
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AXIcrossbar1 (AXIcrossbar1.bd)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AXIcrossbar1 (AXIcrossbar1.bd), AXIcrossbar1 (AXIcrossbar1.v)]", 2, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AXIcrossbar1 (AXIcrossbar1.bd), AXIcrossbar1 (AXIcrossbar1.v), axi_crossbar_3 : AXIcrossbar1_axi_crossbar_1_0 (AXIcrossbar1_axi_crossbar_1_0.xci)]", 4, false, false, false, false, false, true); // D - Double Click
+// Elapsed time: 16 seconds
+selectCodeEditor("AXIcrossbar1.v", 70, 65); // E
+selectCodeEditor("AXIcrossbar1.v", 70, 65); // E
+selectCodeEditor("AXIcrossbar1.v", 70, 65); // E
+selectCodeEditor("AXIcrossbar1.v", 70, 65); // E
+// Elapsed time: 22 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // m
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // Q
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// r (cs): Re-customize IP: addNotify
+// Elapsed time: 59 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Re-customize IP"); // r
+// Tcl Message: startgroup 
+// Tcl Message: endgroup 
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_PIN
+// r (cs): Customize Port: addNotify
+// Elapsed time: 11 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Customize Port"); // r
+unmaximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // Q
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AXIcrossbar1 (AXIcrossbar1.bd)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AXIcrossbar1 (AXIcrossbar1.bd)]", 1, true, false, false, false, true, false); // D - Popup Trigger - Node
+selectMenuItem(PAResourceCommand.PACommandNames_RESET_COMPOSITE_FILE, "Reset Output Products..."); // an
+// Run Command: PAResourceCommand.PACommandNames_RESET_COMPOSITE_FILE
+// aI (cs): Reset Output Products: addNotify
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_RESET_OUTPUT_PRODUCTS, "Reset"); // a
+// bz (cs):  Managing Output Products : addNotify
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJ_DESIGN_MODE_SET
+// Tcl Message: reset_target all [get_files  /home/muheet/stableEnv/cl_test_ss/cl_test_ss.srcs/sources_1/bd/AXIcrossbar1/AXIcrossbar1.bd] 
+// TclEventType: PROJ_DESIGN_MODE_SET
+// Tcl Message: export_ip_user_files -of_objects  [get_files  /home/muheet/stableEnv/cl_test_ss/cl_test_ss.srcs/sources_1/bd/AXIcrossbar1/AXIcrossbar1.bd] -sync -no_script -force -quiet 
+dismissDialog("Managing Output Products"); // bz
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AXIcrossbar1 (AXIcrossbar1.bd)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AXIcrossbar1 (AXIcrossbar1.bd)]", 1, true, false, false, false, true, false); // D - Popup Trigger - Node
+selectMenuItem(PAResourceCommand.PACommandNames_GENERATE_COMPOSITE_FILE, "Generate Output Products..."); // an
+// Run Command: PAResourceCommand.PACommandNames_GENERATE_COMPOSITE_FILE
+// aI (cs): Generate Output Products: addNotify
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY, "Generate"); // a
+// bz (cs):  Managing Output Products : addNotify
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: generate_target all [get_files  /home/muheet/stableEnv/cl_test_ss/cl_test_ss.srcs/sources_1/bd/AXIcrossbar1/AXIcrossbar1.bd] 
+// Tcl Message: Wrote  : </home/muheet/stableEnv/cl_test_ss/cl_test_ss.srcs/sources_1/bd/AXIcrossbar1/AXIcrossbar1.bd>  VHDL Output written to : /home/muheet/stableEnv/cl_test_ss/cl_test_ss.gen/sources_1/bd/AXIcrossbar1/synth/AXIcrossbar1.v VHDL Output written to : /home/muheet/stableEnv/cl_test_ss/cl_test_ss.gen/sources_1/bd/AXIcrossbar1/sim/AXIcrossbar1.v VHDL Output written to : /home/muheet/stableEnv/cl_test_ss/cl_test_ss.gen/sources_1/bd/AXIcrossbar1/hdl/AXIcrossbar1_wrapper.v 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: Exporting to file /home/muheet/stableEnv/cl_test_ss/cl_test_ss.gen/sources_1/bd/AXIcrossbar1/hw_handoff/AXIcrossbar1.hwh Generated Block Design Tcl file /home/muheet/stableEnv/cl_test_ss/cl_test_ss.gen/sources_1/bd/AXIcrossbar1/hw_handoff/AXIcrossbar1_bd.tcl Generated Hardware Definition File /home/muheet/stableEnv/cl_test_ss/cl_test_ss.gen/sources_1/bd/AXIcrossbar1/synth/AXIcrossbar1.hwdef 
+// Tcl Message: export_ip_user_files -of_objects [get_files /home/muheet/stableEnv/cl_test_ss/cl_test_ss.srcs/sources_1/bd/AXIcrossbar1/AXIcrossbar1.bd] -no_script -sync -force -quiet 
+// TclEventType: PROJECT_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// HMemoryUtils.trashcanNow. Engine heap size: 7,421 MB. GUI used memory: 184 MB. Current time: 3/25/22, 8:12:29 AM UTC
+// HMemoryUtils.trashcanNow. Engine heap size: 7,528 MB. GUI used memory: 128 MB. Current time: 3/25/22, 8:13:30 AM UTC
+// 'br' command handler elapsed time: 146 seconds
+// Elapsed time: 144 seconds
+selectButton("OptionPane.button", "OK"); // JButton
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AXIcrossbar1 (AXIcrossbar1.bd), AXIcrossbar1 (AXIcrossbar1.v)]", 2, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AXIcrossbar1 (AXIcrossbar1.bd), AXIcrossbar1 (AXIcrossbar1.v)]", 2, true, false, false, false, true, false); // D - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ak
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ak
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ak
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ak
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AXIcrossbar1 (AXIcrossbar1.bd), AXIcrossbar1 (AXIcrossbar1.v)]", 2, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AXIcrossbar1 (AXIcrossbar1.bd), AXIcrossbar1 (AXIcrossbar1.v), axi_crossbar_3 : AXIcrossbar1_axi_crossbar_1_0 (AXIcrossbar1_axi_crossbar_1_0.xci)]", 4, false, false, false, false, false, true); // D - Double Click
+selectCodeEditor("AXIcrossbar1.v", 82, 125); // E
+selectCodeEditor("AXIcrossbar1.v", 82, 125); // E
+selectCodeEditor("AXIcrossbar1.v", 82, 125); // E
+selectCodeEditor("AXIcrossbar1.v", 82, 125); // E
+selectCodeEditor("AXIcrossbar1.v", 82, 125); // E
+selectCodeEditor("AXIcrossbar1.v", 82, 125); // E
+selectCodeEditor("AXIcrossbar1.v", 82, 125); // E
+selectCodeEditor("AXIcrossbar1.v", 82, 125); // E
+selectCodeEditor("AXIcrossbar1.v", 82, 125); // E
+selectCodeEditor("AXIcrossbar1.v", 82, 125); // E
+selectCodeEditor("AXIcrossbar1.v", 82, 125); // E
+selectCodeEditor("AXIcrossbar1.v", 82, 125); // E
+// Elapsed time: 13 seconds
+selectCodeEditor("AXIcrossbar1.v", 195, 107); // E
+selectCodeEditor("AXIcrossbar1.v", 195, 107); // E
+selectCodeEditor("AXIcrossbar1.v", 195, 107); // E
+selectCodeEditor("AXIcrossbar1.v", 195, 107); // E
+// Elapsed time: 10 seconds
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // Q
+// Elapsed time: 17 seconds
+selectCodeEditor("AXIcrossbar1.v", 830, 261); // E
+selectCodeEditor("AXIcrossbar1.v", 830, 261); // E
+selectCodeEditor("AXIcrossbar1.v", 830, 261); // E
+// Elapsed time: 12 seconds
+selectCodeEditor("AXIcrossbar1.v", 830, 261); // E
+selectCodeEditor("AXIcrossbar1.v", 436, 279); // E
+selectCodeEditor("AXIcrossbar1.v", 436, 279); // E
+selectCodeEditor("AXIcrossbar1.v", 436, 279); // E
+selectCodeEditor("AXIcrossbar1.v", 436, 279); // E
+selectCodeEditor("AXIcrossbar1.v", 436, 279); // E
+// Elapsed time: 141 seconds
+selectCodeEditor("AXIcrossbar1.v", 344, 130); // E
+// Elapsed time: 22 seconds
+selectCodeEditor("AXIcrossbar1.v", 344, 130); // E
+// Elapsed time: 12 seconds
+unmaximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // Q
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AXIcrossbar1 (AXIcrossbar1.bd)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AXIcrossbar1 (AXIcrossbar1.bd)]", 1, true, false, false, false, true, false); // D - Popup Trigger - Node
+selectMenuItem(PAResourceCommand.PACommandNames_CREATE_TOP_HDL, "Create HDL Wrapper..."); // an
+// Run Command: PAResourceCommand.PACommandNames_CREATE_TOP_HDL
+// a (cs): Create HDL Wrapper: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Create HDL Wrapper"); // a
+// Tcl Message: make_wrapper -files [get_files /home/muheet/stableEnv/cl_test_ss/cl_test_ss.srcs/sources_1/bd/AXIcrossbar1/AXIcrossbar1.bd] -top 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse /home/muheet/stableEnv/cl_test_ss/cl_test_ss.gen/sources_1/bd/AXIcrossbar1/hdl/AXIcrossbar1_wrapper.v 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Elapsed time: 14 seconds
+selectButton(PAResourceAtoD.AbstractFileView_RELOAD, "Reload"); // h
+// Elapsed time: 27 seconds
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // Q
+// Elapsed time: 19 seconds
+selectCodeEditor("AXIcrossbar1.v", 709, 154); // E
+selectCodeEditor("AXIcrossbar1.v", 812, 122); // E
+// Elapsed time: 12 seconds
+unmaximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // Q
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AXIcrossbar1_wrapper (AXIcrossbar1_wrapper.v)]", 1); // D
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // Q
+// Elapsed time: 13 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // m
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_PIN
+// r (cs): Customize Port: addNotify
+// Elapsed time: 12 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Customize Port"); // r
+selectButton(PAResourceCommand.PACommandNames_ZOOM_FIT, "System_zoom_fit"); // E
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_FIT
+unmaximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // Q
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AXIcrossbar1_wrapper (AXIcrossbar1_wrapper.v)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AXIcrossbar1_wrapper (AXIcrossbar1_wrapper.v)]", 1, true, false, false, false, false, true); // D - Double Click - Node
+// WARNING: HEventQueue.dispatchEvent() is taking  1877 ms.
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // Q
+// Elapsed time: 10 seconds
+selectCodeEditor("AXIcrossbar1_wrapper.v", 307, 275); // bP
+selectCodeEditor("AXIcrossbar1_wrapper.v", 78, 95); // bP
+selectCodeEditor("AXIcrossbar1_wrapper.v", 76, 274); // bP
+selectCodeEditor("AXIcrossbar1_wrapper.v", 83, 408); // bP
+selectCodeEditor("AXIcrossbar1_wrapper.v", 346, 428); // bP
+selectCodeEditor("AXIcrossbar1_wrapper.v", 83, 399); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 12 seconds
+selectCodeEditor("AXIcrossbar1_wrapper.v", 317, 407); // bP
+selectCodeEditor("AXIcrossbar1_wrapper.v", 317, 407); // bP
+selectCodeEditor("AXIcrossbar1_wrapper.v", 317, 407); // bP
+selectCodeEditor("AXIcrossbar1_wrapper.v", 317, 407); // bP
+selectCodeEditor("AXIcrossbar1_wrapper.v", 317, 407); // bP
+selectCodeEditor("AXIcrossbar1_wrapper.v", 317, 407); // bP
+unmaximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // Q
+selectCodeEditor("AXIcrossbar1_wrapper.v", 361, 49); // bP
+// Elapsed time: 14 seconds
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // Q
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // m
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// r (cs): Re-customize IP: addNotify
+// Elapsed time: 64 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Re-customize IP"); // r
+// Tcl Message: startgroup 
+// Tcl Message: endgroup 
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// N (cs):  Re-customize IP : addNotify
+// r (cs): Re-customize IP: addNotify
+dismissDialog("Re-customize IP"); // N
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Address", 3); // bi
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Connectivity", 4); // bi
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Address", 3); // bi
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Connectivity", 4); // bi
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Address", 3); // bi
+// Elapsed time: 20 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Re-customize IP"); // r
+// Tcl Message: startgroup 
+// Tcl Message: endgroup 
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_PIN
+// r (cs): Customize Pin: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Customize Pin"); // r
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// N (cs):  Re-customize IP : addNotify
+// r (cs): Re-customize IP: addNotify
+dismissDialog("Re-customize IP"); // N
+// Elapsed time: 20 seconds
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Address", 3); // bi
+selectButton(PAResourceEtoH.HACGCComboBox_VALUE_OF_SPECIFIED_PARAMETER, "Number of Address Ranges (ADDR_RANGES)"); // x: TRUE
+selectComboBox("Number of Address Ranges (ADDR_RANGES)", "1", 0); // E
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Re-customize IP"); // r
+// Tcl Command: 'set_property -dict [list CONFIG.ADDR_RANGES.VALUE_SRC USER] [get_bd_cells axi_crossbar_3]'
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: startgroup 
+// Tcl Message: set_property -dict [list CONFIG.ADDR_RANGES.VALUE_SRC USER] [get_bd_cells axi_crossbar_3] 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Command: 'set_property -dict [list CONFIG.ADDR_RANGES {1}] [get_bd_cells axi_crossbar_3]'
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// r (cs): Re-customize IP: addNotify
+// bz (r):  Customize IP : addNotify
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: set_property -dict [list CONFIG.ADDR_RANGES {1}] [get_bd_cells axi_crossbar_3] 
+// Tcl Message: endgroup 
+dismissDialog("Customize IP"); // bz
+// [GUI Memory]: 205 MB (+104kb) [00:30:52]
+// Run Command: PAResourceCommand.PACommandNames_SAVE_RSB_DESIGN
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// bz (cs):  Save Design : addNotify
+// Tcl Message: save_bd_design 
+// Tcl Message: Wrote  : </home/muheet/stableEnv/cl_test_ss/cl_test_ss.srcs/sources_1/bd/AXIcrossbar1/AXIcrossbar1.bd>  Wrote  : </home/muheet/stableEnv/cl_test_ss/cl_test_ss.srcs/sources_1/bd/AXIcrossbar1/ui/bd_cc354dec.ui>  
+// Elapsed time: 22 seconds
+dismissDialog("Save Design"); // bz
+// Elapsed time: 36 seconds
+unmaximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // Q
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AXIcrossbar1_wrapper (AXIcrossbar1_wrapper.v)]", 1); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AXIcrossbar1_wrapper (AXIcrossbar1_wrapper.v)]", 1, true); // D - Node
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (cs): Remove Sources: addNotify
+selectCheckBox(PAResourceQtoS.RemoveSourcesDialog_ALSO_DELETE, "Also delete the project local file/directory from disk", false); // g: FALSE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Remove Sources"); // aE
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/muheet/stableEnv/cl_test_ss/cl_test_ss.gen/sources_1/bd/AXIcrossbar1/hdl/AXIcrossbar1_wrapper.v] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  /home/muheet/stableEnv/cl_test_ss/cl_test_ss.gen/sources_1/bd/AXIcrossbar1/hdl/AXIcrossbar1_wrapper.v 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AXIcrossbar1_wrapper (AXIcrossbar1_wrapper.v), AXIcrossbar1_i : AXIcrossbar1 (AXIcrossbar1.bd)]", 2, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AXIcrossbar1_wrapper (AXIcrossbar1_wrapper.v), AXIcrossbar1_i : AXIcrossbar1 (AXIcrossbar1.bd)]", 2, true, false, false, false, true, false); // D - Popup Trigger - Node
+selectMenuItem(PAResourceCommand.PACommandNames_GENERATE_COMPOSITE_FILE, "Generate Output Products..."); // an
+// Run Command: PAResourceCommand.PACommandNames_GENERATE_COMPOSITE_FILE
+// aI (cs): Generate Output Products: addNotify
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY, "Generate"); // a
+// bz (cs):  Managing Output Products : addNotify
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: generate_target all [get_files  /home/muheet/stableEnv/cl_test_ss/cl_test_ss.srcs/sources_1/bd/AXIcrossbar1/AXIcrossbar1.bd] 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: Wrote  : </home/muheet/stableEnv/cl_test_ss/cl_test_ss.srcs/sources_1/bd/AXIcrossbar1/AXIcrossbar1.bd>  VHDL Output written to : /home/muheet/stableEnv/cl_test_ss/cl_test_ss.gen/sources_1/bd/AXIcrossbar1/synth/AXIcrossbar1.v VHDL Output written to : /home/muheet/stableEnv/cl_test_ss/cl_test_ss.gen/sources_1/bd/AXIcrossbar1/sim/AXIcrossbar1.v VHDL Output written to : /home/muheet/stableEnv/cl_test_ss/cl_test_ss.gen/sources_1/bd/AXIcrossbar1/hdl/AXIcrossbar1_wrapper.v 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_crossbar_3 . 
+// Tcl Message: Exporting to file /home/muheet/stableEnv/cl_test_ss/cl_test_ss.gen/sources_1/bd/AXIcrossbar1/hw_handoff/AXIcrossbar1.hwh Generated Block Design Tcl file /home/muheet/stableEnv/cl_test_ss/cl_test_ss.gen/sources_1/bd/AXIcrossbar1/hw_handoff/AXIcrossbar1_bd.tcl Generated Hardware Definition File /home/muheet/stableEnv/cl_test_ss/cl_test_ss.gen/sources_1/bd/AXIcrossbar1/synth/AXIcrossbar1.hwdef 
+// Tcl Message: generate_target: Time (s): cpu = 00:00:16 ; elapsed = 00:00:10 . Memory (MB): peak = 9679.824 ; gain = 0.000 ; free physical = 19377 ; free virtual = 36927 
+// Tcl Message: export_ip_user_files -of_objects [get_files /home/muheet/stableEnv/cl_test_ss/cl_test_ss.srcs/sources_1/bd/AXIcrossbar1/AXIcrossbar1.bd] -no_script -sync -force -quiet 
+// HMemoryUtils.trashcanNow. Engine heap size: 7,558 MB. GUI used memory: 140 MB. Current time: 3/25/22, 8:27:11 AM UTC
+// TclEventType: PROJECT_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// HMemoryUtils.trashcanNow. Engine heap size: 7,590 MB. GUI used memory: 141 MB. Current time: 3/25/22, 8:27:28 AM UTC
+// HMemoryUtils.trashcanNow. Engine heap size: 7,624 MB. GUI used memory: 139 MB. Current time: 3/25/22, 8:28:28 AM UTC
+// HMemoryUtils.trashcanNow. Engine heap size: 7,469 MB. GUI used memory: 139 MB. Current time: 3/25/22, 8:28:58 AM UTC
+// 'br' command handler elapsed time: 230 seconds
+// Elapsed time: 229 seconds
+selectButton("OptionPane.button", "OK"); // JButton
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "AXIcrossbar1.v", 3); // m
+// Elapsed time: 28 seconds
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // Q
+// Elapsed time: 19 seconds
+selectCodeEditor("AXIcrossbar1.v", 745, 114); // E
+// Elapsed time: 19 seconds
+unmaximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // Q
+// Elapsed time: 17 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AXIcrossbar1 (AXIcrossbar1.bd)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AXIcrossbar1 (AXIcrossbar1.bd)]", 1, true, false, false, false, true, false); // D - Popup Trigger - Node
+selectMenuItem(PAResourceCommand.PACommandNames_CREATE_TOP_HDL, "Create HDL Wrapper..."); // an
+// Run Command: PAResourceCommand.PACommandNames_CREATE_TOP_HDL
+// a (cs): Create HDL Wrapper: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Create HDL Wrapper"); // a
+// Tcl Message: make_wrapper -files [get_files /home/muheet/stableEnv/cl_test_ss/cl_test_ss.srcs/sources_1/bd/AXIcrossbar1/AXIcrossbar1.bd] -top 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse /home/muheet/stableEnv/cl_test_ss/cl_test_ss.gen/sources_1/bd/AXIcrossbar1/hdl/AXIcrossbar1_wrapper.v 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AXIcrossbar1_wrapper (AXIcrossbar1_wrapper.v)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AXIcrossbar1_wrapper (AXIcrossbar1_wrapper.v), AXIcrossbar1_i : AXIcrossbar1 (AXIcrossbar1.bd)]", 2, true, false, false, false, false, true); // D - Double Click - Node
+// WARNING: HEventQueue.dispatchEvent() is taking  1577 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 7,488 MB. GUI used memory: 128 MB. Current time: 3/25/22, 8:59:01 AM UTC
+// Elapsed time: 2298 seconds
+selectCodeEditor("AXIcrossbar1_wrapper.v", 246, 100); // bP
+// Elapsed time: 98 seconds
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // Q
+// Elapsed time: 18 seconds
+selectCodeEditor("AXIcrossbar1_wrapper.v", 279, 410); // bP
+// Elapsed time: 229 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator, Open Block Design]", 7, false); // o
+// Run Command: PAResourceCommand.PACommandNames_OPEN_BLOCK_DESIGN
+// bz (cs):  Open Block Design : addNotify
+// TclEventType: RSB_OPEN_DIAGRAM
+// Tcl Message: open_bd_design {/home/muheet/stableEnv/cl_test_ss/cl_test_ss.srcs/sources_1/bd/AXIcrossbar1/AXIcrossbar1.bd} 
+dismissDialog("Open Block Design"); // bz
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// N (cs):  Re-customize IP : addNotify
+// r (cs): Re-customize IP: addNotify
+// Elapsed time: 14 seconds
+dismissDialog("Re-customize IP"); // N
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Address", 3); // bi
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Global", 0); // bi
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Re-customize IP"); // r
+// Tcl Message: startgroup 
+// Tcl Message: endgroup 
+// HMemoryUtils.trashcanNow. Engine heap size: 7,523 MB. GUI used memory: 134 MB. Current time: 3/25/22, 9:29:02 AM UTC
+// HMemoryUtils.trashcanNow. Engine heap size: 7,488 MB. GUI used memory: 134 MB. Current time: 3/25/22, 9:59:02 AM UTC
+// HMemoryUtils.trashcanNow. Engine heap size: 7,488 MB. GUI used memory: 132 MB. Current time: 3/25/22, 10:29:02 AM UTC
+// HMemoryUtils.trashcanNow. Engine heap size: 7,488 MB. GUI used memory: 132 MB. Current time: 3/25/22, 10:59:02 AM UTC
+// HMemoryUtils.trashcanNow. Engine heap size: 7,488 MB. GUI used memory: 132 MB. Current time: 3/25/22, 11:29:02 AM UTC
+// TclEventType: FILE_SET_CHANGE

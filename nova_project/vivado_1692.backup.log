@@ -1,0 +1,48 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Thu Mar 24 15:39:35 2022
+# Process ID: 1692
+# Current directory: /home/muheet/stableEnv/nova_project
+# Command line: vivado nova_project.xpr
+# Log file: /home/muheet/stableEnv/nova_project/vivado.log
+# Journal file: /home/muheet/stableEnv/nova_project/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project nova_project.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2021.1/data/ip'.
+open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:07 . Memory (MB): peak = 7623.414 ; gain = 80.238 ; free physical = 11095 ; free virtual = 18691
+open_bd_design {/home/muheet/stableEnv/nova_project/nova_project.srcs/sources_1/bd/xlx_design_subsystem/xlx_design_subsystem.bd}
+Reading block design file </home/muheet/stableEnv/nova_project/nova_project.srcs/sources_1/bd/xlx_design_subsystem/xlx_design_subsystem.bd>...
+INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+CRITICAL WARNING: [BD 41-1287] Associated interface by name hydra_m not found for clock port /s_axi_aclk_0
+CRITICAL WARNING: [BD 41-1287] Associated interface by name SMU_s not found for clock port /s_axi_aclk_0
+CRITICAL WARNING: [BD 41-1287] Associated interface by name ethernet_s not found for clock port /s_axi_aclk_0
+CRITICAL WARNING: [BD 41-1287] Associated interface by name hydra_S not found for clock port /s_axi_aclk_0
+CRITICAL WARNING: [BD 41-1287] Associated interface by name DDR_s not found for clock port /s_axi_aclk_0
+CRITICAL WARNING: [BD 41-1287] Associated interface by name MTMLAddr_s not found for clock port /s_axi_aclk_0
+CRITICAL WARNING: [BD 41-1287] Associated interface by name MTMLAddr_m not found for clock port /s_axi_aclk_0
+CRITICAL WARNING: [BD 41-1287] Associated interface by name XBAR2Addr_s not found for clock port /s_axi_aclk_0
+CRITICAL WARNING: [BD 41-1287] Associated interface by name XBAR2Addr_m not found for clock port /s_axi_aclk_0
+CRITICAL WARNING: [BD 41-1287] Associated interface by name XBAR1Addr_m not found for clock port /s_axi_aclk_0
+CRITICAL WARNING: [BD 41-1287] Associated interface by name XBAR1Addr_s not found for clock port /s_axi_aclk_0
+CRITICAL WARNING: [BD 41-1287] Associated interface by name S00_AXI_0 not found for clock port /s_axi_aclk_0
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - axi_dwidth_converter_0
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - axi_protocol_convert_0
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - axi_crossbar_0
+Adding component instance block -- xilinx.com:ip:axi_bram_ctrl:4.1 - axi_bram_ctrl_0
+Adding component instance block -- xilinx.com:ip:blk_mem_gen:8.4 - blk_mem_gen_0
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - axi_crossbar_1
+Adding component instance block -- xilinx.com:ip:axi_uartlite:2.0 - axi_uartlite_0
+Successfully read diagram <xlx_design_subsystem> from block design file </home/muheet/stableEnv/nova_project/nova_project.srcs/sources_1/bd/xlx_design_subsystem/xlx_design_subsystem.bd>
+update_compile_order -fileset sources_1
+startgroup
+set_property -dict [list CONFIG.M00_A00_ADDR_WIDTH {24}] [get_bd_cells axi_crossbar_1]
+endgroup
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 24 15:41:44 2022...

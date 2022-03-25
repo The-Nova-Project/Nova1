@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Wed Mar 23 17:04:55 2022
+# Process ID: 29208
+# Current directory: /home/muheet/stableEnv/cl_test_ss
+# Command line: vivado cl_test_ss.xpr
+# Log file: /home/muheet/stableEnv/cl_test_ss/vivado.log
+# Journal file: /home/muheet/stableEnv/cl_test_ss/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project cl_test_ss.xpr
+update_compile_order -fileset sources_1
