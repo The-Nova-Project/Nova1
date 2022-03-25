@@ -7,3 +7,5 @@ focus on latest open-source tools and low-cost development methodologies
 - linux RISCV SystemVerilog Verilator
 - AWS-Cloud FPGA
 
+![Block Diagram](https://drive.google.com/file/d/1chqhzMsCkIIwPozu61wzzYWvSAf6GUWa/view?usp=sharing)
+
