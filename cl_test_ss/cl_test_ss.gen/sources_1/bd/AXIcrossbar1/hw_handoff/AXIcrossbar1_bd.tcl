@@ -361,7 +361,7 @@ proc create_root_design { parentCell } {
    CONFIG.DATA_WIDTH {512} \
    CONFIG.ID_WIDTH {16} \
    CONFIG.M00_A00_ADDR_WIDTH {24} \
-   CONFIG.M00_A00_BASE_ADDR {0x0000000080000000} \
+   CONFIG.M00_A00_BASE_ADDR {0x0000000081000000} \
    CONFIG.NUM_MI {1} \
    CONFIG.NUM_SI {2} \
    CONFIG.S01_BASE_ID {0x00008000} \
@@ -434,8 +434,8 @@ proc create_root_design { parentCell } {
   connect_bd_net -net axi_uartlite_0_interrupt [get_bd_ports interrupt_1] [get_bd_pins axi_uartlite_1/interrupt]
 
   # Create address segments
-  assign_bd_address -offset 0x80000000 -range 0x10000000 -target_address_space [get_bd_addr_spaces DMA_PCIS_AXI4] [get_bd_addr_segs DDR_AXI4/Reg] -force
-  assign_bd_address -offset 0x80000000 -range 0x10000000 -target_address_space [get_bd_addr_spaces DDR_ADDR_512_64] [get_bd_addr_segs DDR_AXI4/Reg] -force
+  assign_bd_address -offset 0x81000000 -range 0x10000000 -target_address_space [get_bd_addr_spaces DMA_PCIS_AXI4] [get_bd_addr_segs DDR_AXI4/Reg] -force
+  assign_bd_address -offset 0x81000000 -range 0x10000000 -target_address_space [get_bd_addr_spaces DDR_ADDR_512_64] [get_bd_addr_segs DDR_AXI4/Reg] -force
   assign_bd_address -offset 0x00100000 -range 0x00080000 -target_address_space [get_bd_addr_spaces OCL_AXIL_32] [get_bd_addr_segs M02_AXI_0/Reg] -force
   assign_bd_address -offset 0x44A00000 -range 0x00010000 -target_address_space [get_bd_addr_spaces BAR1_AXIL_32] [get_bd_addr_segs M_AXI_0/Reg] -force
   assign_bd_address -offset 0x00000000 -range 0x00080000 -target_address_space [get_bd_addr_spaces OCL_AXIL_32] [get_bd_addr_segs axi_uartlite_1/S_AXI/Reg] -force

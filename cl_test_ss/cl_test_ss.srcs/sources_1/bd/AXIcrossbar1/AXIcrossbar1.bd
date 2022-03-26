@@ -1092,7 +1092,7 @@
             "value": "24"
           },
           "M00_A00_BASE_ADDR": {
-            "value": "0x0000000080000000"
+            "value": "0x0000000081000000"
           },
           "NUM_MI": {
             "value": "1"
@@ -1394,7 +1394,7 @@
             "segments": {
               "SEG_M00_AXI_0_Reg": {
                 "address_block": "/DDR_AXI4/Reg",
-                "offset": "0x0000000080000000",
+                "offset": "0x0000000081000000",
                 "range": "256M"
               }
             }
@@ -1405,7 +1405,7 @@
             "segments": {
               "SEG_M00_AXI_0_Reg": {
                 "address_block": "/DDR_AXI4/Reg",
-                "offset": "0x0000000080000000",
+                "offset": "0x0000000081000000",
                 "range": "256M"
               }
             }

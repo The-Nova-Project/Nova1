@@ -21,41 +21,27 @@
   <key attr.name="vert_type" attr.type="string" for="node" id="VT"/>
   <graph edgedefault="undirected" id="G" parse.edgeids="canonical" parse.nodeids="canonical" parse.order="nodesfirst">
     <node id="n0">
-      <data key="TU">active</data>
       <data key="VH">2</data>
-      <data key="VT">PM</data>
+      <data key="VM">AXIcrossbar1</data>
+      <data key="VT">VR</data>
     </node>
     <node id="n1">
-      <data key="BA">0x00080000</data>
-      <data key="BP">C_BASEADDR</data>
-      <data key="HA">0x000FFFFF</data>
-      <data key="HP">C_HIGHADDR</data>
-      <data key="MA">OCL_AXIL_32</data>
-      <data key="MX">/</data>
-      <data key="MI">OCL_AXIL_32</data>
-      <data key="MS">SEG_test_status_Reg</data>
-      <data key="MV">:::</data>
-      <data key="TM">both</data>
-      <data key="SX">/</data>
-      <data key="SI">test_status</data>
-      <data key="SS">Reg</data>
-      <data key="SV">::AXIcrossbar1_imp:</data>
-      <data key="TU">register</data>
-      <data key="VT">AC</data>
+      <data key="VM">AXIcrossbar1</data>
+      <data key="VT">BC</data>
     </node>
     <node id="n2">
-      <data key="BA">0x00100000</data>
+      <data key="BA">0x0000000081000000</data>
       <data key="BP">C_BASEADDR</data>
-      <data key="HA">0x0017FFFF</data>
+      <data key="HA">0x0000000090FFFFFF</data>
       <data key="HP">C_HIGHADDR</data>
-      <data key="MA">OCL_AXIL_32</data>
+      <data key="MA">DDR_ADDR_512_64</data>
       <data key="MX">/</data>
-      <data key="MI">OCL_AXIL_32</data>
-      <data key="MS">SEG_M02_AXI_0_Reg</data>
+      <data key="MI">DDR_ADDR_512_64</data>
+      <data key="MS">SEG_M00_AXI_0_Reg</data>
       <data key="MV">:::</data>
       <data key="TM">both</data>
       <data key="SX">/</data>
-      <data key="SI">M02_AXI_0</data>
+      <data key="SI">DDR_AXI4</data>
       <data key="SS">Reg</data>
       <data key="SV">::AXIcrossbar1_imp:</data>
       <data key="TU">register</data>
@@ -80,6 +66,24 @@
       <data key="VT">AC</data>
     </node>
     <node id="n4">
+      <data key="BA">0x00100000</data>
+      <data key="BP">C_BASEADDR</data>
+      <data key="HA">0x0017FFFF</data>
+      <data key="HP">C_HIGHADDR</data>
+      <data key="MA">OCL_AXIL_32</data>
+      <data key="MX">/</data>
+      <data key="MI">OCL_AXIL_32</data>
+      <data key="MS">SEG_M02_AXI_0_Reg</data>
+      <data key="MV">:::</data>
+      <data key="TM">both</data>
+      <data key="SX">/</data>
+      <data key="SI">M02_AXI_0</data>
+      <data key="SS">Reg</data>
+      <data key="SV">::AXIcrossbar1_imp:</data>
+      <data key="TU">register</data>
+      <data key="VT">AC</data>
+    </node>
+    <node id="n5">
       <data key="BA">0x00000000</data>
       <data key="BP">C_BASEADDR</data>
       <data key="HA">0x0007FFFF</data>
@@ -97,37 +101,28 @@
       <data key="TU">register</data>
       <data key="VT">AC</data>
     </node>
-    <node id="n5">
-      <data key="VH">2</data>
-      <data key="VM">AXIcrossbar1</data>
-      <data key="VT">VR</data>
-    </node>
     <node id="n6">
-      <data key="VM">AXIcrossbar1</data>
-      <data key="VT">BC</data>
-    </node>
-    <node id="n7">
-      <data key="BA">0x0000000080000000</data>
+      <data key="BA">0x00080000</data>
       <data key="BP">C_BASEADDR</data>
-      <data key="HA">0x000000008FFFFFFF</data>
+      <data key="HA">0x000FFFFF</data>
       <data key="HP">C_HIGHADDR</data>
-      <data key="MA">DDR_ADDR_512_64</data>
+      <data key="MA">OCL_AXIL_32</data>
       <data key="MX">/</data>
-      <data key="MI">DDR_ADDR_512_64</data>
-      <data key="MS">SEG_M00_AXI_0_Reg</data>
+      <data key="MI">OCL_AXIL_32</data>
+      <data key="MS">SEG_test_status_Reg</data>
       <data key="MV">:::</data>
       <data key="TM">both</data>
       <data key="SX">/</data>
-      <data key="SI">DDR_AXI4</data>
+      <data key="SI">test_status</data>
       <data key="SS">Reg</data>
       <data key="SV">::AXIcrossbar1_imp:</data>
       <data key="TU">register</data>
       <data key="VT">AC</data>
     </node>
-    <node id="n8">
-      <data key="BA">0x0000000080000000</data>
+    <node id="n7">
+      <data key="BA">0x0000000081000000</data>
       <data key="BP">C_BASEADDR</data>
-      <data key="HA">0x000000008FFFFFFF</data>
+      <data key="HA">0x0000000090FFFFFF</data>
       <data key="HP">C_HIGHADDR</data>
       <data key="MA">DMA_PCIS_AXI4</data>
       <data key="MX">/</data>
@@ -142,26 +137,31 @@
       <data key="TU">register</data>
       <data key="VT">AC</data>
     </node>
-    <edge id="e0" source="n6" target="n5">
+    <node id="n8">
+      <data key="TU">active</data>
+      <data key="VH">2</data>
+      <data key="VT">PM</data>
+    </node>
+    <edge id="e0" source="n1" target="n0">
     </edge>
-    <edge id="e1" source="n5" target="n0">
+    <edge id="e1" source="n0" target="n8">
     </edge>
-    <edge id="e2" source="n4" target="n0">
+    <edge id="e2" source="n5" target="n8">
       <data key="EH">2</data>
     </edge>
-    <edge id="e3" source="n1" target="n0">
+    <edge id="e3" source="n6" target="n8">
       <data key="EH">2</data>
     </edge>
-    <edge id="e4" source="n2" target="n0">
+    <edge id="e4" source="n4" target="n8">
       <data key="EH">2</data>
     </edge>
-    <edge id="e5" source="n3" target="n0">
+    <edge id="e5" source="n7" target="n8">
       <data key="EH">2</data>
     </edge>
-    <edge id="e6" source="n8" target="n0">
+    <edge id="e6" source="n2" target="n8">
       <data key="EH">2</data>
     </edge>
-    <edge id="e7" source="n7" target="n0">
+    <edge id="e7" source="n3" target="n8">
       <data key="EH">2</data>
     </edge>
   </graph>

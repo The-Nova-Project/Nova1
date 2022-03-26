@@ -6451,7 +6451,7 @@
             "value": "24"
           },
           "M00_A00_BASE_ADDR": {
-            "value": "0x0000000080000000"
+            "value": "0x0000000081000000"
           },
           "M00_S01_READ_CONNECTIVITY": {
             "value": "1"
@@ -6469,7 +6469,7 @@
             "value": "24"
           },
           "M02_A00_BASE_ADDR": {
-            "value": "0x0000000081000000"
+            "value": "0x0000000080000000"
           },
           "M03_A00_ADDR_WIDTH": {
             "value": "24"
@@ -6718,7 +6718,7 @@
             "segments": {
               "SEG_DDR_s_Reg": {
                 "address_block": "/DDR_s/Reg",
-                "offset": "0x0000000080000000",
+                "offset": "0x0000000081000000",
                 "range": "16M"
               },
               "SEG_MTMLAddr_s_Reg": {
@@ -6728,7 +6728,7 @@
               },
               "SEG_XBAR2Addr_s_Reg": {
                 "address_block": "/XBAR2Addr_s/Reg",
-                "offset": "0x0000000081000000",
+                "offset": "0x0000000080000000",
                 "range": "16M"
               },
               "SEG_hydra_S_Reg": {
@@ -6744,7 +6744,7 @@
             "segments": {
               "SEG_DDR_s_Reg": {
                 "address_block": "/DDR_s/Reg",
-                "offset": "0x0000000080000000",
+                "offset": "0x0000000081000000",
                 "range": "16M"
               },
               "SEG_MTMLAddr_s_Reg": {
@@ -6754,7 +6754,7 @@
               },
               "SEG_XBAR2Addr_s_Reg": {
                 "address_block": "/XBAR2Addr_s/Reg",
-                "offset": "0x0000000081000000",
+                "offset": "0x0000000080000000",
                 "range": "16M"
               },
               "SEG_hydra_S_Reg": {
@@ -6801,7 +6801,7 @@
             "segments": {
               "SEG_DDR_s_Reg": {
                 "address_block": "/DDR_s/Reg",
-                "offset": "0x0000000080000000",
+                "offset": "0x0000000081000000",
                 "range": "16M"
               },
               "SEG_MTMLAddr_s_Reg": {
@@ -6811,7 +6811,7 @@
               },
               "SEG_XBAR2Addr_s_Reg": {
                 "address_block": "/XBAR2Addr_s/Reg",
-                "offset": "0x0000000081000000",
+                "offset": "0x0000000080000000",
                 "range": "16M"
               },
               "SEG_hydra_S_Reg": {

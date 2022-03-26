@@ -983,13 +983,13 @@ proc create_root_design { parentCell } {
    CONFIG.DATA_WIDTH {64} \
    CONFIG.ID_WIDTH {5} \
    CONFIG.M00_A00_ADDR_WIDTH {24} \
-   CONFIG.M00_A00_BASE_ADDR {0x0000000080000000} \
+   CONFIG.M00_A00_BASE_ADDR {0x0000000081000000} \
    CONFIG.M00_S01_READ_CONNECTIVITY {1} \
    CONFIG.M00_S01_WRITE_CONNECTIVITY {1} \
    CONFIG.M01_A00_ADDR_WIDTH {24} \
    CONFIG.M01_A00_BASE_ADDR {0x0000000082000000} \
    CONFIG.M02_A00_ADDR_WIDTH {24} \
-   CONFIG.M02_A00_BASE_ADDR {0x0000000081000000} \
+   CONFIG.M02_A00_BASE_ADDR {0x0000000080000000} \
    CONFIG.M03_A00_ADDR_WIDTH {24} \
    CONFIG.M03_A00_BASE_ADDR {0x0000000083000000} \
    CONFIG.NUM_MI {4} \
@@ -1075,9 +1075,9 @@ proc create_root_design { parentCell } {
   connect_bd_net -net s_axi_aresetn_0_1 [get_bd_ports s_axi_aresetn_0] [get_bd_pins axi_bram_ctrl_0/s_axi_aresetn] [get_bd_pins axi_crossbar_0/aresetn] [get_bd_pins axi_crossbar_1/aresetn] [get_bd_pins axi_dwidth_converter_0/s_axi_aresetn] [get_bd_pins axi_protocol_convert_0/aresetn] [get_bd_pins axi_uartlite_0/s_axi_aresetn]
 
   # Create address segments
-  assign_bd_address -offset 0x80000000 -range 0x01000000 -target_address_space [get_bd_addr_spaces hydra_m] [get_bd_addr_segs DDR_s/Reg] -force
-  assign_bd_address -offset 0x80000000 -range 0x01000000 -target_address_space [get_bd_addr_spaces XBAR1Addr_m] [get_bd_addr_segs DDR_s/Reg] -force
-  assign_bd_address -offset 0x80000000 -range 0x01000000 -target_address_space [get_bd_addr_spaces MTMLAddr_m] [get_bd_addr_segs DDR_s/Reg] -force
+  assign_bd_address -offset 0x81000000 -range 0x01000000 -target_address_space [get_bd_addr_spaces hydra_m] [get_bd_addr_segs DDR_s/Reg] -force
+  assign_bd_address -offset 0x81000000 -range 0x01000000 -target_address_space [get_bd_addr_spaces XBAR1Addr_m] [get_bd_addr_segs DDR_s/Reg] -force
+  assign_bd_address -offset 0x81000000 -range 0x01000000 -target_address_space [get_bd_addr_spaces MTMLAddr_m] [get_bd_addr_segs DDR_s/Reg] -force
   assign_bd_address -offset 0x83000000 -range 0x01000000 -target_address_space [get_bd_addr_spaces hydra_m] [get_bd_addr_segs MTMLAddr_s/Reg] -force
   assign_bd_address -offset 0x83000000 -range 0x01000000 -target_address_space [get_bd_addr_spaces XBAR1Addr_m] [get_bd_addr_segs MTMLAddr_s/Reg] -force
   assign_bd_address -offset 0x83000000 -range 0x01000000 -target_address_space [get_bd_addr_spaces MTMLAddr_m] [get_bd_addr_segs MTMLAddr_s/Reg] -force
@@ -1085,9 +1085,9 @@ proc create_root_design { parentCell } {
   assign_bd_address -offset 0x00080000 -range 0x00010000 -target_address_space [get_bd_addr_spaces XBAR2Addr_m] [get_bd_addr_segs SMU_s/Reg] -force
   assign_bd_address -offset 0x001C0000 -range 0x00010000 -target_address_space [get_bd_addr_spaces XBAR2Addr_m] [get_bd_addr_segs XBAR1Addr_s/Reg] -force
   assign_bd_address -offset 0x001C0000 -range 0x00010000 -target_address_space [get_bd_addr_spaces S00_AXI_0] [get_bd_addr_segs XBAR1Addr_s/Reg] -force
-  assign_bd_address -offset 0x81000000 -range 0x01000000 -target_address_space [get_bd_addr_spaces MTMLAddr_m] [get_bd_addr_segs XBAR2Addr_s/Reg] -force
-  assign_bd_address -offset 0x81000000 -range 0x01000000 -target_address_space [get_bd_addr_spaces hydra_m] [get_bd_addr_segs XBAR2Addr_s/Reg] -force
-  assign_bd_address -offset 0x81000000 -range 0x01000000 -target_address_space [get_bd_addr_spaces XBAR1Addr_m] [get_bd_addr_segs XBAR2Addr_s/Reg] -force
+  assign_bd_address -offset 0x80000000 -range 0x01000000 -target_address_space [get_bd_addr_spaces MTMLAddr_m] [get_bd_addr_segs XBAR2Addr_s/Reg] -force
+  assign_bd_address -offset 0x80000000 -range 0x01000000 -target_address_space [get_bd_addr_spaces hydra_m] [get_bd_addr_segs XBAR2Addr_s/Reg] -force
+  assign_bd_address -offset 0x80000000 -range 0x01000000 -target_address_space [get_bd_addr_spaces XBAR1Addr_m] [get_bd_addr_segs XBAR2Addr_s/Reg] -force
   assign_bd_address -offset 0x00000000 -range 0x00002000 -target_address_space [get_bd_addr_spaces XBAR2Addr_m] [get_bd_addr_segs axi_bram_ctrl_0/S_AXI/Mem0] -force
   assign_bd_address -offset 0x00000000 -range 0x00002000 -target_address_space [get_bd_addr_spaces S00_AXI_0] [get_bd_addr_segs axi_bram_ctrl_0/S_AXI/Mem0] -force
   assign_bd_address -offset 0x00040000 -range 0x00010000 -target_address_space [get_bd_addr_spaces S00_AXI_0] [get_bd_addr_segs axi_uartlite_0/S_AXI/Reg] -force
