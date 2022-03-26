@@ -1,0 +1,308 @@
+/*
+
+Xilinx Vivado v2021.1 (64-bit) [Major: 2021, Minor: 1]
+SW Build: 3247384 on Thu Jun 10 19:36:07 MDT 2021
+IP Build: 3246043 on Fri Jun 11 00:30:35 MDT 2021
+
+Process ID (PID): 9694
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Sun Mar 20 21:18:37 UTC 2022
+Time zone: 	Coordinated Universal Time (UTC)
+
+OS: CentOS Linux release 7.9.2009 (Core)
+OS Version: 3.10.0-1160.49.1.el7.x86_64
+OS Architecture: amd64
+Available processors (cores): 8
+
+Display: 3.0
+Screen size: 1360x768
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+
+Java version: 	11.0.2 64-bit
+Java home: 	/opt/Xilinx/Vivado/2021.1/tps/lnx64/jre11.0.2
+Java executable: 	/opt/Xilinx/Vivado/2021.1/tps/lnx64/jre11.0.2/bin/java
+Java initial memory (-Xms): 	256 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	muheet
+User home directory: /home/muheet
+User working directory: /home/muheet/stableEnv/cl_test_ss
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /opt/Xilinx/Vivado
+HDI_APPROOT: /opt/Xilinx/Vivado/2021.1
+RDI_DATADIR: /opt/Xilinx/Vivado/2021.1/data
+RDI_BINDIR: /opt/Xilinx/Vivado/2021.1/bin
+
+Vivado preferences file: /home/muheet/.Xilinx/Vivado/2021.1/vivado.xml
+Vivado preferences directory: /home/muheet/.Xilinx/Vivado/2021.1/
+Vivado layouts directory: /home/muheet/.Xilinx/Vivado/2021.1/data/layouts
+PlanAhead jar file: 	/opt/Xilinx/Vivado/2021.1/lib/classes/planAhead.jar
+Vivado log file: 	/home/muheet/stableEnv/cl_test_ss/vivado.log
+Vivado journal file: 	/home/muheet/stableEnv/cl_test_ss/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-9694-ip-172-32-20-153.ap-southeast-1.compute.internal
+
+Xilinx Environment Variables
+----------------------------
+XILINX_DSP: 
+XILINX_HLS: /opt/Xilinx/Vitis_HLS/2021.1
+XILINX_PLANAHEAD: /opt/Xilinx/Vivado/2021.1
+XILINX_SDK: /opt/Xilinx/Vitis/2021.1
+XILINX_VITIS: /opt/Xilinx/Vitis/2021.1
+XILINX_VIVADO: /opt/Xilinx/Vivado/2021.1
+XILINX_VIVADO_HLS: /opt/Xilinx/Vivado/2021.1
+
+
+GUI allocated memory:	308 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 5,765 MB
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bz (cs):  Open Project : addNotify
+// Opening Vivado Project: cl_test_ss.xpr. Version: Vivado v2021.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// Tcl Message: open_project cl_test_ss.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 5,775 MB. GUI used memory: 54 MB. Current time: 3/20/22, 9:18:38 PM UTC
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project cl_test_ss.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2021.1/data/ip'. 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 69 MB (+69914kb) [00:00:17]
+// [Engine Memory]: 5,810 MB (+5940517kb) [00:00:17]
+// [GUI Memory]: 92 MB (+20471kb) [00:00:18]
+// WARNING: HEventQueue.dispatchEvent() is taking  4818 ms.
+// Project name: cl_test_ss; location: /home/muheet/stableEnv/cl_test_ss; part: xcvu9p-flga2104-1-e
+// [GUI Memory]: 99 MB (+2324kb) [00:00:22]
+// Tcl Message: open_project: Time (s): cpu = 00:00:21 ; elapsed = 00:00:11 . Memory (MB): peak = 7615.289 ; gain = 75.234 ; free physical = 7645 ; free virtual = 16715 
+dismissDialog("Open Project"); // bz
+// [GUI Memory]: 120 MB (+16997kb) [00:00:24]
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// HMemoryUtils.trashcanNow. Engine heap size: 5,890 MB. GUI used memory: 75 MB. Current time: 3/20/22, 9:18:53 PM UTC
+// Tcl Message: INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'. 
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator, Open Block Design]", 7, false); // o
+// Run Command: PAResourceCommand.PACommandNames_OPEN_BLOCK_DESIGN
+// bz (cs):  Open Block Design : addNotify
+// TclEventType: LOAD_FEATURE
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: open_bd_design {/home/muheet/stableEnv/cl_test_ss/cl_test_ss.srcs/sources_1/bd/AXIcrossbar1/AXIcrossbar1.bd} 
+// Tcl Message: Reading block design file </home/muheet/stableEnv/cl_test_ss/cl_test_ss.srcs/sources_1/bd/AXIcrossbar1/AXIcrossbar1.bd>... 
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: LOAD_FEATURE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_OPEN_DIAGRAM
+// [GUI Memory]: 138 MB (+11992kb) [00:00:34]
+// Tcl Message: Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - axi_crossbar_2 Adding component instance block -- xilinx.com:ip:axi_uartlite:2.0 - axi_uartlite_1 Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - axi_crossbar_3 Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - axi_dwidth_converter_0 Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - axi_dwidth_converter_1 Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - axi_protocol_convert_0 Successfully read diagram <AXIcrossbar1> from block design file </home/muheet/stableEnv/cl_test_ss/cl_test_ss.srcs/sources_1/bd/AXIcrossbar1/AXIcrossbar1.bd> 
+// TclEventType: RSB_OPEN_DIAGRAM
+// WARNING: HEventQueue.dispatchEvent() is taking  2060 ms.
+// JavaFX intialization before: 1647811140880
+// JavaFX initialization after: 1647811141806
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// [Engine Memory]: 7,043 MB (+988182kb) [00:00:38]
+// 'bF' command handler elapsed time: 6 seconds
+dismissDialog("Open Block Design"); // bz
+// [GUI Memory]: 149 MB (+4412kb) [00:00:40]
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // Q
+// PAPropertyPanels.initPanels (axi_crossbar_3) elapsed time: 0.4s
+// [GUI Memory]: 163 MB (+7478kb) [00:00:43]
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// N (cs):  Re-customize IP : addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 7,213 MB. GUI used memory: 110 MB. Current time: 3/20/22, 9:19:08 PM UTC
+// r (cs): Re-customize IP: addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  1788 ms.
+dismissDialog("Re-customize IP"); // N
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Re-customize IP"); // r
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Address Editor", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // m
+// PAPropertyPanels.initPanels (DDR_AXI4) elapsed time: 0.3s
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_PIN
+// r (cs): Customize Port: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Customize Port"); // r
+unmaximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // Q
+// [GUI Memory]: 174 MB (+2710kb) [00:01:11]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AXIcrossbar1_wrapper (AXIcrossbar1_wrapper.v)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AXIcrossbar1_wrapper (AXIcrossbar1_wrapper.v), AXIcrossbar1_i : AXIcrossbar1 (AXIcrossbar1.bd)]", 2, true, false, false, false, false, true); // D - Double Click - Node
+// WARNING: HEventQueue.dispatchEvent() is taking  1872 ms.
+// Elapsed time: 19 seconds
+selectCodeEditor("AXIcrossbar1_wrapper.v", 205, 101); // bP
+selectCodeEditor("AXIcrossbar1_wrapper.v", 205, 101); // bP
+selectCodeEditor("AXIcrossbar1_wrapper.v", 205, 101); // bP
+selectCodeEditor("AXIcrossbar1_wrapper.v", 205, 101); // bP
+selectCodeEditor("AXIcrossbar1_wrapper.v", 205, 101); // bP
+selectCodeEditor("AXIcrossbar1_wrapper.v", 205, 101); // bP
+selectCodeEditor("AXIcrossbar1_wrapper.v", 205, 101); // bP
+selectCodeEditor("AXIcrossbar1_wrapper.v", 205, 101); // bP
+// Elapsed time: 10 seconds
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // Q
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // m
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_PIN
+// r (cs): Customize Port: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Customize Port"); // r
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "AXIcrossbar1_wrapper.v", 3); // m
+unmaximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // Q
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AXIcrossbar1_wrapper (AXIcrossbar1_wrapper.v), AXIcrossbar1_i : AXIcrossbar1 (AXIcrossbar1.bd), AXIcrossbar1 (AXIcrossbar1.v)]", 3, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AXIcrossbar1_wrapper (AXIcrossbar1_wrapper.v), AXIcrossbar1_i : AXIcrossbar1 (AXIcrossbar1.bd), AXIcrossbar1 (AXIcrossbar1.v), axi_crossbar_2 : AXIcrossbar1_axi_crossbar_0_0 (AXIcrossbar1_axi_crossbar_0_0.xci)]", 4, false, false, false, false, false, true); // D - Double Click
+// [GUI Memory]: 191 MB (+8729kb) [00:02:18]
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // Q
+selectCodeEditor("AXIcrossbar1.v", 853, 159); // E
+// Elapsed time: 19 seconds
+unmaximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // Q
+// Elapsed time: 31 seconds
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // Q
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "AXIcrossbar1_wrapper.v", 3); // m
+// Elapsed time: 142 seconds
+selectCodeEditor("AXIcrossbar1_wrapper.v", 180, 189); // bP
+selectCodeEditor("AXIcrossbar1_wrapper.v", 215, 247); // bP
+selectCodeEditor("AXIcrossbar1_wrapper.v", 39, 414); // bP
+// Elapsed time: 21 seconds
+selectCodeEditor("AXIcrossbar1_wrapper.v", 176, 204); // bP
+// Elapsed time: 45 seconds
+selectCodeEditor("AXIcrossbar1_wrapper.v", 142, 225); // bP
+// Elapsed time: 35 seconds
+selectCodeEditor("AXIcrossbar1_wrapper.v", 213, 377); // bP
+// Elapsed time: 95 seconds
+selectCodeEditor("AXIcrossbar1_wrapper.v", 180, 312); // bP
+selectCodeEditor("AXIcrossbar1_wrapper.v", 155, 329); // bP
+selectCodeEditor("AXIcrossbar1_wrapper.v", 155, 329); // bP
+selectCodeEditor("AXIcrossbar1_wrapper.v", 155, 329); // bP
+// Elapsed time: 42 seconds
+selectCodeEditor("AXIcrossbar1_wrapper.v", 188, 163); // bP
+// Elapsed time: 11 seconds
+selectCodeEditor("AXIcrossbar1_wrapper.v", 123, 75); // bP
+selectCodeEditor("AXIcrossbar1_wrapper.v", 123, 75); // bP
+selectCodeEditor("AXIcrossbar1_wrapper.v", 123, 75); // bP
+selectCodeEditor("AXIcrossbar1_wrapper.v", 123, 75); // bP
+// Elapsed time: 20 seconds
+selectCodeEditor("AXIcrossbar1_wrapper.v", 234, 220); // bP
+// Elapsed time: 55 seconds
+selectCodeEditor("AXIcrossbar1_wrapper.v", 162, 311); // bP
+// Elapsed time: 792 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // m
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// N (cs):  Re-customize IP : addNotify
+// r (cs): Re-customize IP: addNotify
+dismissDialog("Re-customize IP"); // N
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Address", 3); // bi
+setText("My M00_A00_ADDR_WIDTH", "28", true); // B
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Re-customize IP"); // r
+// Tcl Command: 'set_property -dict [list CONFIG.M00_A00_ADDR_WIDTH {28}] [get_bd_cells axi_crossbar_3]'
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// r (cs): Re-customize IP: addNotify
+// bz (r):  Customize IP : addNotify
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: startgroup 
+// Tcl Message: set_property -dict [list CONFIG.M00_A00_ADDR_WIDTH {28}] [get_bd_cells axi_crossbar_3] 
+// Tcl Message: endgroup 
+dismissDialog("Customize IP"); // bz
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Address Editor", 1); // m
+// HMemoryUtils.trashcanNow. Engine heap size: 7,238 MB. GUI used memory: 128 MB. Current time: 3/20/22, 9:43:48 PM UTC
+// Tcl Command: 'set_property range 256M [get_bd_addr_segs {DDR_ADDR_512_64/SEG_M00_AXI_0_Reg}]'
+// TclEventType: RSB_UPDATE_ADDRASSIGN
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: set_property range 256M [get_bd_addr_segs {DDR_ADDR_512_64/SEG_M00_AXI_0_Reg}] 
+// Tcl Command: 'set_property range 256M [get_bd_addr_segs {DMA_PCIS_AXI4/SEG_M00_AXI_0_Reg}]'
+// TclEventType: RSB_UPDATE_ADDRASSIGN
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: set_property range 256M [get_bd_addr_segs {DMA_PCIS_AXI4/SEG_M00_AXI_0_Reg}] 
+// Run Command: PAResourceCommand.PACommandNames_SAVE_RSB_DESIGN
+// TclEventType: RSB_SAVE_DIAGRAM
+// bz (cs):  Save Design : addNotify
+// Tcl Message: save_bd_design 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: Wrote  : </home/muheet/stableEnv/cl_test_ss/cl_test_ss.srcs/sources_1/bd/AXIcrossbar1/AXIcrossbar1.bd>  Wrote  : </home/muheet/stableEnv/cl_test_ss/cl_test_ss.srcs/sources_1/bd/AXIcrossbar1/ui/bd_cc354dec.ui>  
+// Elapsed time: 19 seconds
+dismissDialog("Save Design"); // bz
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // m
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// N (cs):  Re-customize IP : addNotify
+// r (cs): Re-customize IP: addNotify
+dismissDialog("Re-customize IP"); // N
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Address", 3); // bi
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Re-customize IP"); // r
+// Tcl Message: startgroup 
+// Tcl Message: endgroup 
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// N (cs):  Re-customize IP : addNotify
+// r (cs): Re-customize IP: addNotify
+// Elapsed time: 549 seconds
+dismissDialog("Re-customize IP"); // N
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Address", 3); // bi
+// Elapsed time: 12 seconds
+setText("My M00_A00_BASE_ADDR", "0x0000000080000000"); // B
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Re-customize IP"); // r
+// Tcl Message: startgroup 
+// Tcl Message: endgroup 
+// [GUI Memory]: 202 MB (+1307kb) [00:38:38]
+// HMemoryUtils.trashcanNow. Engine heap size: 7,175 MB. GUI used memory: 115 MB. Current time: 3/20/22, 10:13:48 PM UTC
