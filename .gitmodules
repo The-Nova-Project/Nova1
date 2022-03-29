@@ -1,0 +1,3 @@
+[submodule "aws-fpga"]
+	path = aws-fpga
+	url = https://github.com/The-Nova-Project/aws-fpga
