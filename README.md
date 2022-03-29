@@ -7,6 +7,13 @@ focus on latest open-source tools and low-cost development methodologies
 - AWS-Cloud FPGA
 
 ## Build Prerequisites
+
+```
+git clone https://github.com/The-Nova-Project/Nova1
+cd nova1 
+git submodule update --init --recursive
+```
+
  Create a `StableEnv` folder for setting up the system `/home/$USER/StableEnv` 
  Change the `$USER` name in this repo with your `$USER` name 
 
