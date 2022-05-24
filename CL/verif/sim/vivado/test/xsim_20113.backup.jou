@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# xsim v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Fri Mar 25 19:45:01 2022
+# Process ID: 20113
+# Current directory: /home/muheet/stableEnv/aws-fpga/hdk/cl/developer_designs/xlx_nova_project/verif/sim/vivado/test
+# Command line: xsim -log test.log -mode tcl -source {xsim.dir/tb/xsim_script.tcl}
+# Log file: /home/muheet/stableEnv/aws-fpga/hdk/cl/developer_designs/xlx_nova_project/verif/sim/vivado/test/test.log
+# Journal file: /home/muheet/stableEnv/aws-fpga/hdk/cl/developer_designs/xlx_nova_project/verif/sim/vivado/test/xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/tb/xsim_script.tcl
+source /home/muheet/stableEnv/aws-fpga/hdk/cl/developer_designs/xlx_nova_project/verif/scripts/waves.tcl

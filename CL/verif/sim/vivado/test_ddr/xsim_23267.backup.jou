@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# xsim v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Mon May 23 13:00:07 2022
+# Process ID: 23267
+# Current directory: /home/muheet/stableEnv/New_Folder/verif/sim/vivado/test_ddr
+# Command line: xsim -source {xsim.dir/tb/xsim_script.tcl}
+# Log file: /home/muheet/stableEnv/New_Folder/verif/sim/vivado/test_ddr/xsim.log
+# Journal file: /home/muheet/stableEnv/New_Folder/verif/sim/vivado/test_ddr/xsim.jou
+#-----------------------------------------------------------
+start_gui
+source xsim.dir/tb/xsim_script.tcl
+open_wave_config /home/muheet/stableEnv/New_Folder/verif/sim/vivado/test_ddr/tb.wcfg
+close_sim

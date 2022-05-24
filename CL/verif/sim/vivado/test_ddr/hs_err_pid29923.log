@@ -1,0 +1,19 @@
+#
+# An unexpected error has occurred (11)
+#
+Stack:
+/opt/Xilinx/Vivado/2021.1/tps/lnx64/jre11.0.2/lib//server/libjvm.so(+0xc04c3b) [0x7f284f77ac3b]
+/opt/Xilinx/Vivado/2021.1/tps/lnx64/jre11.0.2/lib//server/libjvm.so(JVM_handle_linux_signal+0x14e) [0x7f284f77f8de]
+/opt/Xilinx/Vivado/2021.1/tps/lnx64/jre11.0.2/lib//server/libjvm.so(+0xbfd538) [0x7f284f773538]
+/lib64/libpthread.so.0(+0xf630) [0x7f28d05cf630]
+/opt/Xilinx/Vivado/2021.1/lib/lnx64.o/librdi_simdata.so(std::_Hashtable<RSDData::RSDISimulationObject const*, std::pair<RSDData::RSDISimulationObject const* const, Tcl_Obj*>, std::allocator<std::pair<RSDData::RSDISimulationObject const* const, Tcl_Obj*> >, std::__detail::_Select1st, std::equal_to<RSDData::RSDISimulationObject const*>, boost::hash<RSDData::RSDISimulationObject const*>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, false> >::equal_range(RSDData::RSDISimulationObject const* const&)+0x2b) [0x7f28bb09771b]
+/opt/Xilinx/Vivado/2021.1/lib/lnx64.o/librdi_simdata.so(RSDData::RSDISimulationObject::~RSDISimulationObject()+0x60) [0x7f28bb0972c0]
+/opt/Xilinx/Vivado/2021.1/lib/lnx64.o/librdi_simdata.so(RSDData::RSDLiveSimulationObject::~RSDLiveSimulationObject()+0x9) [0x7f28bb099299]
+/opt/Xilinx/Vivado/2021.1/lib/lnx64.o/librdi_simdata.so(RSDData::RSDSimulationManager::shutDown()+0x5f) [0x7f28bb0be39f]
+/lib64/libc.so.6(+0x39ce9) [0x7f28d022bce9]
+/lib64/libc.so.6(+0x39d37) [0x7f28d022bd37]
+/lib64/libX11.so.6(_XIOError+0x58) [0x7f28bbd074a8]
+/lib64/libX11.so.6(_XReply+0x3db) [0x7f28bbd0558b]
+/lib64/libX11.so.6(XGetInputFocus+0x53) [0x7f28bbcea693]
+/opt/Xilinx/Vivado/2021.1/tps/lnx64/jre11.0.2/lib/libawt_xawt.so(Java_sun_awt_X11_XlibWrapper_XGetInputFocus+0x18) [0x7f27faedf9c8]
+[0x7f283ff75e84]
