@@ -25,7 +25,7 @@ source source_file.sh
 
 Then change the directory for test
 ```
-cd /home/$USER/StableEnv/aws-fpga/hdk/cl/developer_designs/xlx_nova_project/verif/scripts/
+cd /home/$USER/StableEnv/CL/verif/scripts/
 ```
 
 Then make the environment for simulation and compilation
