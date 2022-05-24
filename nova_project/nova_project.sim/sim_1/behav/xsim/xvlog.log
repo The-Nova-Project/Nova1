@@ -1,14 +1,30 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/muheet/Desktop/nova_project/nova_project.ip_user_files/bd/xlx_design_subsystem/ip/xlx_design_subsystem_axi_dwidth_converter_0_0/sim/xlx_design_subsystem_axi_dwidth_converter_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/muheet/stableEnv/nova_project/nova_project.ip_user_files/bd/xlx_design_subsystem/ip/xlx_design_subsystem_axi_dwidth_converter_0_0/sim/xlx_design_subsystem_axi_dwidth_converter_0_0.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module xlx_design_subsystem_axi_dwidth_converter_0_0
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/muheet/Desktop/nova_project/nova_project.ip_user_files/bd/xlx_design_subsystem/ip/xlx_design_subsystem_axi_protocol_convert_0_0/sim/xlx_design_subsystem_axi_protocol_convert_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/muheet/stableEnv/nova_project/nova_project.ip_user_files/bd/xlx_design_subsystem/ip/xlx_design_subsystem_axi_protocol_convert_0_0/sim/xlx_design_subsystem_axi_protocol_convert_0_0.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module xlx_design_subsystem_axi_protocol_convert_0_0
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/muheet/Desktop/nova_project/nova_project.ip_user_files/bd/xlx_design_subsystem/ip/xlx_design_subsystem_axi_crossbar_0_0/sim/xlx_design_subsystem_axi_crossbar_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/muheet/stableEnv/nova_project/nova_project.ip_user_files/bd/xlx_design_subsystem/ip/xlx_design_subsystem_axi_crossbar_0_0/sim/xlx_design_subsystem_axi_crossbar_0_0.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module xlx_design_subsystem_axi_crossbar_0_0
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/muheet/Desktop/nova_project/nova_project.ip_user_files/bd/xlx_design_subsystem/ip/xlx_design_subsystem_blk_mem_gen_0_0/sim/xlx_design_subsystem_blk_mem_gen_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/muheet/stableEnv/nova_project/nova_project.ip_user_files/bd/xlx_design_subsystem/ip/xlx_design_subsystem_blk_mem_gen_0_0/sim/xlx_design_subsystem_blk_mem_gen_0_0.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module xlx_design_subsystem_blk_mem_gen_0_0
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/muheet/Desktop/nova_project/nova_project.ip_user_files/bd/xlx_design_subsystem/ip/xlx_design_subsystem_axi_crossbar_1_0/sim/xlx_design_subsystem_axi_crossbar_1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/muheet/stableEnv/nova_project/nova_project.ip_user_files/bd/xlx_design_subsystem/ip/xlx_design_subsystem_axi_crossbar_1_0/sim/xlx_design_subsystem_axi_crossbar_1_0.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module xlx_design_subsystem_axi_crossbar_1_0
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/muheet/Desktop/nova_project/nova_project.ip_user_files/bd/xlx_design_subsystem/sim/xlx_design_subsystem.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/muheet/stableEnv/nova_project/nova_project.ip_user_files/bd/xlx_design_subsystem/sim/xlx_design_subsystem.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module xlx_design_subsystem
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/muheet/Desktop/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/hdl/xlx_design_subsystem_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/hdl/xlx_design_subsystem_wrapper.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module xlx_design_subsystem_wrapper
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/stableEnv/nova_project/nova_project.srcs/sources_1/new/xlx_subsystem.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xlx_subsystem
+INFO: [VRFC 10-2458] undeclared symbol APB_M_paddr, assumed default net type wire [/home/muheet/stableEnv/nova_project/nova_project.srcs/sources_1/new/xlx_subsystem.sv:283]
+INFO: [VRFC 10-2458] undeclared symbol APB_M_pwdata, assumed default net type wire [/home/muheet/stableEnv/nova_project/nova_project.srcs/sources_1/new/xlx_subsystem.sv:284]
+INFO: [VRFC 10-2458] undeclared symbol APB_M_pwrite, assumed default net type wire [/home/muheet/stableEnv/nova_project/nova_project.srcs/sources_1/new/xlx_subsystem.sv:285]
+INFO: [VRFC 10-2458] undeclared symbol APB_M_psel, assumed default net type wire [/home/muheet/stableEnv/nova_project/nova_project.srcs/sources_1/new/xlx_subsystem.sv:286]
+INFO: [VRFC 10-2458] undeclared symbol APB_M_penable, assumed default net type wire [/home/muheet/stableEnv/nova_project/nova_project.srcs/sources_1/new/xlx_subsystem.sv:287]
+INFO: [VRFC 10-2458] undeclared symbol APB_M_prdata, assumed default net type wire [/home/muheet/stableEnv/nova_project/nova_project.srcs/sources_1/new/xlx_subsystem.sv:288]
+INFO: [VRFC 10-2458] undeclared symbol APB_M_pready, assumed default net type wire [/home/muheet/stableEnv/nova_project/nova_project.srcs/sources_1/new/xlx_subsystem.sv:289]
+INFO: [VRFC 10-2458] undeclared symbol APB_M_pslverr, assumed default net type wire [/home/muheet/stableEnv/nova_project/nova_project.srcs/sources_1/new/xlx_subsystem.sv:290]
+INFO: [VRFC 10-2458] undeclared symbol XBAR1Addr_arregion, assumed default net type wire [/home/muheet/stableEnv/nova_project/nova_project.srcs/sources_1/new/xlx_subsystem.sv:545]
+INFO: [VRFC 10-2458] undeclared symbol XBAR1Addr_awregion, assumed default net type wire [/home/muheet/stableEnv/nova_project/nova_project.srcs/sources_1/new/xlx_subsystem.sv:557]
+INFO: [VRFC 10-2458] undeclared symbol XBAR2Addr_arregion, assumed default net type wire [/home/muheet/stableEnv/nova_project/nova_project.srcs/sources_1/new/xlx_subsystem.sv:621]
+INFO: [VRFC 10-2458] undeclared symbol XBAR2Addr_awregion, assumed default net type wire [/home/muheet/stableEnv/nova_project/nova_project.srcs/sources_1/new/xlx_subsystem.sv:633]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/muheet/stableEnv/nova_project/nova_project.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

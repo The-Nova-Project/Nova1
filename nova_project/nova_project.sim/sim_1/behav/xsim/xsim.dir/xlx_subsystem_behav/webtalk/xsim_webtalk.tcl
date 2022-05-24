@@ -1,6 +1,6 @@
-webtalk_init -webtalk_dir /home/muheet/Desktop/nova_project/nova_project.sim/sim_1/behav/xsim/xsim.dir/xlx_subsystem_behav/webtalk/
+webtalk_init -webtalk_dir /home/muheet/stableEnv/nova_project/nova_project.sim/sim_1/behav/xsim/xsim.dir/xlx_subsystem_behav/webtalk/
 webtalk_register_client -client project
-webtalk_add_data -client project -key date_generated -value "Fri Mar 11 10:32:07 2022" -context "software_version_and_target_device"
+webtalk_add_data -client project -key date_generated -value "Wed Mar 23 17:12:47 2022" -context "software_version_and_target_device"
 webtalk_add_data -client project -key product_version -value "XSIM v2021.1 (64-bit)" -context "software_version_and_target_device"
 webtalk_add_data -client project -key build_version -value "3247384" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_platform -value "LIN64" -context "software_version_and_target_device"
@@ -14,7 +14,7 @@ webtalk_add_data -client project -key target_package -value "not_applicable" -co
 webtalk_add_data -client project -key target_speed -value "not_applicable" -context "software_version_and_target_device"
 webtalk_add_data -client project -key random_id -value "e4c17937-bd11-4d6f-830d-51614f387963" -context "software_version_and_target_device"
 webtalk_add_data -client project -key project_id -value "e001659db4714a5d8d584e638b1d6c2f" -context "software_version_and_target_device"
-webtalk_add_data -client project -key project_iteration -value "6" -context "software_version_and_target_device"
+webtalk_add_data -client project -key project_iteration -value "10" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_name -value "CentOS" -context "user_environment"
 webtalk_add_data -client project -key os_release -value "CentOS Linux release 7.9.2009 (Core)" -context "user_environment"
 webtalk_add_data -client project -key cpu_name -value "Intel(R) Xeon(R) Platinum 8259CL CPU @ 2.50GHz" -context "user_environment"
@@ -27,6 +27,6 @@ webtalk_add_data -client xsim -key trace_waveform -value "true" -context "xsim\\
 webtalk_add_data -client xsim -key runtime -value "1 us" -context "xsim\\usage"
 webtalk_add_data -client xsim -key iteration -value "0" -context "xsim\\usage"
 webtalk_add_data -client xsim -key Simulation_Time -value "0.11_sec" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Simulation_Memory -value "145148_KB" -context "xsim\\usage"
-webtalk_transmit -clientid 3352919651 -regid "" -xml /home/muheet/Desktop/nova_project/nova_project.sim/sim_1/behav/xsim/xsim.dir/xlx_subsystem_behav/webtalk/usage_statistics_ext_xsim.xml -html /home/muheet/Desktop/nova_project/nova_project.sim/sim_1/behav/xsim/xsim.dir/xlx_subsystem_behav/webtalk/usage_statistics_ext_xsim.html -wdm /home/muheet/Desktop/nova_project/nova_project.sim/sim_1/behav/xsim/xsim.dir/xlx_subsystem_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
+webtalk_add_data -client xsim -key Simulation_Memory -value "144032_KB" -context "xsim\\usage"
+webtalk_transmit -clientid 1709705216 -regid "" -xml /home/muheet/stableEnv/nova_project/nova_project.sim/sim_1/behav/xsim/xsim.dir/xlx_subsystem_behav/webtalk/usage_statistics_ext_xsim.xml -html /home/muheet/stableEnv/nova_project/nova_project.sim/sim_1/behav/xsim/xsim.dir/xlx_subsystem_behav/webtalk/usage_statistics_ext_xsim.html -wdm /home/muheet/stableEnv/nova_project/nova_project.sim/sim_1/behav/xsim/xsim.dir/xlx_subsystem_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
 webtalk_terminate
