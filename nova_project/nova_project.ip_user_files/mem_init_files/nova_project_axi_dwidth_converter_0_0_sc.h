@@ -1,5 +1,5 @@
-#ifndef IP_NOVA_PROJECT_AXI_DWIDTH_CONVERTER_0_0_SC_H_
-#define IP_NOVA_PROJECT_AXI_DWIDTH_CONVERTER_0_0_SC_H_
+#ifndef IP_nova_project_AXI_DWIDTH_CONVERTER_0_0_SC_H_
+#define IP_nova_project_AXI_DWIDTH_CONVERTER_0_0_SC_H_
 
 // (c) Copyright 1995-2022 Xilinx, Inc. All rights reserved.
 // 
@@ -95,4 +95,4 @@ private:
 
 };
 
-#endif // IP_NOVA_PROJECT_AXI_DWIDTH_CONVERTER_0_0_SC_H_
+#endif // IP_nova_project_AXI_DWIDTH_CONVERTER_0_0_SC_H_

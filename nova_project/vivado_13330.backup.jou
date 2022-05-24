@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Sun May 22 10:15:16 2022
+# Process ID: 13330
+# Current directory: /home/muheet/stableEnv/nova_project
+# Command line: vivado nova_project.xpr
+# Log file: /home/muheet/stableEnv/nova_project/vivado.log
+# Journal file: /home/muheet/stableEnv/nova_project/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project nova_project.xpr
+update_compile_order -fileset sources_1
+open_bd_design {/home/muheet/stableEnv/nova_project/nova_project.srcs/sources_1/bd/xlx_design_subsystem/xlx_design_subsystem.bd}

@@ -58,7 +58,7 @@ input [7:0]S00_AXI_0_wstrb,
 input [0:0]S00_AXI_0_wvalid,
 input UART_0_rxd,
 output UART_0_txd,
-input interrupt_0,
+output interrupt_0,
 input s_axi_aclk_0,
 input s_axi_aresetn_0,
 output [255:192]hydra_S_araddr,
@@ -178,98 +178,50 @@ output [7:0]DDR_s_wstrb,
 output [0:0]DDR_s_wvalid
 
 );
-logic [191:128]XBAR1Addr_araddr;
-    logic [5:4]XBAR1Addr_arburst;
-    logic [11:8]XBAR1Addr_arcache;
-    logic [14:10]XBAR1Addr_arid;
-    logic [23:16]XBAR1Addr_arlen;
-    logic [2:2]XBAR1Addr_arlock;
-    logic [8:6]XBAR1Addr_arprot;
-    logic [11:8]XBAR1Addr_arqos;
-    logic [2:2]XBAR1Addr_arready;
-    logic [8:6]XBAR1Addr_arsize;
-    logic [2:2]XBAR1Addr_arvalid;
-    logic [191:128]XBAR1Addr_awaddr;
-    logic [5:4]XBAR1Addr_awburst;
-    logic [11:8]XBAR1Addr_awcache;
-    logic [14:10]XBAR1Addr_awid;
-    logic [23:16]XBAR1Addr_awlen;
-    logic [2:2]XBAR1Addr_awlock;
-    logic [8:6]XBAR1Addr_awprot;
-    logic [11:8]XBAR1Addr_awqos;
-    logic [2:2]XBAR1Addr_awready;
-    logic [8:6]XBAR1Addr_awsize;
-    logic [2:2]XBAR1Addr_awvalid;
-    logic [14:10]XBAR1Addr_bid;
-    logic [2:2]XBAR1Addr_bready;
-    logic [5:4]XBAR1Addr_bresp;
-    logic [2:2]XBAR1Addr_bvalid;
-    logic [191:128]XBAR1Addr_rdata;
-    logic [14:10]XBAR1Addr_rid;
-    logic [2:2]XBAR1Addr_rlast;
-    logic [2:2]XBAR1Addr_rready;
-    logic [5:4]XBAR1Addr_rresp;
-    logic [2:2]XBAR1Addr_rvalid;
-    logic [191:128]XBAR1Addr_wdata;
-    logic [2:2]XBAR1Addr_wlast;
-    logic [2:2]XBAR1Addr_wready;
-    logic [23:16]XBAR1Addr_wstrb;
-    logic [2:2]XBAR1Addr_wvalid;
-
-    logic [127:64]XBAR2Addr_araddr;
-    logic [3:2]XBAR2Addr_arburst;
-    logic [7:4]XBAR2Addr_arcache;
-    logic [9:5]XBAR2Addr_arid;
-    logic [15:8]XBAR2Addr_arlen;
-    logic [1:1]XBAR2Addr_arlock;
-    logic [5:3]XBAR2Addr_arprot;
-    logic [7:4]XBAR2Addr_arqos;
-    logic [1:1]XBAR2Addr_arready;
-    logic [5:3]XBAR2Addr_arsize;
-    logic [1:1]XBAR2Addr_arvalid;
-    logic [127:64]XBAR2Addr_awaddr;
-    logic [3:2]XBAR2Addr_awburst;
-    logic [7:4]XBAR2Addr_awcache;
-    logic [9:5]XBAR2Addr_awid;
-    logic [15:8]XBAR2Addr_awlen;
-    logic [1:1]XBAR2Addr_awlock;
-    logic [5:3]XBAR2Addr_awprot;
-    logic [7:4]XBAR2Addr_awqos;
-    logic [1:1]XBAR2Addr_awready;
-    logic [5:3]XBAR2Addr_awsize;
-    logic [1:1]XBAR2Addr_awvalid;
-    logic [9:5]XBAR2Addr_bid;
-    logic [1:1]XBAR2Addr_bready;
-    logic [3:2]XBAR2Addr_bresp;
-    logic [1:1]XBAR2Addr_bvalid;
-    logic [127:64]XBAR2Addr_rdata;
-    logic [9:5]XBAR2Addr_rid;
-    logic [1:1]XBAR2Addr_rlast;
-    logic [1:1]XBAR2Addr_rready;
-    logic [3:2]XBAR2Addr_rresp;
-    logic [1:1]XBAR2Addr_rvalid;
-    logic [127:64]XBAR2Addr_wdata;
-    logic [1:1]XBAR2Addr_wlast;
-    logic [1:1]XBAR2Addr_wready;
-    logic [15:8]XBAR2Addr_wstrb;
-    logic [1:1]XBAR2Addr_wvalid;
-
-    wire [63:0] mask_araddr;
-  wire [63:0] mask_awaddr;
-  //wire [63:0] s_mask_araddr;
-  //wire [63:0] s_mask_awadr;
-  wire [63:0] XBAR2Addr_awaddr_mask;
-  wire [63:0] XBAR2Addr_araddr_mask;
-
-
-   assign XBAR2Addr_araddr_mask = XBAR2Addr_araddr & 64'h0000_0000_001f_ffff;
-   assign XBAR2Addr_awaddr_mask = XBAR2Addr_awaddr & 64'h0000_0000_001f_ffff;
-   //assign hydra_s_mask_araddr    = hydra_S_araddr & 64'h0000_0000_001f_ffff;
-   //assign hydra_s_mask_awaddr    = hydra_S_awaddr & 64'h0000_0000_001f_ffff;
-    
-    
-    
-xlx_design_subsystem_wrapper design_ss
+  logic [63:0]xbar_araddr;
+  logic [1:0]xbar_arburst;
+  logic [3:0]xbar_arcache;
+  logic [4:0]xbar_arid;
+  logic [7:0]xbar_arlen;
+  logic [0:0]xbar_arlock;
+  logic [2:0]xbar_arprot;
+  logic [3:0]xbar_arqos;
+  logic [0:0]xbar_arready;
+  logic [3:0]xbar_arregion;
+  logic [2:0]xbar_arsize;
+  logic [0:0]xbar_arvalid;
+  logic [63:0]xbar_awaddr;
+  logic [1:0]xbar_awburst;
+  logic [3:0]xbar_awcache;
+  logic [4:0]xbar_awid;
+  logic [7:0]xbar_awlen;
+  logic [0:0]xbar_awlock;
+  logic [2:0]xbar_awprot;
+  logic [3:0]xbar_awqos;
+  logic [0:0]xbar_awready;
+  logic [3:0]xbar_awregion;
+  logic [2:0]xbar_awsize;
+  logic [0:0]xbar_awvalid;
+  logic [4:0]xbar_bid;
+  logic [0:0]xbar_bready;
+  logic [1:0]xbar_bresp;
+  logic [0:0]xbar_bvalid;
+  logic [63:0]xbar_rdata;
+  logic [4:0]xbar_rid;
+  logic [0:0]xbar_rlast;
+  logic [0:0]xbar_rready;
+  logic [1:0]xbar_rresp;
+  logic [0:0]xbar_rvalid;
+  logic [63:0]xbar_wdata;
+  logic [0:0]xbar_wlast;
+  logic [0:0]xbar_wready;
+  logic [7:0]xbar_wstrb;
+  logic [0:0]xbar_wvalid;
+  logic [63:0]xbar_araddr_mask;
+  logic [63:0]xbar_awaddr_mask;
+   assign xbar_araddr_mask = xbar_araddr & 64'h0000_0000_001f_ffff;
+   assign xbar_awaddr_mask = xbar_awaddr & 64'h0000_0000_001f_ffff;
+xlx_design_subsystem design_ss
    (.DDR_s_araddr(DDR_s_araddr),
     .DDR_s_arburst(DDR_s_arburst),
     .DDR_s_arcache(DDR_s_arcache),
@@ -463,158 +415,6 @@ xlx_design_subsystem_wrapper design_ss
     .S00_AXI_0_wvalid(S00_AXI_0_wvalid),
     .UART_0_rxd(UART_0_rxd),
     .UART_0_txd(UART_0_txd),
-    .XBAR1Addr_m_araddr(XBAR1Addr_araddr),
-    .XBAR1Addr_m_arburst(XBAR1Addr_arburst),
-    .XBAR1Addr_m_arcache(XBAR1Addr_arcache),
-    .XBAR1Addr_m_arid(XBAR1Addr_arid),
-    .XBAR1Addr_m_arlen(XBAR1Addr_arlen),
-    .XBAR1Addr_m_arlock(XBAR1Addr_arlock),
-    .XBAR1Addr_m_arprot(XBAR1Addr_arprot),
-    .XBAR1Addr_m_arqos(XBAR1Addr_arqos),
-    .XBAR1Addr_m_arready(XBAR1Addr_arready),
-    .XBAR1Addr_m_arsize(XBAR1Addr_arsize),
-    .XBAR1Addr_m_arvalid(XBAR1Addr_arvalid),
-    .XBAR1Addr_m_awaddr(XBAR1Addr_awaddr),
-    .XBAR1Addr_m_awburst(XBAR1Addr_awburst),
-    .XBAR1Addr_m_awcache(XBAR1Addr_awcache),
-    .XBAR1Addr_m_awid(XBAR1Addr_awid),
-    .XBAR1Addr_m_awlen(XBAR1Addr_awlen),
-    .XBAR1Addr_m_awlock(XBAR1Addr_awlock),
-    .XBAR1Addr_m_awprot(XBAR1Addr_awprot),
-    .XBAR1Addr_m_awqos(XBAR1Addr_awqos),
-    .XBAR1Addr_m_awready(XBAR1Addr_awready),
-    .XBAR1Addr_m_awsize(XBAR1Addr_awsize),
-    .XBAR1Addr_m_awvalid(XBAR1Addr_awvalid),
-    .XBAR1Addr_m_bid(XBAR1Addr_bid),
-    .XBAR1Addr_m_bready(XBAR1Addr_bready),
-    .XBAR1Addr_m_bresp(XBAR1Addr_bresp),
-    .XBAR1Addr_m_bvalid(XBAR1Addr_bvalid),
-    .XBAR1Addr_m_rdata(XBAR1Addr_rdata),
-    .XBAR1Addr_m_rid(XBAR1Addr_rid),
-    .XBAR1Addr_m_rlast(XBAR1Addr_rlast),
-    .XBAR1Addr_m_rready(XBAR1Addr_rready),
-    .XBAR1Addr_m_rresp(XBAR1Addr_rresp),
-    .XBAR1Addr_m_rvalid(XBAR1Addr_rvalid),
-    .XBAR1Addr_m_wdata(XBAR1Addr_wdata),
-    .XBAR1Addr_m_wlast(XBAR1Addr_wlast),
-    .XBAR1Addr_m_wready(XBAR1Addr_wready),
-    .XBAR1Addr_m_wstrb(XBAR1Addr_wstrb),
-    .XBAR1Addr_m_wvalid(XBAR1Addr_wvalid),
-    .XBAR1Addr_s_araddr(XBAR1Addr_araddr),
-    .XBAR1Addr_s_arburst(XBAR1Addr_arburst),
-    .XBAR1Addr_s_arcache(XBAR1Addr_arcache),
-    .XBAR1Addr_s_arid(XBAR1Addr_arid),
-    .XBAR1Addr_s_arlen(XBAR1Addr_arlen),
-    .XBAR1Addr_s_arlock(XBAR1Addr_arlock),
-    .XBAR1Addr_s_arprot(XBAR1Addr_arprot),
-    .XBAR1Addr_s_arqos(XBAR1Addr_arqos),
-    .XBAR1Addr_s_arready(XBAR1Addr_arready),
-    .XBAR1Addr_s_arregion(XBAR1Addr_arregion),
-    .XBAR1Addr_s_arsize(XBAR1Addr_arsize),
-    .XBAR1Addr_s_arvalid(XBAR1Addr_arvalid),
-    .XBAR1Addr_s_awaddr(XBAR1Addr_awaddr),
-    .XBAR1Addr_s_awburst(XBAR1Addr_awburst),
-    .XBAR1Addr_s_awcache(XBAR1Addr_awcache),
-    .XBAR1Addr_s_awid(XBAR1Addr_awid),
-    .XBAR1Addr_s_awlen(XBAR1Addr_awlen),
-    .XBAR1Addr_s_awlock(XBAR1Addr_awlock),
-    .XBAR1Addr_s_awprot(XBAR1Addr_awprot),
-    .XBAR1Addr_s_awqos(XBAR1Addr_awqos),
-    .XBAR1Addr_s_awready(XBAR1Addr_awready),
-    .XBAR1Addr_s_awregion(XBAR1Addr_awregion),
-    .XBAR1Addr_s_awsize(XBAR1Addr_awsize),
-    .XBAR1Addr_s_awvalid(XBAR1Addr_awvalid),
-    .XBAR1Addr_s_bid(XBAR1Addr_bid),
-    .XBAR1Addr_s_bready(XBAR1Addr_bready),
-    .XBAR1Addr_s_bresp(XBAR1Addr_bresp),
-    .XBAR1Addr_s_bvalid(XBAR1Addr_bvalid),
-    .XBAR1Addr_s_rdata(XBAR1Addr_rdata),
-    .XBAR1Addr_s_rid(XBAR1Addr_rid),
-    .XBAR1Addr_s_rlast(XBAR1Addr_rlast),
-    .XBAR1Addr_s_rready(XBAR1Addr_rready),
-    .XBAR1Addr_s_rresp(XBAR1Addr_rresp),
-    .XBAR1Addr_s_rvalid(XBAR1Addr_rvalid),
-    .XBAR1Addr_s_wdata(XBAR1Addr_wdata),
-    .XBAR1Addr_s_wlast(XBAR1Addr_wlast),
-    .XBAR1Addr_s_wready(XBAR1Addr_wready),
-    .XBAR1Addr_s_wstrb(XBAR1Addr_wstrb),
-    .XBAR1Addr_s_wvalid(XBAR1Addr_wvalid),
-    .XBAR2Addr_m_araddr(XBAR2Addr_araddr_mask),
-    .XBAR2Addr_m_arburst(XBAR2Addr_arburst),
-    .XBAR2Addr_m_arcache(XBAR2Addr_arcache),
-    .XBAR2Addr_m_arid(XBAR2Addr_arid),
-    .XBAR2Addr_m_arlen(XBAR2Addr_arlen),
-    .XBAR2Addr_m_arlock(XBAR2Addr_arlock),
-    .XBAR2Addr_m_arprot(XBAR2Addr_arprot),
-    .XBAR2Addr_m_arqos(XBAR2Addr_arqos),
-    .XBAR2Addr_m_arready(XBAR2Addr_arready),
-    .XBAR2Addr_m_arsize(XBAR2Addr_arsize),
-    .XBAR2Addr_m_arvalid(XBAR2Addr_arvalid),
-    .XBAR2Addr_m_awaddr(XBAR2Addr_awaddr_mask),
-    .XBAR2Addr_m_awburst(XBAR2Addr_awburst),
-    .XBAR2Addr_m_awcache(XBAR2Addr_awcache),
-    .XBAR2Addr_m_awid(XBAR2Addr_awid),
-    .XBAR2Addr_m_awlen(XBAR2Addr_awlen),
-    .XBAR2Addr_m_awlock(XBAR2Addr_awlock),
-    .XBAR2Addr_m_awprot(XBAR2Addr_awprot),
-    .XBAR2Addr_m_awqos(XBAR2Addr_awqos),
-    .XBAR2Addr_m_awready(XBAR2Addr_awready),
-    .XBAR2Addr_m_awsize(XBAR2Addr_awsize),
-    .XBAR2Addr_m_awvalid(XBAR2Addr_awvalid),
-    .XBAR2Addr_m_bid(XBAR2Addr_bid),
-    .XBAR2Addr_m_bready(XBAR2Addr_bready),
-    .XBAR2Addr_m_bresp(XBAR2Addr_bresp),
-    .XBAR2Addr_m_bvalid(XBAR2Addr_bvalid),
-    .XBAR2Addr_m_rdata(XBAR2Addr_rdata),
-    .XBAR2Addr_m_rid(XBAR2Addr_rid),
-    .XBAR2Addr_m_rlast(XBAR2Addr_rlast),
-    .XBAR2Addr_m_rready(XBAR2Addr_rready),
-    .XBAR2Addr_m_rresp(XBAR2Addr_rresp),
-    .XBAR2Addr_m_rvalid(XBAR2Addr_rvalid),
-    .XBAR2Addr_m_wdata(XBAR2Addr_wdata),
-    .XBAR2Addr_m_wlast(XBAR2Addr_wlast),
-    .XBAR2Addr_m_wready(XBAR2Addr_wready),
-    .XBAR2Addr_m_wstrb(XBAR2Addr_wstrb),
-    .XBAR2Addr_m_wvalid(XBAR2Addr_wvalid),
-    .XBAR2Addr_s_araddr(XBAR2Addr_araddr),
-    .XBAR2Addr_s_arburst(XBAR2Addr_arburst),
-    .XBAR2Addr_s_arcache(XBAR2Addr_arcache),
-    .XBAR2Addr_s_arid(XBAR2Addr_arid),
-    .XBAR2Addr_s_arlen(XBAR2Addr_arlen),
-    .XBAR2Addr_s_arlock(XBAR2Addr_arlock),
-    .XBAR2Addr_s_arprot(XBAR2Addr_arprot),
-    .XBAR2Addr_s_arqos(XBAR2Addr_arqos),
-    .XBAR2Addr_s_arready(XBAR2Addr_arready),
-    .XBAR2Addr_s_arregion(XBAR2Addr_arregion),
-    .XBAR2Addr_s_arsize(XBAR2Addr_arsize),
-    .XBAR2Addr_s_arvalid(XBAR2Addr_arvalid),
-    .XBAR2Addr_s_awaddr(XBAR2Addr_awaddr),
-    .XBAR2Addr_s_awburst(XBAR2Addr_awburst),
-    .XBAR2Addr_s_awcache(XBAR2Addr_awcache),
-    .XBAR2Addr_s_awid(XBAR2Addr_awid),
-    .XBAR2Addr_s_awlen(XBAR2Addr_awlen),
-    .XBAR2Addr_s_awlock(XBAR2Addr_awlock),
-    .XBAR2Addr_s_awprot(XBAR2Addr_awprot),
-    .XBAR2Addr_s_awqos(XBAR2Addr_awqos),
-    .XBAR2Addr_s_awready(XBAR2Addr_awready),
-    .XBAR2Addr_s_awregion(XBAR2Addr_awregion),
-    .XBAR2Addr_s_awsize(XBAR2Addr_awsize),
-    .XBAR2Addr_s_awvalid(XBAR2Addr_awvalid),
-    .XBAR2Addr_s_bid(XBAR2Addr_bid),
-    .XBAR2Addr_s_bready(XBAR2Addr_bready),
-    .XBAR2Addr_s_bresp(XBAR2Addr_bresp),
-    .XBAR2Addr_s_bvalid(XBAR2Addr_bvalid),
-    .XBAR2Addr_s_rdata(XBAR2Addr_rdata),
-    .XBAR2Addr_s_rid(XBAR2Addr_rid),
-    .XBAR2Addr_s_rlast(XBAR2Addr_rlast),
-    .XBAR2Addr_s_rready(XBAR2Addr_rready),
-    .XBAR2Addr_s_rresp(XBAR2Addr_rresp),
-    .XBAR2Addr_s_rvalid(XBAR2Addr_rvalid),
-    .XBAR2Addr_s_wdata(XBAR2Addr_wdata),
-    .XBAR2Addr_s_wlast(XBAR2Addr_wlast),
-    .XBAR2Addr_s_wready(XBAR2Addr_wready),
-    .XBAR2Addr_s_wstrb(XBAR2Addr_wstrb),
-    .XBAR2Addr_s_wvalid(XBAR2Addr_wvalid),
     .ethernet_s_araddr(),
     .ethernet_s_arburst(),
     .ethernet_s_arcache(),
@@ -732,5 +532,81 @@ xlx_design_subsystem_wrapper design_ss
     .hydra_m_wvalid(hydra_m_wvalid),
     .interrupt_0(interrupt_0),
     .s_axi_aclk_0(s_axi_aclk_0),
-    .s_axi_aresetn_0(s_axi_aresetn_0));
+    .s_axi_aresetn_0(s_axi_aresetn_0),
+    .xbar0_araddr(xbar_araddr_mask),
+    .xbar0_arburst(xbar_arburst),
+    .xbar0_arcache(xbar_arcache),
+    .xbar0_arid(xbar_arid),
+    .xbar0_arlen(xbar_arlen),
+    .xbar0_arlock(xbar_arlock),
+    .xbar0_arprot(xbar_arprot),
+    .xbar0_arqos(xbar_arqos),
+    .xbar0_arready(xbar_arready),
+    .xbar0_arsize(xbar_arsize),
+    .xbar0_arvalid(xbar_arvalid),
+    .xbar0_awaddr(xbar_awaddr_mask),
+    .xbar0_awburst(xbar_awburst),
+    .xbar0_awcache(xbar_awcache),
+    .xbar0_awid(xbar_awid),
+    .xbar0_awlen(xbar_awlen),
+    .xbar0_awlock(xbar_awlock),
+    .xbar0_awprot(xbar_awprot),
+    .xbar0_awqos(xbar_awqos),
+    .xbar0_awready(xbar_awready),
+    .xbar0_awsize(xbar_awsize),
+    .xbar0_awvalid(xbar_awvalid),
+    .xbar0_bid(xbar_bid),
+    .xbar0_bready(xbar_bready),
+    .xbar0_bresp(xbar_bresp),
+    .xbar0_bvalid(xbar_bvalid),
+    .xbar0_rdata(xbar_rdata),
+    .xbar0_rid(xbar_rid),
+    .xbar0_rlast(xbar_rlast),
+    .xbar0_rready(xbar_rready),
+    .xbar0_rresp(xbar_rresp),
+    .xbar0_rvalid(xbar_rvalid),
+    .xbar0_wdata(xbar_wdata),
+    .xbar0_wlast(xbar_wlast),
+    .xbar0_wready(xbar_wready),
+    .xbar0_wstrb(xbar_wstrb),
+    .xbar0_wvalid(xbar_wvalid),
+    .xbar1_araddr(xbar_araddr),
+    .xbar1_arburst(xbar_arburst),
+    .xbar1_arcache(xbar_arcache),
+    .xbar1_arid(xbar_arid),
+    .xbar1_arlen(xbar_arlen),
+    .xbar1_arlock(xbar_arlock),
+    .xbar1_arprot(xbar_arprot),
+    .xbar1_arqos(xbar_arqos),
+    .xbar1_arready(xbar_arready),
+    .xbar1_arregion(xbar_arregion),
+    .xbar1_arsize(xbar_arsize),
+    .xbar1_arvalid(xbar_arvalid),
+    .xbar1_awaddr(xbar_awaddr),
+    .xbar1_awburst(xbar_awburst),
+    .xbar1_awcache(xbar_awcache),
+    .xbar1_awid(xbar_awid),
+    .xbar1_awlen(xbar_awlen),
+    .xbar1_awlock(xbar_awlock),
+    .xbar1_awprot(xbar_awprot),
+    .xbar1_awqos(xbar_awqos),
+    .xbar1_awready(xbar_awready),
+    .xbar1_awregion(xbar_awregion),
+    .xbar1_awsize(xbar_awsize),
+    .xbar1_awvalid(xbar_awvalid),
+    .xbar1_bid(xbar_bid),
+    .xbar1_bready(xbar_bready),
+    .xbar1_bresp(xbar_bresp),
+    .xbar1_bvalid(xbar_bvalid),
+    .xbar1_rdata(xbar_rdata),
+    .xbar1_rid(xbar_rid),
+    .xbar1_rlast(xbar_rlast),
+    .xbar1_rready(xbar_rready),
+    .xbar1_rresp(xbar_rresp),
+    .xbar1_rvalid(xbar_rvalid),
+    .xbar1_wdata(xbar_wdata),
+    .xbar1_wlast(xbar_wlast),
+    .xbar1_wready(xbar_wready),
+    .xbar1_wstrb(xbar_wstrb),
+    .xbar1_wvalid(xbar_wvalid));
 endmodule
