@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# xsim v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Mon May 23 12:51:22 2022
+# Process ID: 20555
+# Current directory: /home/muheet/stableEnv/New_Folder/verif/sim/vivado/test_ddr
+# Command line: xsim -source {xsim.dir/tb/xsim_script.tcl}
+# Log file: /home/muheet/stableEnv/New_Folder/verif/sim/vivado/test_ddr/xsim.log
+# Journal file: /home/muheet/stableEnv/New_Folder/verif/sim/vivado/test_ddr/xsim.jou
+#-----------------------------------------------------------
+start_gui
+source xsim.dir/tb/xsim_script.tcl
+# set_param project.enableReportConfiguration 0
+# load_feature core
+# current_fileset
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2021.1/data/ip'.
+# xsim {tb} -autoloadwcfg
+Time resolution is 1 ps
+open_wave_config /home/muheet/stableEnv/New_Folder/verif/sim/vivado/test_ddr/tb.wcfg
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting xsim at Mon May 23 12:54:18 2022...

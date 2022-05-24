@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb.wdb" id="1">
+         <top_modules>
+            <top_module name="arch_package" />
+            <top_module name="ariane_axi" />
+            <top_module name="ariane_pkg" />
+            <top_module name="ariane_soc" />
+            <top_module name="axi_bram_ctrl_funcs" />
+            <top_module name="axi_pkg" />
+            <top_module name="dm" />
+            <top_module name="glbl" />
+            <top_module name="ipif_pkg" />
+            <top_module name="lib_pkg" />
+            <top_module name="proj_package" />
+            <top_module name="reg_intf" />
+            <top_module name="riscv" />
+            <top_module name="tb" />
+            <top_module name="tb_type_defines_pkg" />
+            <top_module name="test" />
+            <top_module name="vcomponents" />
+            <top_module name="wt_cache_pkg" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
+      <ZoomEndTime time="27.334441 us"></ZoomEndTime>
+      <Cursor1Time time="24.351985 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="232"></NameColumnWidth>
+      <ValueColumnWidth column_width="104"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="114" />
+   <wvobject type="logic" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/arst_n">
+      <obj_property name="ElementShortName">arst_n</obj_property>
+      <obj_property name="ObjectShortName">arst_n</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/arst_ndm_n">
+      <obj_property name="ElementShortName">arst_ndm_n</obj_property>
+      <obj_property name="ObjectShortName">arst_ndm_n</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_araddr">
+      <obj_property name="ElementShortName">DDR_AXI4_araddr[63:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_araddr[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_arburst">
+      <obj_property name="ElementShortName">DDR_AXI4_arburst[1:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_arburst[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_arcache">
+      <obj_property name="ElementShortName">DDR_AXI4_arcache[3:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_arcache[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_arid">
+      <obj_property name="ElementShortName">DDR_AXI4_arid[15:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_arid[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_arlen">
+      <obj_property name="ElementShortName">DDR_AXI4_arlen[7:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_arlen[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_arlock">
+      <obj_property name="ElementShortName">DDR_AXI4_arlock[0:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_arlock[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_arprot">
+      <obj_property name="ElementShortName">DDR_AXI4_arprot[2:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_arprot[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_arqos">
+      <obj_property name="ElementShortName">DDR_AXI4_arqos[3:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_arqos[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_arready">
+      <obj_property name="ElementShortName">DDR_AXI4_arready[0:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_arready[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_arregion">
+      <obj_property name="ElementShortName">DDR_AXI4_arregion[3:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_arregion[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_arsize">
+      <obj_property name="ElementShortName">DDR_AXI4_arsize[2:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_arsize[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_arvalid">
+      <obj_property name="ElementShortName">DDR_AXI4_arvalid[0:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_arvalid[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_awaddr">
+      <obj_property name="ElementShortName">DDR_AXI4_awaddr[63:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_awaddr[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_awburst">
+      <obj_property name="ElementShortName">DDR_AXI4_awburst[1:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_awburst[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_awcache">
+      <obj_property name="ElementShortName">DDR_AXI4_awcache[3:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_awcache[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_awid">
+      <obj_property name="ElementShortName">DDR_AXI4_awid[15:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_awid[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_awlen">
+      <obj_property name="ElementShortName">DDR_AXI4_awlen[7:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_awlen[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_awlock">
+      <obj_property name="ElementShortName">DDR_AXI4_awlock[0:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_awlock[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_awprot">
+      <obj_property name="ElementShortName">DDR_AXI4_awprot[2:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_awprot[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_awqos">
+      <obj_property name="ElementShortName">DDR_AXI4_awqos[3:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_awqos[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_awready">
+      <obj_property name="ElementShortName">DDR_AXI4_awready[0:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_awready[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_awregion">
+      <obj_property name="ElementShortName">DDR_AXI4_awregion[3:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_awregion[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_awsize">
+      <obj_property name="ElementShortName">DDR_AXI4_awsize[2:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_awsize[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_awvalid">
+      <obj_property name="ElementShortName">DDR_AXI4_awvalid[0:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_awvalid[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_bid">
+      <obj_property name="ElementShortName">DDR_AXI4_bid[15:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_bid[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_bready">
+      <obj_property name="ElementShortName">DDR_AXI4_bready[0:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_bready[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_bresp">
+      <obj_property name="ElementShortName">DDR_AXI4_bresp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_bresp[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_bvalid">
+      <obj_property name="ElementShortName">DDR_AXI4_bvalid[0:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_bvalid[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_rdata">
+      <obj_property name="ElementShortName">DDR_AXI4_rdata[511:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_rdata[511:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_rid">
+      <obj_property name="ElementShortName">DDR_AXI4_rid[15:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_rid[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_rlast">
+      <obj_property name="ElementShortName">DDR_AXI4_rlast[0:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_rlast[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_rready">
+      <obj_property name="ElementShortName">DDR_AXI4_rready[0:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_rready[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_rresp">
+      <obj_property name="ElementShortName">DDR_AXI4_rresp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_rresp[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_rvalid">
+      <obj_property name="ElementShortName">DDR_AXI4_rvalid[0:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_rvalid[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_wdata">
+      <obj_property name="ElementShortName">DDR_AXI4_wdata[511:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_wdata[511:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_wlast">
+      <obj_property name="ElementShortName">DDR_AXI4_wlast[0:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_wlast[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_wready">
+      <obj_property name="ElementShortName">DDR_AXI4_wready[0:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_wready[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_wstrb">
+      <obj_property name="ElementShortName">DDR_AXI4_wstrb[63:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_wstrb[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_wvalid">
+      <obj_property name="ElementShortName">DDR_AXI4_wvalid[0:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_wvalid[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_araddr">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_araddr[63:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_araddr[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_arburst">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_arburst[1:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_arburst[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_arcache">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_arcache[3:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_arcache[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_arid">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_arid[5:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_arid[5:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_arlen">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_arlen[7:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_arlen[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_arlock">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_arlock[0:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_arlock[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_arprot">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_arprot[2:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_arprot[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_arqos">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_arqos[3:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_arqos[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_arready">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_arready[0:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_arready[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_arsize">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_arsize[2:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_arsize[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_arvalid">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_arvalid[0:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_arvalid[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_awaddr">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_awaddr[63:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_awaddr[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_awburst">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_awburst[1:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_awburst[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_awcache">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_awcache[3:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_awcache[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_awid">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_awid[5:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_awid[5:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_awlen">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_awlen[7:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_awlen[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_awlock">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_awlock[0:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_awlock[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_awprot">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_awprot[2:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_awprot[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_awqos">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_awqos[3:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_awqos[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_awready">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_awready[0:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_awready[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_awsize">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_awsize[2:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_awsize[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_awvalid">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_awvalid[0:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_awvalid[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_bid">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_bid[15:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_bid[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_bready">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_bready[0:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_bready[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_bresp">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_bresp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_bresp[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_bvalid">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_bvalid[0:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_bvalid[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_rdata">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_rdata[511:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_rdata[511:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_rid">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_rid[15:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_rid[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_rlast">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_rlast[0:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_rlast[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_rready">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_rready[0:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_rready[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_rresp">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_rresp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_rresp[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_rvalid">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_rvalid[0:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_rvalid[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_wdata">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_wdata[511:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_wdata[511:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_wlast">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_wlast[0:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_wlast[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_wready">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_wready[0:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_wready[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_wstrb">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_wstrb[63:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_wstrb[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_wvalid">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_wvalid[0:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_wvalid[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_arvalid">
+      <obj_property name="ElementShortName">maxi_arvalid</obj_property>
+      <obj_property name="ObjectShortName">maxi_arvalid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_arready">
+      <obj_property name="ElementShortName">maxi_arready</obj_property>
+      <obj_property name="ObjectShortName">maxi_arready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_arid">
+      <obj_property name="ElementShortName">maxi_arid[4:0]</obj_property>
+      <obj_property name="ObjectShortName">maxi_arid[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_araddr">
+      <obj_property name="ElementShortName">maxi_araddr[63:0]</obj_property>
+      <obj_property name="ObjectShortName">maxi_araddr[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_arlen">
+      <obj_property name="ElementShortName">maxi_arlen[7:0]</obj_property>
+      <obj_property name="ObjectShortName">maxi_arlen[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_arsize">
+      <obj_property name="ElementShortName">maxi_arsize[2:0]</obj_property>
+      <obj_property name="ObjectShortName">maxi_arsize[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_arburst">
+      <obj_property name="ElementShortName">maxi_arburst[1:0]</obj_property>
+      <obj_property name="ObjectShortName">maxi_arburst[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_arlock">
+      <obj_property name="ElementShortName">maxi_arlock</obj_property>
+      <obj_property name="ObjectShortName">maxi_arlock</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_arcache">
+      <obj_property name="ElementShortName">maxi_arcache[3:0]</obj_property>
+      <obj_property name="ObjectShortName">maxi_arcache[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_arprot">
+      <obj_property name="ElementShortName">maxi_arprot[2:0]</obj_property>
+      <obj_property name="ObjectShortName">maxi_arprot[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_awvalid">
+      <obj_property name="ElementShortName">maxi_awvalid</obj_property>
+      <obj_property name="ObjectShortName">maxi_awvalid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_awready">
+      <obj_property name="ElementShortName">maxi_awready</obj_property>
+      <obj_property name="ObjectShortName">maxi_awready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_awid">
+      <obj_property name="ElementShortName">maxi_awid[4:0]</obj_property>
+      <obj_property name="ObjectShortName">maxi_awid[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_awaddr">
+      <obj_property name="ElementShortName">maxi_awaddr[63:0]</obj_property>
+      <obj_property name="ObjectShortName">maxi_awaddr[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_awlen">
+      <obj_property name="ElementShortName">maxi_awlen[7:0]</obj_property>
+      <obj_property name="ObjectShortName">maxi_awlen[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_awsize">
+      <obj_property name="ElementShortName">maxi_awsize[2:0]</obj_property>
+      <obj_property name="ObjectShortName">maxi_awsize[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_awburst">
+      <obj_property name="ElementShortName">maxi_awburst[1:0]</obj_property>
+      <obj_property name="ObjectShortName">maxi_awburst[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_awlock">
+      <obj_property name="ElementShortName">maxi_awlock</obj_property>
+      <obj_property name="ObjectShortName">maxi_awlock</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_awcache">
+      <obj_property name="ElementShortName">maxi_awcache[3:0]</obj_property>
+      <obj_property name="ObjectShortName">maxi_awcache[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_awprot">
+      <obj_property name="ElementShortName">maxi_awprot[2:0]</obj_property>
+      <obj_property name="ObjectShortName">maxi_awprot[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_wvalid">
+      <obj_property name="ElementShortName">maxi_wvalid</obj_property>
+      <obj_property name="ObjectShortName">maxi_wvalid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_wready">
+      <obj_property name="ElementShortName">maxi_wready</obj_property>
+      <obj_property name="ObjectShortName">maxi_wready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_wdata">
+      <obj_property name="ElementShortName">maxi_wdata[63:0]</obj_property>
+      <obj_property name="ObjectShortName">maxi_wdata[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_wstrb">
+      <obj_property name="ElementShortName">maxi_wstrb[7:0]</obj_property>
+      <obj_property name="ObjectShortName">maxi_wstrb[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_wlast">
+      <obj_property name="ElementShortName">maxi_wlast</obj_property>
+      <obj_property name="ObjectShortName">maxi_wlast</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_rvalid">
+      <obj_property name="ElementShortName">maxi_rvalid</obj_property>
+      <obj_property name="ObjectShortName">maxi_rvalid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_rready">
+      <obj_property name="ElementShortName">maxi_rready</obj_property>
+      <obj_property name="ObjectShortName">maxi_rready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_rid">
+      <obj_property name="ElementShortName">maxi_rid[4:0]</obj_property>
+      <obj_property name="ObjectShortName">maxi_rid[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_rdata">
+      <obj_property name="ElementShortName">maxi_rdata[63:0]</obj_property>
+      <obj_property name="ObjectShortName">maxi_rdata[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_rresp">
+      <obj_property name="ElementShortName">maxi_rresp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">maxi_rresp[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_rlast">
+      <obj_property name="ElementShortName">maxi_rlast</obj_property>
+      <obj_property name="ObjectShortName">maxi_rlast</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_bvalid">
+      <obj_property name="ElementShortName">maxi_bvalid</obj_property>
+      <obj_property name="ObjectShortName">maxi_bvalid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_bready">
+      <obj_property name="ElementShortName">maxi_bready</obj_property>
+      <obj_property name="ObjectShortName">maxi_bready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_bid">
+      <obj_property name="ElementShortName">maxi_bid[4:0]</obj_property>
+      <obj_property name="ObjectShortName">maxi_bid[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_bresp">
+      <obj_property name="ElementShortName">maxi_bresp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">maxi_bresp[1:0]</obj_property>
+   </wvobject>
+</wave_config>

@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Wed Mar  9 08:45:38 2022
+# Process ID: 24594
+# Current directory: /home/muheet/aws-fpga2/hdk/cl/developer_designs/cl_nova/verif
+# Command line: vivado
+# Log file: /home/muheet/aws-fpga2/hdk/cl/developer_designs/cl_nova/verif/vivado.log
+# Journal file: /home/muheet/aws-fpga2/hdk/cl/developer_designs/cl_nova/verif/vivado.jou
+#-----------------------------------------------------------
+start_gui
+xsim ../verif/sim/vivado/test_nova/tb.wdb
+add_wave {{/tb/card/fpga/CL/u_cl_top_wrapper/xilinx_ssxhydra_su/cl_nova1_i/blk_mem_gen_0}} 
+close_sim

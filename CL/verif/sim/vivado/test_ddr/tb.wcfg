@@ -1,0 +1,1173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb.wdb" id="1">
+         <top_modules>
+            <top_module name="arch_package" />
+            <top_module name="ariane_axi" />
+            <top_module name="ariane_pkg" />
+            <top_module name="ariane_soc" />
+            <top_module name="axi_bram_ctrl_funcs" />
+            <top_module name="axi_pkg" />
+            <top_module name="dm" />
+            <top_module name="glbl" />
+            <top_module name="ipif_pkg" />
+            <top_module name="lib_pkg" />
+            <top_module name="proj_package" />
+            <top_module name="reg_intf" />
+            <top_module name="riscv" />
+            <top_module name="tb" />
+            <top_module name="tb_type_defines_pkg" />
+            <top_module name="test_ddr" />
+            <top_module name="vcomponents" />
+            <top_module name="wt_cache_pkg" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="49,104.500 ns"></ZoomStartTime>
+      <ZoomEndTime time="49,417.501 ns"></ZoomEndTime>
+      <Cursor1Time time="49,378.500 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="232"></NameColumnWidth>
+      <ValueColumnWidth column_width="92"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="283" />
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_araddr">
+      <obj_property name="ElementShortName">DDR_AXI4_araddr[63:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_araddr[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_arburst">
+      <obj_property name="ElementShortName">DDR_AXI4_arburst[1:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_arburst[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_arcache">
+      <obj_property name="ElementShortName">DDR_AXI4_arcache[3:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_arcache[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_arid">
+      <obj_property name="ElementShortName">DDR_AXI4_arid[15:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_arid[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_arlen">
+      <obj_property name="ElementShortName">DDR_AXI4_arlen[7:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_arlen[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_arlock">
+      <obj_property name="ElementShortName">DDR_AXI4_arlock[0:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_arlock[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_arprot">
+      <obj_property name="ElementShortName">DDR_AXI4_arprot[2:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_arprot[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_arqos">
+      <obj_property name="ElementShortName">DDR_AXI4_arqos[3:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_arqos[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_arready">
+      <obj_property name="ElementShortName">DDR_AXI4_arready[0:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_arready[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_arregion">
+      <obj_property name="ElementShortName">DDR_AXI4_arregion[3:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_arregion[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_arsize">
+      <obj_property name="ElementShortName">DDR_AXI4_arsize[2:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_arsize[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_arvalid">
+      <obj_property name="ElementShortName">DDR_AXI4_arvalid[0:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_arvalid[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_awaddr">
+      <obj_property name="ElementShortName">DDR_AXI4_awaddr[63:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_awaddr[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_awburst">
+      <obj_property name="ElementShortName">DDR_AXI4_awburst[1:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_awburst[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_awcache">
+      <obj_property name="ElementShortName">DDR_AXI4_awcache[3:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_awcache[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_awid">
+      <obj_property name="ElementShortName">DDR_AXI4_awid[15:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_awid[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_awlen">
+      <obj_property name="ElementShortName">DDR_AXI4_awlen[7:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_awlen[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_awlock">
+      <obj_property name="ElementShortName">DDR_AXI4_awlock[0:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_awlock[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_awprot">
+      <obj_property name="ElementShortName">DDR_AXI4_awprot[2:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_awprot[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_awqos">
+      <obj_property name="ElementShortName">DDR_AXI4_awqos[3:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_awqos[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_awready">
+      <obj_property name="ElementShortName">DDR_AXI4_awready[0:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_awready[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_awregion">
+      <obj_property name="ElementShortName">DDR_AXI4_awregion[3:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_awregion[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_awsize">
+      <obj_property name="ElementShortName">DDR_AXI4_awsize[2:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_awsize[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_awvalid">
+      <obj_property name="ElementShortName">DDR_AXI4_awvalid[0:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_awvalid[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_bid">
+      <obj_property name="ElementShortName">DDR_AXI4_bid[15:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_bid[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_bready">
+      <obj_property name="ElementShortName">DDR_AXI4_bready[0:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_bready[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_bresp">
+      <obj_property name="ElementShortName">DDR_AXI4_bresp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_bresp[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_bvalid">
+      <obj_property name="ElementShortName">DDR_AXI4_bvalid[0:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_bvalid[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_rdata">
+      <obj_property name="ElementShortName">DDR_AXI4_rdata[511:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_rdata[511:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_rid">
+      <obj_property name="ElementShortName">DDR_AXI4_rid[15:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_rid[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_rlast">
+      <obj_property name="ElementShortName">DDR_AXI4_rlast[0:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_rlast[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_rready">
+      <obj_property name="ElementShortName">DDR_AXI4_rready[0:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_rready[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_rresp">
+      <obj_property name="ElementShortName">DDR_AXI4_rresp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_rresp[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_rvalid">
+      <obj_property name="ElementShortName">DDR_AXI4_rvalid[0:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_rvalid[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_wdata">
+      <obj_property name="ElementShortName">DDR_AXI4_wdata[511:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_wdata[511:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_wlast">
+      <obj_property name="ElementShortName">DDR_AXI4_wlast[0:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_wlast[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_wready">
+      <obj_property name="ElementShortName">DDR_AXI4_wready[0:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_wready[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_wstrb">
+      <obj_property name="ElementShortName">DDR_AXI4_wstrb[63:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_wstrb[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DDR_AXI4_wvalid">
+      <obj_property name="ElementShortName">DDR_AXI4_wvalid[0:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_AXI4_wvalid[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_araddr">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_araddr[63:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_araddr[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_arvalid">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_arvalid[0:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_arvalid[0:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_arready">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_arready[0:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_arready[0:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_arburst">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_arburst[1:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_arburst[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_arcache">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_arcache[3:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_arcache[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_arid">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_arid[5:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_arid[5:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_arlen">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_arlen[7:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_arlen[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_arlock">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_arlock[0:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_arlock[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_arprot">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_arprot[2:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_arprot[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_arqos">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_arqos[3:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_arqos[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_arsize">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_arsize[2:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_arsize[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_awaddr">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_awaddr[63:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_awaddr[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_awburst">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_awburst[1:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_awburst[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_awcache">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_awcache[3:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_awcache[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_awid">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_awid[5:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_awid[5:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_awlen">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_awlen[7:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_awlen[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_awlock">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_awlock[0:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_awlock[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_awprot">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_awprot[2:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_awprot[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_awqos">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_awqos[3:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_awqos[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_awready">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_awready[0:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_awready[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_awsize">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_awsize[2:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_awsize[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_awvalid">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_awvalid[0:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_awvalid[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_bid">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_bid[15:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_bid[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_bready">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_bready[0:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_bready[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_bresp">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_bresp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_bresp[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_bvalid">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_bvalid[0:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_bvalid[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_rdata">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_rdata[511:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_rdata[511:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_rid">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_rid[15:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_rid[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_rlast">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_rlast[0:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_rlast[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_rready">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_rready[0:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_rready[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_rresp">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_rresp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_rresp[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_rvalid">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_rvalid[0:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_rvalid[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_wdata">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_wdata[511:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_wdata[511:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_wlast">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_wlast[0:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_wlast[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_wready">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_wready[0:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_wready[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_wstrb">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_wstrb[63:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_wstrb[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/DMA_PCIS_AXI4_wvalid">
+      <obj_property name="ElementShortName">DMA_PCIS_AXI4_wvalid[0:0]</obj_property>
+      <obj_property name="ObjectShortName">DMA_PCIS_AXI4_wvalid[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_arvalid">
+      <obj_property name="ElementShortName">maxi_arvalid</obj_property>
+      <obj_property name="ObjectShortName">maxi_arvalid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_arready">
+      <obj_property name="ElementShortName">maxi_arready</obj_property>
+      <obj_property name="ObjectShortName">maxi_arready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_arid">
+      <obj_property name="ElementShortName">maxi_arid[4:0]</obj_property>
+      <obj_property name="ObjectShortName">maxi_arid[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_araddr">
+      <obj_property name="ElementShortName">maxi_araddr[63:0]</obj_property>
+      <obj_property name="ObjectShortName">maxi_araddr[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_arlen">
+      <obj_property name="ElementShortName">maxi_arlen[7:0]</obj_property>
+      <obj_property name="ObjectShortName">maxi_arlen[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_arsize">
+      <obj_property name="ElementShortName">maxi_arsize[2:0]</obj_property>
+      <obj_property name="ObjectShortName">maxi_arsize[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_arburst">
+      <obj_property name="ElementShortName">maxi_arburst[1:0]</obj_property>
+      <obj_property name="ObjectShortName">maxi_arburst[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_arlock">
+      <obj_property name="ElementShortName">maxi_arlock</obj_property>
+      <obj_property name="ObjectShortName">maxi_arlock</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_arcache">
+      <obj_property name="ElementShortName">maxi_arcache[3:0]</obj_property>
+      <obj_property name="ObjectShortName">maxi_arcache[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_arprot">
+      <obj_property name="ElementShortName">maxi_arprot[2:0]</obj_property>
+      <obj_property name="ObjectShortName">maxi_arprot[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_awvalid">
+      <obj_property name="ElementShortName">maxi_awvalid</obj_property>
+      <obj_property name="ObjectShortName">maxi_awvalid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_awready">
+      <obj_property name="ElementShortName">maxi_awready</obj_property>
+      <obj_property name="ObjectShortName">maxi_awready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_awid">
+      <obj_property name="ElementShortName">maxi_awid[4:0]</obj_property>
+      <obj_property name="ObjectShortName">maxi_awid[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_awaddr">
+      <obj_property name="ElementShortName">maxi_awaddr[63:0]</obj_property>
+      <obj_property name="ObjectShortName">maxi_awaddr[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_awlen">
+      <obj_property name="ElementShortName">maxi_awlen[7:0]</obj_property>
+      <obj_property name="ObjectShortName">maxi_awlen[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_awsize">
+      <obj_property name="ElementShortName">maxi_awsize[2:0]</obj_property>
+      <obj_property name="ObjectShortName">maxi_awsize[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_awburst">
+      <obj_property name="ElementShortName">maxi_awburst[1:0]</obj_property>
+      <obj_property name="ObjectShortName">maxi_awburst[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_awlock">
+      <obj_property name="ElementShortName">maxi_awlock</obj_property>
+      <obj_property name="ObjectShortName">maxi_awlock</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_awcache">
+      <obj_property name="ElementShortName">maxi_awcache[3:0]</obj_property>
+      <obj_property name="ObjectShortName">maxi_awcache[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_awprot">
+      <obj_property name="ElementShortName">maxi_awprot[2:0]</obj_property>
+      <obj_property name="ObjectShortName">maxi_awprot[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_wvalid">
+      <obj_property name="ElementShortName">maxi_wvalid</obj_property>
+      <obj_property name="ObjectShortName">maxi_wvalid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_wready">
+      <obj_property name="ElementShortName">maxi_wready</obj_property>
+      <obj_property name="ObjectShortName">maxi_wready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_wdata">
+      <obj_property name="ElementShortName">maxi_wdata[63:0]</obj_property>
+      <obj_property name="ObjectShortName">maxi_wdata[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_wstrb">
+      <obj_property name="ElementShortName">maxi_wstrb[7:0]</obj_property>
+      <obj_property name="ObjectShortName">maxi_wstrb[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_wlast">
+      <obj_property name="ElementShortName">maxi_wlast</obj_property>
+      <obj_property name="ObjectShortName">maxi_wlast</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_rvalid">
+      <obj_property name="ElementShortName">maxi_rvalid</obj_property>
+      <obj_property name="ObjectShortName">maxi_rvalid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_rready">
+      <obj_property name="ElementShortName">maxi_rready</obj_property>
+      <obj_property name="ObjectShortName">maxi_rready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_rid">
+      <obj_property name="ElementShortName">maxi_rid[4:0]</obj_property>
+      <obj_property name="ObjectShortName">maxi_rid[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_rdata">
+      <obj_property name="ElementShortName">maxi_rdata[63:0]</obj_property>
+      <obj_property name="ObjectShortName">maxi_rdata[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_rresp">
+      <obj_property name="ElementShortName">maxi_rresp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">maxi_rresp[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_rlast">
+      <obj_property name="ElementShortName">maxi_rlast</obj_property>
+      <obj_property name="ObjectShortName">maxi_rlast</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_bvalid">
+      <obj_property name="ElementShortName">maxi_bvalid</obj_property>
+      <obj_property name="ObjectShortName">maxi_bvalid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_bready">
+      <obj_property name="ElementShortName">maxi_bready</obj_property>
+      <obj_property name="ObjectShortName">maxi_bready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_bid">
+      <obj_property name="ElementShortName">maxi_bid[4:0]</obj_property>
+      <obj_property name="ObjectShortName">maxi_bid[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/CL/cl_nova_project/nova_subsystem_1/u_hydra_su/maxi_bresp">
+      <obj_property name="ElementShortName">maxi_bresp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">maxi_bresp[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider112" type="divider">
+      <obj_property name="label">sh</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/cl_sh_ddr_awid">
+      <obj_property name="ElementShortName">cl_sh_ddr_awid[15:0]</obj_property>
+      <obj_property name="ObjectShortName">cl_sh_ddr_awid[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/cl_sh_ddr_awaddr">
+      <obj_property name="ElementShortName">cl_sh_ddr_awaddr[63:0]</obj_property>
+      <obj_property name="ObjectShortName">cl_sh_ddr_awaddr[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/cl_sh_ddr_awlen">
+      <obj_property name="ElementShortName">cl_sh_ddr_awlen[7:0]</obj_property>
+      <obj_property name="ObjectShortName">cl_sh_ddr_awlen[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/cl_sh_ddr_awsize">
+      <obj_property name="ElementShortName">cl_sh_ddr_awsize[2:0]</obj_property>
+      <obj_property name="ObjectShortName">cl_sh_ddr_awsize[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/cl_sh_ddr_awvalid">
+      <obj_property name="ElementShortName">cl_sh_ddr_awvalid</obj_property>
+      <obj_property name="ObjectShortName">cl_sh_ddr_awvalid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/cl_sh_ddr_wid">
+      <obj_property name="ElementShortName">cl_sh_ddr_wid[15:0]</obj_property>
+      <obj_property name="ObjectShortName">cl_sh_ddr_wid[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/cl_sh_ddr_wdata">
+      <obj_property name="ElementShortName">cl_sh_ddr_wdata[511:0]</obj_property>
+      <obj_property name="ObjectShortName">cl_sh_ddr_wdata[511:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/cl_sh_ddr_wstrb">
+      <obj_property name="ElementShortName">cl_sh_ddr_wstrb[63:0]</obj_property>
+      <obj_property name="ObjectShortName">cl_sh_ddr_wstrb[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/cl_sh_ddr_wlast">
+      <obj_property name="ElementShortName">cl_sh_ddr_wlast</obj_property>
+      <obj_property name="ObjectShortName">cl_sh_ddr_wlast</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/cl_sh_ddr_wvalid">
+      <obj_property name="ElementShortName">cl_sh_ddr_wvalid</obj_property>
+      <obj_property name="ObjectShortName">cl_sh_ddr_wvalid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/cl_sh_ddr_bready">
+      <obj_property name="ElementShortName">cl_sh_ddr_bready</obj_property>
+      <obj_property name="ObjectShortName">cl_sh_ddr_bready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/cl_sh_ddr_arid">
+      <obj_property name="ElementShortName">cl_sh_ddr_arid[15:0]</obj_property>
+      <obj_property name="ObjectShortName">cl_sh_ddr_arid[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/cl_sh_ddr_araddr">
+      <obj_property name="ElementShortName">cl_sh_ddr_araddr[63:0]</obj_property>
+      <obj_property name="ObjectShortName">cl_sh_ddr_araddr[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/cl_sh_ddr_arlen">
+      <obj_property name="ElementShortName">cl_sh_ddr_arlen[7:0]</obj_property>
+      <obj_property name="ObjectShortName">cl_sh_ddr_arlen[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/cl_sh_ddr_arsize">
+      <obj_property name="ElementShortName">cl_sh_ddr_arsize[2:0]</obj_property>
+      <obj_property name="ObjectShortName">cl_sh_ddr_arsize[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/cl_sh_ddr_arvalid">
+      <obj_property name="ElementShortName">cl_sh_ddr_arvalid</obj_property>
+      <obj_property name="ObjectShortName">cl_sh_ddr_arvalid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/cl_sh_ddr_rready">
+      <obj_property name="ElementShortName">cl_sh_ddr_rready</obj_property>
+      <obj_property name="ObjectShortName">cl_sh_ddr_rready</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/sh_cl_ddr_awready">
+      <obj_property name="ElementShortName">sh_cl_ddr_awready</obj_property>
+      <obj_property name="ObjectShortName">sh_cl_ddr_awready</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/sh_cl_ddr_wready">
+      <obj_property name="ElementShortName">sh_cl_ddr_wready</obj_property>
+      <obj_property name="ObjectShortName">sh_cl_ddr_wready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/sh_cl_ddr_bid">
+      <obj_property name="ElementShortName">sh_cl_ddr_bid[15:0]</obj_property>
+      <obj_property name="ObjectShortName">sh_cl_ddr_bid[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/sh_cl_ddr_bresp">
+      <obj_property name="ElementShortName">sh_cl_ddr_bresp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">sh_cl_ddr_bresp[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/sh_cl_ddr_bvalid">
+      <obj_property name="ElementShortName">sh_cl_ddr_bvalid</obj_property>
+      <obj_property name="ObjectShortName">sh_cl_ddr_bvalid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/sh_cl_ddr_arready">
+      <obj_property name="ElementShortName">sh_cl_ddr_arready</obj_property>
+      <obj_property name="ObjectShortName">sh_cl_ddr_arready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/sh_cl_ddr_rid">
+      <obj_property name="ElementShortName">sh_cl_ddr_rid[15:0]</obj_property>
+      <obj_property name="ObjectShortName">sh_cl_ddr_rid[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/sh_cl_ddr_rdata">
+      <obj_property name="ElementShortName">sh_cl_ddr_rdata[511:0]</obj_property>
+      <obj_property name="ObjectShortName">sh_cl_ddr_rdata[511:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/sh_cl_ddr_rresp">
+      <obj_property name="ElementShortName">sh_cl_ddr_rresp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">sh_cl_ddr_rresp[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/sh_cl_ddr_rlast">
+      <obj_property name="ElementShortName">sh_cl_ddr_rlast</obj_property>
+      <obj_property name="ObjectShortName">sh_cl_ddr_rlast</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/sh_cl_ddr_rvalid">
+      <obj_property name="ElementShortName">sh_cl_ddr_rvalid</obj_property>
+      <obj_property name="ObjectShortName">sh_cl_ddr_rvalid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/sh_cl_ddr_is_ready">
+      <obj_property name="ElementShortName">sh_cl_ddr_is_ready</obj_property>
+      <obj_property name="ObjectShortName">sh_cl_ddr_is_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider142" type="divider">
+      <obj_property name="label">ddr-3</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/DDR4_3/c0_ddr4_s_axi_ctrl_awvalid">
+      <obj_property name="ElementShortName">c0_ddr4_s_axi_ctrl_awvalid</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_s_axi_ctrl_awvalid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/DDR4_3/c0_ddr4_s_axi_ctrl_awready">
+      <obj_property name="ElementShortName">c0_ddr4_s_axi_ctrl_awready</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_s_axi_ctrl_awready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/c0_ddr4_s_axi_ctrl_awaddr">
+      <obj_property name="ElementShortName">c0_ddr4_s_axi_ctrl_awaddr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_s_axi_ctrl_awaddr[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/DDR4_3/c0_ddr4_s_axi_ctrl_wvalid">
+      <obj_property name="ElementShortName">c0_ddr4_s_axi_ctrl_wvalid</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_s_axi_ctrl_wvalid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/DDR4_3/c0_ddr4_s_axi_ctrl_wready">
+      <obj_property name="ElementShortName">c0_ddr4_s_axi_ctrl_wready</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_s_axi_ctrl_wready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/c0_ddr4_s_axi_ctrl_wdata">
+      <obj_property name="ElementShortName">c0_ddr4_s_axi_ctrl_wdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_s_axi_ctrl_wdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/DDR4_3/c0_ddr4_s_axi_ctrl_bvalid">
+      <obj_property name="ElementShortName">c0_ddr4_s_axi_ctrl_bvalid</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_s_axi_ctrl_bvalid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/DDR4_3/c0_ddr4_s_axi_ctrl_bready">
+      <obj_property name="ElementShortName">c0_ddr4_s_axi_ctrl_bready</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_s_axi_ctrl_bready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/c0_ddr4_s_axi_ctrl_bresp">
+      <obj_property name="ElementShortName">c0_ddr4_s_axi_ctrl_bresp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_s_axi_ctrl_bresp[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/DDR4_3/c0_ddr4_s_axi_ctrl_arvalid">
+      <obj_property name="ElementShortName">c0_ddr4_s_axi_ctrl_arvalid</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_s_axi_ctrl_arvalid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/DDR4_3/c0_ddr4_s_axi_ctrl_arready">
+      <obj_property name="ElementShortName">c0_ddr4_s_axi_ctrl_arready</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_s_axi_ctrl_arready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/c0_ddr4_s_axi_ctrl_araddr">
+      <obj_property name="ElementShortName">c0_ddr4_s_axi_ctrl_araddr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_s_axi_ctrl_araddr[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/DDR4_3/c0_ddr4_s_axi_ctrl_rvalid">
+      <obj_property name="ElementShortName">c0_ddr4_s_axi_ctrl_rvalid</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_s_axi_ctrl_rvalid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/DDR4_3/c0_ddr4_s_axi_ctrl_rready">
+      <obj_property name="ElementShortName">c0_ddr4_s_axi_ctrl_rready</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_s_axi_ctrl_rready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/c0_ddr4_s_axi_ctrl_rdata">
+      <obj_property name="ElementShortName">c0_ddr4_s_axi_ctrl_rdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_s_axi_ctrl_rdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/c0_ddr4_s_axi_ctrl_rresp">
+      <obj_property name="ElementShortName">c0_ddr4_s_axi_ctrl_rresp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_s_axi_ctrl_rresp[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/c0_ddr4_s_axi_awid">
+      <obj_property name="ElementShortName">c0_ddr4_s_axi_awid[15:0]</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_s_axi_awid[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/c0_ddr4_s_axi_awaddr">
+      <obj_property name="ElementShortName">c0_ddr4_s_axi_awaddr[33:0]</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_s_axi_awaddr[33:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/c0_ddr4_s_axi_awlen">
+      <obj_property name="ElementShortName">c0_ddr4_s_axi_awlen[7:0]</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_s_axi_awlen[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/c0_ddr4_s_axi_awsize">
+      <obj_property name="ElementShortName">c0_ddr4_s_axi_awsize[2:0]</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_s_axi_awsize[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/c0_ddr4_s_axi_awburst">
+      <obj_property name="ElementShortName">c0_ddr4_s_axi_awburst[1:0]</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_s_axi_awburst[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/c0_ddr4_s_axi_awlock">
+      <obj_property name="ElementShortName">c0_ddr4_s_axi_awlock[0:0]</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_s_axi_awlock[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/c0_ddr4_s_axi_awcache">
+      <obj_property name="ElementShortName">c0_ddr4_s_axi_awcache[3:0]</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_s_axi_awcache[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/c0_ddr4_s_axi_awprot">
+      <obj_property name="ElementShortName">c0_ddr4_s_axi_awprot[2:0]</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_s_axi_awprot[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/c0_ddr4_s_axi_awqos">
+      <obj_property name="ElementShortName">c0_ddr4_s_axi_awqos[3:0]</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_s_axi_awqos[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/DDR4_3/c0_ddr4_s_axi_awvalid">
+      <obj_property name="ElementShortName">c0_ddr4_s_axi_awvalid</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_s_axi_awvalid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/DDR4_3/c0_ddr4_s_axi_awready">
+      <obj_property name="ElementShortName">c0_ddr4_s_axi_awready</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_s_axi_awready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/c0_ddr4_s_axi_wdata">
+      <obj_property name="ElementShortName">c0_ddr4_s_axi_wdata[511:0]</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_s_axi_wdata[511:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/c0_ddr4_s_axi_wstrb">
+      <obj_property name="ElementShortName">c0_ddr4_s_axi_wstrb[63:0]</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_s_axi_wstrb[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/DDR4_3/c0_ddr4_s_axi_wlast">
+      <obj_property name="ElementShortName">c0_ddr4_s_axi_wlast</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_s_axi_wlast</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/DDR4_3/c0_ddr4_s_axi_wvalid">
+      <obj_property name="ElementShortName">c0_ddr4_s_axi_wvalid</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_s_axi_wvalid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/DDR4_3/c0_ddr4_s_axi_wready">
+      <obj_property name="ElementShortName">c0_ddr4_s_axi_wready</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_s_axi_wready</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/DDR4_3/c0_ddr4_s_axi_bready">
+      <obj_property name="ElementShortName">c0_ddr4_s_axi_bready</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_s_axi_bready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/c0_ddr4_s_axi_bid">
+      <obj_property name="ElementShortName">c0_ddr4_s_axi_bid[15:0]</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_s_axi_bid[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/c0_ddr4_s_axi_bresp">
+      <obj_property name="ElementShortName">c0_ddr4_s_axi_bresp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_s_axi_bresp[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/DDR4_3/c0_ddr4_s_axi_bvalid">
+      <obj_property name="ElementShortName">c0_ddr4_s_axi_bvalid</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_s_axi_bvalid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/c0_ddr4_s_axi_arid">
+      <obj_property name="ElementShortName">c0_ddr4_s_axi_arid[15:0]</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_s_axi_arid[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/c0_ddr4_s_axi_araddr">
+      <obj_property name="ElementShortName">c0_ddr4_s_axi_araddr[33:0]</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_s_axi_araddr[33:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/c0_ddr4_s_axi_arlen">
+      <obj_property name="ElementShortName">c0_ddr4_s_axi_arlen[7:0]</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_s_axi_arlen[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/c0_ddr4_s_axi_arsize">
+      <obj_property name="ElementShortName">c0_ddr4_s_axi_arsize[2:0]</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_s_axi_arsize[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/c0_ddr4_s_axi_arburst">
+      <obj_property name="ElementShortName">c0_ddr4_s_axi_arburst[1:0]</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_s_axi_arburst[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/c0_ddr4_s_axi_arlock">
+      <obj_property name="ElementShortName">c0_ddr4_s_axi_arlock[0:0]</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_s_axi_arlock[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/c0_ddr4_s_axi_arcache">
+      <obj_property name="ElementShortName">c0_ddr4_s_axi_arcache[3:0]</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_s_axi_arcache[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/c0_ddr4_s_axi_arprot">
+      <obj_property name="ElementShortName">c0_ddr4_s_axi_arprot[2:0]</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_s_axi_arprot[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/c0_ddr4_s_axi_arqos">
+      <obj_property name="ElementShortName">c0_ddr4_s_axi_arqos[3:0]</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_s_axi_arqos[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/DDR4_3/c0_ddr4_s_axi_arvalid">
+      <obj_property name="ElementShortName">c0_ddr4_s_axi_arvalid</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_s_axi_arvalid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/DDR4_3/c0_ddr4_s_axi_arready">
+      <obj_property name="ElementShortName">c0_ddr4_s_axi_arready</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_s_axi_arready</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/DDR4_3/c0_ddr4_s_axi_rready">
+      <obj_property name="ElementShortName">c0_ddr4_s_axi_rready</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_s_axi_rready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/c0_ddr4_s_axi_rid">
+      <obj_property name="ElementShortName">c0_ddr4_s_axi_rid[15:0]</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_s_axi_rid[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/c0_ddr4_s_axi_rdata">
+      <obj_property name="ElementShortName">c0_ddr4_s_axi_rdata[511:0]</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_s_axi_rdata[511:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/c0_ddr4_s_axi_rresp">
+      <obj_property name="ElementShortName">c0_ddr4_s_axi_rresp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_s_axi_rresp[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/DDR4_3/c0_ddr4_s_axi_rlast">
+      <obj_property name="ElementShortName">c0_ddr4_s_axi_rlast</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_s_axi_rlast</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/DDR4_3/c0_ddr4_s_axi_rvalid">
+      <obj_property name="ElementShortName">c0_ddr4_s_axi_rvalid</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_s_axi_rvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider196" type="divider">
+      <obj_property name="label">uddr_axi in inst</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/s_axi_awid">
+      <obj_property name="ElementShortName">s_axi_awid[15:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axi_awid[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/s_axi_awaddr">
+      <obj_property name="ElementShortName">s_axi_awaddr[33:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axi_awaddr[33:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/s_axi_awlen">
+      <obj_property name="ElementShortName">s_axi_awlen[7:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axi_awlen[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/s_axi_awsize">
+      <obj_property name="ElementShortName">s_axi_awsize[2:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axi_awsize[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/s_axi_awburst">
+      <obj_property name="ElementShortName">s_axi_awburst[1:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axi_awburst[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/s_axi_awlock">
+      <obj_property name="ElementShortName">s_axi_awlock[0:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axi_awlock[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/s_axi_awcache">
+      <obj_property name="ElementShortName">s_axi_awcache[3:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axi_awcache[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/s_axi_awprot">
+      <obj_property name="ElementShortName">s_axi_awprot[2:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axi_awprot[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/s_axi_awqos">
+      <obj_property name="ElementShortName">s_axi_awqos[3:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axi_awqos[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/s_axi_awvalid">
+      <obj_property name="ElementShortName">s_axi_awvalid</obj_property>
+      <obj_property name="ObjectShortName">s_axi_awvalid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/s_axi_awready">
+      <obj_property name="ElementShortName">s_axi_awready</obj_property>
+      <obj_property name="ObjectShortName">s_axi_awready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/s_axi_wdata">
+      <obj_property name="ElementShortName">s_axi_wdata[511:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axi_wdata[511:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/s_axi_wstrb">
+      <obj_property name="ElementShortName">s_axi_wstrb[63:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axi_wstrb[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/s_axi_wlast">
+      <obj_property name="ElementShortName">s_axi_wlast</obj_property>
+      <obj_property name="ObjectShortName">s_axi_wlast</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/s_axi_wvalid">
+      <obj_property name="ElementShortName">s_axi_wvalid</obj_property>
+      <obj_property name="ObjectShortName">s_axi_wvalid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/s_axi_wready">
+      <obj_property name="ElementShortName">s_axi_wready</obj_property>
+      <obj_property name="ObjectShortName">s_axi_wready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/s_axi_bid">
+      <obj_property name="ElementShortName">s_axi_bid[15:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axi_bid[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/s_axi_bresp">
+      <obj_property name="ElementShortName">s_axi_bresp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axi_bresp[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/s_axi_bvalid">
+      <obj_property name="ElementShortName">s_axi_bvalid</obj_property>
+      <obj_property name="ObjectShortName">s_axi_bvalid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/s_axi_bready">
+      <obj_property name="ElementShortName">s_axi_bready</obj_property>
+      <obj_property name="ObjectShortName">s_axi_bready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/s_axi_arid">
+      <obj_property name="ElementShortName">s_axi_arid[15:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axi_arid[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/s_axi_araddr">
+      <obj_property name="ElementShortName">s_axi_araddr[33:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axi_araddr[33:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/s_axi_arlen">
+      <obj_property name="ElementShortName">s_axi_arlen[7:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axi_arlen[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/s_axi_arsize">
+      <obj_property name="ElementShortName">s_axi_arsize[2:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axi_arsize[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/s_axi_arburst">
+      <obj_property name="ElementShortName">s_axi_arburst[1:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axi_arburst[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/s_axi_arlock">
+      <obj_property name="ElementShortName">s_axi_arlock[0:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axi_arlock[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/s_axi_arcache">
+      <obj_property name="ElementShortName">s_axi_arcache[3:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axi_arcache[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/s_axi_arprot">
+      <obj_property name="ElementShortName">s_axi_arprot[2:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axi_arprot[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/s_axi_arqos">
+      <obj_property name="ElementShortName">s_axi_arqos[3:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axi_arqos[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/s_axi_arvalid">
+      <obj_property name="ElementShortName">s_axi_arvalid</obj_property>
+      <obj_property name="ObjectShortName">s_axi_arvalid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/s_axi_arready">
+      <obj_property name="ElementShortName">s_axi_arready</obj_property>
+      <obj_property name="ObjectShortName">s_axi_arready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/s_axi_rid">
+      <obj_property name="ElementShortName">s_axi_rid[15:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axi_rid[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/s_axi_rdata">
+      <obj_property name="ElementShortName">s_axi_rdata[511:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axi_rdata[511:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/s_axi_rresp">
+      <obj_property name="ElementShortName">s_axi_rresp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axi_rresp[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/s_axi_rlast">
+      <obj_property name="ElementShortName">s_axi_rlast</obj_property>
+      <obj_property name="ObjectShortName">s_axi_rlast</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/s_axi_rvalid">
+      <obj_property name="ElementShortName">s_axi_rvalid</obj_property>
+      <obj_property name="ObjectShortName">s_axi_rvalid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/s_axi_rready">
+      <obj_property name="ElementShortName">s_axi_rready</obj_property>
+      <obj_property name="ObjectShortName">s_axi_rready</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider234" type="divider">
+      <obj_property name="label">axi_register_slice_d1 in u_ddr_axi</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/axi_register_slice_d1/S_AXI_AWID">
+      <obj_property name="ElementShortName">S_AXI_AWID[15:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_AWID[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/axi_register_slice_d1/S_AXI_AWADDR">
+      <obj_property name="ElementShortName">S_AXI_AWADDR[33:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_AWADDR[33:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/axi_register_slice_d1/S_AXI_AWLEN">
+      <obj_property name="ElementShortName">S_AXI_AWLEN[7:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_AWLEN[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/axi_register_slice_d1/S_AXI_AWSIZE">
+      <obj_property name="ElementShortName">S_AXI_AWSIZE[2:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_AWSIZE[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/axi_register_slice_d1/S_AXI_AWBURST">
+      <obj_property name="ElementShortName">S_AXI_AWBURST[1:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_AWBURST[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/axi_register_slice_d1/S_AXI_AWLOCK">
+      <obj_property name="ElementShortName">S_AXI_AWLOCK[1:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_AWLOCK[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/axi_register_slice_d1/S_AXI_AWCACHE">
+      <obj_property name="ElementShortName">S_AXI_AWCACHE[3:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_AWCACHE[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/axi_register_slice_d1/S_AXI_AWPROT">
+      <obj_property name="ElementShortName">S_AXI_AWPROT[2:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_AWPROT[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/axi_register_slice_d1/S_AXI_AWREGION">
+      <obj_property name="ElementShortName">S_AXI_AWREGION[3:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_AWREGION[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/axi_register_slice_d1/S_AXI_AWQOS">
+      <obj_property name="ElementShortName">S_AXI_AWQOS[3:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_AWQOS[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/axi_register_slice_d1/S_AXI_AWUSER">
+      <obj_property name="ElementShortName">S_AXI_AWUSER[0:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_AWUSER[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/axi_register_slice_d1/S_AXI_AWVALID">
+      <obj_property name="ElementShortName">S_AXI_AWVALID</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_AWVALID</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/axi_register_slice_d1/S_AXI_AWREADY">
+      <obj_property name="ElementShortName">S_AXI_AWREADY</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_AWREADY</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/axi_register_slice_d1/S_AXI_WID">
+      <obj_property name="ElementShortName">S_AXI_WID[15:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_WID[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/axi_register_slice_d1/S_AXI_WDATA">
+      <obj_property name="ElementShortName">S_AXI_WDATA[511:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_WDATA[511:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/axi_register_slice_d1/S_AXI_WSTRB">
+      <obj_property name="ElementShortName">S_AXI_WSTRB[63:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_WSTRB[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/axi_register_slice_d1/S_AXI_WLAST">
+      <obj_property name="ElementShortName">S_AXI_WLAST</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_WLAST</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/axi_register_slice_d1/S_AXI_WUSER">
+      <obj_property name="ElementShortName">S_AXI_WUSER[0:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_WUSER[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/axi_register_slice_d1/S_AXI_WVALID">
+      <obj_property name="ElementShortName">S_AXI_WVALID</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_WVALID</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/axi_register_slice_d1/S_AXI_WREADY">
+      <obj_property name="ElementShortName">S_AXI_WREADY</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_WREADY</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/axi_register_slice_d1/S_AXI_BID">
+      <obj_property name="ElementShortName">S_AXI_BID[15:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_BID[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/axi_register_slice_d1/S_AXI_BRESP">
+      <obj_property name="ElementShortName">S_AXI_BRESP[1:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_BRESP[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/axi_register_slice_d1/S_AXI_BUSER">
+      <obj_property name="ElementShortName">S_AXI_BUSER[0:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_BUSER[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/axi_register_slice_d1/S_AXI_BVALID">
+      <obj_property name="ElementShortName">S_AXI_BVALID</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_BVALID</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/axi_register_slice_d1/S_AXI_BREADY">
+      <obj_property name="ElementShortName">S_AXI_BREADY</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_BREADY</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/axi_register_slice_d1/S_AXI_ARID">
+      <obj_property name="ElementShortName">S_AXI_ARID[15:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_ARID[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/axi_register_slice_d1/S_AXI_ARADDR">
+      <obj_property name="ElementShortName">S_AXI_ARADDR[33:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_ARADDR[33:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/axi_register_slice_d1/S_AXI_ARLEN">
+      <obj_property name="ElementShortName">S_AXI_ARLEN[7:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_ARLEN[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/axi_register_slice_d1/S_AXI_ARSIZE">
+      <obj_property name="ElementShortName">S_AXI_ARSIZE[2:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_ARSIZE[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/axi_register_slice_d1/S_AXI_ARBURST">
+      <obj_property name="ElementShortName">S_AXI_ARBURST[1:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_ARBURST[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/axi_register_slice_d1/S_AXI_ARLOCK">
+      <obj_property name="ElementShortName">S_AXI_ARLOCK[1:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_ARLOCK[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/axi_register_slice_d1/S_AXI_ARCACHE">
+      <obj_property name="ElementShortName">S_AXI_ARCACHE[3:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_ARCACHE[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/axi_register_slice_d1/S_AXI_ARPROT">
+      <obj_property name="ElementShortName">S_AXI_ARPROT[2:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_ARPROT[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/axi_register_slice_d1/S_AXI_ARREGION">
+      <obj_property name="ElementShortName">S_AXI_ARREGION[3:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_ARREGION[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/axi_register_slice_d1/S_AXI_ARQOS">
+      <obj_property name="ElementShortName">S_AXI_ARQOS[3:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_ARQOS[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/axi_register_slice_d1/S_AXI_ARUSER">
+      <obj_property name="ElementShortName">S_AXI_ARUSER[0:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_ARUSER[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/axi_register_slice_d1/S_AXI_ARVALID">
+      <obj_property name="ElementShortName">S_AXI_ARVALID</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_ARVALID</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/axi_register_slice_d1/S_AXI_ARREADY">
+      <obj_property name="ElementShortName">S_AXI_ARREADY</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_ARREADY</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/axi_register_slice_d1/S_AXI_RID">
+      <obj_property name="ElementShortName">S_AXI_RID[15:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_RID[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/axi_register_slice_d1/S_AXI_RDATA">
+      <obj_property name="ElementShortName">S_AXI_RDATA[511:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_RDATA[511:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/axi_register_slice_d1/S_AXI_RRESP">
+      <obj_property name="ElementShortName">S_AXI_RRESP[1:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_RRESP[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/axi_register_slice_d1/S_AXI_RLAST">
+      <obj_property name="ElementShortName">S_AXI_RLAST</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_RLAST</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/axi_register_slice_d1/S_AXI_RUSER">
+      <obj_property name="ElementShortName">S_AXI_RUSER[0:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_RUSER[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/axi_register_slice_d1/S_AXI_RVALID">
+      <obj_property name="ElementShortName">S_AXI_RVALID</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_RVALID</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/axi_register_slice_d1/S_AXI_RREADY">
+      <obj_property name="ElementShortName">S_AXI_RREADY</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_RREADY</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/axi_register_slice_d1/s_ar_data">
+      <obj_property name="ElementShortName">s_ar_data[79:0]</obj_property>
+      <obj_property name="ObjectShortName">s_ar_data[79:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider281" type="divider">
+      <obj_property name="label">ar_pipe in d1</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/axi_register_slice_d1/ar_pipe/S_PAYLOAD_DATA">
+      <obj_property name="ElementShortName">S_PAYLOAD_DATA[79:0]</obj_property>
+      <obj_property name="ObjectShortName">S_PAYLOAD_DATA[79:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/card/fpga/sh/DDR4_3/inst/u_ddr_axi/axi_register_slice_d1/ar_pipe/M_PAYLOAD_DATA">
+      <obj_property name="ElementShortName">M_PAYLOAD_DATA[79:0]</obj_property>
+      <obj_property name="ObjectShortName">M_PAYLOAD_DATA[79:0]</obj_property>
+   </wvobject>
+</wave_config>
