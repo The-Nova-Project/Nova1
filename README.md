@@ -18,7 +18,7 @@ git submodule update --init --recursive
  Change the `$USER` name in this repo with your `$USER` name 
 
 ## Build Instruction
-To Build the CL-design, first source the environment variables for **Scalar-Unit** and **AWS-FPGA** and then run the script:
+To Build the CL-design, source the environment variables for **Scalar-Unit** and **AWS-FPGA** by runing the script:
 ```
 source source_file.sh
 ```
