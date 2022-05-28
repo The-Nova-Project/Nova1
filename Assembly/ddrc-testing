@@ -1,0 +1,18 @@
+li x8,0x81000000
+li x4,0x80000050
+li x5,0x81000000
+li x9,0x810001d0
+jump:
+beq x9,x5,exit
+lw x6,0x0(x4)
+nop                
+addi x4,x4,8
+sw x6,0x0(x5)     
+addi x5,x5,8
+jal jump
+exit:
+nop
+nop
+nop
+nop
+jalr x8
