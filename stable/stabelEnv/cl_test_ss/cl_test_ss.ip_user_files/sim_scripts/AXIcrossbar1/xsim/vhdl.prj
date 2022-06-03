@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../bd/AXIcrossbar1/ip/AXIcrossbar1_axi_uartlite_0_0/sim/AXIcrossbar1_axi_uartlite_0_0.vhd" \
+
+nosort
