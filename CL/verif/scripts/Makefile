@@ -43,7 +43,35 @@ endif
 export SIM_ROOT = $(CL_ROOT)/verif/sim/$(SIMULATOR)
 
 ifeq ($(C_TEST),test_null)
-  export SIM_DIR = $(SIM_ROOT)/$(TEST)
+  ifeq ($(AXI_MEMORY_MODEL), 1)
+    ifeq ($(ECC_DIRECT), 1)
+        export SIM_DIR = $(SIM_ROOT)/$(TEST)_sv_fast_ecc_direct
+    else
+      ifeq ($(ECC_RAND), 1)
+        export SIM_DIR = $(SIM_ROOT)/$(TEST)_sv_fast_ecc_rnd
+      else
+        ifeq ($(DDR_BKDR), 1)
+         export SIM_DIR = $(SIM_ROOT)/$(TEST)_sv_fast_bkdr
+	else
+         export SIM_DIR = $(SIM_ROOT)/$(TEST)_sv_fast
+	endif
+      endif
+    endif
+  else
+   ifeq ($(ECC_DIRECT), 1)
+        export SIM_DIR = $(SIM_ROOT)/$(TEST)_sv_ecc_direct
+    else
+      ifeq ($(ECC_RAND), 1)
+        export SIM_DIR = $(SIM_ROOT)/$(TEST)_sv_ecc_rnd
+      else
+        ifeq ($(DDR_BKDR), 1)
+         export SIM_DIR = $(SIM_ROOT)/$(TEST)_sv_bkdr
+	else
+         export SIM_DIR = $(SIM_ROOT)/$(TEST)_sv
+	endif
+      endif
+    endif
+  endif
 else
   export SIM_DIR = $(SIM_ROOT)/$(C_TEST)_c
 endif
@@ -54,7 +82,7 @@ export SH_INF_DIR  = $(HDK_SHELL_DESIGN_DIR)/interfaces
 export SH_SH_DIR   = $(HDK_SHELL_DESIGN_DIR)/sh_ddr/sim
 
 SV_TEST_LIST = test_hello_world
-C_FILES      = $(C_TEST_NAME) $(C_SDK_USR_UTILS_DIR)/sh_dpi_tasks.c $(C_COMMON_DIR)/src/fpga_pci_sv.c
+C_FILES      = $(C_TEST_NAME) $(C_SDK_USR_UTILS_DIR)/sh_dpi_tasks.c $(C_COMMON_DIR)/src/fpga_pci_sv.c $(C_SRC_DIR)/test_dram_dma_common.c
 
 ifeq ($(XCHK), 1)
   all:	make_sim_dir compile_chk run

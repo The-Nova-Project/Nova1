@@ -1,0 +1,28 @@
+#-----------------------------------------------------------
+# xsim v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Wed Jun  8 13:09:54 2022
+# Process ID: 22698
+# Current directory: /home/muheet/stableEnv/CL/verif/sim/vivado/test_ddr_peek_poke_sv
+# Command line: xsim -source {xsim.dir/tb/xsim_script.tcl}
+# Log file: /home/muheet/stableEnv/CL/verif/sim/vivado/test_ddr_peek_poke_sv/xsim.log
+# Journal file: /home/muheet/stableEnv/CL/verif/sim/vivado/test_ddr_peek_poke_sv/xsim.jou
+#-----------------------------------------------------------
+start_gui
+source xsim.dir/tb/xsim_script.tcl
+# set_param project.enableReportConfiguration 0
+# load_feature core
+# current_fileset
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2021.1/data/ip'.
+current_fileset: Time (s): cpu = 00:00:12 ; elapsed = 00:00:22 . Memory (MB): peak = 9611.691 ; gain = 278.016 ; free physical = 545 ; free virtual = 14283
+# xsim {tb} -autoloadwcfg
+Time resolution is 1 ps
+xsim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 10042.719 ; gain = 431.027 ; free physical = 322 ; free virtual = 14061
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 10339.684 ; gain = 0.000 ; free physical = 2154 ; free virtual = 12801
+exit
+INFO: [Common 17-206] Exiting xsim at Wed Jun  8 14:17:08 2022...

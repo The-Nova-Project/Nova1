@@ -26,10 +26,20 @@ module test_ddr_peek_poke();
 
    int           error_count;
    int           fail;
+   parameter [15:0] AXI_ID = 16'h0;
+logic [511:0] rdata;
+logic [63:0] r_addr;
+logic [31:0] w_data;
+logic [63:0] w_addr = 64'h00;
+logic [63:0] inc_data = 0;
+int file_handler;
+int  i;
+int A;
+// logic [15:0] vdip_value;
+logic [15:0] vled_value;
+assign vled_value='b0;
 
    initial begin
-      error_count = 0;
-      fail = 0;
 
       tb.power_up();
 
@@ -39,68 +49,42 @@ module test_ddr_peek_poke();
       tb.poke_stat(.addr(8'h0c), .ddr_idx(1), .data(32'h0000_0000));
       tb.poke_stat(.addr(8'h0c), .ddr_idx(2), .data(32'h0000_0000));
       
-      // select the ATG hardware
-       
-      tb.poke_ocl(.addr(64'h130), .data(0));
-      tb.poke_ocl(.addr(64'h230), .data(0));
-      tb.poke_ocl(.addr(64'h330), .data(0));
-      tb.poke_ocl(.addr(64'h430), .data(0));
+      tb.nsec_delay(5000);
 
-      // allow memory to initialize
-      tb.nsec_delay(25000);
-
-      for ( int i=0; i<26; i++) begin
-//Walk through DDR address range to check if any of the bits in DDR Rank are tied to 0.         
-         addr = 'h40 << i;
-         $display("Write to Addr %b", addr);
-         tb.poke(.addr(addr), .data({512{1'b1}}), .size(DataSize::UINT512));
-         addr = 'h0;
-         $display("Write to Addr %b", addr);
-         tb.poke(.addr(addr), .data({512{1'b0}}), .size(DataSize::UINT512));
-         addr = 'h40 << i;
-         $display("Read  to Addr %b", addr);
-         tb.peek(.addr(addr), .data(wide_read_data), .size(DataSize::UINT512));
-         if (wide_read_data != {512{1'b1}}) begin
-            $error("Read Data mismatch for Addr %h: Exp %h, Act %h", addr, {512{1'b1}}, wide_read_data);
-            error_count++;
-         end
-//Walk through DDR address range to check if two adjacent bits are wrongly wired.         
-         addr = 'h40 << i;
-         $display("Write to Addr %b", addr);
-         tb.poke(.addr(addr), .data({512{1'b1}}), .size(DataSize::UINT512));
-         addr = 'h20 << i;
-         $display("Write to Addr %b", addr);
-         tb.poke(.addr(addr), .data({512{1'b0}}), .size(DataSize::UINT512));
-         addr = 'h40 << i;
-         $display("Read  to Addr %b", addr);
-         tb.peek(.addr(addr), .data(wide_read_data), .size(DataSize::UINT512));
-         if (wide_read_data != {512{1'b1}}) begin
-            $error("Read Data mismatch for Addr %h: Exp %h, Act %h", addr, {512{1'b1}}, wide_read_data);
-            error_count++;
-         end         
-      end 
+      forever begin
+      if(!$feof(file_handler))begin
+        tb.set_virtual_dip_switch(.dip(0));
+             file_handler=$fopen("/home/muheet/stableEnv/aws-fpga/hdk/cl/developer_designs/xlx_nova_project/verif/tests/int_bringup_test.txt","r");
+                  for(i = 0; i <= inc_data; i=i+1)begin
+                            $fscanf(file_handler,"%h\n",A);
+                            w_data = A;
+                  end
+        $display ("Writing 0x%x", w_data," to address 0x%x", w_addr);
+        tb.poke(.addr(w_addr), .data(w_data), .id(AXI_ID), .size(DataSize::UINT32), .intf(AxiPort::PORT_DMA_PCIS)); // write register
       
-      tb.nsec_delay(500);
-
-      // Power down
-      tb.power_down();
-
-      //---------------------------
-      // Report pass/fail status
-      //---------------------------
-      $display("[%t] : Checking total error count...", $realtime);
-      if (error_count > 0) begin
-         fail = 1;
+        r_addr = w_addr;
+        inc_data = inc_data + 1;
+        w_addr = w_addr + 4;
+        
       end
-      $display("[%t] : Detected %3d errors during this test", $realtime, error_count);
+       if ($feof(file_handler)) begin
 
-      if (fail) begin
-         $error("[%t] : *** TEST FAILED ***", $realtime);
-      end else begin
-         $display("[%t] : *** TEST PASSED ***", $realtime);
-      end
-
-      $finish;
+           tb.set_virtual_dip_switch(.dip(1));
+           tb.peek(.addr(64'h0000000000000000), .data(rdata[63:0]), .size(DataSize::UINT64), .intf(AxiPort::PORT_DMA_PCIS));         // start read & write
+           $display ("Reading 0x%x from address 0x%x", rdata, 0000000000000000);
+           tb.peek(.addr(64'h0000000000000008), .data(rdata[63:0]), .size(DataSize::UINT64), .intf(AxiPort::PORT_DMA_PCIS));         // start read & write
+           $display ("Reading 0x%x from address 0x%x", rdata, 0000000000000000);
+           tb.peek(.addr(64'h0000000000000010), .data(rdata), .size(DataSize::UINT512), .intf(AxiPort::PORT_DMA_PCIS));         // start read & write
+           $display ("Reading 0x%x from address 0x%x", rdata, 0000000000000000);
+           $display("REST DISABLE!!!");
+           #14000ns;
+           $display("end of file");
+           tb.kernel_reset();
+           tb.power_down();
+                   $finish();
+         end
+      
+   end 
    end
 
-endmodule // test_ddr_peek_poke
+endmodule 
