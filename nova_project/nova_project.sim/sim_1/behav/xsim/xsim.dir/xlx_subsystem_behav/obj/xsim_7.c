@@ -5419,7 +5419,7 @@ void relocate(char *dp)
 	iki_vhdl_file_variable_register(dp + 2304336);
 
 
-	/*Populate the transaction function pointer field in the whole net structure */
+	/*Populate the transaction function pointer field in the stableEnv net structure */
 }
 
 void sensitize(char *dp)

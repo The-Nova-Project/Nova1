@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Fri Jun  3 12:05:54 2022
+# Process ID: 22581
+# Current directory: /home/muheet/stableEnv/nova_project
+# Command line: vivado nova_project.xpr
+# Log file: /home/muheet/stableEnv/nova_project/vivado.log
+# Journal file: /home/muheet/stableEnv/nova_project/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project nova_project.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2021.1/data/ip'.
+open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:07 . Memory (MB): peak = 7603.805 ; gain = 58.094 ; free physical = 14099 ; free virtual = 29725
+INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+update_compile_order -fileset sources_1

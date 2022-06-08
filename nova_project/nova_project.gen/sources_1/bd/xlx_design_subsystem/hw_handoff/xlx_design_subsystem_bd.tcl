@@ -155,209 +155,7 @@ proc create_root_design { parentCell } {
 
 
   # Create interface ports
-  set DDR_s [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:aximm_rtl:1.0 -portmaps { \
-   ARADDR { physical_name DDR_s_araddr direction O left 63 right 0 } \
-   ARBURST { physical_name DDR_s_arburst direction O left 1 right 0 } \
-   ARCACHE { physical_name DDR_s_arcache direction O left 3 right 0 } \
-   ARID { physical_name DDR_s_arid direction O left 4 right 0 } \
-   ARLEN { physical_name DDR_s_arlen direction O left 7 right 0 } \
-   ARLOCK { physical_name DDR_s_arlock direction O left 0 right 0 } \
-   ARPROT { physical_name DDR_s_arprot direction O left 2 right 0 } \
-   ARQOS { physical_name DDR_s_arqos direction O left 3 right 0 } \
-   ARREADY { physical_name DDR_s_arready direction I left 0 right 0 } \
-   ARREGION { physical_name DDR_s_arregion direction O left 3 right 0 } \
-   ARSIZE { physical_name DDR_s_arsize direction O left 2 right 0 } \
-   ARVALID { physical_name DDR_s_arvalid direction O left 0 right 0 } \
-   AWADDR { physical_name DDR_s_awaddr direction O left 63 right 0 } \
-   AWBURST { physical_name DDR_s_awburst direction O left 1 right 0 } \
-   AWCACHE { physical_name DDR_s_awcache direction O left 3 right 0 } \
-   AWID { physical_name DDR_s_awid direction O left 4 right 0 } \
-   AWLEN { physical_name DDR_s_awlen direction O left 7 right 0 } \
-   AWLOCK { physical_name DDR_s_awlock direction O left 0 right 0 } \
-   AWPROT { physical_name DDR_s_awprot direction O left 2 right 0 } \
-   AWQOS { physical_name DDR_s_awqos direction O left 3 right 0 } \
-   AWREADY { physical_name DDR_s_awready direction I left 0 right 0 } \
-   AWREGION { physical_name DDR_s_awregion direction O left 3 right 0 } \
-   AWSIZE { physical_name DDR_s_awsize direction O left 2 right 0 } \
-   AWVALID { physical_name DDR_s_awvalid direction O left 0 right 0 } \
-   BID { physical_name DDR_s_bid direction I left 4 right 0 } \
-   BREADY { physical_name DDR_s_bready direction O left 0 right 0 } \
-   BRESP { physical_name DDR_s_bresp direction I left 1 right 0 } \
-   BVALID { physical_name DDR_s_bvalid direction I left 0 right 0 } \
-   RDATA { physical_name DDR_s_rdata direction I left 63 right 0 } \
-   RID { physical_name DDR_s_rid direction I left 4 right 0 } \
-   RLAST { physical_name DDR_s_rlast direction I left 0 right 0 } \
-   RREADY { physical_name DDR_s_rready direction O left 0 right 0 } \
-   RRESP { physical_name DDR_s_rresp direction I left 1 right 0 } \
-   RVALID { physical_name DDR_s_rvalid direction I left 0 right 0 } \
-   WDATA { physical_name DDR_s_wdata direction O left 63 right 0 } \
-   WLAST { physical_name DDR_s_wlast direction O left 0 right 0 } \
-   WREADY { physical_name DDR_s_wready direction I left 0 right 0 } \
-   WSTRB { physical_name DDR_s_wstrb direction O left 7 right 0 } \
-   WVALID { physical_name DDR_s_wvalid direction O left 0 right 0 } \
-   } \
-  DDR_s ]
-  set_property -dict [ list \
-   CONFIG.ADDR_WIDTH {64} \
-   CONFIG.DATA_WIDTH {64} \
-   CONFIG.FREQ_HZ {10000000} \
-   CONFIG.HAS_BRESP {1} \
-   CONFIG.HAS_BURST {1} \
-   CONFIG.HAS_CACHE {1} \
-   CONFIG.HAS_LOCK {1} \
-   CONFIG.HAS_PROT {1} \
-   CONFIG.HAS_QOS {1} \
-   CONFIG.HAS_REGION {0} \
-   CONFIG.HAS_RRESP {1} \
-   CONFIG.HAS_WSTRB {1} \
-   CONFIG.INSERT_VIP {0} \
-   CONFIG.NUM_READ_OUTSTANDING {2} \
-   CONFIG.NUM_WRITE_OUTSTANDING {2} \
-   CONFIG.PHASE {0.0} \
-   CONFIG.PROTOCOL {AXI4} \
-   CONFIG.READ_WRITE_MODE {READ_WRITE} \
-   ] $DDR_s
-  set_property HDL_ATTRIBUTE.LOCKED {TRUE} [get_bd_intf_ports DDR_s]
-
-  set MTMLAddr_m [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:aximm_rtl:1.0 -portmaps { \
-   ARADDR { physical_name MTMLAddr_m_araddr direction I left 63 right 0 } \
-   ARBURST { physical_name MTMLAddr_m_arburst direction I left 1 right 0 } \
-   ARCACHE { physical_name MTMLAddr_m_arcache direction I left 3 right 0 } \
-   ARID { physical_name MTMLAddr_m_arid direction I left 4 right 0 } \
-   ARLEN { physical_name MTMLAddr_m_arlen direction I left 7 right 0 } \
-   ARLOCK { physical_name MTMLAddr_m_arlock direction I left 0 right 0 } \
-   ARPROT { physical_name MTMLAddr_m_arprot direction I left 2 right 0 } \
-   ARQOS { physical_name MTMLAddr_m_arqos direction I left 3 right 0 } \
-   ARREADY { physical_name MTMLAddr_m_arready direction O left 0 right 0 } \
-   ARSIZE { physical_name MTMLAddr_m_arsize direction I left 2 right 0 } \
-   ARVALID { physical_name MTMLAddr_m_arvalid direction I left 0 right 0 } \
-   AWADDR { physical_name MTMLAddr_m_awaddr direction I left 63 right 0 } \
-   AWBURST { physical_name MTMLAddr_m_awburst direction I left 1 right 0 } \
-   AWCACHE { physical_name MTMLAddr_m_awcache direction I left 3 right 0 } \
-   AWID { physical_name MTMLAddr_m_awid direction I left 4 right 0 } \
-   AWLEN { physical_name MTMLAddr_m_awlen direction I left 7 right 0 } \
-   AWLOCK { physical_name MTMLAddr_m_awlock direction I left 0 right 0 } \
-   AWPROT { physical_name MTMLAddr_m_awprot direction I left 2 right 0 } \
-   AWQOS { physical_name MTMLAddr_m_awqos direction I left 3 right 0 } \
-   AWREADY { physical_name MTMLAddr_m_awready direction O left 0 right 0 } \
-   AWSIZE { physical_name MTMLAddr_m_awsize direction I left 2 right 0 } \
-   AWVALID { physical_name MTMLAddr_m_awvalid direction I left 0 right 0 } \
-   BID { physical_name MTMLAddr_m_bid direction O left 4 right 0 } \
-   BREADY { physical_name MTMLAddr_m_bready direction I left 0 right 0 } \
-   BRESP { physical_name MTMLAddr_m_bresp direction O left 1 right 0 } \
-   BVALID { physical_name MTMLAddr_m_bvalid direction O left 0 right 0 } \
-   RDATA { physical_name MTMLAddr_m_rdata direction O left 63 right 0 } \
-   RID { physical_name MTMLAddr_m_rid direction O left 4 right 0 } \
-   RLAST { physical_name MTMLAddr_m_rlast direction O left 0 right 0 } \
-   RREADY { physical_name MTMLAddr_m_rready direction I left 0 right 0 } \
-   RRESP { physical_name MTMLAddr_m_rresp direction O left 1 right 0 } \
-   RVALID { physical_name MTMLAddr_m_rvalid direction O left 0 right 0 } \
-   WDATA { physical_name MTMLAddr_m_wdata direction I left 63 right 0 } \
-   WLAST { physical_name MTMLAddr_m_wlast direction I left 0 right 0 } \
-   WREADY { physical_name MTMLAddr_m_wready direction O left 0 right 0 } \
-   WSTRB { physical_name MTMLAddr_m_wstrb direction I left 7 right 0 } \
-   WVALID { physical_name MTMLAddr_m_wvalid direction I left 0 right 0 } \
-   } \
-  MTMLAddr_m ]
-  set_property -dict [ list \
-   CONFIG.ADDR_WIDTH {64} \
-   CONFIG.ARUSER_WIDTH {0} \
-   CONFIG.AWUSER_WIDTH {0} \
-   CONFIG.BUSER_WIDTH {0} \
-   CONFIG.DATA_WIDTH {64} \
-   CONFIG.FREQ_HZ {10000000} \
-   CONFIG.HAS_BRESP {1} \
-   CONFIG.HAS_BURST {1} \
-   CONFIG.HAS_CACHE {1} \
-   CONFIG.HAS_LOCK {1} \
-   CONFIG.HAS_PROT {1} \
-   CONFIG.HAS_QOS {1} \
-   CONFIG.HAS_REGION {0} \
-   CONFIG.HAS_RRESP {1} \
-   CONFIG.HAS_WSTRB {1} \
-   CONFIG.ID_WIDTH {5} \
-   CONFIG.INSERT_VIP {0} \
-   CONFIG.MAX_BURST_LENGTH {256} \
-   CONFIG.NUM_READ_OUTSTANDING {2} \
-   CONFIG.NUM_READ_THREADS {1} \
-   CONFIG.NUM_WRITE_OUTSTANDING {2} \
-   CONFIG.NUM_WRITE_THREADS {1} \
-   CONFIG.PHASE {0.0} \
-   CONFIG.PROTOCOL {AXI4} \
-   CONFIG.READ_WRITE_MODE {READ_WRITE} \
-   CONFIG.RUSER_BITS_PER_BYTE {0} \
-   CONFIG.RUSER_WIDTH {0} \
-   CONFIG.SUPPORTS_NARROW_BURST {1} \
-   CONFIG.WUSER_BITS_PER_BYTE {0} \
-   CONFIG.WUSER_WIDTH {0} \
-   ] $MTMLAddr_m
-  set_property HDL_ATTRIBUTE.LOCKED {TRUE} [get_bd_intf_ports MTMLAddr_m]
-
-  set MTMLAddr_s [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:aximm_rtl:1.0 -portmaps { \
-   ARADDR { physical_name MTMLAddr_s_araddr direction O left 127 right 64 } \
-   ARBURST { physical_name MTMLAddr_s_arburst direction O left 3 right 2 } \
-   ARCACHE { physical_name MTMLAddr_s_arcache direction O left 7 right 4 } \
-   ARID { physical_name MTMLAddr_s_arid direction O left 9 right 5 } \
-   ARLEN { physical_name MTMLAddr_s_arlen direction O left 15 right 8 } \
-   ARLOCK { physical_name MTMLAddr_s_arlock direction O left 1 right 1 } \
-   ARPROT { physical_name MTMLAddr_s_arprot direction O left 5 right 3 } \
-   ARQOS { physical_name MTMLAddr_s_arqos direction O left 7 right 4 } \
-   ARREADY { physical_name MTMLAddr_s_arready direction I left 1 right 1 } \
-   ARREGION { physical_name MTMLAddr_s_arregion direction O left 7 right 4 } \
-   ARSIZE { physical_name MTMLAddr_s_arsize direction O left 5 right 3 } \
-   ARVALID { physical_name MTMLAddr_s_arvalid direction O left 1 right 1 } \
-   AWADDR { physical_name MTMLAddr_s_awaddr direction O left 127 right 64 } \
-   AWBURST { physical_name MTMLAddr_s_awburst direction O left 3 right 2 } \
-   AWCACHE { physical_name MTMLAddr_s_awcache direction O left 7 right 4 } \
-   AWID { physical_name MTMLAddr_s_awid direction O left 9 right 5 } \
-   AWLEN { physical_name MTMLAddr_s_awlen direction O left 15 right 8 } \
-   AWLOCK { physical_name MTMLAddr_s_awlock direction O left 1 right 1 } \
-   AWPROT { physical_name MTMLAddr_s_awprot direction O left 5 right 3 } \
-   AWQOS { physical_name MTMLAddr_s_awqos direction O left 7 right 4 } \
-   AWREADY { physical_name MTMLAddr_s_awready direction I left 1 right 1 } \
-   AWREGION { physical_name MTMLAddr_s_awregion direction O left 7 right 4 } \
-   AWSIZE { physical_name MTMLAddr_s_awsize direction O left 5 right 3 } \
-   AWVALID { physical_name MTMLAddr_s_awvalid direction O left 1 right 1 } \
-   BID { physical_name MTMLAddr_s_bid direction I left 9 right 5 } \
-   BREADY { physical_name MTMLAddr_s_bready direction O left 1 right 1 } \
-   BRESP { physical_name MTMLAddr_s_bresp direction I left 3 right 2 } \
-   BVALID { physical_name MTMLAddr_s_bvalid direction I left 1 right 1 } \
-   RDATA { physical_name MTMLAddr_s_rdata direction I left 127 right 64 } \
-   RID { physical_name MTMLAddr_s_rid direction I left 9 right 5 } \
-   RLAST { physical_name MTMLAddr_s_rlast direction I left 1 right 1 } \
-   RREADY { physical_name MTMLAddr_s_rready direction O left 1 right 1 } \
-   RRESP { physical_name MTMLAddr_s_rresp direction I left 3 right 2 } \
-   RVALID { physical_name MTMLAddr_s_rvalid direction I left 1 right 1 } \
-   WDATA { physical_name MTMLAddr_s_wdata direction O left 127 right 64 } \
-   WLAST { physical_name MTMLAddr_s_wlast direction O left 1 right 1 } \
-   WREADY { physical_name MTMLAddr_s_wready direction I left 1 right 1 } \
-   WSTRB { physical_name MTMLAddr_s_wstrb direction O left 15 right 8 } \
-   WVALID { physical_name MTMLAddr_s_wvalid direction O left 1 right 1 } \
-   } \
-  MTMLAddr_s ]
-  set_property -dict [ list \
-   CONFIG.ADDR_WIDTH {64} \
-   CONFIG.DATA_WIDTH {64} \
-   CONFIG.FREQ_HZ {10000000} \
-   CONFIG.HAS_BRESP {1} \
-   CONFIG.HAS_BURST {1} \
-   CONFIG.HAS_CACHE {1} \
-   CONFIG.HAS_LOCK {1} \
-   CONFIG.HAS_PROT {1} \
-   CONFIG.HAS_QOS {1} \
-   CONFIG.HAS_REGION {0} \
-   CONFIG.HAS_RRESP {1} \
-   CONFIG.HAS_WSTRB {1} \
-   CONFIG.INSERT_VIP {0} \
-   CONFIG.NUM_READ_OUTSTANDING {2} \
-   CONFIG.NUM_WRITE_OUTSTANDING {2} \
-   CONFIG.PHASE {0.0} \
-   CONFIG.PROTOCOL {AXI4} \
-   CONFIG.READ_WRITE_MODE {READ_WRITE} \
-   ] $MTMLAddr_s
-  set_property HDL_ATTRIBUTE.LOCKED {TRUE} [get_bd_intf_ports MTMLAddr_s]
-
-  set S00_AXI_0 [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:aximm_rtl:1.0 S00_AXI_0 ]
+  set BAR1 [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:aximm_rtl:1.0 BAR1 ]
   set_property -dict [ list \
    CONFIG.ADDR_WIDTH {64} \
    CONFIG.ARUSER_WIDTH {0} \
@@ -387,50 +185,103 @@ proc create_root_design { parentCell } {
    CONFIG.SUPPORTS_NARROW_BURST {1} \
    CONFIG.WUSER_BITS_PER_BYTE {0} \
    CONFIG.WUSER_WIDTH {0} \
-   ] $S00_AXI_0
+   ] $BAR1
 
-  set SMU_s [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:aximm_rtl:1.0 -portmaps { \
-   ARADDR { physical_name SMU_s_araddr direction O left 191 right 128 } \
-   ARBURST { physical_name SMU_s_arburst direction O left 5 right 4 } \
-   ARCACHE { physical_name SMU_s_arcache direction O left 11 right 8 } \
-   ARID { physical_name SMU_s_arid direction O left 14 right 10 } \
-   ARLEN { physical_name SMU_s_arlen direction O left 23 right 16 } \
-   ARLOCK { physical_name SMU_s_arlock direction O left 2 right 2 } \
-   ARPROT { physical_name SMU_s_arprot direction O left 8 right 6 } \
-   ARQOS { physical_name SMU_s_arqos direction O left 11 right 8 } \
-   ARREADY { physical_name SMU_s_arready direction I left 2 right 2 } \
-   ARREGION { physical_name SMU_s_arregion direction O left 11 right 8 } \
-   ARSIZE { physical_name SMU_s_arsize direction O left 8 right 6 } \
-   ARVALID { physical_name SMU_s_arvalid direction O left 2 right 2 } \
-   AWADDR { physical_name SMU_s_awaddr direction O left 191 right 128 } \
-   AWBURST { physical_name SMU_s_awburst direction O left 5 right 4 } \
-   AWCACHE { physical_name SMU_s_awcache direction O left 11 right 8 } \
-   AWID { physical_name SMU_s_awid direction O left 14 right 10 } \
-   AWLEN { physical_name SMU_s_awlen direction O left 23 right 16 } \
-   AWLOCK { physical_name SMU_s_awlock direction O left 2 right 2 } \
-   AWPROT { physical_name SMU_s_awprot direction O left 8 right 6 } \
-   AWQOS { physical_name SMU_s_awqos direction O left 11 right 8 } \
-   AWREADY { physical_name SMU_s_awready direction I left 2 right 2 } \
-   AWREGION { physical_name SMU_s_awregion direction O left 11 right 8 } \
-   AWSIZE { physical_name SMU_s_awsize direction O left 8 right 6 } \
-   AWVALID { physical_name SMU_s_awvalid direction O left 2 right 2 } \
-   BID { physical_name SMU_s_bid direction I left 14 right 10 } \
-   BREADY { physical_name SMU_s_bready direction O left 2 right 2 } \
-   BRESP { physical_name SMU_s_bresp direction I left 5 right 4 } \
-   BVALID { physical_name SMU_s_bvalid direction I left 2 right 2 } \
-   RDATA { physical_name SMU_s_rdata direction I left 191 right 128 } \
-   RID { physical_name SMU_s_rid direction I left 14 right 10 } \
-   RLAST { physical_name SMU_s_rlast direction I left 2 right 2 } \
-   RREADY { physical_name SMU_s_rready direction O left 2 right 2 } \
-   RRESP { physical_name SMU_s_rresp direction I left 5 right 4 } \
-   RVALID { physical_name SMU_s_rvalid direction I left 2 right 2 } \
-   WDATA { physical_name SMU_s_wdata direction O left 191 right 128 } \
-   WLAST { physical_name SMU_s_wlast direction O left 2 right 2 } \
-   WREADY { physical_name SMU_s_wready direction I left 2 right 2 } \
-   WSTRB { physical_name SMU_s_wstrb direction O left 23 right 16 } \
-   WVALID { physical_name SMU_s_wvalid direction O left 2 right 2 } \
+  set DDR_m [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:aximm_rtl:1.0 DDR_m ]
+  set_property -dict [ list \
+   CONFIG.ADDR_WIDTH {64} \
+   CONFIG.DATA_WIDTH {64} \
+   CONFIG.FREQ_HZ {10000000} \
+   CONFIG.HAS_REGION {0} \
+   CONFIG.NUM_READ_OUTSTANDING {2} \
+   CONFIG.NUM_WRITE_OUTSTANDING {2} \
+   CONFIG.PROTOCOL {AXI4} \
+   ] $DDR_m
+
+  set MTML_m [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:aximm_rtl:1.0 MTML_m ]
+  set_property -dict [ list \
+   CONFIG.ADDR_WIDTH {64} \
+   CONFIG.DATA_WIDTH {64} \
+   CONFIG.FREQ_HZ {10000000} \
+   CONFIG.NUM_READ_OUTSTANDING {2} \
+   CONFIG.NUM_WRITE_OUTSTANDING {2} \
+   CONFIG.PROTOCOL {AXI4} \
+   ] $MTML_m
+
+  set MTML_s [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:aximm_rtl:1.0 MTML_s ]
+  set_property -dict [ list \
+   CONFIG.ADDR_WIDTH {64} \
+   CONFIG.ARUSER_WIDTH {0} \
+   CONFIG.AWUSER_WIDTH {0} \
+   CONFIG.BUSER_WIDTH {0} \
+   CONFIG.DATA_WIDTH {64} \
+   CONFIG.FREQ_HZ {10000000} \
+   CONFIG.HAS_BRESP {1} \
+   CONFIG.HAS_BURST {1} \
+   CONFIG.HAS_CACHE {1} \
+   CONFIG.HAS_LOCK {1} \
+   CONFIG.HAS_PROT {1} \
+   CONFIG.HAS_QOS {1} \
+   CONFIG.HAS_REGION {0} \
+   CONFIG.HAS_RRESP {1} \
+   CONFIG.HAS_WSTRB {1} \
+   CONFIG.ID_WIDTH {2} \
+   CONFIG.MAX_BURST_LENGTH {256} \
+   CONFIG.NUM_READ_OUTSTANDING {2} \
+   CONFIG.NUM_READ_THREADS {1} \
+   CONFIG.NUM_WRITE_OUTSTANDING {2} \
+   CONFIG.NUM_WRITE_THREADS {1} \
+   CONFIG.PROTOCOL {AXI4} \
+   CONFIG.READ_WRITE_MODE {READ_WRITE} \
+   CONFIG.RUSER_BITS_PER_BYTE {0} \
+   CONFIG.RUSER_WIDTH {0} \
+   CONFIG.SUPPORTS_NARROW_BURST {1} \
+   CONFIG.WUSER_BITS_PER_BYTE {0} \
+   CONFIG.WUSER_WIDTH {0} \
+   ] $MTML_s
+
+  set SMU_m [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:aximm_rtl:1.0 -portmaps { \
+   ARADDR { physical_name SMU_m_araddr direction O left 191 right 128 } \
+   ARBURST { physical_name SMU_m_arburst direction O left 5 right 4 } \
+   ARCACHE { physical_name SMU_m_arcache direction O left 11 right 8 } \
+   ARID { physical_name SMU_m_arid direction O left 14 right 10 } \
+   ARLEN { physical_name SMU_m_arlen direction O left 23 right 16 } \
+   ARLOCK { physical_name SMU_m_arlock direction O left 2 right 2 } \
+   ARPROT { physical_name SMU_m_arprot direction O left 8 right 6 } \
+   ARQOS { physical_name SMU_m_arqos direction O left 11 right 8 } \
+   ARREADY { physical_name SMU_m_arready direction I left 2 right 2 } \
+   ARREGION { physical_name SMU_m_arregion direction O left 11 right 8 } \
+   ARSIZE { physical_name SMU_m_arsize direction O left 8 right 6 } \
+   ARVALID { physical_name SMU_m_arvalid direction O left 2 right 2 } \
+   AWADDR { physical_name SMU_m_awaddr direction O left 191 right 128 } \
+   AWBURST { physical_name SMU_m_awburst direction O left 5 right 4 } \
+   AWCACHE { physical_name SMU_m_awcache direction O left 11 right 8 } \
+   AWID { physical_name SMU_m_awid direction O left 14 right 10 } \
+   AWLEN { physical_name SMU_m_awlen direction O left 23 right 16 } \
+   AWLOCK { physical_name SMU_m_awlock direction O left 2 right 2 } \
+   AWPROT { physical_name SMU_m_awprot direction O left 8 right 6 } \
+   AWQOS { physical_name SMU_m_awqos direction O left 11 right 8 } \
+   AWREADY { physical_name SMU_m_awready direction I left 2 right 2 } \
+   AWREGION { physical_name SMU_m_awregion direction O left 11 right 8 } \
+   AWSIZE { physical_name SMU_m_awsize direction O left 8 right 6 } \
+   AWVALID { physical_name SMU_m_awvalid direction O left 2 right 2 } \
+   BID { physical_name SMU_m_bid direction I left 14 right 10 } \
+   BREADY { physical_name SMU_m_bready direction O left 2 right 2 } \
+   BRESP { physical_name SMU_m_bresp direction I left 5 right 4 } \
+   BVALID { physical_name SMU_m_bvalid direction I left 2 right 2 } \
+   RDATA { physical_name SMU_m_rdata direction I left 191 right 128 } \
+   RID { physical_name SMU_m_rid direction I left 14 right 10 } \
+   RLAST { physical_name SMU_m_rlast direction I left 2 right 2 } \
+   RREADY { physical_name SMU_m_rready direction O left 2 right 2 } \
+   RRESP { physical_name SMU_m_rresp direction I left 5 right 4 } \
+   RVALID { physical_name SMU_m_rvalid direction I left 2 right 2 } \
+   WDATA { physical_name SMU_m_wdata direction O left 191 right 128 } \
+   WLAST { physical_name SMU_m_wlast direction O left 2 right 2 } \
+   WREADY { physical_name SMU_m_wready direction I left 2 right 2 } \
+   WSTRB { physical_name SMU_m_wstrb direction O left 23 right 16 } \
+   WVALID { physical_name SMU_m_wvalid direction O left 2 right 2 } \
    } \
-  SMU_s ]
+  SMU_m ]
   set_property -dict [ list \
    CONFIG.ADDR_WIDTH {64} \
    CONFIG.DATA_WIDTH {64} \
@@ -450,53 +301,53 @@ proc create_root_design { parentCell } {
    CONFIG.PHASE {0.0} \
    CONFIG.PROTOCOL {AXI4} \
    CONFIG.READ_WRITE_MODE {READ_WRITE} \
-   ] $SMU_s
-  set_property HDL_ATTRIBUTE.LOCKED {TRUE} [get_bd_intf_ports SMU_s]
+   ] $SMU_m
+  set_property HDL_ATTRIBUTE.LOCKED {TRUE} [get_bd_intf_ports SMU_m]
 
   set UART_0 [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:uart_rtl:1.0 UART_0 ]
 
-  set ethernet_s [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:aximm_rtl:1.0 -portmaps { \
-   ARADDR { physical_name ethernet_s_araddr direction O left 255 right 192 } \
-   ARBURST { physical_name ethernet_s_arburst direction O left 7 right 6 } \
-   ARCACHE { physical_name ethernet_s_arcache direction O left 15 right 12 } \
-   ARID { physical_name ethernet_s_arid direction O left 19 right 15 } \
-   ARLEN { physical_name ethernet_s_arlen direction O left 31 right 24 } \
-   ARLOCK { physical_name ethernet_s_arlock direction O left 3 right 3 } \
-   ARPROT { physical_name ethernet_s_arprot direction O left 11 right 9 } \
-   ARQOS { physical_name ethernet_s_arqos direction O left 15 right 12 } \
-   ARREADY { physical_name ethernet_s_arready direction I left 3 right 3 } \
-   ARREGION { physical_name ethernet_s_arregion direction O left 15 right 12 } \
-   ARSIZE { physical_name ethernet_s_arsize direction O left 11 right 9 } \
-   ARVALID { physical_name ethernet_s_arvalid direction O left 3 right 3 } \
-   AWADDR { physical_name ethernet_s_awaddr direction O left 255 right 192 } \
-   AWBURST { physical_name ethernet_s_awburst direction O left 7 right 6 } \
-   AWCACHE { physical_name ethernet_s_awcache direction O left 15 right 12 } \
-   AWID { physical_name ethernet_s_awid direction O left 19 right 15 } \
-   AWLEN { physical_name ethernet_s_awlen direction O left 31 right 24 } \
-   AWLOCK { physical_name ethernet_s_awlock direction O left 3 right 3 } \
-   AWPROT { physical_name ethernet_s_awprot direction O left 11 right 9 } \
-   AWQOS { physical_name ethernet_s_awqos direction O left 15 right 12 } \
-   AWREADY { physical_name ethernet_s_awready direction I left 3 right 3 } \
-   AWREGION { physical_name ethernet_s_awregion direction O left 15 right 12 } \
-   AWSIZE { physical_name ethernet_s_awsize direction O left 11 right 9 } \
-   AWVALID { physical_name ethernet_s_awvalid direction O left 3 right 3 } \
-   BID { physical_name ethernet_s_bid direction I left 19 right 15 } \
-   BREADY { physical_name ethernet_s_bready direction O left 3 right 3 } \
-   BRESP { physical_name ethernet_s_bresp direction I left 7 right 6 } \
-   BVALID { physical_name ethernet_s_bvalid direction I left 3 right 3 } \
-   RDATA { physical_name ethernet_s_rdata direction I left 255 right 192 } \
-   RID { physical_name ethernet_s_rid direction I left 19 right 15 } \
-   RLAST { physical_name ethernet_s_rlast direction I left 3 right 3 } \
-   RREADY { physical_name ethernet_s_rready direction O left 3 right 3 } \
-   RRESP { physical_name ethernet_s_rresp direction I left 7 right 6 } \
-   RVALID { physical_name ethernet_s_rvalid direction I left 3 right 3 } \
-   WDATA { physical_name ethernet_s_wdata direction O left 255 right 192 } \
-   WLAST { physical_name ethernet_s_wlast direction O left 3 right 3 } \
-   WREADY { physical_name ethernet_s_wready direction I left 3 right 3 } \
-   WSTRB { physical_name ethernet_s_wstrb direction O left 31 right 24 } \
-   WVALID { physical_name ethernet_s_wvalid direction O left 3 right 3 } \
+  set ethernet_m [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:aximm_rtl:1.0 -portmaps { \
+   ARADDR { physical_name ethernet_m_araddr direction O left 255 right 192 } \
+   ARBURST { physical_name ethernet_m_arburst direction O left 7 right 6 } \
+   ARCACHE { physical_name ethernet_m_arcache direction O left 15 right 12 } \
+   ARID { physical_name ethernet_m_arid direction O left 19 right 15 } \
+   ARLEN { physical_name ethernet_m_arlen direction O left 31 right 24 } \
+   ARLOCK { physical_name ethernet_m_arlock direction O left 3 right 3 } \
+   ARPROT { physical_name ethernet_m_arprot direction O left 11 right 9 } \
+   ARQOS { physical_name ethernet_m_arqos direction O left 15 right 12 } \
+   ARREADY { physical_name ethernet_m_arready direction I left 3 right 3 } \
+   ARREGION { physical_name ethernet_m_arregion direction O left 15 right 12 } \
+   ARSIZE { physical_name ethernet_m_arsize direction O left 11 right 9 } \
+   ARVALID { physical_name ethernet_m_arvalid direction O left 3 right 3 } \
+   AWADDR { physical_name ethernet_m_awaddr direction O left 255 right 192 } \
+   AWBURST { physical_name ethernet_m_awburst direction O left 7 right 6 } \
+   AWCACHE { physical_name ethernet_m_awcache direction O left 15 right 12 } \
+   AWID { physical_name ethernet_m_awid direction O left 19 right 15 } \
+   AWLEN { physical_name ethernet_m_awlen direction O left 31 right 24 } \
+   AWLOCK { physical_name ethernet_m_awlock direction O left 3 right 3 } \
+   AWPROT { physical_name ethernet_m_awprot direction O left 11 right 9 } \
+   AWQOS { physical_name ethernet_m_awqos direction O left 15 right 12 } \
+   AWREADY { physical_name ethernet_m_awready direction I left 3 right 3 } \
+   AWREGION { physical_name ethernet_m_awregion direction O left 15 right 12 } \
+   AWSIZE { physical_name ethernet_m_awsize direction O left 11 right 9 } \
+   AWVALID { physical_name ethernet_m_awvalid direction O left 3 right 3 } \
+   BID { physical_name ethernet_m_bid direction I left 19 right 15 } \
+   BREADY { physical_name ethernet_m_bready direction O left 3 right 3 } \
+   BRESP { physical_name ethernet_m_bresp direction I left 7 right 6 } \
+   BVALID { physical_name ethernet_m_bvalid direction I left 3 right 3 } \
+   RDATA { physical_name ethernet_m_rdata direction I left 255 right 192 } \
+   RID { physical_name ethernet_m_rid direction I left 19 right 15 } \
+   RLAST { physical_name ethernet_m_rlast direction I left 3 right 3 } \
+   RREADY { physical_name ethernet_m_rready direction O left 3 right 3 } \
+   RRESP { physical_name ethernet_m_rresp direction I left 7 right 6 } \
+   RVALID { physical_name ethernet_m_rvalid direction I left 3 right 3 } \
+   WDATA { physical_name ethernet_m_wdata direction O left 255 right 192 } \
+   WLAST { physical_name ethernet_m_wlast direction O left 3 right 3 } \
+   WREADY { physical_name ethernet_m_wready direction I left 3 right 3 } \
+   WSTRB { physical_name ethernet_m_wstrb direction O left 31 right 24 } \
+   WVALID { physical_name ethernet_m_wvalid direction O left 3 right 3 } \
    } \
-  ethernet_s ]
+  ethernet_m ]
   set_property -dict [ list \
    CONFIG.ADDR_WIDTH {64} \
    CONFIG.DATA_WIDTH {64} \
@@ -516,148 +367,10 @@ proc create_root_design { parentCell } {
    CONFIG.PHASE {0.0} \
    CONFIG.PROTOCOL {AXI4} \
    CONFIG.READ_WRITE_MODE {READ_WRITE} \
-   ] $ethernet_s
-  set_property HDL_ATTRIBUTE.LOCKED {TRUE} [get_bd_intf_ports ethernet_s]
+   ] $ethernet_m
+  set_property HDL_ATTRIBUTE.LOCKED {TRUE} [get_bd_intf_ports ethernet_m]
 
-  set hydra_S [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:aximm_rtl:1.0 -portmaps { \
-   ARADDR { physical_name hydra_S_araddr direction O left 255 right 192 } \
-   ARBURST { physical_name hydra_S_arburst direction O left 7 right 6 } \
-   ARCACHE { physical_name hydra_S_arcache direction O left 15 right 12 } \
-   ARID { physical_name hydra_S_arid direction O left 19 right 15 } \
-   ARLEN { physical_name hydra_S_arlen direction O left 31 right 24 } \
-   ARLOCK { physical_name hydra_S_arlock direction O left 3 right 3 } \
-   ARPROT { physical_name hydra_S_arprot direction O left 11 right 9 } \
-   ARQOS { physical_name hydra_S_arqos direction O left 15 right 12 } \
-   ARREADY { physical_name hydra_S_arready direction I left 3 right 3 } \
-   ARREGION { physical_name hydra_S_arregion direction O left 15 right 12 } \
-   ARSIZE { physical_name hydra_S_arsize direction O left 11 right 9 } \
-   ARVALID { physical_name hydra_S_arvalid direction O left 3 right 3 } \
-   AWADDR { physical_name hydra_S_awaddr direction O left 255 right 192 } \
-   AWBURST { physical_name hydra_S_awburst direction O left 7 right 6 } \
-   AWCACHE { physical_name hydra_S_awcache direction O left 15 right 12 } \
-   AWID { physical_name hydra_S_awid direction O left 19 right 15 } \
-   AWLEN { physical_name hydra_S_awlen direction O left 31 right 24 } \
-   AWLOCK { physical_name hydra_S_awlock direction O left 3 right 3 } \
-   AWPROT { physical_name hydra_S_awprot direction O left 11 right 9 } \
-   AWQOS { physical_name hydra_S_awqos direction O left 15 right 12 } \
-   AWREADY { physical_name hydra_S_awready direction I left 3 right 3 } \
-   AWREGION { physical_name hydra_S_awregion direction O left 15 right 12 } \
-   AWSIZE { physical_name hydra_S_awsize direction O left 11 right 9 } \
-   AWVALID { physical_name hydra_S_awvalid direction O left 3 right 3 } \
-   BID { physical_name hydra_S_bid direction I left 19 right 15 } \
-   BREADY { physical_name hydra_S_bready direction O left 3 right 3 } \
-   BRESP { physical_name hydra_S_bresp direction I left 7 right 6 } \
-   BVALID { physical_name hydra_S_bvalid direction I left 3 right 3 } \
-   RDATA { physical_name hydra_S_rdata direction I left 255 right 192 } \
-   RID { physical_name hydra_S_rid direction I left 19 right 15 } \
-   RLAST { physical_name hydra_S_rlast direction I left 3 right 3 } \
-   RREADY { physical_name hydra_S_rready direction O left 3 right 3 } \
-   RRESP { physical_name hydra_S_rresp direction I left 7 right 6 } \
-   RVALID { physical_name hydra_S_rvalid direction I left 3 right 3 } \
-   WDATA { physical_name hydra_S_wdata direction O left 255 right 192 } \
-   WLAST { physical_name hydra_S_wlast direction O left 3 right 3 } \
-   WREADY { physical_name hydra_S_wready direction I left 3 right 3 } \
-   WSTRB { physical_name hydra_S_wstrb direction O left 31 right 24 } \
-   WVALID { physical_name hydra_S_wvalid direction O left 3 right 3 } \
-   } \
-  hydra_S ]
-  set_property -dict [ list \
-   CONFIG.ADDR_WIDTH {64} \
-   CONFIG.DATA_WIDTH {64} \
-   CONFIG.FREQ_HZ {10000000} \
-   CONFIG.HAS_BRESP {1} \
-   CONFIG.HAS_BURST {1} \
-   CONFIG.HAS_CACHE {1} \
-   CONFIG.HAS_LOCK {1} \
-   CONFIG.HAS_PROT {1} \
-   CONFIG.HAS_QOS {1} \
-   CONFIG.HAS_REGION {0} \
-   CONFIG.HAS_RRESP {1} \
-   CONFIG.HAS_WSTRB {1} \
-   CONFIG.INSERT_VIP {0} \
-   CONFIG.NUM_READ_OUTSTANDING {2} \
-   CONFIG.NUM_WRITE_OUTSTANDING {2} \
-   CONFIG.PHASE {0.0} \
-   CONFIG.PROTOCOL {AXI4} \
-   CONFIG.READ_WRITE_MODE {READ_WRITE} \
-   ] $hydra_S
-  set_property HDL_ATTRIBUTE.LOCKED {TRUE} [get_bd_intf_ports hydra_S]
-
-  set hydra_m [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:aximm_rtl:1.0 -portmaps { \
-   ARADDR { physical_name hydra_m_araddr direction I left 127 right 64 } \
-   ARBURST { physical_name hydra_m_arburst direction I left 3 right 2 } \
-   ARCACHE { physical_name hydra_m_arcache direction I left 7 right 4 } \
-   ARID { physical_name hydra_m_arid direction I left 9 right 5 } \
-   ARLEN { physical_name hydra_m_arlen direction I left 15 right 8 } \
-   ARLOCK { physical_name hydra_m_arlock direction I left 1 right 1 } \
-   ARPROT { physical_name hydra_m_arprot direction I left 5 right 3 } \
-   ARQOS { physical_name hydra_m_arqos direction I left 7 right 4 } \
-   ARREADY { physical_name hydra_m_arready direction O left 1 right 1 } \
-   ARSIZE { physical_name hydra_m_arsize direction I left 5 right 3 } \
-   ARVALID { physical_name hydra_m_arvalid direction I left 1 right 1 } \
-   AWADDR { physical_name hydra_m_awaddr direction I left 127 right 64 } \
-   AWBURST { physical_name hydra_m_awburst direction I left 3 right 2 } \
-   AWCACHE { physical_name hydra_m_awcache direction I left 7 right 4 } \
-   AWID { physical_name hydra_m_awid direction I left 9 right 5 } \
-   AWLEN { physical_name hydra_m_awlen direction I left 15 right 8 } \
-   AWLOCK { physical_name hydra_m_awlock direction I left 1 right 1 } \
-   AWPROT { physical_name hydra_m_awprot direction I left 5 right 3 } \
-   AWQOS { physical_name hydra_m_awqos direction I left 7 right 4 } \
-   AWREADY { physical_name hydra_m_awready direction O left 1 right 1 } \
-   AWSIZE { physical_name hydra_m_awsize direction I left 5 right 3 } \
-   AWVALID { physical_name hydra_m_awvalid direction I left 1 right 1 } \
-   BID { physical_name hydra_m_bid direction O left 9 right 5 } \
-   BREADY { physical_name hydra_m_bready direction I left 1 right 1 } \
-   BRESP { physical_name hydra_m_bresp direction O left 3 right 2 } \
-   BVALID { physical_name hydra_m_bvalid direction O left 1 right 1 } \
-   RDATA { physical_name hydra_m_rdata direction O left 127 right 64 } \
-   RID { physical_name hydra_m_rid direction O left 9 right 5 } \
-   RLAST { physical_name hydra_m_rlast direction O left 1 right 1 } \
-   RREADY { physical_name hydra_m_rready direction I left 1 right 1 } \
-   RRESP { physical_name hydra_m_rresp direction O left 3 right 2 } \
-   RVALID { physical_name hydra_m_rvalid direction O left 1 right 1 } \
-   WDATA { physical_name hydra_m_wdata direction I left 127 right 64 } \
-   WLAST { physical_name hydra_m_wlast direction I left 1 right 1 } \
-   WREADY { physical_name hydra_m_wready direction O left 1 right 1 } \
-   WSTRB { physical_name hydra_m_wstrb direction I left 15 right 8 } \
-   WVALID { physical_name hydra_m_wvalid direction I left 1 right 1 } \
-   } \
-  hydra_m ]
-  set_property -dict [ list \
-   CONFIG.ADDR_WIDTH {64} \
-   CONFIG.ARUSER_WIDTH {0} \
-   CONFIG.AWUSER_WIDTH {0} \
-   CONFIG.BUSER_WIDTH {0} \
-   CONFIG.DATA_WIDTH {64} \
-   CONFIG.FREQ_HZ {10000000} \
-   CONFIG.HAS_BRESP {1} \
-   CONFIG.HAS_BURST {1} \
-   CONFIG.HAS_CACHE {1} \
-   CONFIG.HAS_LOCK {1} \
-   CONFIG.HAS_PROT {1} \
-   CONFIG.HAS_QOS {1} \
-   CONFIG.HAS_REGION {0} \
-   CONFIG.HAS_RRESP {1} \
-   CONFIG.HAS_WSTRB {1} \
-   CONFIG.ID_WIDTH {5} \
-   CONFIG.INSERT_VIP {0} \
-   CONFIG.MAX_BURST_LENGTH {256} \
-   CONFIG.NUM_READ_OUTSTANDING {2} \
-   CONFIG.NUM_READ_THREADS {1} \
-   CONFIG.NUM_WRITE_OUTSTANDING {2} \
-   CONFIG.NUM_WRITE_THREADS {1} \
-   CONFIG.PHASE {0.0} \
-   CONFIG.PROTOCOL {AXI4} \
-   CONFIG.READ_WRITE_MODE {READ_WRITE} \
-   CONFIG.RUSER_BITS_PER_BYTE {0} \
-   CONFIG.RUSER_WIDTH {0} \
-   CONFIG.SUPPORTS_NARROW_BURST {1} \
-   CONFIG.WUSER_BITS_PER_BYTE {0} \
-   CONFIG.WUSER_WIDTH {0} \
-   ] $hydra_m
-  set_property HDL_ATTRIBUTE.LOCKED {TRUE} [get_bd_intf_ports hydra_m]
-
-  set xbar0 [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:aximm_rtl:1.0 xbar0 ]
+  set hydra_s [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:aximm_rtl:1.0 hydra_s ]
   set_property -dict [ list \
    CONFIG.ADDR_WIDTH {64} \
    CONFIG.ARUSER_WIDTH {0} \
@@ -687,25 +400,14 @@ proc create_root_design { parentCell } {
    CONFIG.SUPPORTS_NARROW_BURST {1} \
    CONFIG.WUSER_BITS_PER_BYTE {0} \
    CONFIG.WUSER_WIDTH {0} \
-   ] $xbar0
-
-  set xbar1 [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:aximm_rtl:1.0 xbar1 ]
-  set_property -dict [ list \
-   CONFIG.ADDR_WIDTH {64} \
-   CONFIG.DATA_WIDTH {64} \
-   CONFIG.FREQ_HZ {10000000} \
-   CONFIG.HAS_REGION {0} \
-   CONFIG.NUM_READ_OUTSTANDING {2} \
-   CONFIG.NUM_WRITE_OUTSTANDING {2} \
-   CONFIG.PROTOCOL {AXI4} \
-   ] $xbar1
+   ] $hydra_s
 
 
   # Create ports
   set interrupt_0 [ create_bd_port -dir O -type intr interrupt_0 ]
   set s_axi_aclk_0 [ create_bd_port -dir I -type clk -freq_hz 10000000 s_axi_aclk_0 ]
   set_property -dict [ list \
-   CONFIG.ASSOCIATED_BUSIF {hydra_m:SMU_s:ethernet_s:hydra_S:DDR_s:MTMLAddr_s:MTMLAddr_m:S00_AXI_0:xbar1:xbar0} \
+   CONFIG.ASSOCIATED_BUSIF {SMU_m:ethernet_m:BAR1:hydra_s:MTML_s:DDR_m:MTML_m} \
  ] $s_axi_aclk_0
   set s_axi_aresetn_0 [ create_bd_port -dir I -type rst s_axi_aresetn_0 ]
 
@@ -723,62 +425,42 @@ proc create_root_design { parentCell } {
    CONFIG.ADDR_WIDTH {64} \
    CONFIG.DATA_WIDTH {64} \
    CONFIG.ID_WIDTH {5} \
-   CONFIG.M04_S01_READ_CONNECTIVITY {0} \
-   CONFIG.M04_S01_WRITE_CONNECTIVITY {0} \
-   CONFIG.NUM_MI {4} \
-   CONFIG.NUM_SI {2} \
-   CONFIG.S01_BASE_ID {0x00000010} \
-   CONFIG.S02_BASE_ID {0x00000020} \
-   CONFIG.S03_BASE_ID {0x00000030} \
-   CONFIG.S04_BASE_ID {0x00000040} \
-   CONFIG.S05_BASE_ID {0x00000050} \
-   CONFIG.S06_BASE_ID {0x00000060} \
-   CONFIG.S07_BASE_ID {0x00000070} \
-   CONFIG.S08_BASE_ID {0x00000080} \
-   CONFIG.S09_BASE_ID {0x00000090} \
-   CONFIG.S10_BASE_ID {0x000000a0} \
-   CONFIG.S11_BASE_ID {0x000000b0} \
-   CONFIG.S12_BASE_ID {0x000000c0} \
-   CONFIG.S13_BASE_ID {0x000000d0} \
-   CONFIG.S14_BASE_ID {0x000000e0} \
-   CONFIG.S15_BASE_ID {0x000000f0} \
- ] $axi_crossbar_0
-
-  # Create instance: axi_crossbar_1, and set properties
-  set axi_crossbar_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_crossbar:2.1 axi_crossbar_1 ]
-  set_property -dict [ list \
-   CONFIG.ADDR_RANGES {1} \
-   CONFIG.ADDR_WIDTH {64} \
-   CONFIG.DATA_WIDTH {64} \
-   CONFIG.ID_WIDTH {5} \
    CONFIG.M00_A00_ADDR_WIDTH {24} \
-   CONFIG.M00_A00_BASE_ADDR {0x0000000081000000} \
+   CONFIG.M00_A00_BASE_ADDR {0x0000000084000000} \
    CONFIG.M01_A00_ADDR_WIDTH {24} \
-   CONFIG.M01_A00_BASE_ADDR {0x0000000082000000} \
+   CONFIG.M01_A00_BASE_ADDR {0x0000000081000000} \
    CONFIG.M02_A00_ADDR_WIDTH {24} \
-   CONFIG.M02_A00_BASE_ADDR {0x0000000080000000} \
+   CONFIG.M02_A00_BASE_ADDR {0x0000000082000000} \
    CONFIG.M03_A00_ADDR_WIDTH {24} \
    CONFIG.M03_A00_BASE_ADDR {0x0000000083000000} \
-   CONFIG.M03_S01_READ_CONNECTIVITY {1} \
-   CONFIG.M03_S01_WRITE_CONNECTIVITY {1} \
-   CONFIG.NUM_MI {4} \
-   CONFIG.NUM_SI {2} \
-   CONFIG.S01_BASE_ID {0x00000010} \
-   CONFIG.S02_BASE_ID {0x00000020} \
-   CONFIG.S03_BASE_ID {0x00000030} \
-   CONFIG.S04_BASE_ID {0x00000040} \
-   CONFIG.S05_BASE_ID {0x00000050} \
-   CONFIG.S06_BASE_ID {0x00000060} \
-   CONFIG.S07_BASE_ID {0x00000070} \
-   CONFIG.S08_BASE_ID {0x00000080} \
-   CONFIG.S09_BASE_ID {0x00000090} \
-   CONFIG.S10_BASE_ID {0x000000a0} \
-   CONFIG.S11_BASE_ID {0x000000b0} \
-   CONFIG.S12_BASE_ID {0x000000c0} \
-   CONFIG.S13_BASE_ID {0x000000d0} \
-   CONFIG.S14_BASE_ID {0x000000e0} \
-   CONFIG.S15_BASE_ID {0x000000f0} \
- ] $axi_crossbar_1
+   CONFIG.M04_A00_ADDR_WIDTH {24} \
+   CONFIG.M04_A00_BASE_ADDR {0x0000000080000000} \
+   CONFIG.M04_S01_READ_CONNECTIVITY {1} \
+   CONFIG.M04_S01_WRITE_CONNECTIVITY {1} \
+   CONFIG.M04_S02_READ_CONNECTIVITY {1} \
+   CONFIG.M04_S02_WRITE_CONNECTIVITY {1} \
+   CONFIG.M05_A00_ADDR_WIDTH {24} \
+   CONFIG.M05_A00_BASE_ADDR {0x0000000085000000} \
+   CONFIG.M05_S02_READ_CONNECTIVITY {0} \
+   CONFIG.M05_S02_WRITE_CONNECTIVITY {0} \
+   CONFIG.NUM_MI {6} \
+   CONFIG.NUM_SI {3} \
+   CONFIG.S01_BASE_ID {0x00000008} \
+   CONFIG.S02_BASE_ID {0x00000010} \
+   CONFIG.S03_BASE_ID {0x00000018} \
+   CONFIG.S04_BASE_ID {0x00000020} \
+   CONFIG.S05_BASE_ID {0x00000028} \
+   CONFIG.S06_BASE_ID {0x00000030} \
+   CONFIG.S07_BASE_ID {0x00000038} \
+   CONFIG.S08_BASE_ID {0x00000040} \
+   CONFIG.S09_BASE_ID {0x00000048} \
+   CONFIG.S10_BASE_ID {0x00000050} \
+   CONFIG.S11_BASE_ID {0x00000058} \
+   CONFIG.S12_BASE_ID {0x00000060} \
+   CONFIG.S13_BASE_ID {0x00000068} \
+   CONFIG.S14_BASE_ID {0x00000070} \
+   CONFIG.S15_BASE_ID {0x00000078} \
+ ] $axi_crossbar_0
 
   # Create instance: axi_dwidth_converter_0, and set properties
   set axi_dwidth_converter_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_dwidth_converter:2.1 axi_dwidth_converter_0 ]
@@ -819,44 +501,43 @@ proc create_root_design { parentCell } {
  ] $blk_mem_gen_0
 
   # Create interface connections
-  connect_bd_intf_net -intf_net MTMLAddr_m_1 [get_bd_intf_ports MTMLAddr_m] [get_bd_intf_pins axi_crossbar_1/S01_AXI]
-  connect_bd_intf_net -intf_net S00_AXI_0_2 [get_bd_intf_ports S00_AXI_0] [get_bd_intf_pins axi_crossbar_0/S00_AXI]
-  connect_bd_intf_net -intf_net S01_AXI_0_2 [get_bd_intf_ports xbar0] [get_bd_intf_pins axi_crossbar_0/S01_AXI]
+  connect_bd_intf_net -intf_net S00_AXI_0_2 [get_bd_intf_ports BAR1] [get_bd_intf_pins axi_crossbar_0/S00_AXI]
+  connect_bd_intf_net -intf_net S01_AXI_0_2 [get_bd_intf_ports hydra_s] [get_bd_intf_pins axi_crossbar_0/S01_AXI]
+  connect_bd_intf_net -intf_net S02_AXI_0_1 [get_bd_intf_ports MTML_s] [get_bd_intf_pins axi_crossbar_0/S02_AXI]
   connect_bd_intf_net -intf_net axi_bram_ctrl_0_BRAM_PORTA [get_bd_intf_pins axi_bram_ctrl_0/BRAM_PORTA] [get_bd_intf_pins blk_mem_gen_0/BRAM_PORTA]
   connect_bd_intf_net -intf_net axi_crossbar_0_M00_AXI [get_bd_intf_pins axi_bram_ctrl_0/S_AXI] [get_bd_intf_pins axi_crossbar_0/M00_AXI]
   connect_bd_intf_net -intf_net axi_crossbar_0_M01_AXI [get_bd_intf_pins axi_crossbar_0/M01_AXI] [get_bd_intf_pins axi_dwidth_converter_0/S_AXI]
-  connect_bd_intf_net -intf_net axi_crossbar_0_M02_AXI [get_bd_intf_ports SMU_s] [get_bd_intf_pins axi_crossbar_0/M02_AXI]
-  connect_bd_intf_net -intf_net axi_crossbar_0_M03_AXI [get_bd_intf_ports ethernet_s] [get_bd_intf_pins axi_crossbar_0/M03_AXI]
-  connect_bd_intf_net -intf_net axi_crossbar_1_M00_AXI [get_bd_intf_ports DDR_s] [get_bd_intf_pins axi_crossbar_1/M00_AXI]
-  connect_bd_intf_net -intf_net axi_crossbar_1_M01_AXI [get_bd_intf_ports MTMLAddr_s] [get_bd_intf_pins axi_crossbar_1/M01_AXI]
-  connect_bd_intf_net -intf_net axi_crossbar_1_M02_AXI [get_bd_intf_ports xbar1] [get_bd_intf_pins axi_crossbar_1/M02_AXI]
-  connect_bd_intf_net -intf_net axi_crossbar_1_M03_AXI [get_bd_intf_ports hydra_S] [get_bd_intf_pins axi_crossbar_1/M03_AXI]
+  connect_bd_intf_net -intf_net axi_crossbar_0_M02_AXI [get_bd_intf_ports SMU_m] [get_bd_intf_pins axi_crossbar_0/M02_AXI]
+  connect_bd_intf_net -intf_net axi_crossbar_0_M03_AXI [get_bd_intf_ports ethernet_m] [get_bd_intf_pins axi_crossbar_0/M03_AXI]
+  connect_bd_intf_net -intf_net axi_crossbar_0_M04_AXI [get_bd_intf_ports DDR_m] [get_bd_intf_pins axi_crossbar_0/M04_AXI]
+  connect_bd_intf_net -intf_net axi_crossbar_0_M05_AXI [get_bd_intf_ports MTML_m] [get_bd_intf_pins axi_crossbar_0/M05_AXI]
   connect_bd_intf_net -intf_net axi_dwidth_converter_0_M_AXI [get_bd_intf_pins axi_dwidth_converter_0/M_AXI] [get_bd_intf_pins axi_protocol_convert_0/S_AXI]
   connect_bd_intf_net -intf_net axi_protocol_convert_0_M_AXI [get_bd_intf_pins axi_protocol_convert_0/M_AXI] [get_bd_intf_pins axi_uartlite_0/S_AXI]
   connect_bd_intf_net -intf_net axi_uartlite_0_UART [get_bd_intf_ports UART_0] [get_bd_intf_pins axi_uartlite_0/UART]
-  connect_bd_intf_net -intf_net hydra_m_1 [get_bd_intf_ports hydra_m] [get_bd_intf_pins axi_crossbar_1/S00_AXI]
 
   # Create port connections
   connect_bd_net -net axi_uartlite_0_interrupt [get_bd_ports interrupt_0] [get_bd_pins axi_uartlite_0/interrupt]
-  connect_bd_net -net s_axi_aclk_0_1 [get_bd_ports s_axi_aclk_0] [get_bd_pins axi_bram_ctrl_0/s_axi_aclk] [get_bd_pins axi_crossbar_0/aclk] [get_bd_pins axi_crossbar_1/aclk] [get_bd_pins axi_dwidth_converter_0/s_axi_aclk] [get_bd_pins axi_protocol_convert_0/aclk] [get_bd_pins axi_uartlite_0/s_axi_aclk]
-  connect_bd_net -net s_axi_aresetn_0_1 [get_bd_ports s_axi_aresetn_0] [get_bd_pins axi_bram_ctrl_0/s_axi_aresetn] [get_bd_pins axi_crossbar_0/aresetn] [get_bd_pins axi_crossbar_1/aresetn] [get_bd_pins axi_dwidth_converter_0/s_axi_aresetn] [get_bd_pins axi_protocol_convert_0/aresetn] [get_bd_pins axi_uartlite_0/s_axi_aresetn]
+  connect_bd_net -net s_axi_aclk_0_1 [get_bd_ports s_axi_aclk_0] [get_bd_pins axi_bram_ctrl_0/s_axi_aclk] [get_bd_pins axi_crossbar_0/aclk] [get_bd_pins axi_dwidth_converter_0/s_axi_aclk] [get_bd_pins axi_protocol_convert_0/aclk] [get_bd_pins axi_uartlite_0/s_axi_aclk]
+  connect_bd_net -net s_axi_aresetn_0_1 [get_bd_ports s_axi_aresetn_0] [get_bd_pins axi_bram_ctrl_0/s_axi_aresetn] [get_bd_pins axi_crossbar_0/aresetn] [get_bd_pins axi_dwidth_converter_0/s_axi_aresetn] [get_bd_pins axi_protocol_convert_0/aresetn] [get_bd_pins axi_uartlite_0/s_axi_aresetn]
 
   # Create address segments
-  assign_bd_address -offset 0x81000000 -range 0x00010000 -target_address_space [get_bd_addr_spaces hydra_m] [get_bd_addr_segs DDR_s/Reg] -force
-  assign_bd_address -offset 0x81000000 -range 0x00010000 -target_address_space [get_bd_addr_spaces MTMLAddr_m] [get_bd_addr_segs DDR_s/Reg] -force
-  assign_bd_address -offset 0x83000000 -range 0x00010000 -target_address_space [get_bd_addr_spaces hydra_m] [get_bd_addr_segs MTMLAddr_s/Reg] -force
-  assign_bd_address -offset 0x83000000 -range 0x00010000 -target_address_space [get_bd_addr_spaces MTMLAddr_m] [get_bd_addr_segs MTMLAddr_s/Reg] -force
-  assign_bd_address -offset 0x00080000 -range 0x00010000 -target_address_space [get_bd_addr_spaces S00_AXI_0] [get_bd_addr_segs SMU_s/Reg] -force
-  assign_bd_address -offset 0x00080000 -range 0x00010000 -target_address_space [get_bd_addr_spaces xbar0] [get_bd_addr_segs SMU_s/Reg] -force
-  assign_bd_address -offset 0x00000000 -range 0x00002000 -target_address_space [get_bd_addr_spaces S00_AXI_0] [get_bd_addr_segs axi_bram_ctrl_0/S_AXI/Mem0] -force
-  assign_bd_address -offset 0x00000000 -range 0x00002000 -target_address_space [get_bd_addr_spaces xbar0] [get_bd_addr_segs axi_bram_ctrl_0/S_AXI/Mem0] -force
-  assign_bd_address -offset 0x00040000 -range 0x00010000 -target_address_space [get_bd_addr_spaces S00_AXI_0] [get_bd_addr_segs axi_uartlite_0/S_AXI/Reg] -force
-  assign_bd_address -offset 0x00040000 -range 0x00010000 -target_address_space [get_bd_addr_spaces xbar0] [get_bd_addr_segs axi_uartlite_0/S_AXI/Reg] -force
-  assign_bd_address -offset 0x000C0000 -range 0x00010000 -target_address_space [get_bd_addr_spaces S00_AXI_0] [get_bd_addr_segs ethernet_s/Reg] -force
-  assign_bd_address -offset 0x000C0000 -range 0x00010000 -target_address_space [get_bd_addr_spaces xbar0] [get_bd_addr_segs ethernet_s/Reg] -force
-  assign_bd_address -offset 0x82000000 -range 0x00010000 -target_address_space [get_bd_addr_spaces MTMLAddr_m] [get_bd_addr_segs hydra_S/Reg] -force
-  assign_bd_address -offset 0x80000000 -range 0x00010000 -target_address_space [get_bd_addr_spaces hydra_m] [get_bd_addr_segs xbar1/Reg] -force
-  assign_bd_address -offset 0x80000000 -range 0x00010000 -target_address_space [get_bd_addr_spaces MTMLAddr_m] [get_bd_addr_segs xbar1/Reg] -force
+  assign_bd_address -offset 0x80000000 -range 0x00010000 -target_address_space [get_bd_addr_spaces MTML_s] [get_bd_addr_segs DDR_m/Reg] -force
+  assign_bd_address -offset 0x80000000 -range 0x00010000 -target_address_space [get_bd_addr_spaces BAR1] [get_bd_addr_segs DDR_m/Reg] -force
+  assign_bd_address -offset 0x80000000 -range 0x00010000 -target_address_space [get_bd_addr_spaces hydra_s] [get_bd_addr_segs DDR_m/Reg] -force
+  assign_bd_address -offset 0x85000000 -range 0x00010000 -target_address_space [get_bd_addr_spaces hydra_s] [get_bd_addr_segs MTML_m/Reg] -force
+  assign_bd_address -offset 0x85000000 -range 0x00010000 -target_address_space [get_bd_addr_spaces BAR1] [get_bd_addr_segs MTML_m/Reg] -force
+  assign_bd_address -offset 0x82000000 -range 0x00010000 -target_address_space [get_bd_addr_spaces MTML_s] [get_bd_addr_segs SMU_m/Reg] -force
+  assign_bd_address -offset 0x82000000 -range 0x00010000 -target_address_space [get_bd_addr_spaces hydra_s] [get_bd_addr_segs SMU_m/Reg] -force
+  assign_bd_address -offset 0x82000000 -range 0x00010000 -target_address_space [get_bd_addr_spaces BAR1] [get_bd_addr_segs SMU_m/Reg] -force
+  assign_bd_address -offset 0x84000000 -range 0x00002000 -target_address_space [get_bd_addr_spaces BAR1] [get_bd_addr_segs axi_bram_ctrl_0/S_AXI/Mem0] -force
+  assign_bd_address -offset 0x84000000 -range 0x00002000 -target_address_space [get_bd_addr_spaces hydra_s] [get_bd_addr_segs axi_bram_ctrl_0/S_AXI/Mem0] -force
+  assign_bd_address -offset 0x84000000 -range 0x00002000 -target_address_space [get_bd_addr_spaces MTML_s] [get_bd_addr_segs axi_bram_ctrl_0/S_AXI/Mem0] -force
+  assign_bd_address -offset 0x81000000 -range 0x00010000 -target_address_space [get_bd_addr_spaces hydra_s] [get_bd_addr_segs axi_uartlite_0/S_AXI/Reg] -force
+  assign_bd_address -offset 0x81000000 -range 0x00010000 -target_address_space [get_bd_addr_spaces MTML_s] [get_bd_addr_segs axi_uartlite_0/S_AXI/Reg] -force
+  assign_bd_address -offset 0x81000000 -range 0x00010000 -target_address_space [get_bd_addr_spaces BAR1] [get_bd_addr_segs axi_uartlite_0/S_AXI/Reg] -force
+  assign_bd_address -offset 0x83000000 -range 0x00010000 -target_address_space [get_bd_addr_spaces MTML_s] [get_bd_addr_segs ethernet_m/Reg] -force
+  assign_bd_address -offset 0x83000000 -range 0x00010000 -target_address_space [get_bd_addr_spaces hydra_s] [get_bd_addr_segs ethernet_m/Reg] -force
+  assign_bd_address -offset 0x83000000 -range 0x00010000 -target_address_space [get_bd_addr_spaces BAR1] [get_bd_addr_segs ethernet_m/Reg] -force
 
 
   # Restore current instance

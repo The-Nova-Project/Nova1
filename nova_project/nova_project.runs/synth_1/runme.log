@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log xlx_subsystem.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source xlx_subsystem.tcl
+    with args -log xlx_design_subsystem.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source xlx_design_subsystem.tcl
 
 
 ****** Vivado v2021.1 (64-bit)
@@ -8,22 +8,21 @@
   **** IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
     ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 
-source xlx_subsystem.tcl -notrace
+source xlx_design_subsystem.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2021.1/data/ip'.
-Command: synth_design -top xlx_subsystem -part xcvu9p-flga2104-1-e
+Command: synth_design -top xlx_design_subsystem -part xcvu9p-flga2104-1-e
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xcvu9p'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcvu9p'
 INFO: [Device 21-403] Loading part xcvu9p-flga2104-1-e
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 32303
+INFO: [Synth 8-7075] Helper process launched with PID 5731
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 2964.238 ; gain = 225.684 ; free physical = 1851 ; free virtual = 22943
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2962.172 ; gain = 223.652 ; free physical = 1073 ; free virtual = 14499
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'xlx_subsystem' [/home/muheet/stableEnv/nova_project/nova_project.srcs/sources_1/new/xlx_subsystem.sv:21]
 INFO: [Synth 8-6157] synthesizing module 'xlx_design_subsystem' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/synth/xlx_design_subsystem.v:13]
 INFO: [Synth 8-638] synthesizing module 'xlx_design_subsystem_axi_bram_ctrl_0_0' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ip/xlx_design_subsystem_axi_bram_ctrl_0_0/synth/xlx_design_subsystem_axi_bram_ctrl_0_0.vhd:108]
 	Parameter C_BRAM_INST_MODE bound to: EXTERNAL - type: string 
@@ -115,33 +114,43 @@ INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_comparator_s
 INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized1' (17#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
 INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized2' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
 INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized2' (17#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized3' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized3' (17#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized4' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized4' (17#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
 INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_25_addr_decoder' (18#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
 INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_23_axic_srl_fifo' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/94ec/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
 INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_23_ndeep_srl' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/94ec/hdl/axi_data_fifo_v2_1_vl_rfs.v:1135]
 INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_23_ndeep_srl' (19#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/94ec/hdl/axi_data_fifo_v2_1_vl_rfs.v:1135]
 INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_23_axic_srl_fifo' (20#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/94ec/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_25_arbiter_resp' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:1025]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_25_arbiter_resp' (21#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:1025]
 INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
-INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc' (21#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_25_si_transactor' (22#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:3800]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc' (22#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_25_si_transactor' (23#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:3800]
 INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_25_si_transactor__parameterized0' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:3800]
 INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized0' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
-INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized0' (22#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_25_si_transactor__parameterized0' (22#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:3800]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized0' (23#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_25_si_transactor__parameterized0' (23#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:3800]
 INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_25_splitter' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:4461]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_25_splitter' (23#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:4461]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_25_splitter' (24#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:4461]
 INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_25_wdata_router' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:4736]
 INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_23_axic_reg_srl_fifo' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/94ec/hdl/axi_data_fifo_v2_1_vl_rfs.v:889]
 INFO: [Synth 8-155] case statement is not full and has no default [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/94ec/hdl/axi_data_fifo_v2_1_vl_rfs.v:986]
-INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_23_axic_reg_srl_fifo' (24#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/94ec/hdl/axi_data_fifo_v2_1_vl_rfs.v:889]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_25_wdata_router' (25#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:4736]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_23_axic_reg_srl_fifo' (25#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/94ec/hdl/axi_data_fifo_v2_1_vl_rfs.v:889]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_25_wdata_router' (26#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:4736]
 INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_25_si_transactor__parameterized1' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:3800]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_25_arbiter_resp' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:1025]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_25_arbiter_resp' (26#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:1025]
 INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_25_si_transactor__parameterized1' (26#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:3800]
 INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_25_si_transactor__parameterized2' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:3800]
 INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_25_si_transactor__parameterized2' (26#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:3800]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_25_si_transactor__parameterized3' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:3800]
 INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_25_addr_decoder__parameterized0' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
 INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_25_addr_decoder__parameterized0' (26#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_25_si_transactor__parameterized3' (26#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:3800]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_25_si_transactor__parameterized4' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:3800]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_25_si_transactor__parameterized4' (26#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:3800]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_25_addr_decoder__parameterized1' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_25_addr_decoder__parameterized1' (26#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
 INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_23_axic_srl_fifo__parameterized0' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/94ec/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
 INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_23_axic_srl_fifo__parameterized0' (26#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/94ec/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
 INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_25_wdata_mux' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:4561]
@@ -173,6 +182,12 @@ WARNING: [Synth 8-7071] port 'aclk2x' of module 'axi_register_slice_v2_1_24_axi_
 WARNING: [Synth 8-7023] instance 'reg_slice_mi' of module 'axi_register_slice_v2_1_24_axi_register_slice' has 93 connections declared, but only 92 given [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
 WARNING: [Synth 8-7071] port 'aclk2x' of module 'axi_register_slice_v2_1_24_axi_register_slice' is unconnected for instance 'reg_slice_mi' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
 WARNING: [Synth 8-7023] instance 'reg_slice_mi' of module 'axi_register_slice_v2_1_24_axi_register_slice' has 93 connections declared, but only 92 given [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
+WARNING: [Synth 8-7071] port 'aclk2x' of module 'axi_register_slice_v2_1_24_axi_register_slice' is unconnected for instance 'reg_slice_mi' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
+WARNING: [Synth 8-7023] instance 'reg_slice_mi' of module 'axi_register_slice_v2_1_24_axi_register_slice' has 93 connections declared, but only 92 given [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_25_addr_decoder__parameterized2' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_25_addr_decoder__parameterized2' (31#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
+WARNING: [Synth 8-7071] port 'aclk2x' of module 'axi_register_slice_v2_1_24_axi_register_slice' is unconnected for instance 'reg_slice_mi' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
+WARNING: [Synth 8-7023] instance 'reg_slice_mi' of module 'axi_register_slice_v2_1_24_axi_register_slice' has 93 connections declared, but only 92 given [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
 INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_23_axic_srl_fifo__parameterized1' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/94ec/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
 INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_23_axic_srl_fifo__parameterized1' (31#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/94ec/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
 INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_25_wdata_mux__parameterized0' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:4561]
@@ -194,135 +209,101 @@ INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_25_addr_arbiter
 INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_25_crossbar' (34#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:2239]
 INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_25_axi_crossbar' (35#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:4884]
 INFO: [Synth 8-6155] done synthesizing module 'xlx_design_subsystem_axi_crossbar_0_0' (36#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ip/xlx_design_subsystem_axi_crossbar_0_0/synth/xlx_design_subsystem_axi_crossbar_0_0.v:59]
-INFO: [Synth 8-6157] synthesizing module 'xlx_design_subsystem_axi_crossbar_1_0' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ip/xlx_design_subsystem_axi_crossbar_1_0/synth/xlx_design_subsystem_axi_crossbar_1_0.v:59]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_25_axi_crossbar__parameterized0' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:4884]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_25_crossbar__parameterized0' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:2239]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_25_si_transactor__parameterized3' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:3800]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_25_addr_decoder__parameterized1' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
-INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized3' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
-INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized3' (36#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
-INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized4' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
-INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized4' (36#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
-INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized5' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
-INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized5' (36#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_25_addr_decoder__parameterized1' (36#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_25_si_transactor__parameterized3' (36#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:3800]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_25_si_transactor__parameterized4' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:3800]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_25_si_transactor__parameterized4' (36#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:3800]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_25_si_transactor__parameterized5' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:3800]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_25_addr_decoder__parameterized2' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
-INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized6' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
-INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized6' (36#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_25_addr_decoder__parameterized2' (36#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_25_si_transactor__parameterized5' (36#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:3800]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_25_si_transactor__parameterized6' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:3800]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_25_si_transactor__parameterized6' (36#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:3800]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_25_addr_decoder__parameterized3' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_25_addr_decoder__parameterized3' (36#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
-WARNING: [Synth 8-7071] port 'aclk2x' of module 'axi_register_slice_v2_1_24_axi_register_slice' is unconnected for instance 'reg_slice_mi' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
-WARNING: [Synth 8-7023] instance 'reg_slice_mi' of module 'axi_register_slice_v2_1_24_axi_register_slice' has 93 connections declared, but only 92 given [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
-WARNING: [Synth 8-7071] port 'aclk2x' of module 'axi_register_slice_v2_1_24_axi_register_slice' is unconnected for instance 'reg_slice_mi' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
-WARNING: [Synth 8-7023] instance 'reg_slice_mi' of module 'axi_register_slice_v2_1_24_axi_register_slice' has 93 connections declared, but only 92 given [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
-WARNING: [Synth 8-7071] port 'aclk2x' of module 'axi_register_slice_v2_1_24_axi_register_slice' is unconnected for instance 'reg_slice_mi' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
-WARNING: [Synth 8-7023] instance 'reg_slice_mi' of module 'axi_register_slice_v2_1_24_axi_register_slice' has 93 connections declared, but only 92 given [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_25_addr_decoder__parameterized4' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_25_addr_decoder__parameterized4' (36#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
-WARNING: [Synth 8-7071] port 'aclk2x' of module 'axi_register_slice_v2_1_24_axi_register_slice' is unconnected for instance 'reg_slice_mi' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
-WARNING: [Synth 8-7023] instance 'reg_slice_mi' of module 'axi_register_slice_v2_1_24_axi_register_slice' has 93 connections declared, but only 92 given [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
-WARNING: [Synth 8-7071] port 'aclk2x' of module 'axi_register_slice_v2_1_24_axi_register_slice' is unconnected for instance 'reg_slice_mi' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
-WARNING: [Synth 8-7023] instance 'reg_slice_mi' of module 'axi_register_slice_v2_1_24_axi_register_slice' has 93 connections declared, but only 92 given [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_25_crossbar__parameterized0' (36#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:2239]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_25_axi_crossbar__parameterized0' (36#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:4884]
-INFO: [Synth 8-6155] done synthesizing module 'xlx_design_subsystem_axi_crossbar_1_0' (37#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ip/xlx_design_subsystem_axi_crossbar_1_0/synth/xlx_design_subsystem_axi_crossbar_1_0.v:59]
 INFO: [Synth 8-6157] synthesizing module 'xlx_design_subsystem_axi_dwidth_converter_0_0' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ip/xlx_design_subsystem_axi_dwidth_converter_0_0/synth/xlx_design_subsystem_axi_dwidth_converter_0_0.v:58]
 INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_24_top' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3d13/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:14462]
 INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_24_axi_downsizer' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3d13/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:2380]
 INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_24_b_downsizer' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3d13/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:1251]
-INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_24_b_downsizer' (38#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3d13/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:1251]
+INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_24_b_downsizer' (37#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3d13/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:1251]
 INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_24_a_downsizer' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3d13/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:64]
 INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_23_axic_fifo' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/94ec/hdl/axi_data_fifo_v2_1_vl_rfs.v:64]
 INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_23_fifo_gen' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/94ec/hdl/axi_data_fifo_v2_1_vl_rfs.v:168]
 INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_async_rst' [/opt/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_async_rst' (39#1) [/opt/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
-INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_23_fifo_gen' (57#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/94ec/hdl/axi_data_fifo_v2_1_vl_rfs.v:168]
-INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_23_axic_fifo' (58#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/94ec/hdl/axi_data_fifo_v2_1_vl_rfs.v:64]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_async_rst' (38#1) [/opt/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_23_fifo_gen' (56#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/94ec/hdl/axi_data_fifo_v2_1_vl_rfs.v:168]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_23_axic_fifo' (57#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/94ec/hdl/axi_data_fifo_v2_1_vl_rfs.v:64]
 INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_23_axic_fifo__parameterized0' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/94ec/hdl/axi_data_fifo_v2_1_vl_rfs.v:64]
 INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_23_fifo_gen__parameterized0' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/94ec/hdl/axi_data_fifo_v2_1_vl_rfs.v:168]
-INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_23_fifo_gen__parameterized0' (58#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/94ec/hdl/axi_data_fifo_v2_1_vl_rfs.v:168]
-INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_23_axic_fifo__parameterized0' (58#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/94ec/hdl/axi_data_fifo_v2_1_vl_rfs.v:64]
-INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_24_a_downsizer' (59#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3d13/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:64]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_23_fifo_gen__parameterized0' (57#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/94ec/hdl/axi_data_fifo_v2_1_vl_rfs.v:168]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_23_axic_fifo__parameterized0' (57#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/94ec/hdl/axi_data_fifo_v2_1_vl_rfs.v:64]
+INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_24_a_downsizer' (58#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3d13/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:64]
 INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_24_w_downsizer' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3d13/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:2016]
-INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_24_w_downsizer' (60#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3d13/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:2016]
+INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_24_w_downsizer' (59#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3d13/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:2016]
 INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_24_a_downsizer__parameterized0' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3d13/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:64]
-INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_24_a_downsizer__parameterized0' (60#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3d13/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:64]
+INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_24_a_downsizer__parameterized0' (59#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3d13/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:64]
 INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_24_r_downsizer' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3d13/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:1533]
-INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_24_r_downsizer' (61#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3d13/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:1533]
-INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_24_axi_downsizer' (62#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3d13/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:2380]
-INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_24_top' (63#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3d13/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:14462]
-INFO: [Synth 8-6155] done synthesizing module 'xlx_design_subsystem_axi_dwidth_converter_0_0' (64#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ip/xlx_design_subsystem_axi_dwidth_converter_0_0/synth/xlx_design_subsystem_axi_dwidth_converter_0_0.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_24_r_downsizer' (60#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3d13/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:1533]
+INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_24_axi_downsizer' (61#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3d13/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:2380]
+INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_24_top' (62#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/3d13/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:14462]
+INFO: [Synth 8-6155] done synthesizing module 'xlx_design_subsystem_axi_dwidth_converter_0_0' (63#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ip/xlx_design_subsystem_axi_dwidth_converter_0_0/synth/xlx_design_subsystem_axi_dwidth_converter_0_0.v:58]
 INFO: [Synth 8-6157] synthesizing module 'xlx_design_subsystem_axi_protocol_convert_0_0' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ip/xlx_design_subsystem_axi_protocol_convert_0_0/synth/xlx_design_subsystem_axi_protocol_convert_0_0.v:58]
 INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_24_axi_protocol_converter' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4808]
 INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_24_b2s' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4226]
 INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_24_b2s_aw_channel' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3971]
 INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_24_b2s_cmd_translator' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3464]
 INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_24_b2s_incr_cmd' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3092]
-INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_24_b2s_incr_cmd' (65#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3092]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_24_b2s_incr_cmd' (64#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3092]
 INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_24_b2s_wrap_cmd' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2902]
-INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_24_b2s_wrap_cmd' (66#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2902]
-INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_24_b2s_cmd_translator' (67#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3464]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_24_b2s_wrap_cmd' (65#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2902]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_24_b2s_cmd_translator' (66#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3464]
 INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_24_b2s_wr_cmd_fsm' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3224]
 INFO: [Synth 8-226] default block is never used [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3277]
-INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_24_b2s_wr_cmd_fsm' (68#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3224]
-INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_24_b2s_aw_channel' (69#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3971]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_24_b2s_wr_cmd_fsm' (67#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3224]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_24_b2s_aw_channel' (68#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3971]
 INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_24_b2s_b_channel' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3606]
 INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_24_b2s_simple_fifo' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2816]
-INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_24_b2s_simple_fifo' (70#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2816]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_24_b2s_simple_fifo' (69#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2816]
 INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_24_b2s_simple_fifo__parameterized0' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2816]
-INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_24_b2s_simple_fifo__parameterized0' (70#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2816]
-INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_24_b2s_b_channel' (71#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3606]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_24_b2s_simple_fifo__parameterized0' (69#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2816]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_24_b2s_b_channel' (70#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3606]
 INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_24_b2s_ar_channel' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4082]
 INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_24_b2s_rd_cmd_fsm' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3334]
 INFO: [Synth 8-226] default block is never used [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3395]
-INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_24_b2s_rd_cmd_fsm' (72#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3334]
-INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_24_b2s_ar_channel' (73#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4082]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_24_b2s_rd_cmd_fsm' (71#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3334]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_24_b2s_ar_channel' (72#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4082]
 INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_24_b2s_r_channel' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3811]
 INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_24_b2s_simple_fifo__parameterized1' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2816]
-INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_24_b2s_simple_fifo__parameterized1' (73#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2816]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_24_b2s_simple_fifo__parameterized1' (72#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2816]
 INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_24_b2s_simple_fifo__parameterized2' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2816]
-INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_24_b2s_simple_fifo__parameterized2' (73#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2816]
-INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_24_b2s_r_channel' (74#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3811]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_24_b2s_simple_fifo__parameterized2' (72#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2816]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_24_b2s_r_channel' (73#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3811]
 INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_24_axi_register_slice__parameterized0' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:3726]
 INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector__parameterized0' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
-INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_axi2vector__parameterized0' (74#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_axi2vector__parameterized0' (73#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
 INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi__parameterized0' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
-INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_vector2axi__parameterized0' (74#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_vector2axi__parameterized0' (73#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
 INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_24_axic_register_slice__parameterized3' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1498]
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_24_axic_register_slice__parameterized3' (74#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1498]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_24_axic_register_slice__parameterized3' (73#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1498]
 INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_24_axic_register_slice__parameterized4' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1498]
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_24_axic_register_slice__parameterized4' (74#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1498]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_24_axic_register_slice__parameterized4' (73#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1498]
 INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_24_axic_register_slice__parameterized5' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1498]
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_24_axic_register_slice__parameterized5' (74#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1498]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_24_axic_register_slice__parameterized5' (73#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1498]
 INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_24_axic_register_slice__parameterized6' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1498]
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_24_axic_register_slice__parameterized6' (74#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1498]
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_24_axi_register_slice__parameterized0' (74#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:3726]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_24_axic_register_slice__parameterized6' (73#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1498]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_24_axi_register_slice__parameterized0' (73#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:3726]
 WARNING: [Synth 8-7071] port 'aclk2x' of module 'axi_register_slice_v2_1_24_axi_register_slice' is unconnected for instance 'SI_REG' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4392]
 WARNING: [Synth 8-7023] instance 'SI_REG' of module 'axi_register_slice_v2_1_24_axi_register_slice' has 93 connections declared, but only 92 given [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4392]
 INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_24_axi_register_slice__parameterized1' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:3726]
 INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector__parameterized1' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
-INFO: [Common 17-14] Message 'Synth 8-6157' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_axi2vector__parameterized1' (74#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
-INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_vector2axi__parameterized1' (74#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_24_axic_register_slice__parameterized7' (74#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1498]
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_24_axic_register_slice__parameterized8' (74#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1498]
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_24_axic_register_slice__parameterized9' (74#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1498]
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_24_axic_register_slice__parameterized10' (74#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1498]
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_24_axi_register_slice__parameterized1' (74#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:3726]
-INFO: [Common 17-14] Message 'Synth 8-6155' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_axi2vector__parameterized1' (73#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
+INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi__parameterized1' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_vector2axi__parameterized1' (73#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_24_axic_register_slice__parameterized7' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1498]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_24_axic_register_slice__parameterized7' (73#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1498]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_24_axic_register_slice__parameterized8' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1498]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_24_axic_register_slice__parameterized8' (73#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1498]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_24_axic_register_slice__parameterized9' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1498]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_24_axic_register_slice__parameterized9' (73#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1498]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_24_axic_register_slice__parameterized10' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1498]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_24_axic_register_slice__parameterized10' (73#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1498]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_24_axi_register_slice__parameterized1' (73#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:3726]
 WARNING: [Synth 8-7071] port 'aclk2x' of module 'axi_register_slice_v2_1_24_axi_register_slice' is unconnected for instance 'MI_REG' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4647]
 WARNING: [Synth 8-7023] instance 'MI_REG' of module 'axi_register_slice_v2_1_24_axi_register_slice' has 93 connections declared, but only 92 given [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4647]
-WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'xlx_design_subsystem_axi_protocol_convert_0_0' is unconnected for instance 'axi_protocol_convert_0' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/synth/xlx_design_subsystem.v:1981]
-WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'xlx_design_subsystem_axi_protocol_convert_0_0' is unconnected for instance 'axi_protocol_convert_0' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/synth/xlx_design_subsystem.v:1981]
-WARNING: [Synth 8-7023] instance 'axi_protocol_convert_0' of module 'xlx_design_subsystem_axi_protocol_convert_0_0' has 56 connections declared, but only 54 given [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/synth/xlx_design_subsystem.v:1981]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_24_b2s' (74#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4226]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_24_axi_protocol_converter' (75#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4808]
+INFO: [Synth 8-6155] done synthesizing module 'xlx_design_subsystem_axi_protocol_convert_0_0' (76#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ip/xlx_design_subsystem_axi_protocol_convert_0_0/synth/xlx_design_subsystem_axi_protocol_convert_0_0.v:58]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'xlx_design_subsystem_axi_protocol_convert_0_0' is unconnected for instance 'axi_protocol_convert_0' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/synth/xlx_design_subsystem.v:1442]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'xlx_design_subsystem_axi_protocol_convert_0_0' is unconnected for instance 'axi_protocol_convert_0' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/synth/xlx_design_subsystem.v:1442]
+WARNING: [Synth 8-7023] instance 'axi_protocol_convert_0' of module 'xlx_design_subsystem_axi_protocol_convert_0_0' has 56 connections declared, but only 54 given [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/synth/xlx_design_subsystem.v:1442]
 INFO: [Synth 8-638] synthesizing module 'xlx_design_subsystem_axi_uartlite_0_0' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ip/xlx_design_subsystem_axi_uartlite_0_0/synth/xlx_design_subsystem_axi_uartlite_0_0.vhd:86]
 	Parameter C_FAMILY bound to: virtexuplus - type: string 
 	Parameter C_S_AXI_ACLK_FREQ_HZ bound to: 10000000 - type: integer 
@@ -336,7 +317,7 @@ INFO: [Synth 8-3491] module 'axi_uartlite' declared at '/home/muheet/stableEnv/n
 INFO: [Synth 8-638] synthesizing module 'axi_uartlite' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/8c9b/hdl/axi_uartlite_v2_0_vh_rfs.vhd:2190]
 INFO: [Synth 8-638] synthesizing module 'uartlite_core' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/8c9b/hdl/axi_uartlite_v2_0_vh_rfs.vhd:1650]
 INFO: [Synth 8-638] synthesizing module 'baudrate' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/8c9b/hdl/axi_uartlite_v2_0_vh_rfs.vhd:1453]
-INFO: [Synth 8-256] done synthesizing module 'baudrate' (78#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/8c9b/hdl/axi_uartlite_v2_0_vh_rfs.vhd:1453]
+INFO: [Synth 8-256] done synthesizing module 'baudrate' (77#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/8c9b/hdl/axi_uartlite_v2_0_vh_rfs.vhd:1453]
 INFO: [Synth 8-638] synthesizing module 'uartlite_rx' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/8c9b/hdl/axi_uartlite_v2_0_vh_rfs.vhd:927]
 INFO: [Synth 8-638] synthesizing module 'cdc_sync' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
 	Parameter INIT bound to: 1'b0 
@@ -351,36 +332,36 @@ INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_o
 INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:574]
 	Parameter INIT bound to: 1'b0 
 INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:584]
-INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (79#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (78#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
 INFO: [Synth 8-638] synthesizing module 'srl_fifo_f' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
 INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
 INFO: [Synth 8-638] synthesizing module 'cntr_incr_decr_addn_f' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
-INFO: [Synth 8-256] done synthesizing module 'cntr_incr_decr_addn_f' (80#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
+INFO: [Synth 8-256] done synthesizing module 'cntr_incr_decr_addn_f' (79#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
 INFO: [Synth 8-638] synthesizing module 'dynshreg_f' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
-INFO: [Synth 8-256] done synthesizing module 'dynshreg_f' (81#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
-INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f' (82#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
-INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f' (83#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
-INFO: [Synth 8-256] done synthesizing module 'uartlite_rx' (84#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/8c9b/hdl/axi_uartlite_v2_0_vh_rfs.vhd:927]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f' (80#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f' (81#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f' (82#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'uartlite_rx' (83#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/8c9b/hdl/axi_uartlite_v2_0_vh_rfs.vhd:927]
 INFO: [Synth 8-638] synthesizing module 'uartlite_tx' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/8c9b/hdl/axi_uartlite_v2_0_vh_rfs.vhd:408]
-INFO: [Synth 8-256] done synthesizing module 'uartlite_tx' (85#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/8c9b/hdl/axi_uartlite_v2_0_vh_rfs.vhd:408]
-INFO: [Synth 8-256] done synthesizing module 'uartlite_core' (86#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/8c9b/hdl/axi_uartlite_v2_0_vh_rfs.vhd:1650]
+INFO: [Synth 8-256] done synthesizing module 'uartlite_tx' (84#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/8c9b/hdl/axi_uartlite_v2_0_vh_rfs.vhd:408]
+INFO: [Synth 8-256] done synthesizing module 'uartlite_core' (85#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/8c9b/hdl/axi_uartlite_v2_0_vh_rfs.vhd:1650]
 INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
 INFO: [Synth 8-638] synthesizing module 'slave_attachment' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
 INFO: [Synth 8-638] synthesizing module 'address_decoder' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
 INFO: [Synth 8-638] synthesizing module 'pselect_f' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-256] done synthesizing module 'pselect_f' (87#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f' (86#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized0' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized0' (87#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized0' (86#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized1' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized1' (87#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized1' (86#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized2' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized2' (87#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-256] done synthesizing module 'address_decoder' (88#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized2' (86#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'address_decoder' (87#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
 INFO: [Synth 8-226] default block is never used [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2550]
-INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (89#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (90#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
-INFO: [Synth 8-256] done synthesizing module 'axi_uartlite' (91#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/8c9b/hdl/axi_uartlite_v2_0_vh_rfs.vhd:2190]
-INFO: [Synth 8-256] done synthesizing module 'xlx_design_subsystem_axi_uartlite_0_0' (92#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ip/xlx_design_subsystem_axi_uartlite_0_0/synth/xlx_design_subsystem_axi_uartlite_0_0.vhd:86]
+INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (88#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (89#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-256] done synthesizing module 'axi_uartlite' (90#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/8c9b/hdl/axi_uartlite_v2_0_vh_rfs.vhd:2190]
+INFO: [Synth 8-256] done synthesizing module 'xlx_design_subsystem_axi_uartlite_0_0' (91#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ip/xlx_design_subsystem_axi_uartlite_0_0/synth/xlx_design_subsystem_axi_uartlite_0_0.vhd:86]
 INFO: [Synth 8-638] synthesizing module 'xlx_design_subsystem_blk_mem_gen_0_0' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ip/xlx_design_subsystem_blk_mem_gen_0_0/synth/xlx_design_subsystem_blk_mem_gen_0_0.vhd:72]
 	Parameter C_FAMILY bound to: virtexuplus - type: string 
 	Parameter C_XDEVICEFAMILY bound to: virtexuplus - type: string 
@@ -458,48 +439,49 @@ INFO: [Synth 8-638] synthesizing module 'xlx_design_subsystem_blk_mem_gen_0_0' [
 	Parameter C_COUNT_18K_BRAM bound to: 0 - type: string 
 	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     4.343232 mW - type: string 
 INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_4' declared at '/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ipshared/2985/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_4' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ip/xlx_design_subsystem_blk_mem_gen_0_0/synth/xlx_design_subsystem_blk_mem_gen_0_0.vhd:239]
-INFO: [Synth 8-256] done synthesizing module 'xlx_design_subsystem_blk_mem_gen_0_0' (101#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ip/xlx_design_subsystem_blk_mem_gen_0_0/synth/xlx_design_subsystem_blk_mem_gen_0_0.vhd:72]
-WARNING: [Synth 8-7071] port 'rsta_busy' of module 'xlx_design_subsystem_blk_mem_gen_0_0' is unconnected for instance 'blk_mem_gen_0' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/synth/xlx_design_subsystem.v:2059]
-WARNING: [Synth 8-7023] instance 'blk_mem_gen_0' of module 'xlx_design_subsystem_blk_mem_gen_0_0' has 8 connections declared, but only 7 given [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/synth/xlx_design_subsystem.v:2059]
+INFO: [Synth 8-256] done synthesizing module 'xlx_design_subsystem_blk_mem_gen_0_0' (100#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ip/xlx_design_subsystem_blk_mem_gen_0_0/synth/xlx_design_subsystem_blk_mem_gen_0_0.vhd:72]
+WARNING: [Synth 8-7071] port 'rsta_busy' of module 'xlx_design_subsystem_blk_mem_gen_0_0' is unconnected for instance 'blk_mem_gen_0' [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/synth/xlx_design_subsystem.v:1520]
+WARNING: [Synth 8-7023] instance 'blk_mem_gen_0' of module 'xlx_design_subsystem_blk_mem_gen_0_0' has 8 connections declared, but only 7 given [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/synth/xlx_design_subsystem.v:1520]
+INFO: [Synth 8-6155] done synthesizing module 'xlx_design_subsystem' (101#1) [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/synth/xlx_design_subsystem.v:13]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 3257.461 ; gain = 518.906 ; free physical = 1863 ; free virtual = 22958
+Finished RTL Elaboration : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 3250.395 ; gain = 511.875 ; free physical = 1034 ; free virtual = 14467
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 3266.363 ; gain = 527.809 ; free physical = 1892 ; free virtual = 22987
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 3259.297 ; gain = 520.777 ; free physical = 1051 ; free virtual = 14484
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 3266.363 ; gain = 527.809 ; free physical = 1892 ; free virtual = 22987
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 3259.297 ; gain = 520.777 ; free physical = 1051 ; free virtual = 14484
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.40 ; elapsed = 00:00:00.40 . Memory (MB): peak = 3280.301 ; gain = 0.000 ; free physical = 1855 ; free virtual = 22950
+Netlist sorting complete. Time (s): cpu = 00:00:00.36 ; elapsed = 00:00:00.37 . Memory (MB): peak = 3273.234 ; gain = 0.000 ; free physical = 1023 ; free virtual = 14456
 INFO: [Netlist 29-17] Analyzing 15 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ip/xlx_design_subsystem_axi_uartlite_0_0/xlx_design_subsystem_axi_uartlite_0_0_board.xdc] for cell 'design_ss/axi_uartlite_0/U0'
-Finished Parsing XDC File [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ip/xlx_design_subsystem_axi_uartlite_0_0/xlx_design_subsystem_axi_uartlite_0_0_board.xdc] for cell 'design_ss/axi_uartlite_0/U0'
-Parsing XDC File [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ip/xlx_design_subsystem_axi_uartlite_0_0/xlx_design_subsystem_axi_uartlite_0_0.xdc] for cell 'design_ss/axi_uartlite_0/U0'
-Finished Parsing XDC File [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ip/xlx_design_subsystem_axi_uartlite_0_0/xlx_design_subsystem_axi_uartlite_0_0.xdc] for cell 'design_ss/axi_uartlite_0/U0'
+Parsing XDC File [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ip/xlx_design_subsystem_axi_uartlite_0_0/xlx_design_subsystem_axi_uartlite_0_0_board.xdc] for cell 'axi_uartlite_0/U0'
+Finished Parsing XDC File [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ip/xlx_design_subsystem_axi_uartlite_0_0/xlx_design_subsystem_axi_uartlite_0_0_board.xdc] for cell 'axi_uartlite_0/U0'
+Parsing XDC File [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ip/xlx_design_subsystem_axi_uartlite_0_0/xlx_design_subsystem_axi_uartlite_0_0.xdc] for cell 'axi_uartlite_0/U0'
+Finished Parsing XDC File [/home/muheet/stableEnv/nova_project/nova_project.gen/sources_1/bd/xlx_design_subsystem/ip/xlx_design_subsystem_axi_uartlite_0_0/xlx_design_subsystem_axi_uartlite_0_0.xdc] for cell 'axi_uartlite_0/U0'
 Parsing XDC File [/home/muheet/stableEnv/nova_project/nova_project.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [/home/muheet/stableEnv/nova_project/nova_project.runs/synth_1/dont_touch.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/muheet/stableEnv/nova_project/nova_project.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/xlx_subsystem_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/xlx_subsystem_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/muheet/stableEnv/nova_project/nova_project.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/xlx_design_subsystem_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/xlx_design_subsystem_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 INFO: [Project 1-1714] 3 XPM XDC files have been applied to the design.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3430.051 ; gain = 0.000 ; free physical = 1714 ; free virtual = 22809
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3410.984 ; gain = 0.000 ; free physical = 888 ; free virtual = 14318
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 11 instances were transformed.
   FDR => FDRE: 7 instances
   MUXCY_L => MUXCY: 4 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.15 ; elapsed = 00:00:00.15 . Memory (MB): peak = 3430.051 ; gain = 0.000 ; free physical = 1714 ; free virtual = 22809
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.15 ; elapsed = 00:00:00.15 . Memory (MB): peak = 3410.984 ; gain = 0.000 ; free physical = 880 ; free virtual = 14311
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 3430.051 ; gain = 691.496 ; free physical = 1866 ; free virtual = 22961
+Finished Constraint Validation : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 3410.984 ; gain = 672.465 ; free physical = 1028 ; free virtual = 14459
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -507,26 +489,24 @@ Start Loading Part and Timing Information
 Loading part: xcvu9p-flga2104-1-e
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 3430.051 ; gain = 691.496 ; free physical = 1866 ; free virtual = 22961
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 3410.984 ; gain = 672.465 ; free physical = 1028 ; free virtual = 14459
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property KEEP_HIERARCHY = SOFT for design_ss/axi_dwidth_converter_0/inst. (constraint file  /home/muheet/stableEnv/nova_project/nova_project.runs/synth_1/dont_touch.xdc, line 29).
-Applied set_property KEEP_HIERARCHY = SOFT for design_ss/axi_uartlite_0/U0. (constraint file  /home/muheet/stableEnv/nova_project/nova_project.runs/synth_1/dont_touch.xdc, line 38).
-Applied set_property KEEP_HIERARCHY = SOFT for design_ss. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_ss/axi_dwidth_converter_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_ss/axi_protocol_convert_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_ss/axi_crossbar_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_ss/axi_bram_ctrl_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_ss/blk_mem_gen_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_ss/axi_crossbar_1. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_ss/axi_uartlite_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_ss/axi_dwidth_converter_0/inst/\gen_downsizer.gen_simple_downsizer.axi_downsizer_inst /\USE_WRITE.write_addr_inst /\USE_B_CHANNEL.cmd_b_queue /inst/fifo_gen_inst/inst_fifo_gen/\gconvfifo.rf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst . (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_ss/axi_dwidth_converter_0/inst/\gen_downsizer.gen_simple_downsizer.axi_downsizer_inst /\USE_WRITE.write_addr_inst /cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/\gconvfifo.rf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst . (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_ss/axi_dwidth_converter_0/inst/\gen_downsizer.gen_simple_downsizer.axi_downsizer_inst /\USE_READ.read_addr_inst /cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/\gconvfifo.rf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for axi_dwidth_converter_0/inst. (constraint file  /home/muheet/stableEnv/nova_project/nova_project.runs/synth_1/dont_touch.xdc, line 26).
+Applied set_property KEEP_HIERARCHY = SOFT for axi_uartlite_0/U0. (constraint file  /home/muheet/stableEnv/nova_project/nova_project.runs/synth_1/dont_touch.xdc, line 35).
+Applied set_property KEEP_HIERARCHY = SOFT for axi_dwidth_converter_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for axi_protocol_convert_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for axi_crossbar_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for axi_bram_ctrl_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for blk_mem_gen_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for axi_uartlite_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for axi_dwidth_converter_0/inst/\gen_downsizer.gen_simple_downsizer.axi_downsizer_inst /\USE_WRITE.write_addr_inst /\USE_B_CHANNEL.cmd_b_queue /inst/fifo_gen_inst/inst_fifo_gen/\gconvfifo.rf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for axi_dwidth_converter_0/inst/\gen_downsizer.gen_simple_downsizer.axi_downsizer_inst /\USE_WRITE.write_addr_inst /cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/\gconvfifo.rf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for axi_dwidth_converter_0/inst/\gen_downsizer.gen_simple_downsizer.axi_downsizer_inst /\USE_READ.read_addr_inst /cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/\gconvfifo.rf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst . (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 3430.051 ; gain = 691.496 ; free physical = 1866 ; free virtual = 22961
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 3410.984 ; gain = 672.465 ; free physical = 1027 ; free virtual = 14458
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'arb_sm_cs_reg' in module 'sng_port_arb'
 INFO: [Synth 8-802] inferred FSM for state register 'GEN_WDATA_SM_NO_ECC_SNG_REG_WREADY.wr_data_sng_sm_cs_reg' in module 'wr_chnl'
@@ -652,7 +632,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'slave_attachment'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:41 ; elapsed = 00:00:46 . Memory (MB): peak = 3430.051 ; gain = 691.496 ; free physical = 1853 ; free virtual = 22951
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:43 ; elapsed = 00:00:48 . Memory (MB): peak = 3410.984 ; gain = 672.465 ; free physical = 1024 ; free virtual = 14458
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -662,7 +642,7 @@ Detailed RTL Component Info :
 	   2 Input   64 Bit       Adders := 2     
 	   2 Input   12 Bit       Adders := 8     
 	   2 Input    9 Bit       Adders := 5     
-	   2 Input    8 Bit       Adders := 15    
+	   2 Input    8 Bit       Adders := 12    
 	   3 Input    8 Bit       Adders := 2     
 	   2 Input    7 Bit       Adders := 1     
 	   2 Input    6 Bit       Adders := 2     
@@ -671,14 +651,14 @@ Detailed RTL Component Info :
 	   2 Input    4 Bit       Adders := 16    
 	   3 Input    3 Bit       Adders := 2     
 	   2 Input    3 Bit       Adders := 10    
-	   2 Input    2 Bit       Adders := 102   
+	   2 Input    2 Bit       Adders := 95    
 	   2 Input    1 Bit       Adders := 4     
 +---XORs : 
-	   2 Input      1 Bit         XORs := 104   
+	   2 Input      1 Bit         XORs := 95    
 +---Registers : 
-	              100 Bit    Registers := 4     
+	              100 Bit    Registers := 2     
 	               94 Bit    Registers := 4     
-	               72 Bit    Registers := 20    
+	               72 Bit    Registers := 14    
 	               64 Bit    Registers := 9     
 	               36 Bit    Registers := 2     
 	               32 Bit    Registers := 3     
@@ -688,20 +668,20 @@ Detailed RTL Component Info :
 	               11 Bit    Registers := 2     
 	               10 Bit    Registers := 1     
 	                9 Bit    Registers := 6     
-	                8 Bit    Registers := 23    
-	                7 Bit    Registers := 13    
+	                8 Bit    Registers := 20    
+	                7 Bit    Registers := 24    
 	                6 Bit    Registers := 2     
-	                5 Bit    Registers := 51    
-	                4 Bit    Registers := 18    
-	                3 Bit    Registers := 26    
-	                2 Bit    Registers := 110   
-	                1 Bit    Registers := 455   
+	                5 Bit    Registers := 31    
+	                4 Bit    Registers := 19    
+	                3 Bit    Registers := 28    
+	                2 Bit    Registers := 84    
+	                1 Bit    Registers := 404   
 +---Muxes : 
 	   2 Input   94 Bit        Muxes := 4     
-	   2 Input   72 Bit        Muxes := 20    
+	   2 Input   72 Bit        Muxes := 14    
 	   2 Input   64 Bit        Muxes := 13    
 	   8 Input   64 Bit        Muxes := 2     
-	   2 Input   40 Bit        Muxes := 20    
+	   2 Input   56 Bit        Muxes := 14    
 	   2 Input   36 Bit        Muxes := 2     
 	   2 Input   32 Bit        Muxes := 3     
 	   2 Input   16 Bit        Muxes := 12    
@@ -710,28 +690,30 @@ Detailed RTL Component Info :
 	   5 Input   10 Bit        Muxes := 2     
 	   2 Input   10 Bit        Muxes := 5     
 	   2 Input    9 Bit        Muxes := 4     
-	   2 Input    8 Bit        Muxes := 18    
+	   2 Input    8 Bit        Muxes := 17    
+	   2 Input    7 Bit        Muxes := 6     
 	   8 Input    7 Bit        Muxes := 2     
+	   2 Input    6 Bit        Muxes := 6     
 	   8 Input    5 Bit        Muxes := 6     
-	   2 Input    5 Bit        Muxes := 14    
+	   2 Input    5 Bit        Muxes := 6     
 	   9 Input    4 Bit        Muxes := 1     
-	   2 Input    4 Bit        Muxes := 84    
-	   3 Input    4 Bit        Muxes := 14    
+	   2 Input    4 Bit        Muxes := 67    
+	   3 Input    4 Bit        Muxes := 10    
 	   4 Input    4 Bit        Muxes := 1     
 	   4 Input    3 Bit        Muxes := 2     
 	   5 Input    3 Bit        Muxes := 3     
-	   2 Input    3 Bit        Muxes := 41    
+	   2 Input    3 Bit        Muxes := 49    
 	   3 Input    3 Bit        Muxes := 1     
 	   8 Input    3 Bit        Muxes := 4     
 	   3 Input    2 Bit        Muxes := 15    
-	   2 Input    2 Bit        Muxes := 182   
+	   2 Input    2 Bit        Muxes := 146   
 	   4 Input    2 Bit        Muxes := 9     
 	   5 Input    2 Bit        Muxes := 3     
-	   2 Input    1 Bit        Muxes := 448   
-	   3 Input    1 Bit        Muxes := 37    
+	   2 Input    1 Bit        Muxes := 439   
+	   3 Input    1 Bit        Muxes := 28    
 	   9 Input    1 Bit        Muxes := 19    
 	   5 Input    1 Bit        Muxes := 2     
-	   4 Input    1 Bit        Muxes := 49    
+	   4 Input    1 Bit        Muxes := 37    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -748,20 +730,20 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:03 ; elapsed = 00:01:09 . Memory (MB): peak = 3430.051 ; gain = 691.496 ; free physical = 1693 ; free virtual = 22816
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:10 ; elapsed = 00:01:17 . Memory (MB): peak = 3410.984 ; gain = 672.465 ; free physical = 963 ; free virtual = 14410
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 Distributed RAM: Preliminary Mapping Report (see note below)
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------+----------------+----------------------+---------------+
-|Module Name                                                                                                                                                          | RTL Object                                                                    | Inference      | Size (Depth x Width) | Primitives    | 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------+----------------+----------------------+---------------+
-|design_ss/axi_dwidth_converter_0/inst/\gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst  | inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg | User Attribute | 32 x 9               | RAM32M16 x 1  | 
-|design_ss/axi_dwidth_converter_0/inst/\gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst                  | inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg | User Attribute | 32 x 26              | RAM32M16 x 2  | 
-|design_ss/axi_dwidth_converter_0/inst/\gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst                    | inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg | User Attribute | 32 x 26              | RAM32M16 x 2  | 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------+----------------+----------------------+---------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------+----------------+----------------------+---------------+
+|Module Name                                                                                                                                                | RTL Object                                                                    | Inference      | Size (Depth x Width) | Primitives    | 
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------+----------------+----------------------+---------------+
+|axi_dwidth_converter_0/inst/\gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst  | inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg | User Attribute | 32 x 9               | RAM32M16 x 1  | 
+|axi_dwidth_converter_0/inst/\gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst                  | inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg | User Attribute | 32 x 26              | RAM32M16 x 2  | 
+|axi_dwidth_converter_0/inst/\gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst                    | inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg | User Attribute | 32 x 26              | RAM32M16 x 2  | 
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------+----------------+----------------------+---------------+
 
 Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
 ---------------------------------------------------------------------------------
@@ -771,26 +753,26 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:14 ; elapsed = 00:01:24 . Memory (MB): peak = 3484.781 ; gain = 746.227 ; free physical = 2415 ; free virtual = 23531
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:20 ; elapsed = 00:01:30 . Memory (MB): peak = 3484.184 ; gain = 745.664 ; free physical = 1461 ; free virtual = 14909
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:15 ; elapsed = 00:01:25 . Memory (MB): peak = 3491.781 ; gain = 753.227 ; free physical = 2408 ; free virtual = 23525
+Finished Timing Optimization : Time (s): cpu = 00:01:21 ; elapsed = 00:01:32 . Memory (MB): peak = 3492.184 ; gain = 753.664 ; free physical = 1455 ; free virtual = 14902
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 Distributed RAM: Final Mapping Report
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------+----------------+----------------------+---------------+
-|Module Name                                                                                                                                                          | RTL Object                                                                    | Inference      | Size (Depth x Width) | Primitives    | 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------+----------------+----------------------+---------------+
-|design_ss/axi_dwidth_converter_0/inst/\gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst  | inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg | User Attribute | 32 x 9               | RAM32M16 x 1  | 
-|design_ss/axi_dwidth_converter_0/inst/\gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst                  | inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg | User Attribute | 32 x 26              | RAM32M16 x 2  | 
-|design_ss/axi_dwidth_converter_0/inst/\gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst                    | inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg | User Attribute | 32 x 26              | RAM32M16 x 2  | 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------+----------------+----------------------+---------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------+----------------+----------------------+---------------+
+|Module Name                                                                                                                                                | RTL Object                                                                    | Inference      | Size (Depth x Width) | Primitives    | 
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------+----------------+----------------------+---------------+
+|axi_dwidth_converter_0/inst/\gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst  | inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg | User Attribute | 32 x 9               | RAM32M16 x 1  | 
+|axi_dwidth_converter_0/inst/\gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst                  | inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg | User Attribute | 32 x 26              | RAM32M16 x 2  | 
+|axi_dwidth_converter_0/inst/\gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst                    | inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg | User Attribute | 32 x 26              | RAM32M16 x 2  | 
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------+----------------+----------------------+---------------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -799,7 +781,7 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:19 ; elapsed = 00:01:30 . Memory (MB): peak = 3520.828 ; gain = 782.273 ; free physical = 2430 ; free virtual = 23539
+Finished Technology Mapping : Time (s): cpu = 00:01:27 ; elapsed = 00:01:38 . Memory (MB): peak = 3551.246 ; gain = 812.727 ; free physical = 1451 ; free virtual = 14896
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -817,37 +799,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:23 ; elapsed = 00:01:33 . Memory (MB): peak = 3523.801 ; gain = 785.246 ; free physical = 2494 ; free virtual = 23603
+Finished IO Insertion : Time (s): cpu = 00:01:30 ; elapsed = 00:01:41 . Memory (MB): peak = 3560.156 ; gain = 821.637 ; free physical = 1449 ; free virtual = 14892
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:23 ; elapsed = 00:01:33 . Memory (MB): peak = 3523.801 ; gain = 785.246 ; free physical = 2494 ; free virtual = 23603
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:30 ; elapsed = 00:01:41 . Memory (MB): peak = 3560.156 ; gain = 821.637 ; free physical = 1449 ; free virtual = 14892
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:23 ; elapsed = 00:01:34 . Memory (MB): peak = 3523.801 ; gain = 785.246 ; free physical = 2493 ; free virtual = 23603
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:31 ; elapsed = 00:01:42 . Memory (MB): peak = 3560.156 ; gain = 821.637 ; free physical = 1448 ; free virtual = 14891
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:23 ; elapsed = 00:01:34 . Memory (MB): peak = 3523.801 ; gain = 785.246 ; free physical = 2493 ; free virtual = 23603
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:31 ; elapsed = 00:01:42 . Memory (MB): peak = 3560.156 ; gain = 821.637 ; free physical = 1448 ; free virtual = 14891
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:23 ; elapsed = 00:01:34 . Memory (MB): peak = 3523.801 ; gain = 785.246 ; free physical = 2490 ; free virtual = 23599
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:31 ; elapsed = 00:01:42 . Memory (MB): peak = 3560.156 ; gain = 821.637 ; free physical = 1450 ; free virtual = 14890
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:23 ; elapsed = 00:01:34 . Memory (MB): peak = 3523.801 ; gain = 785.246 ; free physical = 2488 ; free virtual = 23598
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:31 ; elapsed = 00:01:42 . Memory (MB): peak = 3560.156 ; gain = 821.637 ; free physical = 1450 ; free virtual = 14890
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -894,55 +876,55 @@ Report Cell Usage:
 +------+---------+------+
 |1     |BUFG     |     1|
 |2     |CARRY8   |     2|
-|3     |LUT1     |   114|
-|4     |LUT2     |   257|
-|5     |LUT3     |   863|
-|6     |LUT4     |   393|
-|7     |LUT5     |   469|
-|8     |LUT6     |   794|
+|3     |LUT1     |   109|
+|4     |LUT2     |   252|
+|5     |LUT3     |   826|
+|6     |LUT4     |   855|
+|7     |LUT5     |  1111|
+|8     |LUT6     |   971|
 |9     |MUXCY_L  |     3|
-|10    |MUXF7    |     1|
+|10    |MUXF7    |     2|
 |11    |RAM32M16 |     5|
 |12    |RAMB36E2 |     2|
 |13    |SRL16E   |    33|
-|14    |SRLC32E  |    22|
+|14    |SRLC32E  |    33|
 |15    |XORCY    |     4|
 |16    |FDCE     |    69|
 |17    |FDPE     |    33|
 |18    |FDR      |     5|
-|19    |FDRE     |  2239|
-|20    |FDSE     |    90|
-|21    |IBUF     |   664|
-|22    |OBUF     |   718|
+|19    |FDRE     |  2415|
+|20    |FDSE     |    89|
+|21    |IBUF     |  1123|
+|22    |OBUF     |  1350|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:23 ; elapsed = 00:01:34 . Memory (MB): peak = 3523.801 ; gain = 785.246 ; free physical = 2485 ; free virtual = 23595
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:31 ; elapsed = 00:01:42 . Memory (MB): peak = 3560.156 ; gain = 821.637 ; free physical = 1450 ; free virtual = 14890
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:16 ; elapsed = 00:01:27 . Memory (MB): peak = 3523.801 ; gain = 621.559 ; free physical = 2508 ; free virtual = 23617
-Synthesis Optimization Complete : Time (s): cpu = 00:01:23 ; elapsed = 00:01:34 . Memory (MB): peak = 3523.805 ; gain = 785.246 ; free physical = 2508 ; free virtual = 23617
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:24 ; elapsed = 00:01:36 . Memory (MB): peak = 3560.156 ; gain = 669.949 ; free physical = 1478 ; free virtual = 14919
+Synthesis Optimization Complete : Time (s): cpu = 00:01:32 ; elapsed = 00:01:43 . Memory (MB): peak = 3560.160 ; gain = 821.637 ; free physical = 1478 ; free virtual = 14919
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.12 . Memory (MB): peak = 3526.770 ; gain = 0.000 ; free physical = 2571 ; free virtual = 23687
-INFO: [Netlist 29-17] Analyzing 685 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.15 ; elapsed = 00:00:00.14 . Memory (MB): peak = 3560.160 ; gain = 0.000 ; free physical = 1564 ; free virtual = 15003
+INFO: [Netlist 29-17] Analyzing 1145 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell design_ss/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.SIMPLE_PRIM36.SERIES8_SP_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell design_ss/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.SIMPLE_PRIM36.SERIES8_SP_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3635.973 ; gain = 0.000 ; free physical = 2397 ; free virtual = 23513
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.SIMPLE_PRIM36.SERIES8_SP_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.SIMPLE_PRIM36.SERIES8_SP_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3642.867 ; gain = 0.000 ; free physical = 1476 ; free virtual = 14915
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 676 instances were transformed.
+  A total of 1135 instances were transformed.
   (CARRY4) => CARRY8: 1 instance 
   BUFG => BUFGCE: 1 instance 
   FDR => FDRE: 5 instances
-  IBUF => IBUF (IBUFCTRL, INBUF): 664 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 1123 instances
   RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 5 instances
 
-Synth Design complete, checksum: 74779a2e
+Synth Design complete, checksum: 88bcaa02
 INFO: [Common 17-83] Releasing license: Synthesis
-348 Infos, 31 Warnings, 0 Critical Warnings and 0 Errors encountered.
+336 Infos, 25 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:39 ; elapsed = 00:01:48 . Memory (MB): peak = 3635.973 ; gain = 1058.422 ; free physical = 2548 ; free virtual = 23664
-INFO: [Common 17-1381] The checkpoint '/home/muheet/stableEnv/nova_project/nova_project.runs/synth_1/xlx_subsystem.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file xlx_subsystem_utilization_synth.rpt -pb xlx_subsystem_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Mar 26 16:14:23 2022...
+synth_design: Time (s): cpu = 00:01:51 ; elapsed = 00:01:58 . Memory (MB): peak = 3642.867 ; gain = 1068.320 ; free physical = 1626 ; free virtual = 15065
+INFO: [Common 17-1381] The checkpoint '/home/muheet/stableEnv/nova_project/nova_project.runs/synth_1/xlx_design_subsystem.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file xlx_design_subsystem_utilization_synth.rpt -pb xlx_design_subsystem_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Jun  1 18:54:43 2022...
