@@ -20,10 +20,12 @@
 
 set HDK_SHELL_DIR $::env(HDK_SHELL_DIR)
 set HDK_SHELL_DESIGN_DIR $::env(HDK_SHELL_DESIGN_DIR)
-set HDK_DIR $::env(HDK_DIR)
 set CL_DIR $::env(CL_DIR)
+
 set TARGET_DIR $CL_DIR/build/src_post_encryption
 set UNUSED_TEMPLATES_DIR $HDK_SHELL_DESIGN_DIR/interfaces
+
+
 # Remove any previously encrypted files, that may no longer be used
 if {[llength [glob -nocomplain -dir $TARGET_DIR *]] != 0} {
   eval file delete -force [glob $TARGET_DIR/*]
@@ -32,24 +34,32 @@ if {[llength [glob -nocomplain -dir $TARGET_DIR *]] != 0} {
 #---- Developr would replace this section with design files ----
 
 ## Change file names and paths below to reflect your CL area.  DO NOT include AWS RTL files.
-file copy -force /home/muheet/stableEnv/aws-fpga/hdk/cl/developer_designs/xlx_nova_project/design/cl_dram_dma_defines.vh             $TARGET_DIR
-file copy -force /home/muheet/stableEnv/aws-fpga/hdk/cl/developer_designs/xlx_nova_project/design/cl_id_defines.vh                      $TARGET_DIR
-file copy -force /home/muheet/stableEnv/aws-fpga/hdk/cl/developer_designs/xlx_nova_project/design/cl_nova.v                     $TARGET_DIR 
-file copy -force /home/muheet/stableEnv/aws-fpga/hdk/cl/examples/common/design/cl_common_defines.vh        $TARGET_DIR
-file copy -force /home/muheet/stableEnv/aws-fpga/hdk/cl/developer_designs/xlx_nova_project/design/cl_test.v        $TARGET_DIR 
-file copy -force /home/muheet/stableEnv/aws-fpga/hdk/cl/developer_designs/xlx_nova_project/design/nova_project_defines.vh        $TARGET_DIR
-file copy -force /home/muheet/stableEnv/aws-fpga/hdk/cl/developer_designs/xlx_nova_project/design/nova_project_wrapper.v        $TARGET_DIR
-file copy -force /home/muheet/stableEnv/aws-fpga/hdk/cl/developer_designs/xlx_nova_project/design/nova_subsystem.v        $TARGET_DIR
-file copy -force /home/muheet/stableEnv/aws-fpga/hdk/cl/developer_designs/xlx_nova_project/design/nova_subsystem_wrapper.v        $TARGET_DIR
-file copy -force $UNUSED_TEMPLATES_DIR/unused_apppf_irq_template.inc  $TARGET_DIR
-file copy -force $UNUSED_TEMPLATES_DIR/unused_cl_sda_template.inc     $TARGET_DIR
-file copy -force $UNUSED_TEMPLATES_DIR/unused_ddr_a_b_d_template.inc  $TARGET_DIR
-file copy -force $UNUSED_TEMPLATES_DIR/unused_pcim_template.inc       $TARGET_DIR
-file copy -force $UNUSED_TEMPLATES_DIR/unused_flr_template.inc        $TARGET_DIR
+file copy -force $CL_DIR/../common/design/cl_common_defines.vh     $TARGET_DIR
+file copy -force $CL_DIR/design/cl_dram_dma_defines.vh             $TARGET_DIR
+file copy -force $CL_DIR/design/cl_id_defines.vh                   $TARGET_DIR
+file copy -force $CL_DIR/design/cl_dram_dma_pkg.sv                 $TARGET_DIR
+file copy -force $CL_DIR/design/cl_top.sv                     $TARGET_DIR
+file copy -force $CL_DIR/design/cl_tst.sv                          $TARGET_DIR
+file copy -force $CL_DIR/design/cl_int_tst.sv                      $TARGET_DIR
+file copy -force $CL_DIR/design/mem_scrb.sv                        $TARGET_DIR
+file copy -force $CL_DIR/design/cl_tst_scrb.sv                     $TARGET_DIR
+file copy -force $CL_DIR/design/axil_slave.sv                      $TARGET_DIR
+file copy -force $CL_DIR/design/cl_int_slv.sv                      $TARGET_DIR
+file copy -force $CL_DIR/design/cl_pcim_mstr.sv                    $TARGET_DIR
+file copy -force $CL_DIR/design/cl_vio.sv                          $TARGET_DIR
+file copy -force $CL_DIR/design/cl_dma_pcis_slv.sv                 $TARGET_DIR
+file copy -force $CL_DIR/design/cl_ila.sv                          $TARGET_DIR
+file copy -force $CL_DIR/design/cl_ocl_slv.sv                      $TARGET_DIR
+file copy -force $CL_DIR/design/cl_sda_slv.sv                      $TARGET_DIR
+file copy -force $CL_DIR/design/cl_dram_dma_axi_mstr.sv            $TARGET_DIR
+file copy -force $UNUSED_TEMPLATES_DIR/unused_sh_bar1_template.inc $TARGET_DIR
 
 #---- End of section replaced by Developr ---
 
+
+
 # Make sure files have write permissions for the encryption
+
 exec chmod +w {*}[glob $TARGET_DIR/*]
 
 set TOOL_VERSION $::env(VIVADO_TOOL_VERSION)

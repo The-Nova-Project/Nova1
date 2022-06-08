@@ -129,43 +129,47 @@ module cl_test(
    assign DDR_ADDR_512_64_awaddr = DDR_ADDR_512_64_awaddr_mask & 64'h0000_0000_0fff_ffff;
    assign DDR_ADDR_512_64_araddr = DDR_ADDR_512_64_araddr_mask & 64'h0000_0000_0fff_ffff;
 
-wire [63:0] S00_AXI_0_araddr;
-wire [1:0]  S00_AXI_0_arburst;
-wire [3:0]  S00_AXI_0_arcache;
-wire [4:0]  S00_AXI_0_arid;                ////////;
-wire [7:0]  S00_AXI_0_arlen;
-wire [0:0]  S00_AXI_0_arlock;
-wire [2:0]  S00_AXI_0_arprot;
-wire [3:0]  S00_AXI_0_arqos;
-wire [0:0] S00_AXI_0_arready;
-wire [2:0]  S00_AXI_0_arsize;
-wire [0:0]  S00_AXI_0_arvalid;
-wire [63:0] S00_AXI_0_awaddr;
-wire [1:0]  S00_AXI_0_awburst;
-wire [3:0]  S00_AXI_0_awcache;
-wire [4:0]  S00_AXI_0_awid;
-wire [7:0]  S00_AXI_0_awlen;
-wire [0:0]  S00_AXI_0_awlock;
-wire [2:0]  S00_AXI_0_awprot;
-wire [3:0]  S00_AXI_0_awqos;
-wire [0:0] S00_AXI_0_awready;
-wire [2:0]  S00_AXI_0_awsize;
-wire [0:0]  S00_AXI_0_awvalid;
-wire [4:0] S00_AXI_0_bid;
-wire [0:0]  S00_AXI_0_bready;
-wire [1:0] S00_AXI_0_bresp;
-wire [0:0] S00_AXI_0_bvalid;
-wire [63:0]S00_AXI_0_rdata;
-wire [4:0] S00_AXI_0_rid;
-wire [0:0] S00_AXI_0_rlast;
-wire [0:0]  S00_AXI_0_rready;
-wire [1:0] S00_AXI_0_rresp;
-wire [0:0] S00_AXI_0_rvalid;
-wire [63:0] S00_AXI_0_wdata;
-wire [0:0]  S00_AXI_0_wlast;
-wire [0:0] S00_AXI_0_wready;
-wire [7:0]  S00_AXI_0_wstrb;
-wire [0:0]  S00_AXI_0_wvalid;
+wire [63:0] BAR1_araddr;
+wire [63:0] BAR1_araddr_new;
+assign BAR1_araddr_new=64'h80000000+BAR1_araddr;
+wire [1:0]  BAR1_arburst;
+wire [3:0]  BAR1_arcache;
+wire [4:0]  BAR1_arid;                ////////;
+wire [7:0]  BAR1_arlen;
+wire [0:0]  BAR1_arlock;
+wire [2:0]  BAR1_arprot;
+wire [3:0]  BAR1_arqos;
+wire [0:0] BAR1_arready;
+wire [2:0]  BAR1_arsize;
+wire [0:0]  BAR1_arvalid;
+wire [63:0] BAR1_awaddr;
+wire [63:0] BAR1_awaddr_new;
+assign BAR1_awaddr_new=64'h80000000+BAR1_awaddr;
+wire [1:0]  BAR1_awburst;
+wire [3:0]  BAR1_awcache;
+wire [4:0]  BAR1_awid;
+wire [7:0]  BAR1_awlen;
+wire [0:0]  BAR1_awlock;
+wire [2:0]  BAR1_awprot;
+wire [3:0]  BAR1_awqos;
+wire [0:0] BAR1_awready;
+wire [2:0]  BAR1_awsize;
+wire [0:0]  BAR1_awvalid;
+wire [4:0] BAR1_bid;
+wire [0:0]  BAR1_bready;
+wire [1:0] BAR1_bresp;
+wire [0:0] BAR1_bvalid;
+wire [63:0]BAR1_rdata;
+wire [4:0] BAR1_rid;
+wire [0:0] BAR1_rlast;
+wire [0:0]  BAR1_rready;
+wire [1:0] BAR1_rresp;
+wire [0:0] BAR1_rvalid;
+wire [63:0] BAR1_wdata;
+wire [0:0]  BAR1_wlast;
+wire [0:0] BAR1_wready;
+wire [7:0]  BAR1_wstrb;
+wire [0:0]  BAR1_wvalid;
 wire        arst_n;
 wire        arst_ndm_n;
   wire [63:0]DDR_ADDR_512_64_araddr;
@@ -211,86 +215,86 @@ wire        arst_ndm_n;
   wire       UART_1_rxd;
 
 nova_subsystem nova_subsystem_1(
-    .S00_AXI_0_araddr(S00_AXI_0_araddr),
-    .S00_AXI_0_arburst(S00_AXI_0_arburst),
-    .S00_AXI_0_arcache(S00_AXI_0_arcache),
-    .S00_AXI_0_arid('b0),
-    .S00_AXI_0_arlen(S00_AXI_0_arlen),
-    .S00_AXI_0_arlock(S00_AXI_0_arlock),
-    .S00_AXI_0_arprot(S00_AXI_0_arprot),
-    .S00_AXI_0_arqos(S00_AXI_0_arqos),
-    .S00_AXI_0_arready(S00_AXI_0_arready),
-    .S00_AXI_0_arsize(S00_AXI_0_arsize),
-    .S00_AXI_0_arvalid(S00_AXI_0_arvalid),
-    .S00_AXI_0_awaddr(S00_AXI_0_awaddr),
-    .S00_AXI_0_awburst(S00_AXI_0_awburst),
-    .S00_AXI_0_awcache(S00_AXI_0_awcache),
-    .S00_AXI_0_awid('b0),
-    .S00_AXI_0_awlen(S00_AXI_0_awlen),
-    .S00_AXI_0_awlock(S00_AXI_0_awlock),
-    .S00_AXI_0_awprot(S00_AXI_0_awprot),
-    .S00_AXI_0_awqos(S00_AXI_0_awqos),
-    .S00_AXI_0_awready(S00_AXI_0_awready),
-    .S00_AXI_0_awsize(S00_AXI_0_awsize),
-    .S00_AXI_0_awvalid(S00_AXI_0_awvalid),
-    .S00_AXI_0_bid(),
-    .S00_AXI_0_bready(S00_AXI_0_bready),
-    .S00_AXI_0_bresp(S00_AXI_0_bresp),
-    .S00_AXI_0_bvalid(S00_AXI_0_bvalid),
-    .S00_AXI_0_rdata(S00_AXI_0_rdata),
-    .S00_AXI_0_rid(),
-    .S00_AXI_0_rlast(S00_AXI_0_rlast),
-    .S00_AXI_0_rready(S00_AXI_0_rready),
-    .S00_AXI_0_rresp(S00_AXI_0_rresp),
-    .S00_AXI_0_rvalid(S00_AXI_0_rvalid),
-    .S00_AXI_0_wdata(S00_AXI_0_wdata),
-    .S00_AXI_0_wlast(S00_AXI_0_wlast),
-    .S00_AXI_0_wready(S00_AXI_0_wready),
-    .S00_AXI_0_wstrb(S00_AXI_0_wstrb),
-    .S00_AXI_0_wvalid(S00_AXI_0_wvalid),
+    .BAR1_araddr(BAR1_araddr_new),
+    .BAR1_arburst(BAR1_arburst),
+    .BAR1_arcache(BAR1_arcache),
+    .BAR1_arid('b0),
+    .BAR1_arlen(BAR1_arlen),
+    .BAR1_arlock(BAR1_arlock),
+    .BAR1_arprot(BAR1_arprot),
+    .BAR1_arqos(BAR1_arqos),
+    .BAR1_arready(BAR1_arready),
+    .BAR1_arsize(BAR1_arsize),
+    .BAR1_arvalid(BAR1_arvalid),
+    .BAR1_awaddr(BAR1_awaddr_new),
+    .BAR1_awburst(BAR1_awburst),
+    .BAR1_awcache(BAR1_awcache),
+    .BAR1_awid('b0),
+    .BAR1_awlen(BAR1_awlen),
+    .BAR1_awlock(BAR1_awlock),
+    .BAR1_awprot(BAR1_awprot),
+    .BAR1_awqos(BAR1_awqos),
+    .BAR1_awready(BAR1_awready),
+    .BAR1_awsize(BAR1_awsize),
+    .BAR1_awvalid(BAR1_awvalid),
+    .BAR1_bid(),
+    .BAR1_bready(BAR1_bready),
+    .BAR1_bresp(BAR1_bresp),
+    .BAR1_bvalid(BAR1_bvalid),
+    .BAR1_rdata(BAR1_rdata),
+    .BAR1_rid(),
+    .BAR1_rlast(BAR1_rlast),
+    .BAR1_rready(BAR1_rready),
+    .BAR1_rresp(BAR1_rresp),
+    .BAR1_rvalid(BAR1_rvalid),
+    .BAR1_wdata(BAR1_wdata),
+    .BAR1_wlast(BAR1_wlast),
+    .BAR1_wready(BAR1_wready),
+    .BAR1_wstrb(BAR1_wstrb),
+    .BAR1_wvalid(BAR1_wvalid),
   .s_axi_aclk_0(s_axi_aclk_0),
   .s_axi_aresetn_0(s_axi_aresetn_0),
   .arst_n(arst_n),
   .arst_ndm_n(arst_ndm_n),
-  .DDR_s_araddr(DDR_ADDR_512_64_araddr_mask),
-  .DDR_s_arburst(DDR_ADDR_512_64_arburst),
-  .DDR_s_arcache(DDR_ADDR_512_64_arcache),
-  .DDR_s_arid(DDR_ADDR_512_64_arid),
-  .DDR_s_arlen(DDR_ADDR_512_64_arlen),
-  .DDR_s_arlock(DDR_ADDR_512_64_arlock),
-  .DDR_s_arprot(DDR_ADDR_512_64_arprot),
-  .DDR_s_arqos(DDR_ADDR_512_64_arqos),
-  .DDR_s_arready(DDR_ADDR_512_64_arready),
-  .DDR_s_arregion(DDR_ADDR_512_64_arregion),
-  .DDR_s_arsize(DDR_ADDR_512_64_arsize),
-  .DDR_s_arvalid(DDR_ADDR_512_64_arvalid),
-  .DDR_s_awaddr(DDR_ADDR_512_64_awaddr_mask),
-  .DDR_s_awburst(DDR_ADDR_512_64_awburst),
-  .DDR_s_awcache(DDR_ADDR_512_64_awcache),
-  .DDR_s_awid(DDR_ADDR_512_64_awid),
-  .DDR_s_awlen(DDR_ADDR_512_64_awlen),
-  .DDR_s_awlock(DDR_ADDR_512_64_awlock),
-  .DDR_s_awprot(DDR_ADDR_512_64_awprot),
-  .DDR_s_awqos(DDR_ADDR_512_64_awqos),
-  .DDR_s_awready(DDR_ADDR_512_64_awready),
-  .DDR_s_awregion(DDR_ADDR_512_64_awregion),
-  .DDR_s_awsize(DDR_ADDR_512_64_awsize),
-  .DDR_s_awvalid(DDR_ADDR_512_64_awvalid),
-  .DDR_s_bid(DDR_ADDR_512_64_bid),
-  .DDR_s_bready(DDR_ADDR_512_64_bready),
-  .DDR_s_bresp(DDR_ADDR_512_64_bresp),
-  .DDR_s_bvalid(DDR_ADDR_512_64_bvalid),
-  .DDR_s_rdata(DDR_ADDR_512_64_rdata),
-  .DDR_s_rid(DDR_ADDR_512_64_rid),
-  .DDR_s_rlast(DDR_ADDR_512_64_rlast),
-  .DDR_s_rready(DDR_ADDR_512_64_rready),
-  .DDR_s_rresp(DDR_ADDR_512_64_rresp),
-  .DDR_s_rvalid(DDR_ADDR_512_64_rvalid),
-  .DDR_s_wdata(DDR_ADDR_512_64_wdata),
-  .DDR_s_wlast(DDR_ADDR_512_64_wlast),
-  .DDR_s_wready(DDR_ADDR_512_64_wready),
-  .DDR_s_wstrb(DDR_ADDR_512_64_wstrb),
-  .DDR_s_wvalid(DDR_ADDR_512_64_wvalid),
+  .DDR_m_araddr(DDR_ADDR_512_64_araddr_mask),
+  .DDR_m_arburst(DDR_ADDR_512_64_arburst),
+  .DDR_m_arcache(DDR_ADDR_512_64_arcache),
+  .DDR_m_arid(DDR_ADDR_512_64_arid),
+  .DDR_m_arlen(DDR_ADDR_512_64_arlen),
+  .DDR_m_arlock(DDR_ADDR_512_64_arlock),
+  .DDR_m_arprot(DDR_ADDR_512_64_arprot),
+  .DDR_m_arqos(DDR_ADDR_512_64_arqos),
+  .DDR_m_arready(DDR_ADDR_512_64_arready),
+  .DDR_m_arregion(DDR_ADDR_512_64_arregion),
+  .DDR_m_arsize(DDR_ADDR_512_64_arsize),
+  .DDR_m_arvalid(DDR_ADDR_512_64_arvalid),
+  .DDR_m_awaddr(DDR_ADDR_512_64_awaddr_mask),
+  .DDR_m_awburst(DDR_ADDR_512_64_awburst),
+  .DDR_m_awcache(DDR_ADDR_512_64_awcache),
+  .DDR_m_awid(DDR_ADDR_512_64_awid),
+  .DDR_m_awlen(DDR_ADDR_512_64_awlen),
+  .DDR_m_awlock(DDR_ADDR_512_64_awlock),
+  .DDR_m_awprot(DDR_ADDR_512_64_awprot),
+  .DDR_m_awqos(DDR_ADDR_512_64_awqos),
+  .DDR_m_awready(DDR_ADDR_512_64_awready),
+  .DDR_m_awregion(DDR_ADDR_512_64_awregion),
+  .DDR_m_awsize(DDR_ADDR_512_64_awsize),
+  .DDR_m_awvalid(DDR_ADDR_512_64_awvalid),
+  .DDR_m_bid(DDR_ADDR_512_64_bid),
+  .DDR_m_bready(DDR_ADDR_512_64_bready),
+  .DDR_m_bresp(DDR_ADDR_512_64_bresp),
+  .DDR_m_bvalid(DDR_ADDR_512_64_bvalid),
+  .DDR_m_rdata(DDR_ADDR_512_64_rdata),
+  .DDR_m_rid(DDR_ADDR_512_64_rid),
+  .DDR_m_rlast(DDR_ADDR_512_64_rlast),
+  .DDR_m_rready(DDR_ADDR_512_64_rready),
+  .DDR_m_rresp(DDR_ADDR_512_64_rresp),
+  .DDR_m_rvalid(DDR_ADDR_512_64_rvalid),
+  .DDR_m_wdata(DDR_ADDR_512_64_wdata),
+  .DDR_m_wlast(DDR_ADDR_512_64_wlast),
+  .DDR_m_wready(DDR_ADDR_512_64_wready),
+  .DDR_m_wstrb(DDR_ADDR_512_64_wstrb),
+  .DDR_m_wvalid(DDR_ADDR_512_64_wvalid),
   .UART_0_rxd(UART_1_txd),
   .UART_0_txd(UART_1_rxd));
 
@@ -367,7 +371,7 @@ AXIcrossbar1_wrapper test_subsystem(
     .DDR_AXI4_arsize(DDR_AXI4_arsize),
     .DDR_AXI4_arvalid(DDR_AXI4_arvalid),
     .DDR_AXI4_awaddr(DDR_AXI4_awaddr),
-    .DDR_AXI4_awburst(DDR_AXI4_arburst),
+    .DDR_AXI4_awburst(DDR_AXI4_awburst),
     .DDR_AXI4_awcache(DDR_AXI4_awcache),
     .DDR_AXI4_awid(DDR_AXI4_awid),
     .DDR_AXI4_awlen(DDR_AXI4_awlen),
@@ -449,41 +453,41 @@ AXIcrossbar1_wrapper test_subsystem(
     .M02_AXI_0_wready('b0),
     .M02_AXI_0_wstrb(),
     .M02_AXI_0_wvalid(),
-    .M_AXI_0_araddr(S00_AXI_0_araddr),
-    .M_AXI_0_arburst(S00_AXI_0_arburst),
-    .M_AXI_0_arcache(S00_AXI_0_arcache),
-    .M_AXI_0_arlen(S00_AXI_0_arlen),
-    .M_AXI_0_arlock(S00_AXI_0_arlock),
-    .M_AXI_0_arprot(S00_AXI_0_arprot),
-    .M_AXI_0_arqos(S00_AXI_0_arqos),
-    .M_AXI_0_arready(S00_AXI_0_arready),
+    .M_AXI_0_araddr(BAR1_araddr),
+    .M_AXI_0_arburst(BAR1_arburst),
+    .M_AXI_0_arcache(BAR1_arcache),
+    .M_AXI_0_arlen(BAR1_arlen),
+    .M_AXI_0_arlock(BAR1_arlock),
+    .M_AXI_0_arprot(BAR1_arprot),
+    .M_AXI_0_arqos(BAR1_arqos),
+    .M_AXI_0_arready(BAR1_arready),
     .M_AXI_0_arregion(),
-    .M_AXI_0_arsize(S00_AXI_0_arsize),
-    .M_AXI_0_arvalid(S00_AXI_0_arvalid),
-    .M_AXI_0_awaddr(S00_AXI_0_awaddr),
-    .M_AXI_0_awburst(S00_AXI_0_awburst),
-    .M_AXI_0_awcache(S00_AXI_0_awcache),
-    .M_AXI_0_awlen(S00_AXI_0_awlen),
-    .M_AXI_0_awlock(S00_AXI_0_awlock),
-    .M_AXI_0_awprot(S00_AXI_0_awprot),
-    .M_AXI_0_awqos(S00_AXI_0_awqos),
-    .M_AXI_0_awready(S00_AXI_0_awready),
+    .M_AXI_0_arsize(BAR1_arsize),
+    .M_AXI_0_arvalid(BAR1_arvalid),
+    .M_AXI_0_awaddr(BAR1_awaddr),
+    .M_AXI_0_awburst(BAR1_awburst),
+    .M_AXI_0_awcache(BAR1_awcache),
+    .M_AXI_0_awlen(BAR1_awlen),
+    .M_AXI_0_awlock(BAR1_awlock),
+    .M_AXI_0_awprot(BAR1_awprot),
+    .M_AXI_0_awqos(BAR1_awqos),
+    .M_AXI_0_awready(BAR1_awready),
     .M_AXI_0_awregion(),
-    .M_AXI_0_awsize(S00_AXI_0_awsize),
-    .M_AXI_0_awvalid(S00_AXI_0_awvalid),
-    .M_AXI_0_bready(S00_AXI_0_bready),
-    .M_AXI_0_bresp(S00_AXI_0_bresp),
-    .M_AXI_0_bvalid(S00_AXI_0_bvalid),
-    .M_AXI_0_rdata(S00_AXI_0_rdata),
-    .M_AXI_0_rlast(S00_AXI_0_rlast),
-    .M_AXI_0_rready(S00_AXI_0_rready),
-    .M_AXI_0_rresp(S00_AXI_0_rresp),
-    .M_AXI_0_rvalid(S00_AXI_0_rvalid),
-    .M_AXI_0_wdata(S00_AXI_0_wdata),
-    .M_AXI_0_wlast(S00_AXI_0_wlast),
-    .M_AXI_0_wready(S00_AXI_0_wready),
-    .M_AXI_0_wstrb(S00_AXI_0_wstrb),
-    .M_AXI_0_wvalid(S00_AXI_0_wvalid),
+    .M_AXI_0_awsize(BAR1_awsize),
+    .M_AXI_0_awvalid(BAR1_awvalid),
+    .M_AXI_0_bready(BAR1_bready),
+    .M_AXI_0_bresp(BAR1_bresp),
+    .M_AXI_0_bvalid(BAR1_bvalid),
+    .M_AXI_0_rdata(BAR1_rdata),
+    .M_AXI_0_rlast(BAR1_rlast),
+    .M_AXI_0_rready(BAR1_rready),
+    .M_AXI_0_rresp(BAR1_rresp),
+    .M_AXI_0_rvalid(BAR1_rvalid),
+    .M_AXI_0_wdata(BAR1_wdata),
+    .M_AXI_0_wlast(BAR1_wlast),
+    .M_AXI_0_wready(BAR1_wready),
+    .M_AXI_0_wstrb(BAR1_wstrb),
+    .M_AXI_0_wvalid(BAR1_wvalid),
     .OCL_AXIL_32_araddr(OCL_AXIL_32_araddr),
     .OCL_AXIL_32_arprot(OCL_AXIL_32_arprot),
     .OCL_AXIL_32_arready(OCL_AXIL_32_arready),

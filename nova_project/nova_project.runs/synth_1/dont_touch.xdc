@@ -2,7 +2,7 @@
 # It contains project source information necessary for synthesis and implementation.
 
 # Block Designs: bd/xlx_design_subsystem/xlx_design_subsystem.bd
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==xlx_design_subsystem || ORIG_REF_NAME==xlx_design_subsystem} -quiet] -quiet
+# Block Designs: The module: 'xlx_design_subsystem' is the root of the design. Do not add the DONT_TOUCH constraint.
 
 # IP: bd/xlx_design_subsystem/ip/xlx_design_subsystem_axi_dwidth_converter_0_0/xlx_design_subsystem_axi_dwidth_converter_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==xlx_design_subsystem_axi_dwidth_converter_0_0 || ORIG_REF_NAME==xlx_design_subsystem_axi_dwidth_converter_0_0} -quiet] -quiet
@@ -18,9 +18,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==xlx_design_
 
 # IP: bd/xlx_design_subsystem/ip/xlx_design_subsystem_blk_mem_gen_0_0/xlx_design_subsystem_blk_mem_gen_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==xlx_design_subsystem_blk_mem_gen_0_0 || ORIG_REF_NAME==xlx_design_subsystem_blk_mem_gen_0_0} -quiet] -quiet
-
-# IP: bd/xlx_design_subsystem/ip/xlx_design_subsystem_axi_crossbar_1_0/xlx_design_subsystem_axi_crossbar_1_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==xlx_design_subsystem_axi_crossbar_1_0 || ORIG_REF_NAME==xlx_design_subsystem_axi_crossbar_1_0} -quiet] -quiet
 
 # IP: bd/xlx_design_subsystem/ip/xlx_design_subsystem_axi_uartlite_0_0/xlx_design_subsystem_axi_uartlite_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==xlx_design_subsystem_axi_uartlite_0_0 || ORIG_REF_NAME==xlx_design_subsystem_axi_uartlite_0_0} -quiet] -quiet

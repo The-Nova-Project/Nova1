@@ -36,4 +36,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log xlx_subsystem.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source xlx_subsystem.tcl
+EAStep vivado -log xlx_design_subsystem.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source xlx_design_subsystem.tcl

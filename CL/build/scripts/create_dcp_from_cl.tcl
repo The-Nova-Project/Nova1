@@ -19,7 +19,7 @@ package require tar
 set TOP top_sp
 
 ## Replace with the name of your module
-set CL_MODULE cl_nova
+set CL_MODULE cl_top
 
 #################################################
 ## Command-line Arguments
@@ -104,40 +104,51 @@ puts "All reports and intermediate results will be time stamped with $timestamp"
 
 set_msg_config -id {Chipscope 16-3} -suppress
 set_msg_config -string {AXI_QUAD_SPI} -suppress
+set_msg_config -string {PIPE_CL_SH_AURORA_STAT} -suppress
+set_msg_config -string {PIPE_CL_SH_HMC_STAT} -suppress
+set_msg_config -string {PIPE_AURORA_CHANNEL_UP} -suppress
+set_msg_config -string {PIPE_HMC_IIC} -suppress
+set_msg_config -string {PIPE_SH_CL_AURORA_STAT} -suppress
 
 # Suppress Warnings
 # These are to avoid warning messages that may not be real issues. A developer
 # may comment them out if they wish to see more information from warning
 # messages.
 set_msg_config -id {Common 17-55}        -suppress
-set_msg_config -id {Vivado 12-4739}      -suppress
-set_msg_config -id {Constraints 18-4866} -suppress
+set_msg_config -id {Designutils 20-1567} -suppress
 set_msg_config -id {IP_Flow 19-2162}     -suppress
+set_msg_config -id {Project 1-498}       -suppress
 set_msg_config -id {Route 35-328}        -suppress
-set_msg_config -id {Vivado 12-1008}      -suppress
 set_msg_config -id {Vivado 12-508}       -suppress
+set_msg_config -id {Constraints 18-4866} -suppress
 set_msg_config -id {filemgmt 56-12}      -suppress
+set_msg_config -id {Constraints 18-4644} -suppress
+set_msg_config -id {Coretcl 2-64}        -suppress
+set_msg_config -id {Vivado 12-4739}      -suppress
+set_msg_config -id {Vivado 12-5201}      -suppress
 set_msg_config -id {DRC CKLD-1}          -suppress
-set_msg_config -id {DRC CKLD-2}          -suppress
 set_msg_config -id {IP_Flow 19-2248}     -suppress
-set_msg_config -id {Vivado 12-1580}      -suppress
+#set_msg_config -id {Opt 31-155}          -suppress
+set_msg_config -id {Synth 8-115}         -suppress
+set_msg_config -id {Synth 8-3936}        -suppress
+set_msg_config -id {Vivado 12-1023}      -suppress
 set_msg_config -id {Constraints 18-550}  -suppress
 set_msg_config -id {Synth 8-3295}        -suppress
 set_msg_config -id {Synth 8-3321}        -suppress
 set_msg_config -id {Synth 8-3331}        -suppress
 set_msg_config -id {Synth 8-3332}        -suppress
-set_msg_config -id {Synth 8-6014}        -suppress
-set_msg_config -id {Timing 38-436}       -suppress
-set_msg_config -id {DRC REQP-1853}       -suppress
 set_msg_config -id {Synth 8-350}         -suppress
 set_msg_config -id {Synth 8-3848}        -suppress
 set_msg_config -id {Synth 8-3917}        -suppress
-set_msg_config -id {Opt 31-430}          -suppress
+set_msg_config -id {Synth 8-6014}        -suppress
+set_msg_config -id {Vivado 12-1580}      -suppress
+set_msg_config -id {Constraints 18-619}  -suppress
+set_msg_config -id {DRC CKLD-2}          -suppress
+set_msg_config -id {DRC REQP-1853}       -suppress
+set_msg_config -id {Timing 38-436}       -suppress
 
 set_msg_config -severity "CRITICAL WARNING" -string "WRAPPER_INST/SH" -suppress
 set_msg_config -severity "WARNING"          -string "WRAPPER_INST/SH" -suppress
-
-puts "AWS FPGA: ([clock format [clock seconds] -format %T]) Calling the encrypt.tcl.";
 
 # Check that an email address has been set, else unset notify_via_sns
 
@@ -180,6 +191,8 @@ switch $strategy {
     }
 }
 
+puts "AWS FPGA: ([clock format [clock seconds] -format %T]) Calling the encrypt.tcl.";
+
 #Encrypt source code
 source encrypt.tcl
 
@@ -197,15 +210,19 @@ puts "AWS FPGA: ([clock format [clock seconds] -format %T]) Calling aws_gen_clk_
 
 source $HDK_SHELL_DIR/build/scripts/aws_gen_clk_constraints.tcl
 #################################################################
-#### Do not remove this setting. Need to workaround bug
+##### Do not remove this setting. Need to workaround bug
 ##################################################################
 set_param hd.clockRoutingWireReduction false
+
 ##################################################
 ### CL XPR OOC Synthesis
 ##################################################
 if {${cl.synth}} {
    source -notrace ./synth_${CL_MODULE}.tcl
    set synth_dcp ${timestamp}.CL.post_synth.dcp
+} else {
+   open_checkpoint ../checkpoints/CL.post_synth.dcp
+   set synth_dcp CL.post_synth.dcp
 }
 
 ##################################################
@@ -222,8 +239,9 @@ if {$implement} {
       set_property IP_REPO_PATHS $cacheDir [current_project]
       puts "\nAWS FPGA: ([clock format [clock seconds] -format %T]) - Combining Shell and CL design checkpoints";
       add_files $HDK_SHELL_DIR/build/checkpoints/from_aws/SH_CL_BB_routed.dcp
-      add_files $CL_DIR/build/checkpoints/${timestamp}.CL.post_synth.dcp
-      set_property SCOPED_TO_CELLS {WRAPPER_INST/CL} [get_files $CL_DIR/build/checkpoints/${timestamp}.CL.post_synth.dcp]
+      #add_files $CL_DIR/build/checkpoints/${timestamp}.CL.post_synth.dcp
+      add_files $CL_DIR/build/checkpoints/$synth_dcp
+      set_property SCOPED_TO_CELLS {WRAPPER_INST/CL} [get_files $CL_DIR/build/checkpoints/$synth_dcp]
 
       #Read the constraints, note *DO NOT* read cl_clocks_aws (clocks originating from AWS shell)
       read_xdc [ list \
@@ -251,7 +269,6 @@ if {$implement} {
    ########################
    # CL Optimize
    ########################
-   set place_preHookTcl  ""
    if {$opt} {
       puts "\nAWS FPGA: ([clock format [clock seconds] -format %T]) - Running optimization";
       impl_step opt_design $TOP $opt_options $opt_directive $opt_preHookTcl $opt_postHookTcl
@@ -306,10 +323,12 @@ if {$implement} {
    # This is what will deliver to AWS
    puts "AWS FPGA: ([clock format [clock seconds] -format %T]) - Writing final DCP to to_aws directory.";
 
-   #writing unencrypted dcp for analysis to checkpoints dir.
+   #FIXME -- THIS SHOULD BE REMOVED FROM THE FINAL SCRIPT
+   #write_checkpoint -force $CL_DIR/build/checkpoints/to_aws/${timestamp}.SH_CL_routed_before_ddr_fix.dcp
+   #source top_ddr_fix.tcl
+   #checkpoint can used by developer for analysis and hence donot encrypt
    write_checkpoint -force $CL_DIR/build/checkpoints/${timestamp}.SH_CL_routed.dcp
-
-   #writing encrypted dcp which can be sent to AWS
+   #checkpoint that will be sent to aws and hence encrypt
    write_checkpoint -encrypt -force $CL_DIR/build/checkpoints/to_aws/${timestamp}.SH_CL_routed.dcp
 
    # Generate debug probes file
@@ -325,6 +344,7 @@ if {$implement} {
 # Create a zipped tar file, that would be used for createFpgaImage EC2 API
 
 puts "AWS FPGA: ([clock format [clock seconds] -format %T]) - Compress files for sending to AWS. "
+
 
 # Create manifest file
 set manifest_file [open "$CL_DIR/build/checkpoints/to_aws/${timestamp}.manifest.txt" w]

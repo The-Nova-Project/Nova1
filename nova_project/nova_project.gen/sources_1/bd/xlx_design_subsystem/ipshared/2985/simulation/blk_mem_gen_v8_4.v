@@ -2407,7 +2407,7 @@ module blk_mem_gen_v8_4_4_mem_module
             end
           end
 
-        // No byte-writes, overwrite the whole word
+        // No byte-writes, overwrite the stableEnv word
         end else begin
           current_contents = data;
         end
@@ -2535,7 +2535,7 @@ module blk_mem_gen_v8_4_4_mem_module
             end
           end
 
-        // No byte-writes, overwrite the whole word
+        // No byte-writes, overwrite the stableEnv word
         end else begin
           current_contents = data;
         end
