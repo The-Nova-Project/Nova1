@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/muheet/stableEnv/nova_project/nova_project.runs/synth_1'
+HD_PWD='/home/muheet/uart_afi/nova_project/nova_project.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -36,4 +36,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log xlx_design_subsystem.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source xlx_design_subsystem.tcl
+EAStep vivado -log nova_project_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source nova_project_wrapper.tcl
