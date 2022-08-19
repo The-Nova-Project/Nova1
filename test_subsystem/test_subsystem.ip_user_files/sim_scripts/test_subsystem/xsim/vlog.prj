@@ -1,0 +1,12 @@
+verilog xil_defaultlib --include "../../../../test_subsystem.gen/sources_1/bd/test_subsystem/ipshared/ec67/hdl" \
+"../../../../test_subsystem.gen/sources_1/bd/test_subsystem/ip/test_subsystem_axi_dwidth_converter_0_0/sim/test_subsystem_axi_dwidth_converter_0_0.v" \
+"../../../../test_subsystem.gen/sources_1/bd/test_subsystem/ip/test_subsystem_axi_crossbar_0_0/sim/test_subsystem_axi_crossbar_0_0.v" \
+"../../../../test_subsystem.gen/sources_1/bd/test_subsystem/ip/test_subsystem_axi_crossbar_1_0/sim/test_subsystem_axi_crossbar_1_0.v" \
+"../../../../test_subsystem.gen/sources_1/bd/test_subsystem/ip/test_subsystem_debug_bridge_0_1/bd_0/ip/ip_0/sim/bd_b364_axi_jtag_0.v" \
+"../../../../test_subsystem.gen/sources_1/bd/test_subsystem/ip/test_subsystem_debug_bridge_0_1/bd_0/sim/bd_b364.v" \
+"../../../../test_subsystem.gen/sources_1/bd/test_subsystem/ip/test_subsystem_debug_bridge_0_1/sim/test_subsystem_debug_bridge_0_1.v" \
+"../../../../test_subsystem.gen/sources_1/bd/test_subsystem/sim/test_subsystem.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

@@ -1,0 +1,56 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Thu Aug 18 11:01:59 2022
+# Process ID: 4361
+# Current directory: /home/muheet/update_bd/afi_check/test_subsystem
+# Command line: vivado test_subsystem.xpr
+# Log file: /home/muheet/update_bd/afi_check/test_subsystem/vivado.log
+# Journal file: /home/muheet/update_bd/afi_check/test_subsystem/vivado.jou
+#-----------------------------------------------------------
+Sourcing tcl script '/home/muheet/.Xilinx/Vivado/Vivado_init.tcl'
+*Modifying Vivado command: launch_runs (aws_proc_overrides.tcl)
+script dir /home/muheet/update_bd/afi_check/aws-fpga/hdk/common/shell_v04261818/hlx/build/scripts
+start_gui
+open_project test_subsystem.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2021.1/data/ip'.
+open_project: Time (s): cpu = 00:00:19 ; elapsed = 00:00:08 . Memory (MB): peak = 7598.480 ; gain = 51.094 ; free physical = 6258 ; free virtual = 35590
+open_bd_design {/home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.srcs/sources_1/bd/test_subsystem/test_subsystem.bd}
+Reading block design file </home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.srcs/sources_1/bd/test_subsystem/test_subsystem.bd>...
+INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - axi_dwidth_converter_0
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - axi_crossbar_0
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - axi_crossbar_1
+Adding component instance block -- xilinx.com:ip:debug_bridge:3.0 - debug_bridge_0
+Adding component instance block -- xilinx.com:ip:axi_uartlite:2.0 - axi_uartlite_0
+Successfully read diagram <test_subsystem> from block design file </home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.srcs/sources_1/bd/test_subsystem/test_subsystem.bd>
+update_compile_order -fileset sources_1
+startgroup
+set_property -dict [list CONFIG.M01_A00_BASE_ADDR {0x0000000000080000}] [get_bd_cells axi_crossbar_1]
+endgroup
+save_bd_design
+Wrote  : </home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.srcs/sources_1/bd/test_subsystem/test_subsystem.bd> 
+Wrote  : </home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.srcs/sources_1/bd/test_subsystem/ui/bd_c43e14c2.ui> 
+generate_target all [get_files  /home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.srcs/sources_1/bd/test_subsystem/test_subsystem.bd]
+WARNING: [BD 41-2121] Port s_axi_aclk associated reset port s_axi_lite_resetn does not exist
+Wrote  : </home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.srcs/sources_1/bd/test_subsystem/test_subsystem.bd> 
+VHDL Output written to : /home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.gen/sources_1/bd/test_subsystem/synth/test_subsystem.v
+VHDL Output written to : /home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.gen/sources_1/bd/test_subsystem/sim/test_subsystem.v
+VHDL Output written to : /home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.gen/sources_1/bd/test_subsystem/hdl/test_subsystem_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_crossbar_1 .
+Exporting to file /home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.gen/sources_1/bd/test_subsystem/ip/test_subsystem_debug_bridge_0_1/bd_0/hw_handoff/test_subsystem_debug_bridge_0_1.hwh
+Generated Block Design Tcl file /home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.gen/sources_1/bd/test_subsystem/ip/test_subsystem_debug_bridge_0_1/bd_0/hw_handoff/test_subsystem_debug_bridge_0_1_bd.tcl
+Generated Hardware Definition File /home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.gen/sources_1/bd/test_subsystem/ip/test_subsystem_debug_bridge_0_1/bd_0/synth/test_subsystem_debug_bridge_0_1.hwdef
+Exporting to file /home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.gen/sources_1/bd/test_subsystem/hw_handoff/test_subsystem.hwh
+Generated Block Design Tcl file /home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.gen/sources_1/bd/test_subsystem/hw_handoff/test_subsystem_bd.tcl
+Generated Hardware Definition File /home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.gen/sources_1/bd/test_subsystem/synth/test_subsystem.hwdef
+generate_target: Time (s): cpu = 00:00:21 ; elapsed = 00:00:13 . Memory (MB): peak = 9298.590 ; gain = 0.000 ; free physical = 5894 ; free virtual = 35227
+export_ip_user_files -of_objects [get_files /home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.srcs/sources_1/bd/test_subsystem/test_subsystem.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.srcs/sources_1/bd/test_subsystem/test_subsystem.bd] -directory /home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.ip_user_files/sim_scripts -ip_user_files_dir /home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.ip_user_files -ipstatic_source_dir /home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.cache/compile_simlib/modelsim} {questa=/home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.cache/compile_simlib/questa} {ies=/home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.cache/compile_simlib/ies} {xcelium=/home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.cache/compile_simlib/xcelium} {vcs=/home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.cache/compile_simlib/vcs} {riviera=/home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Aug 18 11:08:38 2022...
