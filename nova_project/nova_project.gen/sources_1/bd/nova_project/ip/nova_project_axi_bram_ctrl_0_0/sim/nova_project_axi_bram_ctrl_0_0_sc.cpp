@@ -61,9 +61,9 @@ nova_project_axi_bram_ctrl_0_0_sc::nova_project_axi_bram_ctrl_0_0_sc(const sc_co
 
   // initialize module
     xsc::common_cpp::properties model_param_props;
-    model_param_props.addLong("C_MEMORY_DEPTH", "8192");
-    model_param_props.addLong("C_BRAM_ADDR_WIDTH", "13");
-    model_param_props.addLong("C_S_AXI_ADDR_WIDTH", "16");
+    model_param_props.addLong("C_MEMORY_DEPTH", "131072");
+    model_param_props.addLong("C_BRAM_ADDR_WIDTH", "17");
+    model_param_props.addLong("C_S_AXI_ADDR_WIDTH", "20");
     model_param_props.addLong("C_S_AXI_DATA_WIDTH", "64");
     model_param_props.addLong("C_S_AXI_ID_WIDTH", "5");
     model_param_props.addLong("C_S_AXI_SUPPORTS_NARROW_BURST", "1");

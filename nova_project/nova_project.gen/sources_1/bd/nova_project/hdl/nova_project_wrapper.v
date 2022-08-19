@@ -1,7 +1,7 @@
 //Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
-//Date        : Tue Aug  2 07:19:20 2022
+//Date        : Tue Aug 16 19:39:18 2022
 //Host        : ip-172-32-20-153.ap-southeast-1.compute.internal running 64-bit CentOS Linux release 7.9.2009 (Core)
 //Command     : generate_target nova_project_wrapper.bd
 //Design      : nova_project_wrapper
@@ -10,82 +10,84 @@
 `timescale 1 ps / 1 ps
 
 module nova_project_wrapper
-   (DDR_AXI4_araddr,
-    DDR_AXI4_arburst,
-    DDR_AXI4_arcache,
-    DDR_AXI4_arid,
-    DDR_AXI4_arlen,
-    DDR_AXI4_arlock,
-    DDR_AXI4_arprot,
-    DDR_AXI4_arqos,
-    DDR_AXI4_arready,
-    DDR_AXI4_arregion,
-    DDR_AXI4_arsize,
-    DDR_AXI4_arvalid,
-    DDR_AXI4_awaddr,
-    DDR_AXI4_awburst,
-    DDR_AXI4_awcache,
-    DDR_AXI4_awid,
-    DDR_AXI4_awlen,
-    DDR_AXI4_awlock,
-    DDR_AXI4_awprot,
-    DDR_AXI4_awqos,
-    DDR_AXI4_awready,
-    DDR_AXI4_awregion,
-    DDR_AXI4_awsize,
-    DDR_AXI4_awvalid,
-    DDR_AXI4_bid,
-    DDR_AXI4_bready,
-    DDR_AXI4_bresp,
-    DDR_AXI4_bvalid,
-    DDR_AXI4_rdata,
-    DDR_AXI4_rid,
-    DDR_AXI4_rlast,
-    DDR_AXI4_rready,
-    DDR_AXI4_rresp,
-    DDR_AXI4_rvalid,
-    DDR_AXI4_wdata,
-    DDR_AXI4_wlast,
-    DDR_AXI4_wready,
-    DDR_AXI4_wstrb,
-    DDR_AXI4_wvalid,
-    DMA_PCIS_AXI4_araddr,
-    DMA_PCIS_AXI4_arburst,
-    DMA_PCIS_AXI4_arcache,
-    DMA_PCIS_AXI4_arid,
-    DMA_PCIS_AXI4_arlen,
-    DMA_PCIS_AXI4_arlock,
-    DMA_PCIS_AXI4_arprot,
-    DMA_PCIS_AXI4_arqos,
-    DMA_PCIS_AXI4_arready,
-    DMA_PCIS_AXI4_arsize,
-    DMA_PCIS_AXI4_arvalid,
-    DMA_PCIS_AXI4_awaddr,
-    DMA_PCIS_AXI4_awburst,
-    DMA_PCIS_AXI4_awcache,
-    DMA_PCIS_AXI4_awid,
-    DMA_PCIS_AXI4_awlen,
-    DMA_PCIS_AXI4_awlock,
-    DMA_PCIS_AXI4_awprot,
-    DMA_PCIS_AXI4_awqos,
-    DMA_PCIS_AXI4_awready,
-    DMA_PCIS_AXI4_awsize,
-    DMA_PCIS_AXI4_awvalid,
-    DMA_PCIS_AXI4_bid,
-    DMA_PCIS_AXI4_bready,
-    DMA_PCIS_AXI4_bresp,
-    DMA_PCIS_AXI4_bvalid,
-    DMA_PCIS_AXI4_rdata,
-    DMA_PCIS_AXI4_rid,
-    DMA_PCIS_AXI4_rlast,
-    DMA_PCIS_AXI4_rready,
-    DMA_PCIS_AXI4_rresp,
-    DMA_PCIS_AXI4_rvalid,
-    DMA_PCIS_AXI4_wdata,
-    DMA_PCIS_AXI4_wlast,
-    DMA_PCIS_AXI4_wready,
-    DMA_PCIS_AXI4_wstrb,
-    DMA_PCIS_AXI4_wvalid,
+   (M02_AXI_MTML_araddr,
+    M02_AXI_MTML_arburst,
+    M02_AXI_MTML_arcache,
+    M02_AXI_MTML_arid,
+    M02_AXI_MTML_arlen,
+    M02_AXI_MTML_arlock,
+    M02_AXI_MTML_arprot,
+    M02_AXI_MTML_arqos,
+    M02_AXI_MTML_arready,
+    M02_AXI_MTML_arregion,
+    M02_AXI_MTML_arsize,
+    M02_AXI_MTML_arvalid,
+    M02_AXI_MTML_awaddr,
+    M02_AXI_MTML_awburst,
+    M02_AXI_MTML_awcache,
+    M02_AXI_MTML_awid,
+    M02_AXI_MTML_awlen,
+    M02_AXI_MTML_awlock,
+    M02_AXI_MTML_awprot,
+    M02_AXI_MTML_awqos,
+    M02_AXI_MTML_awready,
+    M02_AXI_MTML_awregion,
+    M02_AXI_MTML_awsize,
+    M02_AXI_MTML_awvalid,
+    M02_AXI_MTML_bid,
+    M02_AXI_MTML_bready,
+    M02_AXI_MTML_bresp,
+    M02_AXI_MTML_bvalid,
+    M02_AXI_MTML_rdata,
+    M02_AXI_MTML_rid,
+    M02_AXI_MTML_rlast,
+    M02_AXI_MTML_rready,
+    M02_AXI_MTML_rresp,
+    M02_AXI_MTML_rvalid,
+    M02_AXI_MTML_wdata,
+    M02_AXI_MTML_wlast,
+    M02_AXI_MTML_wready,
+    M02_AXI_MTML_wstrb,
+    M02_AXI_MTML_wvalid,
+    M03_AXI_DDR_araddr,
+    M03_AXI_DDR_arburst,
+    M03_AXI_DDR_arcache,
+    M03_AXI_DDR_arid,
+    M03_AXI_DDR_arlen,
+    M03_AXI_DDR_arlock,
+    M03_AXI_DDR_arprot,
+    M03_AXI_DDR_arqos,
+    M03_AXI_DDR_arready,
+    M03_AXI_DDR_arregion,
+    M03_AXI_DDR_arsize,
+    M03_AXI_DDR_arvalid,
+    M03_AXI_DDR_awaddr,
+    M03_AXI_DDR_awburst,
+    M03_AXI_DDR_awcache,
+    M03_AXI_DDR_awid,
+    M03_AXI_DDR_awlen,
+    M03_AXI_DDR_awlock,
+    M03_AXI_DDR_awprot,
+    M03_AXI_DDR_awqos,
+    M03_AXI_DDR_awready,
+    M03_AXI_DDR_awregion,
+    M03_AXI_DDR_awsize,
+    M03_AXI_DDR_awvalid,
+    M03_AXI_DDR_bid,
+    M03_AXI_DDR_bready,
+    M03_AXI_DDR_bresp,
+    M03_AXI_DDR_bvalid,
+    M03_AXI_DDR_rdata,
+    M03_AXI_DDR_rid,
+    M03_AXI_DDR_rlast,
+    M03_AXI_DDR_rready,
+    M03_AXI_DDR_rresp,
+    M03_AXI_DDR_rvalid,
+    M03_AXI_DDR_wdata,
+    M03_AXI_DDR_wlast,
+    M03_AXI_DDR_wready,
+    M03_AXI_DDR_wstrb,
+    M03_AXI_DDR_wvalid,
     S01_AXI_0_araddr,
     S01_AXI_0_arburst,
     S01_AXI_0_arcache,
@@ -123,6 +125,43 @@ module nova_project_wrapper
     S01_AXI_0_wready,
     S01_AXI_0_wstrb,
     S01_AXI_0_wvalid,
+    S02_AXI_MTML_araddr,
+    S02_AXI_MTML_arburst,
+    S02_AXI_MTML_arcache,
+    S02_AXI_MTML_arid,
+    S02_AXI_MTML_arlen,
+    S02_AXI_MTML_arlock,
+    S02_AXI_MTML_arprot,
+    S02_AXI_MTML_arqos,
+    S02_AXI_MTML_arready,
+    S02_AXI_MTML_arsize,
+    S02_AXI_MTML_arvalid,
+    S02_AXI_MTML_awaddr,
+    S02_AXI_MTML_awburst,
+    S02_AXI_MTML_awcache,
+    S02_AXI_MTML_awid,
+    S02_AXI_MTML_awlen,
+    S02_AXI_MTML_awlock,
+    S02_AXI_MTML_awprot,
+    S02_AXI_MTML_awqos,
+    S02_AXI_MTML_awready,
+    S02_AXI_MTML_awsize,
+    S02_AXI_MTML_awvalid,
+    S02_AXI_MTML_bid,
+    S02_AXI_MTML_bready,
+    S02_AXI_MTML_bresp,
+    S02_AXI_MTML_bvalid,
+    S02_AXI_MTML_rdata,
+    S02_AXI_MTML_rid,
+    S02_AXI_MTML_rlast,
+    S02_AXI_MTML_rready,
+    S02_AXI_MTML_rresp,
+    S02_AXI_MTML_rvalid,
+    S02_AXI_MTML_wdata,
+    S02_AXI_MTML_wlast,
+    S02_AXI_MTML_wready,
+    S02_AXI_MTML_wstrb,
+    S02_AXI_MTML_wvalid,
     S_AXI_0_araddr,
     S_AXI_0_arprot,
     S_AXI_0_arready,
@@ -142,107 +181,89 @@ module nova_project_wrapper
     S_AXI_0_wready,
     S_AXI_0_wstrb,
     S_AXI_0_wvalid,
-    S_AXI_1_araddr,
-    S_AXI_1_arready,
-    S_AXI_1_arvalid,
-    S_AXI_1_awaddr,
-    S_AXI_1_awready,
-    S_AXI_1_awvalid,
-    S_AXI_1_bready,
-    S_AXI_1_bresp,
-    S_AXI_1_bvalid,
-    S_AXI_1_rdata,
-    S_AXI_1_rready,
-    S_AXI_1_rresp,
-    S_AXI_1_rvalid,
-    S_AXI_1_wdata,
-    S_AXI_1_wready,
-    S_AXI_1_wstrb,
-    S_AXI_1_wvalid,
     UART_0_rxd,
     UART_0_txd,
-    UART_1_rxd,
-    UART_1_txd,
     interrupt_0,
-    interrupt_1,
     s_axi_aclk_0,
     s_axi_aresetn_0);
-  output [63:0]DDR_AXI4_araddr;
-  output [1:0]DDR_AXI4_arburst;
-  output [3:0]DDR_AXI4_arcache;
-  output [15:0]DDR_AXI4_arid;
-  output [7:0]DDR_AXI4_arlen;
-  output [0:0]DDR_AXI4_arlock;
-  output [2:0]DDR_AXI4_arprot;
-  output [3:0]DDR_AXI4_arqos;
-  input [0:0]DDR_AXI4_arready;
-  output [3:0]DDR_AXI4_arregion;
-  output [2:0]DDR_AXI4_arsize;
-  output [0:0]DDR_AXI4_arvalid;
-  output [63:0]DDR_AXI4_awaddr;
-  output [1:0]DDR_AXI4_awburst;
-  output [3:0]DDR_AXI4_awcache;
-  output [15:0]DDR_AXI4_awid;
-  output [7:0]DDR_AXI4_awlen;
-  output [0:0]DDR_AXI4_awlock;
-  output [2:0]DDR_AXI4_awprot;
-  output [3:0]DDR_AXI4_awqos;
-  input [0:0]DDR_AXI4_awready;
-  output [3:0]DDR_AXI4_awregion;
-  output [2:0]DDR_AXI4_awsize;
-  output [0:0]DDR_AXI4_awvalid;
-  input [15:0]DDR_AXI4_bid;
-  output [0:0]DDR_AXI4_bready;
-  input [1:0]DDR_AXI4_bresp;
-  input [0:0]DDR_AXI4_bvalid;
-  input [511:0]DDR_AXI4_rdata;
-  input [15:0]DDR_AXI4_rid;
-  input [0:0]DDR_AXI4_rlast;
-  output [0:0]DDR_AXI4_rready;
-  input [1:0]DDR_AXI4_rresp;
-  input [0:0]DDR_AXI4_rvalid;
-  output [511:0]DDR_AXI4_wdata;
-  output [0:0]DDR_AXI4_wlast;
-  input [0:0]DDR_AXI4_wready;
-  output [63:0]DDR_AXI4_wstrb;
-  output [0:0]DDR_AXI4_wvalid;
-  input [63:0]DMA_PCIS_AXI4_araddr;
-  input [1:0]DMA_PCIS_AXI4_arburst;
-  input [3:0]DMA_PCIS_AXI4_arcache;
-  input [15:0]DMA_PCIS_AXI4_arid;
-  input [7:0]DMA_PCIS_AXI4_arlen;
-  input [0:0]DMA_PCIS_AXI4_arlock;
-  input [2:0]DMA_PCIS_AXI4_arprot;
-  input [3:0]DMA_PCIS_AXI4_arqos;
-  output [0:0]DMA_PCIS_AXI4_arready;
-  input [2:0]DMA_PCIS_AXI4_arsize;
-  input [0:0]DMA_PCIS_AXI4_arvalid;
-  input [63:0]DMA_PCIS_AXI4_awaddr;
-  input [1:0]DMA_PCIS_AXI4_awburst;
-  input [3:0]DMA_PCIS_AXI4_awcache;
-  input [15:0]DMA_PCIS_AXI4_awid;
-  input [7:0]DMA_PCIS_AXI4_awlen;
-  input [0:0]DMA_PCIS_AXI4_awlock;
-  input [2:0]DMA_PCIS_AXI4_awprot;
-  input [3:0]DMA_PCIS_AXI4_awqos;
-  output [0:0]DMA_PCIS_AXI4_awready;
-  input [2:0]DMA_PCIS_AXI4_awsize;
-  input [0:0]DMA_PCIS_AXI4_awvalid;
-  output [15:0]DMA_PCIS_AXI4_bid;
-  input [0:0]DMA_PCIS_AXI4_bready;
-  output [1:0]DMA_PCIS_AXI4_bresp;
-  output [0:0]DMA_PCIS_AXI4_bvalid;
-  output [511:0]DMA_PCIS_AXI4_rdata;
-  output [15:0]DMA_PCIS_AXI4_rid;
-  output [0:0]DMA_PCIS_AXI4_rlast;
-  input [0:0]DMA_PCIS_AXI4_rready;
-  output [1:0]DMA_PCIS_AXI4_rresp;
-  output [0:0]DMA_PCIS_AXI4_rvalid;
-  input [511:0]DMA_PCIS_AXI4_wdata;
-  input [0:0]DMA_PCIS_AXI4_wlast;
-  output [0:0]DMA_PCIS_AXI4_wready;
-  input [63:0]DMA_PCIS_AXI4_wstrb;
-  input [0:0]DMA_PCIS_AXI4_wvalid;
+  output [63:0]M02_AXI_MTML_araddr;
+  output [1:0]M02_AXI_MTML_arburst;
+  output [3:0]M02_AXI_MTML_arcache;
+  output [4:0]M02_AXI_MTML_arid;
+  output [7:0]M02_AXI_MTML_arlen;
+  output [0:0]M02_AXI_MTML_arlock;
+  output [2:0]M02_AXI_MTML_arprot;
+  output [3:0]M02_AXI_MTML_arqos;
+  input [0:0]M02_AXI_MTML_arready;
+  output [3:0]M02_AXI_MTML_arregion;
+  output [2:0]M02_AXI_MTML_arsize;
+  output [0:0]M02_AXI_MTML_arvalid;
+  output [63:0]M02_AXI_MTML_awaddr;
+  output [1:0]M02_AXI_MTML_awburst;
+  output [3:0]M02_AXI_MTML_awcache;
+  output [4:0]M02_AXI_MTML_awid;
+  output [7:0]M02_AXI_MTML_awlen;
+  output [0:0]M02_AXI_MTML_awlock;
+  output [2:0]M02_AXI_MTML_awprot;
+  output [3:0]M02_AXI_MTML_awqos;
+  input [0:0]M02_AXI_MTML_awready;
+  output [3:0]M02_AXI_MTML_awregion;
+  output [2:0]M02_AXI_MTML_awsize;
+  output [0:0]M02_AXI_MTML_awvalid;
+  input [4:0]M02_AXI_MTML_bid;
+  output [0:0]M02_AXI_MTML_bready;
+  input [1:0]M02_AXI_MTML_bresp;
+  input [0:0]M02_AXI_MTML_bvalid;
+  input [63:0]M02_AXI_MTML_rdata;
+  input [4:0]M02_AXI_MTML_rid;
+  input [0:0]M02_AXI_MTML_rlast;
+  output [0:0]M02_AXI_MTML_rready;
+  input [1:0]M02_AXI_MTML_rresp;
+  input [0:0]M02_AXI_MTML_rvalid;
+  output [63:0]M02_AXI_MTML_wdata;
+  output [0:0]M02_AXI_MTML_wlast;
+  input [0:0]M02_AXI_MTML_wready;
+  output [7:0]M02_AXI_MTML_wstrb;
+  output [0:0]M02_AXI_MTML_wvalid;
+  output [63:0]M03_AXI_DDR_araddr;
+  output [1:0]M03_AXI_DDR_arburst;
+  output [3:0]M03_AXI_DDR_arcache;
+  output [4:0]M03_AXI_DDR_arid;
+  output [7:0]M03_AXI_DDR_arlen;
+  output [0:0]M03_AXI_DDR_arlock;
+  output [2:0]M03_AXI_DDR_arprot;
+  output [3:0]M03_AXI_DDR_arqos;
+  input [0:0]M03_AXI_DDR_arready;
+  output [3:0]M03_AXI_DDR_arregion;
+  output [2:0]M03_AXI_DDR_arsize;
+  output [0:0]M03_AXI_DDR_arvalid;
+  output [63:0]M03_AXI_DDR_awaddr;
+  output [1:0]M03_AXI_DDR_awburst;
+  output [3:0]M03_AXI_DDR_awcache;
+  output [4:0]M03_AXI_DDR_awid;
+  output [7:0]M03_AXI_DDR_awlen;
+  output [0:0]M03_AXI_DDR_awlock;
+  output [2:0]M03_AXI_DDR_awprot;
+  output [3:0]M03_AXI_DDR_awqos;
+  input [0:0]M03_AXI_DDR_awready;
+  output [3:0]M03_AXI_DDR_awregion;
+  output [2:0]M03_AXI_DDR_awsize;
+  output [0:0]M03_AXI_DDR_awvalid;
+  input [4:0]M03_AXI_DDR_bid;
+  output [0:0]M03_AXI_DDR_bready;
+  input [1:0]M03_AXI_DDR_bresp;
+  input [0:0]M03_AXI_DDR_bvalid;
+  input [63:0]M03_AXI_DDR_rdata;
+  input [4:0]M03_AXI_DDR_rid;
+  input [0:0]M03_AXI_DDR_rlast;
+  output [0:0]M03_AXI_DDR_rready;
+  input [1:0]M03_AXI_DDR_rresp;
+  input [0:0]M03_AXI_DDR_rvalid;
+  output [63:0]M03_AXI_DDR_wdata;
+  output [0:0]M03_AXI_DDR_wlast;
+  input [0:0]M03_AXI_DDR_wready;
+  output [7:0]M03_AXI_DDR_wstrb;
+  output [0:0]M03_AXI_DDR_wvalid;
   input [63:0]S01_AXI_0_araddr;
   input [1:0]S01_AXI_0_arburst;
   input [3:0]S01_AXI_0_arcache;
@@ -280,6 +301,43 @@ module nova_project_wrapper
   output [0:0]S01_AXI_0_wready;
   input [7:0]S01_AXI_0_wstrb;
   input [0:0]S01_AXI_0_wvalid;
+  input [63:0]S02_AXI_MTML_araddr;
+  input [1:0]S02_AXI_MTML_arburst;
+  input [3:0]S02_AXI_MTML_arcache;
+  input [4:0]S02_AXI_MTML_arid;
+  input [7:0]S02_AXI_MTML_arlen;
+  input [0:0]S02_AXI_MTML_arlock;
+  input [2:0]S02_AXI_MTML_arprot;
+  input [3:0]S02_AXI_MTML_arqos;
+  output [0:0]S02_AXI_MTML_arready;
+  input [2:0]S02_AXI_MTML_arsize;
+  input [0:0]S02_AXI_MTML_arvalid;
+  input [63:0]S02_AXI_MTML_awaddr;
+  input [1:0]S02_AXI_MTML_awburst;
+  input [3:0]S02_AXI_MTML_awcache;
+  input [4:0]S02_AXI_MTML_awid;
+  input [7:0]S02_AXI_MTML_awlen;
+  input [0:0]S02_AXI_MTML_awlock;
+  input [2:0]S02_AXI_MTML_awprot;
+  input [3:0]S02_AXI_MTML_awqos;
+  output [0:0]S02_AXI_MTML_awready;
+  input [2:0]S02_AXI_MTML_awsize;
+  input [0:0]S02_AXI_MTML_awvalid;
+  output [4:0]S02_AXI_MTML_bid;
+  input [0:0]S02_AXI_MTML_bready;
+  output [1:0]S02_AXI_MTML_bresp;
+  output [0:0]S02_AXI_MTML_bvalid;
+  output [63:0]S02_AXI_MTML_rdata;
+  output [4:0]S02_AXI_MTML_rid;
+  output [0:0]S02_AXI_MTML_rlast;
+  input [0:0]S02_AXI_MTML_rready;
+  output [1:0]S02_AXI_MTML_rresp;
+  output [0:0]S02_AXI_MTML_rvalid;
+  input [63:0]S02_AXI_MTML_wdata;
+  input [0:0]S02_AXI_MTML_wlast;
+  output [0:0]S02_AXI_MTML_wready;
+  input [7:0]S02_AXI_MTML_wstrb;
+  input [0:0]S02_AXI_MTML_wvalid;
   input [63:0]S_AXI_0_araddr;
   input [2:0]S_AXI_0_arprot;
   output S_AXI_0_arready;
@@ -299,108 +357,90 @@ module nova_project_wrapper
   output S_AXI_0_wready;
   input [3:0]S_AXI_0_wstrb;
   input S_AXI_0_wvalid;
-  input [3:0]S_AXI_1_araddr;
-  output S_AXI_1_arready;
-  input S_AXI_1_arvalid;
-  input [3:0]S_AXI_1_awaddr;
-  output S_AXI_1_awready;
-  input S_AXI_1_awvalid;
-  input S_AXI_1_bready;
-  output [1:0]S_AXI_1_bresp;
-  output S_AXI_1_bvalid;
-  output [31:0]S_AXI_1_rdata;
-  input S_AXI_1_rready;
-  output [1:0]S_AXI_1_rresp;
-  output S_AXI_1_rvalid;
-  input [31:0]S_AXI_1_wdata;
-  output S_AXI_1_wready;
-  input [3:0]S_AXI_1_wstrb;
-  input S_AXI_1_wvalid;
   input UART_0_rxd;
   output UART_0_txd;
-  input UART_1_rxd;
-  output UART_1_txd;
   output interrupt_0;
-  output interrupt_1;
   input s_axi_aclk_0;
   input s_axi_aresetn_0;
 
-  wire [63:0]DDR_AXI4_araddr;
-  wire [1:0]DDR_AXI4_arburst;
-  wire [3:0]DDR_AXI4_arcache;
-  wire [15:0]DDR_AXI4_arid;
-  wire [7:0]DDR_AXI4_arlen;
-  wire [0:0]DDR_AXI4_arlock;
-  wire [2:0]DDR_AXI4_arprot;
-  wire [3:0]DDR_AXI4_arqos;
-  wire [0:0]DDR_AXI4_arready;
-  wire [3:0]DDR_AXI4_arregion;
-  wire [2:0]DDR_AXI4_arsize;
-  wire [0:0]DDR_AXI4_arvalid;
-  wire [63:0]DDR_AXI4_awaddr;
-  wire [1:0]DDR_AXI4_awburst;
-  wire [3:0]DDR_AXI4_awcache;
-  wire [15:0]DDR_AXI4_awid;
-  wire [7:0]DDR_AXI4_awlen;
-  wire [0:0]DDR_AXI4_awlock;
-  wire [2:0]DDR_AXI4_awprot;
-  wire [3:0]DDR_AXI4_awqos;
-  wire [0:0]DDR_AXI4_awready;
-  wire [3:0]DDR_AXI4_awregion;
-  wire [2:0]DDR_AXI4_awsize;
-  wire [0:0]DDR_AXI4_awvalid;
-  wire [15:0]DDR_AXI4_bid;
-  wire [0:0]DDR_AXI4_bready;
-  wire [1:0]DDR_AXI4_bresp;
-  wire [0:0]DDR_AXI4_bvalid;
-  wire [511:0]DDR_AXI4_rdata;
-  wire [15:0]DDR_AXI4_rid;
-  wire [0:0]DDR_AXI4_rlast;
-  wire [0:0]DDR_AXI4_rready;
-  wire [1:0]DDR_AXI4_rresp;
-  wire [0:0]DDR_AXI4_rvalid;
-  wire [511:0]DDR_AXI4_wdata;
-  wire [0:0]DDR_AXI4_wlast;
-  wire [0:0]DDR_AXI4_wready;
-  wire [63:0]DDR_AXI4_wstrb;
-  wire [0:0]DDR_AXI4_wvalid;
-  wire [63:0]DMA_PCIS_AXI4_araddr;
-  wire [1:0]DMA_PCIS_AXI4_arburst;
-  wire [3:0]DMA_PCIS_AXI4_arcache;
-  wire [15:0]DMA_PCIS_AXI4_arid;
-  wire [7:0]DMA_PCIS_AXI4_arlen;
-  wire [0:0]DMA_PCIS_AXI4_arlock;
-  wire [2:0]DMA_PCIS_AXI4_arprot;
-  wire [3:0]DMA_PCIS_AXI4_arqos;
-  wire [0:0]DMA_PCIS_AXI4_arready;
-  wire [2:0]DMA_PCIS_AXI4_arsize;
-  wire [0:0]DMA_PCIS_AXI4_arvalid;
-  wire [63:0]DMA_PCIS_AXI4_awaddr;
-  wire [1:0]DMA_PCIS_AXI4_awburst;
-  wire [3:0]DMA_PCIS_AXI4_awcache;
-  wire [15:0]DMA_PCIS_AXI4_awid;
-  wire [7:0]DMA_PCIS_AXI4_awlen;
-  wire [0:0]DMA_PCIS_AXI4_awlock;
-  wire [2:0]DMA_PCIS_AXI4_awprot;
-  wire [3:0]DMA_PCIS_AXI4_awqos;
-  wire [0:0]DMA_PCIS_AXI4_awready;
-  wire [2:0]DMA_PCIS_AXI4_awsize;
-  wire [0:0]DMA_PCIS_AXI4_awvalid;
-  wire [15:0]DMA_PCIS_AXI4_bid;
-  wire [0:0]DMA_PCIS_AXI4_bready;
-  wire [1:0]DMA_PCIS_AXI4_bresp;
-  wire [0:0]DMA_PCIS_AXI4_bvalid;
-  wire [511:0]DMA_PCIS_AXI4_rdata;
-  wire [15:0]DMA_PCIS_AXI4_rid;
-  wire [0:0]DMA_PCIS_AXI4_rlast;
-  wire [0:0]DMA_PCIS_AXI4_rready;
-  wire [1:0]DMA_PCIS_AXI4_rresp;
-  wire [0:0]DMA_PCIS_AXI4_rvalid;
-  wire [511:0]DMA_PCIS_AXI4_wdata;
-  wire [0:0]DMA_PCIS_AXI4_wlast;
-  wire [0:0]DMA_PCIS_AXI4_wready;
-  wire [63:0]DMA_PCIS_AXI4_wstrb;
-  wire [0:0]DMA_PCIS_AXI4_wvalid;
+  wire [63:0]M02_AXI_MTML_araddr;
+  wire [1:0]M02_AXI_MTML_arburst;
+  wire [3:0]M02_AXI_MTML_arcache;
+  wire [4:0]M02_AXI_MTML_arid;
+  wire [7:0]M02_AXI_MTML_arlen;
+  wire [0:0]M02_AXI_MTML_arlock;
+  wire [2:0]M02_AXI_MTML_arprot;
+  wire [3:0]M02_AXI_MTML_arqos;
+  wire [0:0]M02_AXI_MTML_arready;
+  wire [3:0]M02_AXI_MTML_arregion;
+  wire [2:0]M02_AXI_MTML_arsize;
+  wire [0:0]M02_AXI_MTML_arvalid;
+  wire [63:0]M02_AXI_MTML_awaddr;
+  wire [1:0]M02_AXI_MTML_awburst;
+  wire [3:0]M02_AXI_MTML_awcache;
+  wire [4:0]M02_AXI_MTML_awid;
+  wire [7:0]M02_AXI_MTML_awlen;
+  wire [0:0]M02_AXI_MTML_awlock;
+  wire [2:0]M02_AXI_MTML_awprot;
+  wire [3:0]M02_AXI_MTML_awqos;
+  wire [0:0]M02_AXI_MTML_awready;
+  wire [3:0]M02_AXI_MTML_awregion;
+  wire [2:0]M02_AXI_MTML_awsize;
+  wire [0:0]M02_AXI_MTML_awvalid;
+  wire [4:0]M02_AXI_MTML_bid;
+  wire [0:0]M02_AXI_MTML_bready;
+  wire [1:0]M02_AXI_MTML_bresp;
+  wire [0:0]M02_AXI_MTML_bvalid;
+  wire [63:0]M02_AXI_MTML_rdata;
+  wire [4:0]M02_AXI_MTML_rid;
+  wire [0:0]M02_AXI_MTML_rlast;
+  wire [0:0]M02_AXI_MTML_rready;
+  wire [1:0]M02_AXI_MTML_rresp;
+  wire [0:0]M02_AXI_MTML_rvalid;
+  wire [63:0]M02_AXI_MTML_wdata;
+  wire [0:0]M02_AXI_MTML_wlast;
+  wire [0:0]M02_AXI_MTML_wready;
+  wire [7:0]M02_AXI_MTML_wstrb;
+  wire [0:0]M02_AXI_MTML_wvalid;
+  wire [63:0]M03_AXI_DDR_araddr;
+  wire [1:0]M03_AXI_DDR_arburst;
+  wire [3:0]M03_AXI_DDR_arcache;
+  wire [4:0]M03_AXI_DDR_arid;
+  wire [7:0]M03_AXI_DDR_arlen;
+  wire [0:0]M03_AXI_DDR_arlock;
+  wire [2:0]M03_AXI_DDR_arprot;
+  wire [3:0]M03_AXI_DDR_arqos;
+  wire [0:0]M03_AXI_DDR_arready;
+  wire [3:0]M03_AXI_DDR_arregion;
+  wire [2:0]M03_AXI_DDR_arsize;
+  wire [0:0]M03_AXI_DDR_arvalid;
+  wire [63:0]M03_AXI_DDR_awaddr;
+  wire [1:0]M03_AXI_DDR_awburst;
+  wire [3:0]M03_AXI_DDR_awcache;
+  wire [4:0]M03_AXI_DDR_awid;
+  wire [7:0]M03_AXI_DDR_awlen;
+  wire [0:0]M03_AXI_DDR_awlock;
+  wire [2:0]M03_AXI_DDR_awprot;
+  wire [3:0]M03_AXI_DDR_awqos;
+  wire [0:0]M03_AXI_DDR_awready;
+  wire [3:0]M03_AXI_DDR_awregion;
+  wire [2:0]M03_AXI_DDR_awsize;
+  wire [0:0]M03_AXI_DDR_awvalid;
+  wire [4:0]M03_AXI_DDR_bid;
+  wire [0:0]M03_AXI_DDR_bready;
+  wire [1:0]M03_AXI_DDR_bresp;
+  wire [0:0]M03_AXI_DDR_bvalid;
+  wire [63:0]M03_AXI_DDR_rdata;
+  wire [4:0]M03_AXI_DDR_rid;
+  wire [0:0]M03_AXI_DDR_rlast;
+  wire [0:0]M03_AXI_DDR_rready;
+  wire [1:0]M03_AXI_DDR_rresp;
+  wire [0:0]M03_AXI_DDR_rvalid;
+  wire [63:0]M03_AXI_DDR_wdata;
+  wire [0:0]M03_AXI_DDR_wlast;
+  wire [0:0]M03_AXI_DDR_wready;
+  wire [7:0]M03_AXI_DDR_wstrb;
+  wire [0:0]M03_AXI_DDR_wvalid;
   wire [63:0]S01_AXI_0_araddr;
   wire [1:0]S01_AXI_0_arburst;
   wire [3:0]S01_AXI_0_arcache;
@@ -438,6 +478,43 @@ module nova_project_wrapper
   wire [0:0]S01_AXI_0_wready;
   wire [7:0]S01_AXI_0_wstrb;
   wire [0:0]S01_AXI_0_wvalid;
+  wire [63:0]S02_AXI_MTML_araddr;
+  wire [1:0]S02_AXI_MTML_arburst;
+  wire [3:0]S02_AXI_MTML_arcache;
+  wire [4:0]S02_AXI_MTML_arid;
+  wire [7:0]S02_AXI_MTML_arlen;
+  wire [0:0]S02_AXI_MTML_arlock;
+  wire [2:0]S02_AXI_MTML_arprot;
+  wire [3:0]S02_AXI_MTML_arqos;
+  wire [0:0]S02_AXI_MTML_arready;
+  wire [2:0]S02_AXI_MTML_arsize;
+  wire [0:0]S02_AXI_MTML_arvalid;
+  wire [63:0]S02_AXI_MTML_awaddr;
+  wire [1:0]S02_AXI_MTML_awburst;
+  wire [3:0]S02_AXI_MTML_awcache;
+  wire [4:0]S02_AXI_MTML_awid;
+  wire [7:0]S02_AXI_MTML_awlen;
+  wire [0:0]S02_AXI_MTML_awlock;
+  wire [2:0]S02_AXI_MTML_awprot;
+  wire [3:0]S02_AXI_MTML_awqos;
+  wire [0:0]S02_AXI_MTML_awready;
+  wire [2:0]S02_AXI_MTML_awsize;
+  wire [0:0]S02_AXI_MTML_awvalid;
+  wire [4:0]S02_AXI_MTML_bid;
+  wire [0:0]S02_AXI_MTML_bready;
+  wire [1:0]S02_AXI_MTML_bresp;
+  wire [0:0]S02_AXI_MTML_bvalid;
+  wire [63:0]S02_AXI_MTML_rdata;
+  wire [4:0]S02_AXI_MTML_rid;
+  wire [0:0]S02_AXI_MTML_rlast;
+  wire [0:0]S02_AXI_MTML_rready;
+  wire [1:0]S02_AXI_MTML_rresp;
+  wire [0:0]S02_AXI_MTML_rvalid;
+  wire [63:0]S02_AXI_MTML_wdata;
+  wire [0:0]S02_AXI_MTML_wlast;
+  wire [0:0]S02_AXI_MTML_wready;
+  wire [7:0]S02_AXI_MTML_wstrb;
+  wire [0:0]S02_AXI_MTML_wvalid;
   wire [63:0]S_AXI_0_araddr;
   wire [2:0]S_AXI_0_arprot;
   wire S_AXI_0_arready;
@@ -457,109 +534,91 @@ module nova_project_wrapper
   wire S_AXI_0_wready;
   wire [3:0]S_AXI_0_wstrb;
   wire S_AXI_0_wvalid;
-  wire [3:0]S_AXI_1_araddr;
-  wire S_AXI_1_arready;
-  wire S_AXI_1_arvalid;
-  wire [3:0]S_AXI_1_awaddr;
-  wire S_AXI_1_awready;
-  wire S_AXI_1_awvalid;
-  wire S_AXI_1_bready;
-  wire [1:0]S_AXI_1_bresp;
-  wire S_AXI_1_bvalid;
-  wire [31:0]S_AXI_1_rdata;
-  wire S_AXI_1_rready;
-  wire [1:0]S_AXI_1_rresp;
-  wire S_AXI_1_rvalid;
-  wire [31:0]S_AXI_1_wdata;
-  wire S_AXI_1_wready;
-  wire [3:0]S_AXI_1_wstrb;
-  wire S_AXI_1_wvalid;
   wire UART_0_rxd;
   wire UART_0_txd;
-  wire UART_1_rxd;
-  wire UART_1_txd;
   wire interrupt_0;
-  wire interrupt_1;
   wire s_axi_aclk_0;
   wire s_axi_aresetn_0;
 
   nova_project nova_project_i
-       (.DDR_AXI4_araddr(DDR_AXI4_araddr),
-        .DDR_AXI4_arburst(DDR_AXI4_arburst),
-        .DDR_AXI4_arcache(DDR_AXI4_arcache),
-        .DDR_AXI4_arid(DDR_AXI4_arid),
-        .DDR_AXI4_arlen(DDR_AXI4_arlen),
-        .DDR_AXI4_arlock(DDR_AXI4_arlock),
-        .DDR_AXI4_arprot(DDR_AXI4_arprot),
-        .DDR_AXI4_arqos(DDR_AXI4_arqos),
-        .DDR_AXI4_arready(DDR_AXI4_arready),
-        .DDR_AXI4_arregion(DDR_AXI4_arregion),
-        .DDR_AXI4_arsize(DDR_AXI4_arsize),
-        .DDR_AXI4_arvalid(DDR_AXI4_arvalid),
-        .DDR_AXI4_awaddr(DDR_AXI4_awaddr),
-        .DDR_AXI4_awburst(DDR_AXI4_awburst),
-        .DDR_AXI4_awcache(DDR_AXI4_awcache),
-        .DDR_AXI4_awid(DDR_AXI4_awid),
-        .DDR_AXI4_awlen(DDR_AXI4_awlen),
-        .DDR_AXI4_awlock(DDR_AXI4_awlock),
-        .DDR_AXI4_awprot(DDR_AXI4_awprot),
-        .DDR_AXI4_awqos(DDR_AXI4_awqos),
-        .DDR_AXI4_awready(DDR_AXI4_awready),
-        .DDR_AXI4_awregion(DDR_AXI4_awregion),
-        .DDR_AXI4_awsize(DDR_AXI4_awsize),
-        .DDR_AXI4_awvalid(DDR_AXI4_awvalid),
-        .DDR_AXI4_bid(DDR_AXI4_bid),
-        .DDR_AXI4_bready(DDR_AXI4_bready),
-        .DDR_AXI4_bresp(DDR_AXI4_bresp),
-        .DDR_AXI4_bvalid(DDR_AXI4_bvalid),
-        .DDR_AXI4_rdata(DDR_AXI4_rdata),
-        .DDR_AXI4_rid(DDR_AXI4_rid),
-        .DDR_AXI4_rlast(DDR_AXI4_rlast),
-        .DDR_AXI4_rready(DDR_AXI4_rready),
-        .DDR_AXI4_rresp(DDR_AXI4_rresp),
-        .DDR_AXI4_rvalid(DDR_AXI4_rvalid),
-        .DDR_AXI4_wdata(DDR_AXI4_wdata),
-        .DDR_AXI4_wlast(DDR_AXI4_wlast),
-        .DDR_AXI4_wready(DDR_AXI4_wready),
-        .DDR_AXI4_wstrb(DDR_AXI4_wstrb),
-        .DDR_AXI4_wvalid(DDR_AXI4_wvalid),
-        .DMA_PCIS_AXI4_araddr(DMA_PCIS_AXI4_araddr),
-        .DMA_PCIS_AXI4_arburst(DMA_PCIS_AXI4_arburst),
-        .DMA_PCIS_AXI4_arcache(DMA_PCIS_AXI4_arcache),
-        .DMA_PCIS_AXI4_arid(DMA_PCIS_AXI4_arid),
-        .DMA_PCIS_AXI4_arlen(DMA_PCIS_AXI4_arlen),
-        .DMA_PCIS_AXI4_arlock(DMA_PCIS_AXI4_arlock),
-        .DMA_PCIS_AXI4_arprot(DMA_PCIS_AXI4_arprot),
-        .DMA_PCIS_AXI4_arqos(DMA_PCIS_AXI4_arqos),
-        .DMA_PCIS_AXI4_arready(DMA_PCIS_AXI4_arready),
-        .DMA_PCIS_AXI4_arsize(DMA_PCIS_AXI4_arsize),
-        .DMA_PCIS_AXI4_arvalid(DMA_PCIS_AXI4_arvalid),
-        .DMA_PCIS_AXI4_awaddr(DMA_PCIS_AXI4_awaddr),
-        .DMA_PCIS_AXI4_awburst(DMA_PCIS_AXI4_awburst),
-        .DMA_PCIS_AXI4_awcache(DMA_PCIS_AXI4_awcache),
-        .DMA_PCIS_AXI4_awid(DMA_PCIS_AXI4_awid),
-        .DMA_PCIS_AXI4_awlen(DMA_PCIS_AXI4_awlen),
-        .DMA_PCIS_AXI4_awlock(DMA_PCIS_AXI4_awlock),
-        .DMA_PCIS_AXI4_awprot(DMA_PCIS_AXI4_awprot),
-        .DMA_PCIS_AXI4_awqos(DMA_PCIS_AXI4_awqos),
-        .DMA_PCIS_AXI4_awready(DMA_PCIS_AXI4_awready),
-        .DMA_PCIS_AXI4_awsize(DMA_PCIS_AXI4_awsize),
-        .DMA_PCIS_AXI4_awvalid(DMA_PCIS_AXI4_awvalid),
-        .DMA_PCIS_AXI4_bid(DMA_PCIS_AXI4_bid),
-        .DMA_PCIS_AXI4_bready(DMA_PCIS_AXI4_bready),
-        .DMA_PCIS_AXI4_bresp(DMA_PCIS_AXI4_bresp),
-        .DMA_PCIS_AXI4_bvalid(DMA_PCIS_AXI4_bvalid),
-        .DMA_PCIS_AXI4_rdata(DMA_PCIS_AXI4_rdata),
-        .DMA_PCIS_AXI4_rid(DMA_PCIS_AXI4_rid),
-        .DMA_PCIS_AXI4_rlast(DMA_PCIS_AXI4_rlast),
-        .DMA_PCIS_AXI4_rready(DMA_PCIS_AXI4_rready),
-        .DMA_PCIS_AXI4_rresp(DMA_PCIS_AXI4_rresp),
-        .DMA_PCIS_AXI4_rvalid(DMA_PCIS_AXI4_rvalid),
-        .DMA_PCIS_AXI4_wdata(DMA_PCIS_AXI4_wdata),
-        .DMA_PCIS_AXI4_wlast(DMA_PCIS_AXI4_wlast),
-        .DMA_PCIS_AXI4_wready(DMA_PCIS_AXI4_wready),
-        .DMA_PCIS_AXI4_wstrb(DMA_PCIS_AXI4_wstrb),
-        .DMA_PCIS_AXI4_wvalid(DMA_PCIS_AXI4_wvalid),
+       (.M02_AXI_MTML_araddr(M02_AXI_MTML_araddr),
+        .M02_AXI_MTML_arburst(M02_AXI_MTML_arburst),
+        .M02_AXI_MTML_arcache(M02_AXI_MTML_arcache),
+        .M02_AXI_MTML_arid(M02_AXI_MTML_arid),
+        .M02_AXI_MTML_arlen(M02_AXI_MTML_arlen),
+        .M02_AXI_MTML_arlock(M02_AXI_MTML_arlock),
+        .M02_AXI_MTML_arprot(M02_AXI_MTML_arprot),
+        .M02_AXI_MTML_arqos(M02_AXI_MTML_arqos),
+        .M02_AXI_MTML_arready(M02_AXI_MTML_arready),
+        .M02_AXI_MTML_arregion(M02_AXI_MTML_arregion),
+        .M02_AXI_MTML_arsize(M02_AXI_MTML_arsize),
+        .M02_AXI_MTML_arvalid(M02_AXI_MTML_arvalid),
+        .M02_AXI_MTML_awaddr(M02_AXI_MTML_awaddr),
+        .M02_AXI_MTML_awburst(M02_AXI_MTML_awburst),
+        .M02_AXI_MTML_awcache(M02_AXI_MTML_awcache),
+        .M02_AXI_MTML_awid(M02_AXI_MTML_awid),
+        .M02_AXI_MTML_awlen(M02_AXI_MTML_awlen),
+        .M02_AXI_MTML_awlock(M02_AXI_MTML_awlock),
+        .M02_AXI_MTML_awprot(M02_AXI_MTML_awprot),
+        .M02_AXI_MTML_awqos(M02_AXI_MTML_awqos),
+        .M02_AXI_MTML_awready(M02_AXI_MTML_awready),
+        .M02_AXI_MTML_awregion(M02_AXI_MTML_awregion),
+        .M02_AXI_MTML_awsize(M02_AXI_MTML_awsize),
+        .M02_AXI_MTML_awvalid(M02_AXI_MTML_awvalid),
+        .M02_AXI_MTML_bid(M02_AXI_MTML_bid),
+        .M02_AXI_MTML_bready(M02_AXI_MTML_bready),
+        .M02_AXI_MTML_bresp(M02_AXI_MTML_bresp),
+        .M02_AXI_MTML_bvalid(M02_AXI_MTML_bvalid),
+        .M02_AXI_MTML_rdata(M02_AXI_MTML_rdata),
+        .M02_AXI_MTML_rid(M02_AXI_MTML_rid),
+        .M02_AXI_MTML_rlast(M02_AXI_MTML_rlast),
+        .M02_AXI_MTML_rready(M02_AXI_MTML_rready),
+        .M02_AXI_MTML_rresp(M02_AXI_MTML_rresp),
+        .M02_AXI_MTML_rvalid(M02_AXI_MTML_rvalid),
+        .M02_AXI_MTML_wdata(M02_AXI_MTML_wdata),
+        .M02_AXI_MTML_wlast(M02_AXI_MTML_wlast),
+        .M02_AXI_MTML_wready(M02_AXI_MTML_wready),
+        .M02_AXI_MTML_wstrb(M02_AXI_MTML_wstrb),
+        .M02_AXI_MTML_wvalid(M02_AXI_MTML_wvalid),
+        .M03_AXI_DDR_araddr(M03_AXI_DDR_araddr),
+        .M03_AXI_DDR_arburst(M03_AXI_DDR_arburst),
+        .M03_AXI_DDR_arcache(M03_AXI_DDR_arcache),
+        .M03_AXI_DDR_arid(M03_AXI_DDR_arid),
+        .M03_AXI_DDR_arlen(M03_AXI_DDR_arlen),
+        .M03_AXI_DDR_arlock(M03_AXI_DDR_arlock),
+        .M03_AXI_DDR_arprot(M03_AXI_DDR_arprot),
+        .M03_AXI_DDR_arqos(M03_AXI_DDR_arqos),
+        .M03_AXI_DDR_arready(M03_AXI_DDR_arready),
+        .M03_AXI_DDR_arregion(M03_AXI_DDR_arregion),
+        .M03_AXI_DDR_arsize(M03_AXI_DDR_arsize),
+        .M03_AXI_DDR_arvalid(M03_AXI_DDR_arvalid),
+        .M03_AXI_DDR_awaddr(M03_AXI_DDR_awaddr),
+        .M03_AXI_DDR_awburst(M03_AXI_DDR_awburst),
+        .M03_AXI_DDR_awcache(M03_AXI_DDR_awcache),
+        .M03_AXI_DDR_awid(M03_AXI_DDR_awid),
+        .M03_AXI_DDR_awlen(M03_AXI_DDR_awlen),
+        .M03_AXI_DDR_awlock(M03_AXI_DDR_awlock),
+        .M03_AXI_DDR_awprot(M03_AXI_DDR_awprot),
+        .M03_AXI_DDR_awqos(M03_AXI_DDR_awqos),
+        .M03_AXI_DDR_awready(M03_AXI_DDR_awready),
+        .M03_AXI_DDR_awregion(M03_AXI_DDR_awregion),
+        .M03_AXI_DDR_awsize(M03_AXI_DDR_awsize),
+        .M03_AXI_DDR_awvalid(M03_AXI_DDR_awvalid),
+        .M03_AXI_DDR_bid(M03_AXI_DDR_bid),
+        .M03_AXI_DDR_bready(M03_AXI_DDR_bready),
+        .M03_AXI_DDR_bresp(M03_AXI_DDR_bresp),
+        .M03_AXI_DDR_bvalid(M03_AXI_DDR_bvalid),
+        .M03_AXI_DDR_rdata(M03_AXI_DDR_rdata),
+        .M03_AXI_DDR_rid(M03_AXI_DDR_rid),
+        .M03_AXI_DDR_rlast(M03_AXI_DDR_rlast),
+        .M03_AXI_DDR_rready(M03_AXI_DDR_rready),
+        .M03_AXI_DDR_rresp(M03_AXI_DDR_rresp),
+        .M03_AXI_DDR_rvalid(M03_AXI_DDR_rvalid),
+        .M03_AXI_DDR_wdata(M03_AXI_DDR_wdata),
+        .M03_AXI_DDR_wlast(M03_AXI_DDR_wlast),
+        .M03_AXI_DDR_wready(M03_AXI_DDR_wready),
+        .M03_AXI_DDR_wstrb(M03_AXI_DDR_wstrb),
+        .M03_AXI_DDR_wvalid(M03_AXI_DDR_wvalid),
         .S01_AXI_0_araddr(S01_AXI_0_araddr),
         .S01_AXI_0_arburst(S01_AXI_0_arburst),
         .S01_AXI_0_arcache(S01_AXI_0_arcache),
@@ -597,6 +656,43 @@ module nova_project_wrapper
         .S01_AXI_0_wready(S01_AXI_0_wready),
         .S01_AXI_0_wstrb(S01_AXI_0_wstrb),
         .S01_AXI_0_wvalid(S01_AXI_0_wvalid),
+        .S02_AXI_MTML_araddr(S02_AXI_MTML_araddr),
+        .S02_AXI_MTML_arburst(S02_AXI_MTML_arburst),
+        .S02_AXI_MTML_arcache(S02_AXI_MTML_arcache),
+        .S02_AXI_MTML_arid(S02_AXI_MTML_arid),
+        .S02_AXI_MTML_arlen(S02_AXI_MTML_arlen),
+        .S02_AXI_MTML_arlock(S02_AXI_MTML_arlock),
+        .S02_AXI_MTML_arprot(S02_AXI_MTML_arprot),
+        .S02_AXI_MTML_arqos(S02_AXI_MTML_arqos),
+        .S02_AXI_MTML_arready(S02_AXI_MTML_arready),
+        .S02_AXI_MTML_arsize(S02_AXI_MTML_arsize),
+        .S02_AXI_MTML_arvalid(S02_AXI_MTML_arvalid),
+        .S02_AXI_MTML_awaddr(S02_AXI_MTML_awaddr),
+        .S02_AXI_MTML_awburst(S02_AXI_MTML_awburst),
+        .S02_AXI_MTML_awcache(S02_AXI_MTML_awcache),
+        .S02_AXI_MTML_awid(S02_AXI_MTML_awid),
+        .S02_AXI_MTML_awlen(S02_AXI_MTML_awlen),
+        .S02_AXI_MTML_awlock(S02_AXI_MTML_awlock),
+        .S02_AXI_MTML_awprot(S02_AXI_MTML_awprot),
+        .S02_AXI_MTML_awqos(S02_AXI_MTML_awqos),
+        .S02_AXI_MTML_awready(S02_AXI_MTML_awready),
+        .S02_AXI_MTML_awsize(S02_AXI_MTML_awsize),
+        .S02_AXI_MTML_awvalid(S02_AXI_MTML_awvalid),
+        .S02_AXI_MTML_bid(S02_AXI_MTML_bid),
+        .S02_AXI_MTML_bready(S02_AXI_MTML_bready),
+        .S02_AXI_MTML_bresp(S02_AXI_MTML_bresp),
+        .S02_AXI_MTML_bvalid(S02_AXI_MTML_bvalid),
+        .S02_AXI_MTML_rdata(S02_AXI_MTML_rdata),
+        .S02_AXI_MTML_rid(S02_AXI_MTML_rid),
+        .S02_AXI_MTML_rlast(S02_AXI_MTML_rlast),
+        .S02_AXI_MTML_rready(S02_AXI_MTML_rready),
+        .S02_AXI_MTML_rresp(S02_AXI_MTML_rresp),
+        .S02_AXI_MTML_rvalid(S02_AXI_MTML_rvalid),
+        .S02_AXI_MTML_wdata(S02_AXI_MTML_wdata),
+        .S02_AXI_MTML_wlast(S02_AXI_MTML_wlast),
+        .S02_AXI_MTML_wready(S02_AXI_MTML_wready),
+        .S02_AXI_MTML_wstrb(S02_AXI_MTML_wstrb),
+        .S02_AXI_MTML_wvalid(S02_AXI_MTML_wvalid),
         .S_AXI_0_araddr(S_AXI_0_araddr),
         .S_AXI_0_arprot(S_AXI_0_arprot),
         .S_AXI_0_arready(S_AXI_0_arready),
@@ -616,29 +712,9 @@ module nova_project_wrapper
         .S_AXI_0_wready(S_AXI_0_wready),
         .S_AXI_0_wstrb(S_AXI_0_wstrb),
         .S_AXI_0_wvalid(S_AXI_0_wvalid),
-        .S_AXI_1_araddr(S_AXI_1_araddr),
-        .S_AXI_1_arready(S_AXI_1_arready),
-        .S_AXI_1_arvalid(S_AXI_1_arvalid),
-        .S_AXI_1_awaddr(S_AXI_1_awaddr),
-        .S_AXI_1_awready(S_AXI_1_awready),
-        .S_AXI_1_awvalid(S_AXI_1_awvalid),
-        .S_AXI_1_bready(S_AXI_1_bready),
-        .S_AXI_1_bresp(S_AXI_1_bresp),
-        .S_AXI_1_bvalid(S_AXI_1_bvalid),
-        .S_AXI_1_rdata(S_AXI_1_rdata),
-        .S_AXI_1_rready(S_AXI_1_rready),
-        .S_AXI_1_rresp(S_AXI_1_rresp),
-        .S_AXI_1_rvalid(S_AXI_1_rvalid),
-        .S_AXI_1_wdata(S_AXI_1_wdata),
-        .S_AXI_1_wready(S_AXI_1_wready),
-        .S_AXI_1_wstrb(S_AXI_1_wstrb),
-        .S_AXI_1_wvalid(S_AXI_1_wvalid),
         .UART_0_rxd(UART_0_rxd),
         .UART_0_txd(UART_0_txd),
-        .UART_1_rxd(UART_1_rxd),
-        .UART_1_txd(UART_1_txd),
         .interrupt_0(interrupt_0),
-        .interrupt_1(interrupt_1),
         .s_axi_aclk_0(s_axi_aclk_0),
         .s_axi_aresetn_0(s_axi_aresetn_0));
 endmodule

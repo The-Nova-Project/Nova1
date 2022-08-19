@@ -1,6 +1,5 @@
 vhdl xil_defaultlib  \
 "../../../../nova_project.gen/sources_1/bd/nova_project/ip/nova_project_axi_bram_ctrl_0_0/sim/nova_project_axi_bram_ctrl_0_0.vhd" \
-"../../../../nova_project.gen/sources_1/bd/nova_project/ip/nova_project_axi_uartlite_0_1/sim/nova_project_axi_uartlite_0_1.vhd" \
-"../../../../nova_project.gen/sources_1/bd/nova_project/ip/nova_project_axi_uartlite_0_2/sim/nova_project_axi_uartlite_0_2.vhd" \
+"../../../../nova_project.gen/sources_1/bd/nova_project/ip/nova_project_axi_uartlite_0_0/sim/nova_project_axi_uartlite_0_0.vhd" \
 
 nosort

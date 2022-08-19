@@ -42,12 +42,6 @@
   "../../../../nova_project.gen/sources_1/bd/nova_project/ip/nova_project_axi_dwidth_converter_0_0/sim/nova_project_axi_dwidth_converter_0_0.v" \
   "../../../../nova_project.gen/sources_1/bd/nova_project/ip/nova_project_axi_protocol_convert_0_0/sim/nova_project_axi_protocol_convert_0_0.v" \
 -endlib
--makelib xcelium_lib/axi_crossbar_v2_1_25 \
-  "../../../../nova_project.gen/sources_1/bd/nova_project/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v" \
--endlib
--makelib xcelium_lib/xil_defaultlib \
-  "../../../../nova_project.gen/sources_1/bd/nova_project/ip/nova_project_axi_crossbar_0_0/sim/nova_project_axi_crossbar_0_0.v" \
--endlib
 -makelib xcelium_lib/axi_bram_ctrl_v4_1_5 \
   "../../../../nova_project.gen/sources_1/bd/nova_project/ipshared/33c1/hdl/axi_bram_ctrl_v4_1_rfs.vhd" \
 -endlib
@@ -56,9 +50,12 @@
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   "../../../../nova_project.gen/sources_1/bd/nova_project/ip/nova_project_blk_mem_gen_0_0/sim/nova_project_blk_mem_gen_0_0.v" \
-  "../../../../nova_project.gen/sources_1/bd/nova_project/ip/nova_project_axi_protocol_convert_1_0/sim/nova_project_axi_protocol_convert_1_0.v" \
-  "../../../../nova_project.gen/sources_1/bd/nova_project/ip/nova_project_axi_dwidth_converter_1_0/sim/nova_project_axi_dwidth_converter_1_0.v" \
-  "../../../../nova_project.gen/sources_1/bd/nova_project/ip/nova_project_axi_crossbar_1_0/sim/nova_project_axi_crossbar_1_0.v" \
+-endlib
+-makelib xcelium_lib/axi_crossbar_v2_1_25 \
+  "../../../../nova_project.gen/sources_1/bd/nova_project/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../../nova_project.gen/sources_1/bd/nova_project/ip/nova_project_axi_crossbar_0_2/sim/nova_project_axi_crossbar_0_2.v" \
 -endlib
 -makelib xcelium_lib/axi_lite_ipif_v3_0_4 \
   "../../../../nova_project.gen/sources_1/bd/nova_project/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd" \
@@ -76,12 +73,11 @@
   "../../../../nova_project.gen/sources_1/bd/nova_project/ipshared/8c9b/hdl/axi_uartlite_v2_0_vh_rfs.vhd" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
-  "../../../../nova_project.gen/sources_1/bd/nova_project/ip/nova_project_axi_uartlite_0_1/sim/nova_project_axi_uartlite_0_1.vhd" \
-  "../../../../nova_project.gen/sources_1/bd/nova_project/ip/nova_project_axi_uartlite_0_2/sim/nova_project_axi_uartlite_0_2.vhd" \
+  "../../../../nova_project.gen/sources_1/bd/nova_project/ip/nova_project_axi_uartlite_0_0/sim/nova_project_axi_uartlite_0_0.vhd" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
-  "../../../../nova_project.gen/sources_1/bd/nova_project/ip/nova_project_axi_dwidth_converter_2_0/sim/nova_project_axi_dwidth_converter_2_0.v" \
-  "../../../../nova_project.gen/sources_1/bd/nova_project/ip/nova_project_axi_crossbar_2_0/sim/nova_project_axi_crossbar_2_0.v" \
+  "../../../../nova_project.gen/sources_1/bd/nova_project/ip/nova_project_axi_protocol_convert_1_0/sim/nova_project_axi_protocol_convert_1_0.v" \
+  "../../../../nova_project.gen/sources_1/bd/nova_project/ip/nova_project_axi_dwidth_converter_1_0/sim/nova_project_axi_dwidth_converter_1_0.v" \
   "../../../../nova_project.gen/sources_1/bd/nova_project/sim/nova_project.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
