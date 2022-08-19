@@ -19,8 +19,8 @@
 #define ZERO_VAL                0x00
 #define TO_HOST                 0x120
 #define BRAM_START_ADDR         0x0
-#define TOTAL_INSTR             75
-#define PASSED_VAL              0
+#define TOTAL_INSTR             0
+#define PASSED_VAL              9
 #define FAILED_VAL              1
 
 const struct logger *logger             = &logger_stdout;
@@ -97,7 +97,7 @@ int main(int argc, char **argv){
     uint16_t  led_val      = 0U;
     uint16_t  tohost_val   = TO_HOST;
     int       slot_id      = 0, 
-              bar_id       = APP_PF_BAR4,
+              bar_id       = APP_PF_BAR1,
               rc,
               opt;
     uint32_t address       = BRAM_START_ADDR;
@@ -134,7 +134,8 @@ int main(int argc, char **argv){
     uint32_t instructions_arr[TOTAL_INSTR];
     instrLoader(&instructions_arr, TOTAL_INSTR);
 
-    printf("===== Starting with writing into BRAM via BAR 01 =====\n");
+    printf("\n===== After writing Assembly into DDR via DMA =====\n");
+    printf("\n===== Start Reading from T0-Host address of BRAM via BAR 01 =====\n");
     
     int i = 0;
     for(i=0; i<TOTAL_INSTR; i++){
@@ -173,38 +174,38 @@ int main(int argc, char **argv){
         address = address + 4;
     }
 
-    //printf("\n ------ ---- --- --- -- - -- WRITING DEADBEEF TO TO-HOST  ---- --- -- -- - -- - - - --- - \n");
+   // printf("\n ------ ---- --- --- -- - -- WRITING DEADBEEF TO TO-HOST  ---- --- -- -- - -- - - - --- - \n");
     
-    instruction = DEADBEEF;
+   // instruction = DEADBEEF;
     address = TO_HOST;
 
-   // printf("------------- deadbeef val 0x%08x", instruction);
+    //printf("------------- deadbeef val 0x%08x", instruction);
 
-    rc = fpga_pci_poke(pci_bar_handle, address, instruction);
-    fail_on(rc, out, "Unable to write to the fpga !");
-    msleep(1UL);
-    printf("\n ------ ---- --- --- -- - -- TURNINGN DIP SWITCH / HYDRA RESET OFF  ---- --- -- -- - -- - - - --- - \n");
-    
-    dip_sw_val |= SU_RESET_ON;
-    rc = fpga_mgmt_set_vDIP(0,dip_sw_val);
-    fail_on(rc, out, "FAILED TO WRITE VDIP 2");
-
-    rc = fpga_mgmt_get_vDIP_status(0, &dip_sw_val);
-    fail_on(rc, out, "FAIL TO GET VDIP SWITCH VAL");
-    printf("VDIP VALUE: 0x%02x \n", dip_sw_val);
-    
-    rc = fpga_mgmt_get_vLED_status(0, &led_val);
-    fail_on(rc, out, "FAIL TO GET LEDs");
-    printf("VLED VALUE: 0x%02x \n", led_val);
+    //rc = fpga_pci_poke(pci_bar_handle, address, instruction);
+    //fail_on(rc, out, "Unable to write to the fpga !");
+    //msleep(1UL);
+    //printf("\n ------ ---- --- --- -- - -- TURNINGN DIP SWITCH / HYDRA RESET OFF  ---- --- -- -- - -- - - - --- - \n");
+    //
+    //dip_sw_val |= SU_RESET_ON;
+    //rc = fpga_mgmt_set_vDIP(0,dip_sw_val);
+    //fail_on(rc, out, "FAILED TO WRITE VDIP 2");
+//
+    //rc = fpga_mgmt_get_vDIP_status(0, &dip_sw_val);
+    //fail_on(rc, out, "FAIL TO GET VDIP SWITCH VAL");
+    //printf("VDIP VALUE: 0x%02x \n", dip_sw_val);
+    //
+    //rc = fpga_mgmt_get_vLED_status(0, &led_val);
+    //fail_on(rc, out, "FAIL TO GET LEDs");
+    //printf("VLED VALUE: 0x%02x \n", led_val);
 
     uint32_t pass_val = PASSED_VAL;
     uint32_t fail_val = FAILED_VAL;
 
-   // printf("\n ------ ---- --- --- -- - -- PEEKING THRU TO-HOST  ---- --- -- -- - -- - - - --- - \n");
+    printf("\n ------ ---- --- --- -- - -- PEEKING THRU TO-HOST  ---- --- -- -- - -- - - - --- - \n");
     
     int k =0;
     address = TO_HOST;
-    for(k=0;k<0;k++){
+    for(k=0;k<20;k++){
 
         nanosleep(&delayValue, &delayValue);
 
@@ -214,9 +215,9 @@ int main(int argc, char **argv){
 
         if(instruction == pass_val) {
 
-            printf("TEST PASSED\n");
+            printf("DDR to CORE and CORE to BRAM ---TEST PASSED--- THRU DMA and BAR1 interface \n");
             printf("Resulting value matched expected value 0x%x.\n It worked!\n", instruction);
-            
+            break;
 
         }
         if(instruction == fail_val) {
