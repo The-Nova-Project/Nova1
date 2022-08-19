@@ -95,7 +95,7 @@ void nova_project_axi_bram_ctrl_0_0::before_end_of_elaboration()
     S_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
     S_AXI_transactor_param_props.addLong("FREQ_HZ", "10000000");
     S_AXI_transactor_param_props.addLong("ID_WIDTH", "5");
-    S_AXI_transactor_param_props.addLong("ADDR_WIDTH", "16");
+    S_AXI_transactor_param_props.addLong("ADDR_WIDTH", "20");
     S_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
     S_AXI_transactor_param_props.addLong("ARUSER_WIDTH", "0");
     S_AXI_transactor_param_props.addLong("WUSER_WIDTH", "0");
@@ -125,7 +125,7 @@ void nova_project_axi_bram_ctrl_0_0::before_end_of_elaboration()
     S_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     S_AXI_transactor_param_props.addString("CLK_DOMAIN", "nova_project_s_axi_aclk_0");
 
-    mp_S_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<64,16,5,1,1,1,1,1>("S_AXI_transactor", S_AXI_transactor_param_props);
+    mp_S_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<64,20,5,1,1,1,1,1>("S_AXI_transactor", S_AXI_transactor_param_props);
 
     // S_AXI' transactor ports
 
@@ -218,7 +218,7 @@ void nova_project_axi_bram_ctrl_0_0::before_end_of_elaboration()
     S_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
     S_AXI_transactor_param_props.addLong("FREQ_HZ", "10000000");
     S_AXI_transactor_param_props.addLong("ID_WIDTH", "5");
-    S_AXI_transactor_param_props.addLong("ADDR_WIDTH", "16");
+    S_AXI_transactor_param_props.addLong("ADDR_WIDTH", "20");
     S_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
     S_AXI_transactor_param_props.addLong("ARUSER_WIDTH", "0");
     S_AXI_transactor_param_props.addLong("WUSER_WIDTH", "0");
@@ -248,7 +248,7 @@ void nova_project_axi_bram_ctrl_0_0::before_end_of_elaboration()
     S_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     S_AXI_transactor_param_props.addString("CLK_DOMAIN", "nova_project_s_axi_aclk_0");
 
-    mp_S_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<64,16,5,1,1,1,1,1>("S_AXI_transactor", S_AXI_transactor_param_props);
+    mp_S_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<64,20,5,1,1,1,1,1>("S_AXI_transactor", S_AXI_transactor_param_props);
 
     // S_AXI' transactor ports
 
@@ -341,7 +341,7 @@ void nova_project_axi_bram_ctrl_0_0::before_end_of_elaboration()
     S_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
     S_AXI_transactor_param_props.addLong("FREQ_HZ", "10000000");
     S_AXI_transactor_param_props.addLong("ID_WIDTH", "5");
-    S_AXI_transactor_param_props.addLong("ADDR_WIDTH", "16");
+    S_AXI_transactor_param_props.addLong("ADDR_WIDTH", "20");
     S_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
     S_AXI_transactor_param_props.addLong("ARUSER_WIDTH", "0");
     S_AXI_transactor_param_props.addLong("WUSER_WIDTH", "0");
@@ -371,7 +371,7 @@ void nova_project_axi_bram_ctrl_0_0::before_end_of_elaboration()
     S_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     S_AXI_transactor_param_props.addString("CLK_DOMAIN", "nova_project_s_axi_aclk_0");
 
-    mp_S_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<64,16,5,1,1,1,1,1>("S_AXI_transactor", S_AXI_transactor_param_props);
+    mp_S_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<64,20,5,1,1,1,1,1>("S_AXI_transactor", S_AXI_transactor_param_props);
 
     // S_AXI' transactor ports
 
@@ -453,7 +453,7 @@ nova_project_axi_bram_ctrl_0_0::nova_project_axi_bram_ctrl_0_0(const sc_core::sc
     S_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
     S_AXI_transactor_param_props.addLong("FREQ_HZ", "10000000");
     S_AXI_transactor_param_props.addLong("ID_WIDTH", "5");
-    S_AXI_transactor_param_props.addLong("ADDR_WIDTH", "16");
+    S_AXI_transactor_param_props.addLong("ADDR_WIDTH", "20");
     S_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
     S_AXI_transactor_param_props.addLong("ARUSER_WIDTH", "0");
     S_AXI_transactor_param_props.addLong("WUSER_WIDTH", "0");
@@ -483,7 +483,7 @@ nova_project_axi_bram_ctrl_0_0::nova_project_axi_bram_ctrl_0_0(const sc_core::sc
     S_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     S_AXI_transactor_param_props.addString("CLK_DOMAIN", "nova_project_s_axi_aclk_0");
 
-    mp_S_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<64,16,5,1,1,1,1,1>("S_AXI_transactor", S_AXI_transactor_param_props);
+    mp_S_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<64,20,5,1,1,1,1,1>("S_AXI_transactor", S_AXI_transactor_param_props);
   mp_S_AXI_transactor->ARADDR(s_axi_araddr);
   mp_S_AXI_transactor->ARBURST(s_axi_arburst);
   mp_S_AXI_transactor->ARCACHE(s_axi_arcache);
@@ -577,7 +577,7 @@ nova_project_axi_bram_ctrl_0_0::nova_project_axi_bram_ctrl_0_0(const sc_core::sc
     S_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
     S_AXI_transactor_param_props.addLong("FREQ_HZ", "10000000");
     S_AXI_transactor_param_props.addLong("ID_WIDTH", "5");
-    S_AXI_transactor_param_props.addLong("ADDR_WIDTH", "16");
+    S_AXI_transactor_param_props.addLong("ADDR_WIDTH", "20");
     S_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
     S_AXI_transactor_param_props.addLong("ARUSER_WIDTH", "0");
     S_AXI_transactor_param_props.addLong("WUSER_WIDTH", "0");
@@ -607,7 +607,7 @@ nova_project_axi_bram_ctrl_0_0::nova_project_axi_bram_ctrl_0_0(const sc_core::sc
     S_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     S_AXI_transactor_param_props.addString("CLK_DOMAIN", "nova_project_s_axi_aclk_0");
 
-    mp_S_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<64,16,5,1,1,1,1,1>("S_AXI_transactor", S_AXI_transactor_param_props);
+    mp_S_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<64,20,5,1,1,1,1,1>("S_AXI_transactor", S_AXI_transactor_param_props);
   mp_S_AXI_transactor->ARADDR(s_axi_araddr);
   mp_S_AXI_transactor->ARBURST(s_axi_arburst);
   mp_S_AXI_transactor->ARCACHE(s_axi_arcache);

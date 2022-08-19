@@ -1,0 +1,29 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Tue Aug 16 19:22:26 2022
+# Process ID: 29088
+# Current directory: /home/muheet/update_bd/afi_check/nova_project
+# Command line: vivado nova_project.xpr
+# Log file: /home/muheet/update_bd/afi_check/nova_project/vivado.log
+# Journal file: /home/muheet/update_bd/afi_check/nova_project/vivado.jou
+#-----------------------------------------------------------
+Sourcing tcl script '/home/muheet/.Xilinx/Vivado/Vivado_init.tcl'
+no such variable
+    (read trace on "::env(HDK_SHELL_DIR)")
+    invoked from within
+"source $::env(HDK_SHELL_DIR)/hlx/hlx_setup.tcl"
+    (file "/home/muheet/.Xilinx/Vivado/Vivado_init.tcl" line 1)
+start_gui
+open_project nova_project.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2021.1/data/ip'.
+open_project: Time (s): cpu = 00:00:19 ; elapsed = 00:00:08 . Memory (MB): peak = 7599.453 ; gain = 51.090 ; free physical = 2211 ; free virtual = 49451
+INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Aug 16 19:23:15 2022...

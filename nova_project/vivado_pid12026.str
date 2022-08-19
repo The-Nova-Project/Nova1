@@ -1,0 +1,160 @@
+/*
+
+Xilinx Vivado v2021.1 (64-bit) [Major: 2021, Minor: 1]
+SW Build: 3247384 on Thu Jun 10 19:36:07 MDT 2021
+IP Build: 3246043 on Fri Jun 11 00:30:35 MDT 2021
+
+Process ID (PID): 12026
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Mon Aug 08 10:39:35 UTC 2022
+Time zone: 	Coordinated Universal Time (UTC)
+
+OS: CentOS Linux release 7.9.2009 (Core)
+OS Version: 3.10.0-1160.66.1.el7.x86_64
+OS Architecture: amd64
+Available processors (cores): 8
+
+Display: 4.0
+Screen size: 1366x768
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+
+Java version: 	11.0.2 64-bit
+Java home: 	/opt/Xilinx/Vivado/2021.1/tps/lnx64/jre11.0.2
+Java executable: 	/opt/Xilinx/Vivado/2021.1/tps/lnx64/jre11.0.2/bin/java
+Java initial memory (-Xms): 	256 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	$USER
+User home directory: /home/$USER
+User working directory: /home/$USER/update_bd/afi_check/nova_project
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /opt/Xilinx/Vivado
+HDI_APPROOT: /opt/Xilinx/Vivado/2021.1
+RDI_DATADIR: /opt/Xilinx/Vivado/2021.1/data
+RDI_BINDIR: /opt/Xilinx/Vivado/2021.1/bin
+
+Vivado preferences file: /home/$USER/.Xilinx/Vivado/2021.1/vivado.xml
+Vivado preferences directory: /home/$USER/.Xilinx/Vivado/2021.1/
+Vivado layouts directory: /home/$USER/.Xilinx/Vivado/2021.1/data/layouts
+PlanAhead jar file: 	/opt/Xilinx/Vivado/2021.1/lib/classes/planAhead.jar
+Vivado log file: 	/home/$USER/update_bd/afi_check/nova_project/vivado.log
+Vivado journal file: 	/home/$USER/update_bd/afi_check/nova_project/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-12026-ip-172-32-20-153.ap-southeast-1.compute.internal
+
+Xilinx Environment Variables
+----------------------------
+XILINX_DSP: 
+XILINX_HLS: /opt/Xilinx/Vitis_HLS/2021.1
+XILINX_PLANAHEAD: /opt/Xilinx/Vivado/2021.1
+XILINX_SDK: /opt/Xilinx/Vitis/2021.1
+XILINX_VITIS: /opt/Xilinx/Vitis/2021.1
+XILINX_VIVADO: /opt/Xilinx/Vivado/2021.1
+XILINX_VIVADO_HLS: /opt/Xilinx/Vivado/2021.1
+
+
+GUI allocated memory:	256 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 5,767 MB
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: Sourcing tcl script '/home/$USER/.Xilinx/Vivado/Vivado_init.tcl' 
+// Tcl Message: no such variable     (read trace on "::env(HDK_SHELL_DIR)")     invoked from within "source $::env(HDK_SHELL_DIR)/hlx/hlx_setup.tcl"     (file "/home/$USER/.Xilinx/Vivado/Vivado_init.tcl" line 1) 
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bz (cs):  Open Project : addNotify
+// Opening Vivado Project: nova_project.xpr. Version: Vivado v2021.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// Tcl Message: open_project nova_project.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 95 MB (+96838kb) [00:00:13]
+// [Engine Memory]: 5,817 MB (+5948234kb) [00:00:13]
+// [GUI Memory]: 118 MB (+19162kb) [00:00:14]
+// WARNING: HEventQueue.dispatchEvent() is taking  3904 ms.
+// Tcl Message: open_project nova_project.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from '/home/$USER/update_bd/afi_check/nova_project' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2021.1/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 5,846 MB. GUI used memory: 60 MB. Current time: 8/8/22, 10:39:40 AM UTC
+// Project name: nova_project; location: /home/$USER/update_bd/afi_check/nova_project; part: xcvu9p-flga2104-1-e
+// Tcl Message: open_project: Time (s): cpu = 00:00:20 ; elapsed = 00:00:08 . Memory (MB): peak = 7627.746 ; gain = 85.238 ; free physical = 451 ; free virtual = 18002 
+dismissDialog("Open Project"); // bz
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 45 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, nova_project_wrapper (nova_project_wrapper.v)]", 1); // D
+// PAPropertyPanels.initPanels (nova_project.v) elapsed time: 0.3s
+// [GUI Memory]: 134 MB (+11360kb) [00:01:20]
+// Elapsed time: 17 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, nova_project_wrapper (nova_project_wrapper.v), nova_project_i : nova_project (nova_project.bd), nova_project (nova_project.v)]", 3, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, nova_project_wrapper (nova_project_wrapper.v), nova_project_i : nova_project (nova_project.bd), nova_project (nova_project.v), axi_dwidth_converter_0 : nova_project_axi_dwidth_converter_0_0 (nova_project_axi_dwidth_converter_0_0.xci)]", 6, false, false, false, false, false, true); // D - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 5,925 MB. GUI used memory: 87 MB. Current time: 8/8/22, 10:40:46 AM UTC
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, nova_project_wrapper (nova_project_wrapper.v), nova_project_i : nova_project (nova_project.bd), nova_project (nova_project.v), axi_dwidth_converter_0 : nova_project_axi_dwidth_converter_0_0 (nova_project_axi_dwidth_converter_0_0.xci)]", 6, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, nova_project_wrapper (nova_project_wrapper.v), nova_project_i : nova_project (nova_project.bd), nova_project (nova_project.v), axi_dwidth_converter_0 : nova_project_axi_dwidth_converter_0_0 (nova_project_axi_dwidth_converter_0_0.xci)]", 6, false, false, false, false, false, true); // D - Double Click
+// Run Command: PAResourceCommand.PACommandNames_RECUSTOMIZE_CORE
+// HOptionPane Warning: ''nova_project_axi_dwidth_converter_0_0.xci' IP is part of a block design. Please open the block design 'nova_project.bd' and customize the IP. (Re-customize IP)'
+// 'A' command handler elapsed time: 10 seconds
+// Elapsed time: 10 seconds
+selectButton("OptionPane.button", "OK"); // JButton
+// Elapsed time: 26 seconds
+selectCodeEditor("nova_project.v", 209, 273); // E
+// Elapsed time: 12 seconds
+selectCodeEditor("nova_project.v", 149, 217); // E
+// Elapsed time: 13 seconds
+selectCodeEditor("nova_project.v", 28, 202, true, false, false, false, false); // E - Shift Key
+typeControlKey((HResource) null, "nova_project.v", 'c'); // E
+// [GUI Memory]: 144 MB (+2433kb) [00:04:36]
+// HMemoryUtils.trashcanNow. Engine heap size: 5,927 MB. GUI used memory: 87 MB. Current time: 8/8/22, 11:10:46 AM UTC
+// Elapsed time: 3320 seconds
+selectCodeEditor("nova_project.v", 170, 267); // E
+// Elapsed time: 35 seconds
+selectButton(RDIResource.HPopupTitle_CLOSE, (String) null); // k
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // N
+// Elapsed time: 16 seconds
+unmaximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // N
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, nova_project_wrapper (nova_project_wrapper.v), nova_project_i : nova_project (nova_project.bd), nova_project (nova_project.v)]", 3); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, nova_project_wrapper (nova_project_wrapper.v)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, nova_project_wrapper (nova_project_wrapper.v)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, nova_project_wrapper (nova_project_wrapper.v)]", 1, true, false, false, false, false, true); // D - Double Click - Node
+// WARNING: HEventQueue.dispatchEvent() is taking  1952 ms.
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // N
+selectCodeEditor("nova_project_wrapper.v", 185, 358); // bP
+// Elapsed time: 15 seconds
+selectCodeEditor("nova_project_wrapper.v", 14, 169); // bP
+// Elapsed time: 10 seconds
+selectCodeEditor("nova_project_wrapper.v", 189, 322, true, false, false, false, false); // bP - Shift Key
+typeControlKey((HResource) null, "nova_project_wrapper.v", 'c'); // bP
+// HMemoryUtils.trashcanNow. Engine heap size: 5,937 MB. GUI used memory: 78 MB. Current time: 8/8/22, 11:40:46 AM UTC

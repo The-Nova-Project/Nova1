@@ -155,47 +155,25 @@ proc create_root_design { parentCell } {
 
 
   # Create interface ports
-  set DDR_AXI4 [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:aximm_rtl:1.0 DDR_AXI4 ]
+  set M02_AXI_MTML [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:aximm_rtl:1.0 M02_AXI_MTML ]
   set_property -dict [ list \
    CONFIG.ADDR_WIDTH {64} \
-   CONFIG.DATA_WIDTH {512} \
+   CONFIG.DATA_WIDTH {64} \
    CONFIG.FREQ_HZ {10000000} \
    CONFIG.NUM_READ_OUTSTANDING {2} \
    CONFIG.NUM_WRITE_OUTSTANDING {2} \
    CONFIG.PROTOCOL {AXI4} \
-   ] $DDR_AXI4
+   ] $M02_AXI_MTML
 
-  set DMA_PCIS_AXI4 [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:aximm_rtl:1.0 DMA_PCIS_AXI4 ]
+  set M03_AXI_DDR [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:aximm_rtl:1.0 M03_AXI_DDR ]
   set_property -dict [ list \
    CONFIG.ADDR_WIDTH {64} \
-   CONFIG.ARUSER_WIDTH {0} \
-   CONFIG.AWUSER_WIDTH {0} \
-   CONFIG.BUSER_WIDTH {0} \
-   CONFIG.DATA_WIDTH {512} \
+   CONFIG.DATA_WIDTH {64} \
    CONFIG.FREQ_HZ {10000000} \
-   CONFIG.HAS_BRESP {1} \
-   CONFIG.HAS_BURST {1} \
-   CONFIG.HAS_CACHE {1} \
-   CONFIG.HAS_LOCK {1} \
-   CONFIG.HAS_PROT {1} \
-   CONFIG.HAS_QOS {1} \
-   CONFIG.HAS_REGION {0} \
-   CONFIG.HAS_RRESP {1} \
-   CONFIG.HAS_WSTRB {1} \
-   CONFIG.ID_WIDTH {6} \
-   CONFIG.MAX_BURST_LENGTH {256} \
    CONFIG.NUM_READ_OUTSTANDING {2} \
-   CONFIG.NUM_READ_THREADS {1} \
    CONFIG.NUM_WRITE_OUTSTANDING {2} \
-   CONFIG.NUM_WRITE_THREADS {1} \
    CONFIG.PROTOCOL {AXI4} \
-   CONFIG.READ_WRITE_MODE {READ_WRITE} \
-   CONFIG.RUSER_BITS_PER_BYTE {0} \
-   CONFIG.RUSER_WIDTH {0} \
-   CONFIG.SUPPORTS_NARROW_BURST {1} \
-   CONFIG.WUSER_BITS_PER_BYTE {0} \
-   CONFIG.WUSER_WIDTH {0} \
-   ] $DMA_PCIS_AXI4
+   ] $M03_AXI_DDR
 
   set S01_AXI_0 [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:aximm_rtl:1.0 S01_AXI_0 ]
   set_property -dict [ list \
@@ -229,6 +207,38 @@ proc create_root_design { parentCell } {
    CONFIG.WUSER_WIDTH {0} \
    ] $S01_AXI_0
 
+  set S02_AXI_MTML [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:aximm_rtl:1.0 S02_AXI_MTML ]
+  set_property -dict [ list \
+   CONFIG.ADDR_WIDTH {64} \
+   CONFIG.ARUSER_WIDTH {0} \
+   CONFIG.AWUSER_WIDTH {0} \
+   CONFIG.BUSER_WIDTH {0} \
+   CONFIG.DATA_WIDTH {64} \
+   CONFIG.FREQ_HZ {10000000} \
+   CONFIG.HAS_BRESP {1} \
+   CONFIG.HAS_BURST {1} \
+   CONFIG.HAS_CACHE {1} \
+   CONFIG.HAS_LOCK {1} \
+   CONFIG.HAS_PROT {1} \
+   CONFIG.HAS_QOS {1} \
+   CONFIG.HAS_REGION {0} \
+   CONFIG.HAS_RRESP {1} \
+   CONFIG.HAS_WSTRB {1} \
+   CONFIG.ID_WIDTH {5} \
+   CONFIG.MAX_BURST_LENGTH {256} \
+   CONFIG.NUM_READ_OUTSTANDING {2} \
+   CONFIG.NUM_READ_THREADS {1} \
+   CONFIG.NUM_WRITE_OUTSTANDING {2} \
+   CONFIG.NUM_WRITE_THREADS {1} \
+   CONFIG.PROTOCOL {AXI4} \
+   CONFIG.READ_WRITE_MODE {READ_WRITE} \
+   CONFIG.RUSER_BITS_PER_BYTE {0} \
+   CONFIG.RUSER_WIDTH {0} \
+   CONFIG.SUPPORTS_NARROW_BURST {1} \
+   CONFIG.WUSER_BITS_PER_BYTE {0} \
+   CONFIG.WUSER_WIDTH {0} \
+   ] $S02_AXI_MTML
+
   set S_AXI_0 [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:aximm_rtl:1.0 S_AXI_0 ]
   set_property -dict [ list \
    CONFIG.ADDR_WIDTH {64} \
@@ -261,46 +271,11 @@ proc create_root_design { parentCell } {
    CONFIG.WUSER_WIDTH {0} \
    ] $S_AXI_0
 
-  set S_AXI_1 [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:aximm_rtl:1.0 S_AXI_1 ]
-  set_property -dict [ list \
-   CONFIG.ADDR_WIDTH {16} \
-   CONFIG.ARUSER_WIDTH {0} \
-   CONFIG.AWUSER_WIDTH {0} \
-   CONFIG.BUSER_WIDTH {0} \
-   CONFIG.DATA_WIDTH {32} \
-   CONFIG.FREQ_HZ {10000000} \
-   CONFIG.HAS_BRESP {1} \
-   CONFIG.HAS_BURST {0} \
-   CONFIG.HAS_CACHE {0} \
-   CONFIG.HAS_LOCK {0} \
-   CONFIG.HAS_PROT {0} \
-   CONFIG.HAS_QOS {0} \
-   CONFIG.HAS_REGION {0} \
-   CONFIG.HAS_RRESP {1} \
-   CONFIG.HAS_WSTRB {1} \
-   CONFIG.ID_WIDTH {0} \
-   CONFIG.MAX_BURST_LENGTH {1} \
-   CONFIG.NUM_READ_OUTSTANDING {2} \
-   CONFIG.NUM_READ_THREADS {1} \
-   CONFIG.NUM_WRITE_OUTSTANDING {2} \
-   CONFIG.NUM_WRITE_THREADS {1} \
-   CONFIG.PROTOCOL {AXI4LITE} \
-   CONFIG.READ_WRITE_MODE {READ_WRITE} \
-   CONFIG.RUSER_BITS_PER_BYTE {0} \
-   CONFIG.RUSER_WIDTH {0} \
-   CONFIG.SUPPORTS_NARROW_BURST {0} \
-   CONFIG.WUSER_BITS_PER_BYTE {0} \
-   CONFIG.WUSER_WIDTH {0} \
-   ] $S_AXI_1
-
   set UART_0 [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:uart_rtl:1.0 UART_0 ]
-
-  set UART_1 [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:uart_rtl:1.0 UART_1 ]
 
 
   # Create ports
   set interrupt_0 [ create_bd_port -dir O -type intr interrupt_0 ]
-  set interrupt_1 [ create_bd_port -dir O -type intr interrupt_1 ]
   set s_axi_aclk_0 [ create_bd_port -dir I -type clk -freq_hz 10000000 s_axi_aclk_0 ]
   set s_axi_aresetn_0 [ create_bd_port -dir I -type rst s_axi_aresetn_0 ]
 
@@ -319,86 +294,40 @@ proc create_root_design { parentCell } {
    CONFIG.ADDR_WIDTH {64} \
    CONFIG.DATA_WIDTH {64} \
    CONFIG.ID_WIDTH {5} \
-   CONFIG.M00_A00_ADDR_WIDTH {16} \
-   CONFIG.M00_A00_BASE_ADDR {0x0000000000000000} \
-   CONFIG.M01_A00_ADDR_WIDTH {19} \
-   CONFIG.M01_A00_BASE_ADDR {0x0000000000000000} \
-   CONFIG.M02_A00_ADDR_WIDTH {19} \
-   CONFIG.M02_A00_BASE_ADDR {0x0000000001800000} \
-   CONFIG.NUM_MI {1} \
-   CONFIG.NUM_SI {2} \
-   CONFIG.S01_BASE_ID {0x00000010} \
-   CONFIG.S02_BASE_ID {0x00000020} \
-   CONFIG.S03_BASE_ID {0x00000030} \
-   CONFIG.S04_BASE_ID {0x00000040} \
-   CONFIG.S05_BASE_ID {0x00000050} \
-   CONFIG.S06_BASE_ID {0x00000060} \
-   CONFIG.S07_BASE_ID {0x00000070} \
-   CONFIG.S08_BASE_ID {0x00000080} \
-   CONFIG.S09_BASE_ID {0x00000090} \
-   CONFIG.S10_BASE_ID {0x000000a0} \
-   CONFIG.S11_BASE_ID {0x000000b0} \
-   CONFIG.S12_BASE_ID {0x000000c0} \
-   CONFIG.S13_BASE_ID {0x000000d0} \
-   CONFIG.S14_BASE_ID {0x000000e0} \
-   CONFIG.S15_BASE_ID {0x000000f0} \
- ] $axi_crossbar_0
-
-  # Create instance: axi_crossbar_1, and set properties
-  set axi_crossbar_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_crossbar:2.1 axi_crossbar_1 ]
-  set_property -dict [ list \
-   CONFIG.ADDR_RANGES {1} \
-   CONFIG.ADDR_WIDTH {64} \
-   CONFIG.DATA_WIDTH {64} \
-   CONFIG.ID_WIDTH {5} \
-   CONFIG.M00_A00_BASE_ADDR {0x0000000080000000} \
-   CONFIG.M01_A00_BASE_ADDR {0x0000000000080000} \
-   CONFIG.M02_A00_ADDR_WIDTH {19} \
-   CONFIG.M02_A00_BASE_ADDR {0x0000000000000000} \
-   CONFIG.NUM_MI {3} \
-   CONFIG.S01_BASE_ID {0x00000020} \
-   CONFIG.S02_BASE_ID {0x00000040} \
-   CONFIG.S03_BASE_ID {0x00000060} \
-   CONFIG.S04_BASE_ID {0x00000080} \
-   CONFIG.S05_BASE_ID {0x000000a0} \
-   CONFIG.S06_BASE_ID {0x000000c0} \
-   CONFIG.S07_BASE_ID {0x000000e0} \
-   CONFIG.S08_BASE_ID {0x00000100} \
-   CONFIG.S09_BASE_ID {0x00000120} \
-   CONFIG.S10_BASE_ID {0x00000140} \
-   CONFIG.S11_BASE_ID {0x00000160} \
-   CONFIG.S12_BASE_ID {0x00000180} \
-   CONFIG.S13_BASE_ID {0x000001a0} \
-   CONFIG.S14_BASE_ID {0x000001c0} \
-   CONFIG.S15_BASE_ID {0x000001e0} \
- ] $axi_crossbar_1
-
-  # Create instance: axi_crossbar_2, and set properties
-  set axi_crossbar_2 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_crossbar:2.1 axi_crossbar_2 ]
-  set_property -dict [ list \
-   CONFIG.ADDR_WIDTH {64} \
-   CONFIG.DATA_WIDTH {512} \
-   CONFIG.ID_WIDTH {16} \
    CONFIG.M00_A00_ADDR_WIDTH {19} \
-   CONFIG.M00_A00_BASE_ADDR {0x0000000000000000} \
-   CONFIG.NUM_MI {1} \
-   CONFIG.NUM_SI {2} \
-   CONFIG.S01_BASE_ID {0x00008000} \
-   CONFIG.S02_BASE_ID {0x00010000} \
-   CONFIG.S03_BASE_ID {0x00018000} \
-   CONFIG.S04_BASE_ID {0x00020000} \
-   CONFIG.S05_BASE_ID {0x00028000} \
-   CONFIG.S06_BASE_ID {0x00030000} \
-   CONFIG.S07_BASE_ID {0x00038000} \
-   CONFIG.S08_BASE_ID {0x00040000} \
-   CONFIG.S09_BASE_ID {0x00048000} \
-   CONFIG.S10_BASE_ID {0x00050000} \
-   CONFIG.S11_BASE_ID {0x00058000} \
-   CONFIG.S12_BASE_ID {0x00060000} \
-   CONFIG.S13_BASE_ID {0x00068000} \
-   CONFIG.S14_BASE_ID {0x00070000} \
-   CONFIG.S15_BASE_ID {0x00078000} \
- ] $axi_crossbar_2
+   CONFIG.M00_A00_BASE_ADDR {0x0000000080000000} \
+   CONFIG.M01_A00_ADDR_WIDTH {19} \
+   CONFIG.M01_A00_BASE_ADDR {0x0000000080100000} \
+   CONFIG.M01_S02_READ_CONNECTIVITY {1} \
+   CONFIG.M01_S02_WRITE_CONNECTIVITY {1} \
+   CONFIG.M02_A00_ADDR_WIDTH {16} \
+   CONFIG.M02_A00_BASE_ADDR {0x0000000080400000} \
+   CONFIG.M02_S00_READ_CONNECTIVITY {1} \
+   CONFIG.M02_S00_WRITE_CONNECTIVITY {1} \
+   CONFIG.M02_S02_READ_CONNECTIVITY {1} \
+   CONFIG.M02_S02_WRITE_CONNECTIVITY {1} \
+   CONFIG.M03_A00_ADDR_WIDTH {19} \
+   CONFIG.M03_A00_BASE_ADDR {0x0000000086000000} \
+   CONFIG.M03_S02_READ_CONNECTIVITY {1} \
+   CONFIG.M03_S02_WRITE_CONNECTIVITY {1} \
+   CONFIG.NUM_MI {4} \
+   CONFIG.NUM_SI {3} \
+   CONFIG.S01_BASE_ID {0x00000008} \
+   CONFIG.S02_BASE_ID {0x00000010} \
+   CONFIG.S03_BASE_ID {0x00000018} \
+   CONFIG.S04_BASE_ID {0x00000020} \
+   CONFIG.S05_BASE_ID {0x00000028} \
+   CONFIG.S06_BASE_ID {0x00000030} \
+   CONFIG.S07_BASE_ID {0x00000038} \
+   CONFIG.S08_BASE_ID {0x00000040} \
+   CONFIG.S09_BASE_ID {0x00000048} \
+   CONFIG.S10_BASE_ID {0x00000050} \
+   CONFIG.S11_BASE_ID {0x00000058} \
+   CONFIG.S12_BASE_ID {0x00000060} \
+   CONFIG.S13_BASE_ID {0x00000068} \
+   CONFIG.S14_BASE_ID {0x00000070} \
+   CONFIG.S15_BASE_ID {0x00000078} \
+ ] $axi_crossbar_0
 
   # Create instance: axi_dwidth_converter_0, and set properties
   set axi_dwidth_converter_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_dwidth_converter:2.1 axi_dwidth_converter_0 ]
@@ -411,18 +340,10 @@ proc create_root_design { parentCell } {
   # Create instance: axi_dwidth_converter_1, and set properties
   set axi_dwidth_converter_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_dwidth_converter:2.1 axi_dwidth_converter_1 ]
   set_property -dict [ list \
+   CONFIG.ADDR_WIDTH {64} \
    CONFIG.PROTOCOL {AXI4LITE} \
    CONFIG.SI_DATA_WIDTH {64} \
  ] $axi_dwidth_converter_1
-
-  # Create instance: axi_dwidth_converter_2, and set properties
-  set axi_dwidth_converter_2 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_dwidth_converter:2.1 axi_dwidth_converter_2 ]
-  set_property -dict [ list \
-   CONFIG.ADDR_WIDTH {64} \
-   CONFIG.MI_DATA_WIDTH {512} \
-   CONFIG.SI_DATA_WIDTH {64} \
-   CONFIG.SI_ID_WIDTH {16} \
- ] $axi_dwidth_converter_2
 
   # Create instance: axi_protocol_convert_0, and set properties
   set axi_protocol_convert_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_protocol_converter:2.1 axi_protocol_convert_0 ]
@@ -445,9 +366,6 @@ proc create_root_design { parentCell } {
   # Create instance: axi_uartlite_0, and set properties
   set axi_uartlite_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_uartlite:2.0 axi_uartlite_0 ]
 
-  # Create instance: axi_uartlite_1, and set properties
-  set axi_uartlite_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_uartlite:2.0 axi_uartlite_1 ]
-
   # Create instance: blk_mem_gen_0, and set properties
   set blk_mem_gen_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 blk_mem_gen_0 ]
   set_property -dict [ list \
@@ -466,35 +384,35 @@ proc create_root_design { parentCell } {
 
   # Create interface connections
   connect_bd_intf_net -intf_net S01_AXI_0_1 [get_bd_intf_ports S01_AXI_0] [get_bd_intf_pins axi_crossbar_0/S01_AXI]
-  connect_bd_intf_net -intf_net S01_AXI_1_1 [get_bd_intf_ports DMA_PCIS_AXI4] [get_bd_intf_pins axi_crossbar_2/S01_AXI]
+  connect_bd_intf_net -intf_net S02_AXI_0_1 [get_bd_intf_ports S02_AXI_MTML] [get_bd_intf_pins axi_crossbar_0/S02_AXI]
   connect_bd_intf_net -intf_net S_AXI_0_1 [get_bd_intf_ports S_AXI_0] [get_bd_intf_pins axi_dwidth_converter_0/S_AXI]
-  connect_bd_intf_net -intf_net S_AXI_1_1 [get_bd_intf_ports S_AXI_1] [get_bd_intf_pins axi_uartlite_1/S_AXI]
   connect_bd_intf_net -intf_net axi_bram_ctrl_0_BRAM_PORTA [get_bd_intf_pins axi_bram_ctrl_0/BRAM_PORTA] [get_bd_intf_pins blk_mem_gen_0/BRAM_PORTA]
-  connect_bd_intf_net -intf_net axi_crossbar_0_M00_AXI [get_bd_intf_pins axi_crossbar_0/M00_AXI] [get_bd_intf_pins axi_crossbar_1/S00_AXI]
-  connect_bd_intf_net -intf_net axi_crossbar_1_M00_AXI [get_bd_intf_pins axi_bram_ctrl_0/S_AXI] [get_bd_intf_pins axi_crossbar_1/M00_AXI]
-  connect_bd_intf_net -intf_net axi_crossbar_1_M01_AXI [get_bd_intf_pins axi_crossbar_1/M01_AXI] [get_bd_intf_pins axi_protocol_convert_1/S_AXI]
-  connect_bd_intf_net -intf_net axi_crossbar_1_M02_AXI [get_bd_intf_pins axi_crossbar_1/M02_AXI] [get_bd_intf_pins axi_dwidth_converter_2/S_AXI]
-  connect_bd_intf_net -intf_net axi_crossbar_2_M00_AXI [get_bd_intf_ports DDR_AXI4] [get_bd_intf_pins axi_crossbar_2/M00_AXI]
+  connect_bd_intf_net -intf_net axi_crossbar_0_M00_AXI [get_bd_intf_ports M03_AXI_DDR] [get_bd_intf_pins axi_crossbar_0/M00_AXI]
+  connect_bd_intf_net -intf_net axi_crossbar_0_M01_AXI [get_bd_intf_pins axi_crossbar_0/M01_AXI] [get_bd_intf_pins axi_protocol_convert_1/S_AXI]
+  connect_bd_intf_net -intf_net axi_crossbar_0_M02_AXI [get_bd_intf_ports M02_AXI_MTML] [get_bd_intf_pins axi_crossbar_0/M02_AXI]
+  connect_bd_intf_net -intf_net axi_crossbar_0_M03_AXI [get_bd_intf_pins axi_bram_ctrl_0/S_AXI] [get_bd_intf_pins axi_crossbar_0/M03_AXI]
   connect_bd_intf_net -intf_net axi_dwidth_converter_0_M_AXI [get_bd_intf_pins axi_dwidth_converter_0/M_AXI] [get_bd_intf_pins axi_protocol_convert_0/S_AXI]
   connect_bd_intf_net -intf_net axi_dwidth_converter_1_M_AXI [get_bd_intf_pins axi_dwidth_converter_1/M_AXI] [get_bd_intf_pins axi_uartlite_0/S_AXI]
-  connect_bd_intf_net -intf_net axi_dwidth_converter_2_M_AXI [get_bd_intf_pins axi_crossbar_2/S00_AXI] [get_bd_intf_pins axi_dwidth_converter_2/M_AXI]
   connect_bd_intf_net -intf_net axi_protocol_convert_0_M_AXI [get_bd_intf_pins axi_crossbar_0/S00_AXI] [get_bd_intf_pins axi_protocol_convert_0/M_AXI]
   connect_bd_intf_net -intf_net axi_protocol_convert_1_M_AXI [get_bd_intf_pins axi_dwidth_converter_1/S_AXI] [get_bd_intf_pins axi_protocol_convert_1/M_AXI]
   connect_bd_intf_net -intf_net axi_uartlite_0_UART [get_bd_intf_ports UART_0] [get_bd_intf_pins axi_uartlite_0/UART]
-  connect_bd_intf_net -intf_net axi_uartlite_1_UART [get_bd_intf_ports UART_1] [get_bd_intf_pins axi_uartlite_1/UART]
 
   # Create port connections
   connect_bd_net -net axi_uartlite_0_interrupt [get_bd_ports interrupt_0] [get_bd_pins axi_uartlite_0/interrupt]
-  connect_bd_net -net axi_uartlite_1_interrupt [get_bd_ports interrupt_1] [get_bd_pins axi_uartlite_1/interrupt]
-  connect_bd_net -net s_axi_aclk_0_1 [get_bd_ports s_axi_aclk_0] [get_bd_pins axi_bram_ctrl_0/s_axi_aclk] [get_bd_pins axi_crossbar_0/aclk] [get_bd_pins axi_crossbar_1/aclk] [get_bd_pins axi_crossbar_2/aclk] [get_bd_pins axi_dwidth_converter_0/s_axi_aclk] [get_bd_pins axi_dwidth_converter_1/s_axi_aclk] [get_bd_pins axi_dwidth_converter_2/s_axi_aclk] [get_bd_pins axi_protocol_convert_0/aclk] [get_bd_pins axi_protocol_convert_1/aclk] [get_bd_pins axi_uartlite_0/s_axi_aclk] [get_bd_pins axi_uartlite_1/s_axi_aclk]
-  connect_bd_net -net s_axi_aresetn_0_1 [get_bd_ports s_axi_aresetn_0] [get_bd_pins axi_bram_ctrl_0/s_axi_aresetn] [get_bd_pins axi_crossbar_0/aresetn] [get_bd_pins axi_crossbar_1/aresetn] [get_bd_pins axi_crossbar_2/aresetn] [get_bd_pins axi_dwidth_converter_0/s_axi_aresetn] [get_bd_pins axi_dwidth_converter_1/s_axi_aresetn] [get_bd_pins axi_dwidth_converter_2/s_axi_aresetn] [get_bd_pins axi_protocol_convert_0/aresetn] [get_bd_pins axi_protocol_convert_1/aresetn] [get_bd_pins axi_uartlite_0/s_axi_aresetn] [get_bd_pins axi_uartlite_1/s_axi_aresetn]
+  connect_bd_net -net s_axi_aclk_0_1 [get_bd_ports s_axi_aclk_0] [get_bd_pins axi_bram_ctrl_0/s_axi_aclk] [get_bd_pins axi_crossbar_0/aclk] [get_bd_pins axi_dwidth_converter_0/s_axi_aclk] [get_bd_pins axi_dwidth_converter_1/s_axi_aclk] [get_bd_pins axi_protocol_convert_0/aclk] [get_bd_pins axi_protocol_convert_1/aclk] [get_bd_pins axi_uartlite_0/s_axi_aclk]
+  connect_bd_net -net s_axi_aresetn_0_1 [get_bd_ports s_axi_aresetn_0] [get_bd_pins axi_bram_ctrl_0/s_axi_aresetn] [get_bd_pins axi_crossbar_0/aresetn] [get_bd_pins axi_dwidth_converter_0/s_axi_aresetn] [get_bd_pins axi_dwidth_converter_1/s_axi_aresetn] [get_bd_pins axi_protocol_convert_0/aresetn] [get_bd_pins axi_protocol_convert_1/aresetn] [get_bd_pins axi_uartlite_0/s_axi_aresetn]
 
   # Create address segments
-  assign_bd_address -offset 0x00000000 -range 0x00010000 -target_address_space [get_bd_addr_spaces S_AXI_0] [get_bd_addr_segs axi_bram_ctrl_0/S_AXI/Mem0] -force
-  assign_bd_address -offset 0x00000000 -range 0x00010000 -target_address_space [get_bd_addr_spaces S01_AXI_0] [get_bd_addr_segs axi_bram_ctrl_0/S_AXI/Mem0] -force
-  assign_bd_address -offset 0x40600000 -range 0x00010000 -target_address_space [get_bd_addr_spaces S_AXI_0] [get_bd_addr_segs axi_uartlite_0/S_AXI/Reg] -force
-  assign_bd_address -offset 0x00080000 -range 0x00010000 -target_address_space [get_bd_addr_spaces S01_AXI_0] [get_bd_addr_segs axi_uartlite_0/S_AXI/Reg] -force
-  assign_bd_address -offset 0x00000000 -range 0x00001000 -target_address_space [get_bd_addr_spaces S_AXI_1] [get_bd_addr_segs axi_uartlite_1/S_AXI/Reg] -force
+  assign_bd_address -offset 0x80400000 -range 0x00010000 -target_address_space [get_bd_addr_spaces S01_AXI_0] [get_bd_addr_segs M02_AXI_MTML/Reg] -force
+  assign_bd_address -offset 0x80400000 -range 0x00010000 -target_address_space [get_bd_addr_spaces S02_AXI_MTML] [get_bd_addr_segs M02_AXI_MTML/Reg] -force
+  assign_bd_address -offset 0x80600000 -range 0x00100000 -target_address_space [get_bd_addr_spaces S01_AXI_0] [get_bd_addr_segs M03_AXI_DDR/Reg] -force
+  assign_bd_address -offset 0x80600000 -range 0x00100000 -target_address_space [get_bd_addr_spaces S02_AXI_MTML] [get_bd_addr_segs M03_AXI_DDR/Reg] -force
+  assign_bd_address -offset 0x80180000 -range 0x00100000 -target_address_space [get_bd_addr_spaces S_AXI_0] [get_bd_addr_segs axi_bram_ctrl_0/S_AXI/Mem0] -force
+  assign_bd_address -offset 0x80180000 -range 0x00100000 -target_address_space [get_bd_addr_spaces S01_AXI_0] [get_bd_addr_segs axi_bram_ctrl_0/S_AXI/Mem0] -force
+  assign_bd_address -offset 0x80180000 -range 0x00100000 -target_address_space [get_bd_addr_spaces S02_AXI_MTML] [get_bd_addr_segs axi_bram_ctrl_0/S_AXI/Mem0] -force
+  assign_bd_address -offset 0x80100000 -range 0x00000400 -target_address_space [get_bd_addr_spaces S_AXI_0] [get_bd_addr_segs axi_uartlite_0/S_AXI/Reg] -force
+  assign_bd_address -offset 0x80100000 -range 0x00000400 -target_address_space [get_bd_addr_spaces S01_AXI_0] [get_bd_addr_segs axi_uartlite_0/S_AXI/Reg] -force
+  assign_bd_address -offset 0x80100000 -range 0x00000400 -target_address_space [get_bd_addr_spaces S02_AXI_MTML] [get_bd_addr_segs axi_uartlite_0/S_AXI/Reg] -force
 
 
   # Restore current instance

@@ -1,0 +1,131 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Tue Aug 16 08:56:22 2022
+# Process ID: 29770
+# Current directory: /home/muheet/update_bd/afi_check/test_subsystem
+# Command line: vivado test_subsystem.xpr
+# Log file: /home/muheet/update_bd/afi_check/test_subsystem/vivado.log
+# Journal file: /home/muheet/update_bd/afi_check/test_subsystem/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project test_subsystem.xpr
+update_compile_order -fileset sources_1
+open_bd_design {/home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.srcs/sources_1/bd/test_subsystem/test_subsystem.bd}
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_crossbar:2.1 axi_crossbar_1
+endgroup
+set_property location {2 421 -495} [get_bd_cells axi_crossbar_1]
+set_property -dict [list CONFIG.ADDR_WIDTH.VALUE_SRC PROPAGATED CONFIG.PROTOCOL.VALUE_SRC USER] [get_bd_cells axi_crossbar_1]
+set_property -dict [list CONFIG.PROTOCOL {AXI4LITE} CONFIG.CONNECTIVITY_MODE {SASD} CONFIG.R_REGISTER {1} CONFIG.S00_SINGLE_THREAD {1}] [get_bd_cells axi_crossbar_1]
+startgroup
+make_bd_intf_pins_external  [get_bd_intf_pins axi_crossbar_1/S00_AXI]
+endgroup
+set_property name OCL_AXI4L [get_bd_intf_ports S00_AXI_0]
+startgroup
+set_property -dict [list CONFIG.M00_A00_BASE_ADDR.VALUE_SRC USER CONFIG.M01_A00_BASE_ADDR.VALUE_SRC USER] [get_bd_cells axi_crossbar_1]
+set_property -dict [list CONFIG.M00_A00_BASE_ADDR {0x0} CONFIG.M01_A00_BASE_ADDR {0x80000000}] [get_bd_cells axi_crossbar_1]
+endgroup
+startgroup
+make_bd_intf_pins_external  [get_bd_intf_pins axi_crossbar_1/M00_AXI]
+endgroup
+set_property name debug [get_bd_intf_ports M00_AXI_0]
+startgroup
+make_bd_intf_pins_external  [get_bd_intf_pins axi_crossbar_1/M01_AXI]
+endgroup
+set_property name test_uart [get_bd_intf_ports M01_AXI_0]
+startgroup
+make_bd_pins_external  [get_bd_pins axi_crossbar_1/aclk]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins axi_crossbar_1/aresetn]
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:jtag_axi:1.2 jtag_axi_0
+endgroup
+set_property -dict [list CONFIG.PROTOCOL {2}] [get_bd_cells jtag_axi_0]
+startgroup
+make_bd_intf_pins_external  [get_bd_intf_pins jtag_axi_0/M_AXI]
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:debug_bridge:3.0 debug_bridge_0
+endgroup
+undo
+delete_bd_objs [get_bd_intf_nets jtag_axi_0_M_AXI] [get_bd_cells jtag_axi_0]
+delete_bd_objs [get_bd_intf_ports M_AXI_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:debug_bridge:3.0 debug_bridge_0
+endgroup
+set_property location {2 432 -640} [get_bd_cells debug_bridge_0]
+set_property -dict [list CONFIG.C_DEBUG_MODE {3} CONFIG.C_DESIGN_TYPE {0}] [get_bd_cells debug_bridge_0]
+delete_bd_objs [get_bd_intf_nets axi_crossbar_1_M00_AXI] [get_bd_intf_ports debug]
+set_property -dict [list CONFIG.C_DESIGN_TYPE {0}] [get_bd_cells debug_bridge_0]
+connect_bd_intf_net [get_bd_intf_pins debug_bridge_0/S_AXI] [get_bd_intf_pins axi_crossbar_1/M00_AXI]
+connect_bd_net [get_bd_ports aclk_0] [get_bd_pins debug_bridge_0/s_axi_aclk]
+connect_bd_net [get_bd_ports aresetn_0] [get_bd_pins debug_bridge_0/tap_tdo]
+delete_bd_objs [get_bd_ports aclk_0]
+delete_bd_objs [get_bd_ports aresetn_0]
+delete_bd_objs [get_bd_nets aclk_0_1]
+delete_bd_objs [get_bd_nets aresetn_0_1]
+connect_bd_net [get_bd_ports s_axi_aclk_0] [get_bd_pins debug_bridge_0/s_axi_aclk]
+connect_bd_net [get_bd_ports s_axi_aresetn_0] [get_bd_pins debug_bridge_0/s_axi_aresetn]
+connect_bd_net [get_bd_ports s_axi_aclk_0] [get_bd_pins axi_crossbar_1/aclk]
+connect_bd_net [get_bd_ports s_axi_aresetn_0] [get_bd_pins axi_crossbar_1/aresetn]
+startgroup
+make_bd_pins_external  [get_bd_pins debug_bridge_0/tap_tdi]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins debug_bridge_0/tap_tms]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins debug_bridge_0/tap_tck]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins debug_bridge_0/tap_tdo]
+endgroup
+regenerate_bd_layout -routing
+regenerate_bd_layout
+startgroup
+endgroup
+startgroup
+endgroup
+assign_bd_address
+set_property offset 0x0000000000000000 [get_bd_addr_segs {S_DDR/SEG_DDR_AXI4_Reg}]
+set_property offset 0x0000000000000000 [get_bd_addr_segs {DMA_PCIS_AXI4/SEG_DDR_AXI4_Reg}]
+set_property offset 0x80000000 [get_bd_addr_segs {OCL_AXI4L/SEG_test_uart_Reg}]
+save_bd_design
+set_property offset 0x00000000 [get_bd_addr_segs {OCL_AXI4L/SEG_debug_bridge_0_Reg0}]
+reset_target all [get_files  /home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.srcs/sources_1/bd/test_subsystem/test_subsystem.bd]
+export_ip_user_files -of_objects  [get_files  /home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.srcs/sources_1/bd/test_subsystem/test_subsystem.bd] -sync -no_script -force -quiet
+generate_target all [get_files  /home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.srcs/sources_1/bd/test_subsystem/test_subsystem.bd]
+export_ip_user_files -of_objects [get_files /home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.srcs/sources_1/bd/test_subsystem/test_subsystem.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.srcs/sources_1/bd/test_subsystem/test_subsystem.bd] -directory /home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.ip_user_files/sim_scripts -ip_user_files_dir /home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.ip_user_files -ipstatic_source_dir /home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.cache/compile_simlib/modelsim} {questa=/home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.cache/compile_simlib/questa} {ies=/home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.cache/compile_simlib/ies} {xcelium=/home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.cache/compile_simlib/xcelium} {vcs=/home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.cache/compile_simlib/vcs} {riviera=/home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+delete_bd_objs [get_bd_intf_nets axi_crossbar_1_M01_AXI] [get_bd_intf_ports test_uart]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_uartlite:2.0 axi_uartlite_0
+endgroup
+set_property location {3 789 394} [get_bd_cells axi_uartlite_0]
+connect_bd_intf_net [get_bd_intf_pins axi_crossbar_1/M01_AXI] [get_bd_intf_pins axi_uartlite_0/S_AXI]
+connect_bd_net [get_bd_ports s_axi_aclk_0] [get_bd_pins axi_uartlite_0/s_axi_aclk]
+connect_bd_net [get_bd_ports s_axi_aresetn_0] [get_bd_pins axi_uartlite_0/s_axi_aresetn]
+startgroup
+make_bd_intf_pins_external  [get_bd_intf_pins axi_uartlite_0/UART]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins axi_uartlite_0/interrupt]
+endgroup
+startgroup
+endgroup
+assign_bd_address
+save_bd_design
+set_property offset 0x80000000 [get_bd_addr_segs {OCL_AXI4L/SEG_axi_uartlite_0_Reg}]
+reset_target all [get_files  /home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.srcs/sources_1/bd/test_subsystem/test_subsystem.bd]
+export_ip_user_files -of_objects  [get_files  /home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.srcs/sources_1/bd/test_subsystem/test_subsystem.bd] -sync -no_script -force -quiet
+generate_target all [get_files  /home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.srcs/sources_1/bd/test_subsystem/test_subsystem.bd]
+export_ip_user_files -of_objects [get_files /home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.srcs/sources_1/bd/test_subsystem/test_subsystem.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.srcs/sources_1/bd/test_subsystem/test_subsystem.bd] -directory /home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.ip_user_files/sim_scripts -ip_user_files_dir /home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.ip_user_files -ipstatic_source_dir /home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.cache/compile_simlib/modelsim} {questa=/home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.cache/compile_simlib/questa} {ies=/home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.cache/compile_simlib/ies} {xcelium=/home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.cache/compile_simlib/xcelium} {vcs=/home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.cache/compile_simlib/vcs} {riviera=/home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+regenerate_bd_layout -routing
+startgroup
+endgroup
+report_compile_order -used_in simulation

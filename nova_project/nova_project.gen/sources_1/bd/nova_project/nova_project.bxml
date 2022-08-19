@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="39">
   <CompositeFile CompositeFileTopName="nova_project" CanBeSetAsTop="true" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1659424761"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1659424761"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1659424761"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1659424761"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1660678759"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1660678759"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1660678759"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1660678759"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="synth/nova_project.v" Type="Verilog">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>

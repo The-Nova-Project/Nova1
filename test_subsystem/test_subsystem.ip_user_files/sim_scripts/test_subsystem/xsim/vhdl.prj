@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../../test_subsystem.gen/sources_1/bd/test_subsystem/ip/test_subsystem_axi_uartlite_0_0/sim/test_subsystem_axi_uartlite_0_0.vhd" \
+
+nosort

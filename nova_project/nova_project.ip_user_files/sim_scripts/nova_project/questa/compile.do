@@ -12,8 +12,8 @@ vlib questa_lib/msim/axi_clock_converter_v2_1_23
 vlib questa_lib/msim/blk_mem_gen_v8_4_4
 vlib questa_lib/msim/axi_dwidth_converter_v2_1_24
 vlib questa_lib/msim/xil_defaultlib
-vlib questa_lib/msim/axi_crossbar_v2_1_25
 vlib questa_lib/msim/axi_bram_ctrl_v4_1_5
+vlib questa_lib/msim/axi_crossbar_v2_1_25
 vlib questa_lib/msim/axi_lite_ipif_v3_0_4
 vlib questa_lib/msim/lib_pkg_v1_0_2
 vlib questa_lib/msim/lib_srl_fifo_v1_0_2
@@ -31,8 +31,8 @@ vmap axi_clock_converter_v2_1_23 questa_lib/msim/axi_clock_converter_v2_1_23
 vmap blk_mem_gen_v8_4_4 questa_lib/msim/blk_mem_gen_v8_4_4
 vmap axi_dwidth_converter_v2_1_24 questa_lib/msim/axi_dwidth_converter_v2_1_24
 vmap xil_defaultlib questa_lib/msim/xil_defaultlib
-vmap axi_crossbar_v2_1_25 questa_lib/msim/axi_crossbar_v2_1_25
 vmap axi_bram_ctrl_v4_1_5 questa_lib/msim/axi_bram_ctrl_v4_1_5
+vmap axi_crossbar_v2_1_25 questa_lib/msim/axi_crossbar_v2_1_25
 vmap axi_lite_ipif_v3_0_4 questa_lib/msim/axi_lite_ipif_v3_0_4
 vmap lib_pkg_v1_0_2 questa_lib/msim/lib_pkg_v1_0_2
 vmap lib_srl_fifo_v1_0_2 questa_lib/msim/lib_srl_fifo_v1_0_2
@@ -83,12 +83,6 @@ vlog -work xil_defaultlib -64 -incr -mfcu "+incdir+../../../../nova_project.gen/
 "../../../../nova_project.gen/sources_1/bd/nova_project/ip/nova_project_axi_dwidth_converter_0_0/sim/nova_project_axi_dwidth_converter_0_0.v" \
 "../../../../nova_project.gen/sources_1/bd/nova_project/ip/nova_project_axi_protocol_convert_0_0/sim/nova_project_axi_protocol_convert_0_0.v" \
 
-vlog -work axi_crossbar_v2_1_25 -64 -incr -mfcu "+incdir+../../../../nova_project.gen/sources_1/bd/nova_project/ipshared/ec67/hdl" \
-"../../../../nova_project.gen/sources_1/bd/nova_project/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v" \
-
-vlog -work xil_defaultlib -64 -incr -mfcu "+incdir+../../../../nova_project.gen/sources_1/bd/nova_project/ipshared/ec67/hdl" \
-"../../../../nova_project.gen/sources_1/bd/nova_project/ip/nova_project_axi_crossbar_0_0/sim/nova_project_axi_crossbar_0_0.v" \
-
 vcom -work axi_bram_ctrl_v4_1_5 -64 -93 \
 "../../../../nova_project.gen/sources_1/bd/nova_project/ipshared/33c1/hdl/axi_bram_ctrl_v4_1_rfs.vhd" \
 
@@ -97,9 +91,12 @@ vcom -work xil_defaultlib -64 -93 \
 
 vlog -work xil_defaultlib -64 -incr -mfcu "+incdir+../../../../nova_project.gen/sources_1/bd/nova_project/ipshared/ec67/hdl" \
 "../../../../nova_project.gen/sources_1/bd/nova_project/ip/nova_project_blk_mem_gen_0_0/sim/nova_project_blk_mem_gen_0_0.v" \
-"../../../../nova_project.gen/sources_1/bd/nova_project/ip/nova_project_axi_protocol_convert_1_0/sim/nova_project_axi_protocol_convert_1_0.v" \
-"../../../../nova_project.gen/sources_1/bd/nova_project/ip/nova_project_axi_dwidth_converter_1_0/sim/nova_project_axi_dwidth_converter_1_0.v" \
-"../../../../nova_project.gen/sources_1/bd/nova_project/ip/nova_project_axi_crossbar_1_0/sim/nova_project_axi_crossbar_1_0.v" \
+
+vlog -work axi_crossbar_v2_1_25 -64 -incr -mfcu "+incdir+../../../../nova_project.gen/sources_1/bd/nova_project/ipshared/ec67/hdl" \
+"../../../../nova_project.gen/sources_1/bd/nova_project/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v" \
+
+vlog -work xil_defaultlib -64 -incr -mfcu "+incdir+../../../../nova_project.gen/sources_1/bd/nova_project/ipshared/ec67/hdl" \
+"../../../../nova_project.gen/sources_1/bd/nova_project/ip/nova_project_axi_crossbar_0_2/sim/nova_project_axi_crossbar_0_2.v" \
 
 vcom -work axi_lite_ipif_v3_0_4 -64 -93 \
 "../../../../nova_project.gen/sources_1/bd/nova_project/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd" \
@@ -117,12 +114,11 @@ vcom -work axi_uartlite_v2_0_28 -64 -93 \
 "../../../../nova_project.gen/sources_1/bd/nova_project/ipshared/8c9b/hdl/axi_uartlite_v2_0_vh_rfs.vhd" \
 
 vcom -work xil_defaultlib -64 -93 \
-"../../../../nova_project.gen/sources_1/bd/nova_project/ip/nova_project_axi_uartlite_0_1/sim/nova_project_axi_uartlite_0_1.vhd" \
-"../../../../nova_project.gen/sources_1/bd/nova_project/ip/nova_project_axi_uartlite_0_2/sim/nova_project_axi_uartlite_0_2.vhd" \
+"../../../../nova_project.gen/sources_1/bd/nova_project/ip/nova_project_axi_uartlite_0_0/sim/nova_project_axi_uartlite_0_0.vhd" \
 
 vlog -work xil_defaultlib -64 -incr -mfcu "+incdir+../../../../nova_project.gen/sources_1/bd/nova_project/ipshared/ec67/hdl" \
-"../../../../nova_project.gen/sources_1/bd/nova_project/ip/nova_project_axi_dwidth_converter_2_0/sim/nova_project_axi_dwidth_converter_2_0.v" \
-"../../../../nova_project.gen/sources_1/bd/nova_project/ip/nova_project_axi_crossbar_2_0/sim/nova_project_axi_crossbar_2_0.v" \
+"../../../../nova_project.gen/sources_1/bd/nova_project/ip/nova_project_axi_protocol_convert_1_0/sim/nova_project_axi_protocol_convert_1_0.v" \
+"../../../../nova_project.gen/sources_1/bd/nova_project/ip/nova_project_axi_dwidth_converter_1_0/sim/nova_project_axi_dwidth_converter_1_0.v" \
 "../../../../nova_project.gen/sources_1/bd/nova_project/sim/nova_project.v" \
 
 vlog -work xil_defaultlib \

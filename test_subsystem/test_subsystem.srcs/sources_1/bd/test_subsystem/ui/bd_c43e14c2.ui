@@ -1,0 +1,44 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-246,-62",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port S_DDR -pg 1 -lvl 0 -x -10 -y 140 -defaultsOSRD
+preplace port DDR_AXI4 -pg 1 -lvl 3 -x 930 -y 90 -defaultsOSRD
+preplace port DMA_PCIS_AXI4 -pg 1 -lvl 0 -x -10 -y 80 -defaultsOSRD
+preplace port OCL_AXI4L -pg 1 -lvl 0 -x -10 -y 310 -defaultsOSRD
+preplace port UART_0 -pg 1 -lvl 3 -x 930 -y 380 -defaultsOSRD
+preplace port port-id_s_axi_aclk_0 -pg 1 -lvl 0 -x -10 -y 160 -defaultsOSRD
+preplace port port-id_s_axi_aresetn_0 -pg 1 -lvl 0 -x -10 -y 180 -defaultsOSRD
+preplace port port-id_tap_tdi_0 -pg 1 -lvl 3 -x 930 -y 230 -defaultsOSRD
+preplace port port-id_tap_tms_0 -pg 1 -lvl 3 -x 930 -y 250 -defaultsOSRD
+preplace port port-id_tap_tck_0 -pg 1 -lvl 3 -x 930 -y 270 -defaultsOSRD
+preplace port port-id_tap_tdo_0 -pg 1 -lvl 0 -x -10 -y 410 -defaultsOSRD
+preplace port port-id_interrupt_0 -pg 1 -lvl 3 -x 930 -y 400 -defaultsOSRD
+preplace inst axi_dwidth_converter_0 -pg 1 -lvl 1 -x 430 -y 160 -defaultsOSRD
+preplace inst axi_crossbar_0 -pg 1 -lvl 2 -x 770 -y 80 -defaultsOSRD
+preplace inst axi_crossbar_1 -pg 1 -lvl 1 -x 430 -y 330 -defaultsOSRD
+preplace inst debug_bridge_0 -pg 1 -lvl 2 -x 770 -y 240 -defaultsOSRD
+preplace inst axi_uartlite_0 -pg 1 -lvl 2 -x 770 -y 390 -defaultsOSRD
+preplace netloc axi_uartlite_0_interrupt 1 2 1 N 400
+preplace netloc debug_bridge_0_tap_tck 1 2 1 910J 260n
+preplace netloc debug_bridge_0_tap_tdi 1 2 1 910J 220n
+preplace netloc debug_bridge_0_tap_tms 1 2 1 910J 240n
+preplace netloc s_axi_aclk_0_1 1 0 2 10 240 630
+preplace netloc s_axi_aresetn_0_1 1 0 2 20 80 610
+preplace netloc tap_tdo_0_1 1 0 2 30J 250 600J
+preplace netloc S00_AXI_0_1 1 0 1 NJ 310
+preplace netloc S01_AXI_0_1 1 0 2 10J 70 NJ
+preplace netloc S_AXI_0_1 1 0 1 NJ 140
+preplace netloc axi_crossbar_0_M00_AXI 1 2 1 910J 80n
+preplace netloc axi_crossbar_1_M00_AXI 1 1 1 620 210n
+preplace netloc axi_crossbar_1_M01_AXI 1 1 1 600 340n
+preplace netloc axi_dwidth_converter_0_M_AXI 1 1 1 600 50n
+preplace netloc axi_uartlite_0_UART 1 2 1 N 380
+levelinfo -pg 1 -10 430 770 930
+pagesize -pg 1 -db -bbox -sgen -180 -50 1060 730
+"
+}
+0

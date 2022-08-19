@@ -1,13 +1,10 @@
 verilog xil_defaultlib --include "../../../../nova_project.gen/sources_1/bd/nova_project/ipshared/ec67/hdl" \
 "../../../../nova_project.gen/sources_1/bd/nova_project/ip/nova_project_axi_dwidth_converter_0_0/sim/nova_project_axi_dwidth_converter_0_0.v" \
 "../../../../nova_project.gen/sources_1/bd/nova_project/ip/nova_project_axi_protocol_convert_0_0/sim/nova_project_axi_protocol_convert_0_0.v" \
-"../../../../nova_project.gen/sources_1/bd/nova_project/ip/nova_project_axi_crossbar_0_0/sim/nova_project_axi_crossbar_0_0.v" \
 "../../../../nova_project.gen/sources_1/bd/nova_project/ip/nova_project_blk_mem_gen_0_0/sim/nova_project_blk_mem_gen_0_0.v" \
+"../../../../nova_project.gen/sources_1/bd/nova_project/ip/nova_project_axi_crossbar_0_2/sim/nova_project_axi_crossbar_0_2.v" \
 "../../../../nova_project.gen/sources_1/bd/nova_project/ip/nova_project_axi_protocol_convert_1_0/sim/nova_project_axi_protocol_convert_1_0.v" \
 "../../../../nova_project.gen/sources_1/bd/nova_project/ip/nova_project_axi_dwidth_converter_1_0/sim/nova_project_axi_dwidth_converter_1_0.v" \
-"../../../../nova_project.gen/sources_1/bd/nova_project/ip/nova_project_axi_crossbar_1_0/sim/nova_project_axi_crossbar_1_0.v" \
-"../../../../nova_project.gen/sources_1/bd/nova_project/ip/nova_project_axi_dwidth_converter_2_0/sim/nova_project_axi_dwidth_converter_2_0.v" \
-"../../../../nova_project.gen/sources_1/bd/nova_project/ip/nova_project_axi_crossbar_2_0/sim/nova_project_axi_crossbar_2_0.v" \
 "../../../../nova_project.gen/sources_1/bd/nova_project/sim/nova_project.v" \
 
 verilog xil_defaultlib "glbl.v"
