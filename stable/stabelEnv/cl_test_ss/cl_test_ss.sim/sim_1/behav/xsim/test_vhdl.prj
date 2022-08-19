@@ -1,6 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  \
-"../../../../cl_test_ss.ip_user_files/bd/AXIcrossbar1/ip/AXIcrossbar1_axi_uartlite_0_0/sim/AXIcrossbar1_axi_uartlite_0_0.vhd" \
-
-# Do not sort compile order
-nosort

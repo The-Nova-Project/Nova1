@@ -28,7 +28,7 @@
 #define tx_empty_status         0x0
 
 #define interrupt_value         0x10
-#define data_value              0xabc     
+#define data_value              0x8      
 
 #define ZERO_VAL                0x00
 #define TO_HOST                 0x120
@@ -104,18 +104,17 @@ int main(int argc, char **argv){
     // uint16_t   dip_sw_val          = 0U;
     uint32_t   tx_data_reg         = tx_data;
     // uint32_t   rx_data_reg         = rx_data;
-    // uint32_t   tx_status_reg       = tx_sts;
-    // uint32_t   data_write_value    = data_value;
-    uint32_t   write_value         = tx_empty_status;
-    // uint32_t   valid_status        = rx_valid_status;
+    uint32_t   tx_status_reg       = tx_sts;
+    uint32_t   data_write_value    = data_value;
+    uint32_t   write_value         = 0x0;
+    uint32_t   valid_status        = rx_valid_status;
     // uint16_t   led_val             = 0U;               
     int        slot_id             = 0, 
                bar_id              = APP_PF_BAR1,
-              //  bar_id2             = APP_PF_BAR0,
+               bar_id2             = APP_PF_BAR0,
                rc;
             //   opt;
     long      delayValue2          = WAIT_DELAY2;
-    char chr;
     
 
     rc = fpga_mgmt_init();
@@ -145,13 +144,10 @@ int main(int argc, char **argv){
     // fail_on(rc, out, "FAIL TO READ VDIP1");
     // printf("NEW VDIP VALUE: 0x%02x \n", dip_sw_val);
 
-    printf("Please enter a character : ");
-    scanf("%c" , &chr);
 
 
-
-    printf("writing '%c' to TX register \n", chr/*, tx_data_reg*/);    //write data
-    rc = fpga_pci_poke(pci_bar_handle, tx_data_reg, chr);
+    printf("writing 0x%08x to TX register \n", data_write_value/*, tx_data_reg*/);    //write data
+    rc = fpga_pci_poke(pci_bar_handle, tx_data_reg, data_write_value);
     fail_on(rc, out, "Unable to write to the fpga !");
 
     printf("SLEEP FOR %4ld microecond \n", delayValue2);                              //time sleep
@@ -184,7 +180,7 @@ int main(int argc, char **argv){
 
 
 
-    rc = fpga_pci_attach(slot_id, pf_id, bar_id, 0, &pci_bar_handle);
+    rc = fpga_pci_attach(slot_id, pf_id, bar_id2, 0, &pci_bar_handle);
     fail_on(rc, out, "Unable to attach to the AFI on slot id %d", slot_id);
 
     
@@ -199,9 +195,9 @@ int main(int argc, char **argv){
     printf("SLEEP FOR %4ld microecond \n", delayValue2);                              //time sleep
     usleep(delayValue2);
 
-    // rc = fpga_pci_peek(pci_bar_handle, tx_status_reg, &valid_status);
-    // fail_on(rc, out, "Unable to read read from the fpga !");
-    // printf("Byte received valid value is  - 0x%08x", valid_status);
+    rc = fpga_pci_peek(pci_bar_handle, tx_status_reg, &valid_status);
+    fail_on(rc, out, "Unable to read read from the fpga !");
+    printf("Byte received valid value is  - 0x%08x", valid_status);
 
     // dip_sw_val   =   valid_status;
 
@@ -225,12 +221,10 @@ int main(int argc, char **argv){
     rc = fpga_pci_peek(pci_bar_handle, tx_data_reg, &write_value);
     fail_on(rc, out, "Unable to read read from the fpga !");                                 //read byte received
 
-    printf("value received is - '%c'", write_value);
-
-    if(write_value == chr){
-            printf(" PASSSED");
+    if(write_value == data_write_value){
+            printf("PASSSED  - 0x%08x", write_value);
         } else {
-            printf("FAILED");
+            printf("FAILED  - 0x%08x", write_value);
         }
 
 out:
