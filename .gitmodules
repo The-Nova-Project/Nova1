@@ -3,4 +3,4 @@
 	url = https://github.com/The-Nova-Project/aws-fpga
 [submodule "scalar-unit"]
 	path = scalar-unit
-	url = https://github.com/xcelerium/scalar-unit
+	url = https://github.com/The-Nova-Project/scalar-unit.git
