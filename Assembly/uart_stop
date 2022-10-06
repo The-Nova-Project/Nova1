@@ -1,0 +1,15 @@
+#transmitt "1" into hydra subsystems uart after loading the hex into bram or else 
+#counter will end and store the current counter value at to host
+li x1 0x80000000 #hydra to bram
+li x2 0x80000000 #hydra to uart
+li x11 0x80000000 #hydra to ddr
+addi x3 x0 0 #counter start
+addi x10 x0 1
+counter:
+sd x3 0x0(x1)
+addi x1 x1 0x4
+addi x3 x3 1
+ld x4 0x0(x2) #reading value 1 as counter intrupt from uart
+beq x4 x10 to_host
+jal counter 
+to_host : sd x3 0x0(x11) #storing last counter value at ddr to host
