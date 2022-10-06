@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Wed Sep 14 05:55:16 2022
+# Process ID: 32746
+# Current directory: /home/muheet/update_bd/afi_check/nova_project
+# Command line: vivado nova_project.xpr
+# Log file: /home/muheet/update_bd/afi_check/nova_project/vivado.log
+# Journal file: /home/muheet/update_bd/afi_check/nova_project/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project nova_project.xpr
+open_bd_design {/home/muheet/update_bd/afi_check/nova_project/nova_project.srcs/sources_1/bd/nova_project/nova_project.bd}
+update_compile_order -fileset sources_1

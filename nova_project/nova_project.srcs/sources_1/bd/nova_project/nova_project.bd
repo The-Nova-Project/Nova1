@@ -790,16 +790,16 @@
             "value": "5"
           },
           "M00_A00_ADDR_WIDTH": {
-            "value": "19"
+            "value": "26"
           },
           "M00_A00_BASE_ADDR": {
             "value": "0x0000000080000000"
           },
           "M01_A00_ADDR_WIDTH": {
-            "value": "19"
+            "value": "26"
           },
           "M01_A00_BASE_ADDR": {
-            "value": "0x0000000080100000"
+            "value": "0x0000000088000000"
           },
           "M01_S02_READ_CONNECTIVITY": {
             "value": "1"
@@ -808,10 +808,10 @@
             "value": "1"
           },
           "M02_A00_ADDR_WIDTH": {
-            "value": "16"
+            "value": "26"
           },
           "M02_A00_BASE_ADDR": {
-            "value": "0x0000000080400000"
+            "value": "0x0000000084000000"
           },
           "M02_S00_READ_CONNECTIVITY": {
             "value": "1"
@@ -826,10 +826,10 @@
             "value": "1"
           },
           "M03_A00_ADDR_WIDTH": {
-            "value": "19"
+            "value": "26"
           },
           "M03_A00_BASE_ADDR": {
-            "value": "0x0000000086000000"
+            "value": "0x000000008C000000"
           },
           "M03_S02_READ_CONNECTIVITY": {
             "value": "1"
