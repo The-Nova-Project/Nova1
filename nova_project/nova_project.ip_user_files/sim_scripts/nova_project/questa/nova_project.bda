@@ -26,49 +26,13 @@
       <data key="VT">PM</data>
     </node>
     <node id="n1">
-      <data key="BA">0x0000000080180000</data>
-      <data key="BP">C_S_AXI_BASEADDR</data>
-      <data key="HA">0x000000008027FFFF</data>
-      <data key="HP">C_S_AXI_HIGHADDR</data>
-      <data key="MA">S_AXI_0</data>
-      <data key="MX">/</data>
-      <data key="MI">S_AXI_0</data>
-      <data key="MS">SEG_axi_bram_ctrl_0_Mem0</data>
-      <data key="MV">:::</data>
-      <data key="TM">both</data>
-      <data key="SX">/axi_bram_ctrl_0</data>
-      <data key="SI">S_AXI</data>
-      <data key="SS">Mem0</data>
-      <data key="SV">xilinx.com:ip:axi_bram_ctrl:4.1</data>
-      <data key="TU">memory</data>
-      <data key="VT">AC</data>
-    </node>
-    <node id="n2">
-      <data key="BA">0x0000000080400000</data>
-      <data key="BP">C_BASEADDR</data>
-      <data key="HA">0x000000008040FFFF</data>
-      <data key="HP">C_HIGHADDR</data>
-      <data key="MA">S02_AXI_MTML</data>
-      <data key="MX">/</data>
-      <data key="MI">S02_AXI_MTML</data>
-      <data key="MS">SEG_M02_AXI_MTML_Reg</data>
-      <data key="MV">:::</data>
-      <data key="TM">both</data>
-      <data key="SX">/</data>
-      <data key="SI">M02_AXI_MTML</data>
-      <data key="SS">Reg</data>
-      <data key="SV">::nova_project_imp:</data>
-      <data key="TU">register</data>
-      <data key="VT">AC</data>
-    </node>
-    <node id="n3">
       <data key="BA">0x0000000080100000</data>
       <data key="BP">C_BASEADDR</data>
       <data key="HA">0x00000000801003FF</data>
       <data key="HP">C_HIGHADDR</data>
-      <data key="MA">S_AXI_0</data>
+      <data key="MA">S02_AXI_MTML</data>
       <data key="MX">/</data>
-      <data key="MI">S_AXI_0</data>
+      <data key="MI">S02_AXI_MTML</data>
       <data key="MS">SEG_axi_uartlite_0_Reg</data>
       <data key="MV">:::</data>
       <data key="TM">both</data>
@@ -79,34 +43,7 @@
       <data key="TU">register</data>
       <data key="VT">AC</data>
     </node>
-    <node id="n4">
-      <data key="BA">0x0000000080180000</data>
-      <data key="BP">C_S_AXI_BASEADDR</data>
-      <data key="HA">0x000000008027FFFF</data>
-      <data key="HP">C_S_AXI_HIGHADDR</data>
-      <data key="MA">S02_AXI_MTML</data>
-      <data key="MX">/</data>
-      <data key="MI">S02_AXI_MTML</data>
-      <data key="MS">SEG_axi_bram_ctrl_0_Mem0</data>
-      <data key="MV">:::</data>
-      <data key="TM">both</data>
-      <data key="SX">/axi_bram_ctrl_0</data>
-      <data key="SI">S_AXI</data>
-      <data key="SS">Mem0</data>
-      <data key="SV">xilinx.com:ip:axi_bram_ctrl:4.1</data>
-      <data key="TU">memory</data>
-      <data key="VT">AC</data>
-    </node>
-    <node id="n5">
-      <data key="VH">2</data>
-      <data key="VM">nova_project</data>
-      <data key="VT">VR</data>
-    </node>
-    <node id="n6">
-      <data key="VM">nova_project</data>
-      <data key="VT">BC</data>
-    </node>
-    <node id="n7">
+    <node id="n2">
       <data key="BA">0x0000000080180000</data>
       <data key="BP">C_S_AXI_BASEADDR</data>
       <data key="HA">0x000000008027FFFF</data>
@@ -124,14 +61,86 @@
       <data key="TU">memory</data>
       <data key="VT">AC</data>
     </node>
-    <node id="n8">
-      <data key="BA">0x0000000080400000</data>
+    <node id="n3">
+      <data key="BA">0x0000000080600000</data>
       <data key="BP">C_BASEADDR</data>
-      <data key="HA">0x000000008040FFFF</data>
+      <data key="HA">0x00000000806FFFFF</data>
       <data key="HP">C_HIGHADDR</data>
       <data key="MA">S01_AXI_0</data>
       <data key="MX">/</data>
       <data key="MI">S01_AXI_0</data>
+      <data key="MS">SEG_M03_AXI_DDR_Reg</data>
+      <data key="MV">:::</data>
+      <data key="TM">both</data>
+      <data key="SX">/</data>
+      <data key="SI">M03_AXI_DDR</data>
+      <data key="SS">Reg</data>
+      <data key="SV">::nova_project_imp:</data>
+      <data key="TU">register</data>
+      <data key="VT">AC</data>
+    </node>
+    <node id="n4">
+      <data key="BA">0x0000000080100000</data>
+      <data key="BP">C_BASEADDR</data>
+      <data key="HA">0x00000000801003FF</data>
+      <data key="HP">C_HIGHADDR</data>
+      <data key="MA">S01_AXI_0</data>
+      <data key="MX">/</data>
+      <data key="MI">S01_AXI_0</data>
+      <data key="MS">SEG_axi_uartlite_0_Reg</data>
+      <data key="MV">:::</data>
+      <data key="TM">both</data>
+      <data key="SX">/axi_uartlite_0</data>
+      <data key="SI">S_AXI</data>
+      <data key="SS">Reg</data>
+      <data key="SV">xilinx.com:ip:axi_uartlite:2.0</data>
+      <data key="TU">register</data>
+      <data key="VT">AC</data>
+    </node>
+    <node id="n5">
+      <data key="BA">0x0000000080180000</data>
+      <data key="BP">C_S_AXI_BASEADDR</data>
+      <data key="HA">0x000000008027FFFF</data>
+      <data key="HP">C_S_AXI_HIGHADDR</data>
+      <data key="MA">S_AXI_0</data>
+      <data key="MX">/</data>
+      <data key="MI">S_AXI_0</data>
+      <data key="MS">SEG_axi_bram_ctrl_0_Mem0</data>
+      <data key="MV">:::</data>
+      <data key="TM">both</data>
+      <data key="SX">/axi_bram_ctrl_0</data>
+      <data key="SI">S_AXI</data>
+      <data key="SS">Mem0</data>
+      <data key="SV">xilinx.com:ip:axi_bram_ctrl:4.1</data>
+      <data key="TU">memory</data>
+      <data key="VT">AC</data>
+    </node>
+    <node id="n6">
+      <data key="BA">0x0000000080600000</data>
+      <data key="BP">C_BASEADDR</data>
+      <data key="HA">0x00000000806FFFFF</data>
+      <data key="HP">C_HIGHADDR</data>
+      <data key="MA">S02_AXI_MTML</data>
+      <data key="MX">/</data>
+      <data key="MI">S02_AXI_MTML</data>
+      <data key="MS">SEG_M03_AXI_DDR_Reg</data>
+      <data key="MV">:::</data>
+      <data key="TM">both</data>
+      <data key="SX">/</data>
+      <data key="SI">M03_AXI_DDR</data>
+      <data key="SS">Reg</data>
+      <data key="SV">::nova_project_imp:</data>
+      <data key="TU">register</data>
+      <data key="VT">AC</data>
+    </node>
+    <node id="n7">
+      <data key="BA">0x0000000080400000</data>
+      <data key="BP">C_BASEADDR</data>
+      <data key="HA">0x000000008040FFFF</data>
+      <data key="HP">C_HIGHADDR</data>
+      <data key="MA">S02_AXI_MTML</data>
+      <data key="MX">/</data>
+      <data key="MI">S02_AXI_MTML</data>
       <data key="MS">SEG_M02_AXI_MTML_Reg</data>
       <data key="MV">:::</data>
       <data key="TM">both</data>
@@ -142,14 +151,19 @@
       <data key="TU">register</data>
       <data key="VT">AC</data>
     </node>
+    <node id="n8">
+      <data key="VH">2</data>
+      <data key="VM">nova_project</data>
+      <data key="VT">VR</data>
+    </node>
     <node id="n9">
       <data key="BA">0x0000000080100000</data>
       <data key="BP">C_BASEADDR</data>
       <data key="HA">0x00000000801003FF</data>
       <data key="HP">C_HIGHADDR</data>
-      <data key="MA">S02_AXI_MTML</data>
+      <data key="MA">S_AXI_0</data>
       <data key="MX">/</data>
-      <data key="MI">S02_AXI_MTML</data>
+      <data key="MI">S_AXI_0</data>
       <data key="MS">SEG_axi_uartlite_0_Reg</data>
       <data key="MV">:::</data>
       <data key="TM">both</data>
@@ -161,91 +175,77 @@
       <data key="VT">AC</data>
     </node>
     <node id="n10">
-      <data key="BA">0x0000000080100000</data>
+      <data key="BA">0x0000000080400000</data>
       <data key="BP">C_BASEADDR</data>
-      <data key="HA">0x00000000801003FF</data>
+      <data key="HA">0x000000008040FFFF</data>
       <data key="HP">C_HIGHADDR</data>
       <data key="MA">S01_AXI_0</data>
       <data key="MX">/</data>
       <data key="MI">S01_AXI_0</data>
-      <data key="MS">SEG_axi_uartlite_0_Reg</data>
+      <data key="MS">SEG_M02_AXI_MTML_Reg</data>
       <data key="MV">:::</data>
       <data key="TM">both</data>
-      <data key="SX">/axi_uartlite_0</data>
-      <data key="SI">S_AXI</data>
+      <data key="SX">/</data>
+      <data key="SI">M02_AXI_MTML</data>
       <data key="SS">Reg</data>
-      <data key="SV">xilinx.com:ip:axi_uartlite:2.0</data>
+      <data key="SV">::nova_project_imp:</data>
       <data key="TU">register</data>
       <data key="VT">AC</data>
     </node>
     <node id="n11">
-      <data key="BA">0x0000000080600000</data>
-      <data key="BP">C_BASEADDR</data>
-      <data key="HA">0x00000000806FFFFF</data>
-      <data key="HP">C_HIGHADDR</data>
+      <data key="VM">nova_project</data>
+      <data key="VT">BC</data>
+    </node>
+    <node id="n12">
+      <data key="BA">0x0000000080180000</data>
+      <data key="BP">C_S_AXI_BASEADDR</data>
+      <data key="HA">0x000000008027FFFF</data>
+      <data key="HP">C_S_AXI_HIGHADDR</data>
       <data key="MA">S02_AXI_MTML</data>
       <data key="MX">/</data>
       <data key="MI">S02_AXI_MTML</data>
-      <data key="MS">SEG_M03_AXI_DDR_Reg</data>
+      <data key="MS">SEG_axi_bram_ctrl_0_Mem0</data>
       <data key="MV">:::</data>
       <data key="TM">both</data>
-      <data key="SX">/</data>
-      <data key="SI">M03_AXI_DDR</data>
-      <data key="SS">Reg</data>
-      <data key="SV">::nova_project_imp:</data>
-      <data key="TU">register</data>
+      <data key="SX">/axi_bram_ctrl_0</data>
+      <data key="SI">S_AXI</data>
+      <data key="SS">Mem0</data>
+      <data key="SV">xilinx.com:ip:axi_bram_ctrl:4.1</data>
+      <data key="TU">memory</data>
       <data key="VT">AC</data>
     </node>
-    <node id="n12">
-      <data key="BA">0x0000000080600000</data>
-      <data key="BP">C_BASEADDR</data>
-      <data key="HA">0x00000000806FFFFF</data>
-      <data key="HP">C_HIGHADDR</data>
-      <data key="MA">S01_AXI_0</data>
-      <data key="MX">/</data>
-      <data key="MI">S01_AXI_0</data>
-      <data key="MS">SEG_M03_AXI_DDR_Reg</data>
-      <data key="MV">:::</data>
-      <data key="TM">both</data>
-      <data key="SX">/</data>
-      <data key="SI">M03_AXI_DDR</data>
-      <data key="SS">Reg</data>
-      <data key="SV">::nova_project_imp:</data>
-      <data key="TU">register</data>
-      <data key="VT">AC</data>
-    </node>
-    <edge id="e0" source="n6" target="n5">
+    <edge id="e0" source="n11" target="n8">
     </edge>
-    <edge id="e1" source="n5" target="n0">
+    <edge id="e1" source="n8" target="n0">
     </edge>
-    <edge id="e2" source="n3" target="n0">
+    <edge id="e2" source="n9" target="n0">
       <data key="EH">2</data>
     </edge>
-    <edge id="e3" source="n1" target="n0">
+    <edge id="e3" source="n5" target="n0">
       <data key="EH">2</data>
     </edge>
-    <edge id="e4" source="n10" target="n0">
+    <edge id="e4" source="n4" target="n0">
       <data key="EH">2</data>
     </edge>
-    <edge id="e5" source="n8" target="n0">
+    <edge id="e5" source="n10" target="n0">
       <data key="EH">2</data>
     </edge>
-    <edge id="e6" source="n7" target="n0">
+    <edge id="e6" source="n2" target="n0">
       <data key="EH">2</data>
     </edge>
-    <edge id="e7" source="n9" target="n0">
+    <edge id="e7" source="n1" target="n0">
       <data key="EH">2</data>
     </edge>
-    <edge id="e8" source="n2" target="n0">
+    <edge id="e8" source="n7" target="n0">
       <data key="EH">2</data>
     </edge>
-    <edge id="e9" source="n4" target="n0">
+    <edge id="e9" source="n12" target="n0">
       <data key="EH">2</data>
     </edge>
-    <edge id="e10" source="n12" target="n0">
+    <edge id="e10" source="n3" target="n0">
       <data key="EH">2</data>
     </edge>
-    <edge id="e11" source="n11" target="n0">
+    <edge id="e11" source="n6" target="n0">
       <data key="EH">2</data>
     </edge>
   </graph>
