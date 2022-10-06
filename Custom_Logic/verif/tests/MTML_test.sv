@@ -21,7 +21,7 @@ int A;
 initial begin
       tb.set_virtual_dip_switch(.dip(0));
       tb.power_up();
-     file_handler=$fopen("/home/$USER/mtml_integrated/aws-fpga/hdk/cl/developer_designs/nova_project/verif/tests/MTML_text.txt","r");
+     file_handler=$fopen("/home/$USER/mtml_integrated/Custom_Logic/verif/tests/MTML_text.txt","r");
       tb.set_virtual_dip_switch(.dip(0));
         $display ("Writing matrix data 32'd4321 to address 0x80000202");
         tb.poke(.addr(32'h00000400), .data(32'h0), .id(AXI_ID), .size(DataSize::UINT32), .intf(AxiPort::PORT_BAR1));
@@ -46,7 +46,7 @@ initial begin
     forever begin
       if(!$feof(file_handler))begin
         
-             file_handler=$fopen("/home/$USER/mtml_integrated/aws-fpga/hdk/cl/developer_designs/nova_project/verif/tests/MTML_text.txt","r");
+             file_handler=$fopen("/home/$USER/mtml_integrated/Custom_Logic/verif/tests/MTML_text.txt","r");
                   for(i = 0; i <= inc_data; i=i+1)begin
                             $fscanf(file_handler,"%h\n",A);
                             w_data = A;

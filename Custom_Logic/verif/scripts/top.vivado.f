@@ -34,7 +34,7 @@
 -sourcelibdir ${HDK_SHELL_DESIGN_DIR}/ip/axi_clock_converter_0/sim
 -sourcelibdir ${HDK_SHELL_DESIGN_DIR}/ip/axi_register_slice/hdl
 -sourcelibdir ${HDK_SHELL_DESIGN_DIR}/ip/axi_clock_converter_0/hdl
--sourcelibdir /home/$USER/update_bd/afi_check/aws-fpga/hdk/cl/developer_designs/nova_project/verif/scripts
+-sourcelibdir /home/$USER/update_bd/afi_check/Custom_Logic/verif/scripts
 
 -include ${CL_ROOT}/../../examples/common/design
 -include ${CL_ROOT}/verif
@@ -48,7 +48,7 @@
 -include ${HDK_SHELL_DESIGN_DIR}/ip/axi_clock_converter_0/sim
 -include ${HDK_SHELL_DESIGN_DIR}/ip/axi_clock_converter_0/hdl
 -include ${HDK_DIR}/cl/examples/common/design/
--include /home/$USER/update_bd/afi_check/aws-fpga/hdk/cl/developer_designs/nova_project/verif/scripts
+-include /home/$USER/update_bd/afi_check/Custom_Logic/verif/scripts
 
 -f /home/$USER/update_bd/afi_check/scalar-unit/build/flist
 ${HDK_SHELL_DESIGN_DIR}/ip/axi_register_slice/hdl/axi_register_slice_v2_1_vl_rfs.v
@@ -91,7 +91,7 @@ ${HDK_SHELL_DESIGN_DIR}/ip/axi_clock_converter_0/hdl/fifo_generator_v13_2_rfs.v
 /home/$USER/update_bd/afi_check/test_subsystem/test_subsystem.gen/sources_1/bd/test_subsystem/ip/test_subsystem_debug_bridge_0_1/bd_0/sim/bd_b364.v
 /home/$USER/update_bd/afi_check/test_subsystem/test_subsystem.gen/sources_1/bd/test_subsystem/ip/test_subsystem_debug_bridge_0_1/sim/test_subsystem_debug_bridge_0_1.v
 /home/$USER/update_bd/afi_check/test_subsystem/test_subsystem.gen/sources_1/bd/test_subsystem/sim/test_subsystem.v
-/home/$USER/update_bd/afi_check/aws-fpga/hdk/cl/developer_designs/nova_project/design/nova_subsystem.v
+/home/$USER/update_bd/afi_check/Custom_Logic/design/nova_subsystem.v
 
 
 -f ${HDK_COMMON_DIR}/verif/tb/filelists/tb.${SIMULATOR}.f
@@ -137,5 +137,5 @@ ${HDK_SHELL_DESIGN_DIR}/sh_ddr/sim/sh_ddr.sv
 
 
 --define DISABLE_VJTAG_DEBUG
-/home/$USER/update_bd/afi_check/aws-fpga/hdk/cl/developer_designs/nova_project/design/cl_nova.sv
+/home/$USER/update_bd/afi_check/Custom_Logic/design/cl_nova.sv
 

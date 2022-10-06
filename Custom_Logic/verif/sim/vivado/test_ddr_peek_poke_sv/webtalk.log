@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Webtalk v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Thu Oct  6 17:17:57 2022
+# Process ID: 14902
+# Current directory: /home/muheet/update_bd/afi_check/Custom_Logic/verif/sim/vivado/test_ddr_peek_poke_sv
+# Command line: wbtcv -mode batch -source /home/muheet/update_bd/afi_check/Custom_Logic/verif/sim/vivado/test_ddr_peek_poke_sv/xsim.dir/tb/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/muheet/update_bd/afi_check/Custom_Logic/verif/sim/vivado/test_ddr_peek_poke_sv/webtalk.log
+# Journal file: /home/muheet/update_bd/afi_check/Custom_Logic/verif/sim/vivado/test_ddr_peek_poke_sv/webtalk.jou
+#-----------------------------------------------------------
+source /home/muheet/update_bd/afi_check/Custom_Logic/verif/sim/vivado/test_ddr_peek_poke_sv/xsim.dir/tb/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Thu Oct  6 17:17:57 2022...
