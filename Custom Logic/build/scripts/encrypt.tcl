@@ -20,6 +20,11 @@
 
 set HDK_SHELL_DIR $::env(HDK_SHELL_DIR)
 set HDK_SHELL_DESIGN_DIR $::env(HDK_SHELL_DESIGN_DIR)
+set HDK_DIR $::env(HDK_DIR)
+#set MATMUL $::env(MATMUL)
+set SU_ROOT $::env(SU_ROOT)
+set VIVADO_NOVA $::env(VIVADO_NOVA)
+set VIVADO_TEST $::env(VIVADO_TEST)
 set CL_DIR $::env(CL_DIR)
 set TARGET_DIR $CL_DIR/build/src_post_encryption
 set UNUSED_TEMPLATES_DIR $HDK_SHELL_DESIGN_DIR/interfaces
@@ -31,18 +36,17 @@ if {[llength [glob -nocomplain -dir $TARGET_DIR *]] != 0} {
 #---- Developr would replace this section with design files ----
 
 ## Change file names and paths below to reflect your CL area.  DO NOT include AWS RTL files.
-file copy -force $CL_DIR/design/cl_hello_world_defines.vh             $TARGET_DIR
+file copy -force $CL_DIR/design/nova_project_defines.vh               $TARGET_DIR
 file copy -force $CL_DIR/design/cl_id_defines.vh                      $TARGET_DIR
-file copy -force $CL_DIR/design/cl_hello_world.sv                     $TARGET_DIR 
-file copy -force $CL_DIR/../common/design/cl_common_defines.vh        $TARGET_DIR 
+file copy -force $CL_DIR/design/cl_dram_dma_defines.vh                      $TARGET_DIR
+file copy -force $CL_DIR/design/cl_nova.sv                            $TARGET_DIR 
+file copy -force $HDK_DIR/cl/examples/common/design/cl_common_defines.vh        $TARGET_DIR  
 file copy -force $UNUSED_TEMPLATES_DIR/unused_apppf_irq_template.inc  $TARGET_DIR
 file copy -force $UNUSED_TEMPLATES_DIR/unused_cl_sda_template.inc     $TARGET_DIR
-file copy -force $UNUSED_TEMPLATES_DIR/unused_ddr_a_b_d_template.inc  $TARGET_DIR
-file copy -force $UNUSED_TEMPLATES_DIR/unused_ddr_c_template.inc      $TARGET_DIR
-file copy -force $UNUSED_TEMPLATES_DIR/unused_dma_pcis_template.inc   $TARGET_DIR
 file copy -force $UNUSED_TEMPLATES_DIR/unused_pcim_template.inc       $TARGET_DIR
-file copy -force $UNUSED_TEMPLATES_DIR/unused_sh_bar1_template.inc    $TARGET_DIR
 file copy -force $UNUSED_TEMPLATES_DIR/unused_flr_template.inc        $TARGET_DIR
+file copy -force $UNUSED_TEMPLATES_DIR/unused_ddr_c_template.inc        $TARGET_DIR
+file copy -force $UNUSED_TEMPLATES_DIR/unused_sh_ocl_template.inc        $TARGET_DIR
 
 #---- End of section replaced by Developr ---
 
@@ -55,6 +59,6 @@ puts "AWS FPGA: VIVADO_TOOL_VERSION $TOOL_VERSION"
 puts "vivado_version $vivado_version"
 
 # encrypt .v/.sv/.vh/inc as verilog files
-encrypt -k $HDK_SHELL_DIR/build/scripts/vivado_keyfile_2017_4.txt -lang verilog  [glob -nocomplain -- $TARGET_DIR/*.{v,sv}] [glob -nocomplain -- $TARGET_DIR/*.vh] [glob -nocomplain -- $TARGET_DIR/*.inc]
+#encrypt -k $HDK_SHELL_DIR/build/scripts/vivado_keyfile_2017_4.txt -lang verilog  [glob -nocomplain -- $TARGET_DIR/*.{v,sv}] [glob -nocomplain -- $TARGET_DIR/*.vh] [glob -nocomplain -- $TARGET_DIR/*.inc]
 # encrypt *vhdl files
-encrypt -k $HDK_SHELL_DIR/build/scripts/vivado_vhdl_keyfile_2017_4.txt -lang vhdl -quiet [ glob -nocomplain -- $TARGET_DIR/*.vhd? ]
+#encrypt -k $HDK_SHELL_DIR/build/scripts/vivado_vhdl_keyfile_2017_4.txt -lang vhdl -quiet [ glob -nocomplain -- $TARGET_DIR/*.vhd? ]
