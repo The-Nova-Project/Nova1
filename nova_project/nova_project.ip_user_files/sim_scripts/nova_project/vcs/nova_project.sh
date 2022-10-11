@@ -249,7 +249,7 @@ create_lib_mappings()
   if [[ ($1 != "") ]]; then
     lib_map_path="$1"
   else
-    lib_map_path="/home/muheet/update_bd/afi_check/nova_project/nova_project.cache/compile_simlib/vcs"
+    lib_map_path="/home/muheet/Nova1/nova_project/nova_project.cache/compile_simlib/vcs"
   fi
 
   for (( i=0; i<${#design_libs[*]}; i++ )); do

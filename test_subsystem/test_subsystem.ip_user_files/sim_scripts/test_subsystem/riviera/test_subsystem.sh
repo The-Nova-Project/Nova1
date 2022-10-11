@@ -93,7 +93,7 @@ map_setup_file()
   if [[ ($1 != "") ]]; then
     lib_map_path="$1"
   else
-    lib_map_path="/home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.cache/compile_simlib/riviera"
+    lib_map_path="/home/muheet/Nova1/test_subsystem/test_subsystem.cache/compile_simlib/riviera"
   fi
   if [[ ($lib_map_path != "") ]]; then
     src_file="$lib_map_path/$file"
