@@ -4,9 +4,9 @@
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
 # Start of session at: Thu Oct  6 17:17:57 2022
 # Process ID: 14902
-# Current directory: /home/muheet/update_bd/afi_check/Custom_Logic/verif/sim/vivado/test_ddr_peek_poke_sv
-# Command line: wbtcv -mode batch -source /home/muheet/update_bd/afi_check/Custom_Logic/verif/sim/vivado/test_ddr_peek_poke_sv/xsim.dir/tb/webtalk/xsim_webtalk.tcl -notrace
-# Log file: /home/muheet/update_bd/afi_check/Custom_Logic/verif/sim/vivado/test_ddr_peek_poke_sv/webtalk.log
-# Journal file: /home/muheet/update_bd/afi_check/Custom_Logic/verif/sim/vivado/test_ddr_peek_poke_sv/webtalk.jou
+# Current directory: /home/muheet/Nova1/Custom_Logic/verif/sim/vivado/test_ddr_peek_poke_sv
+# Command line: wbtcv -mode batch -source /home/muheet/Nova1/Custom_Logic/verif/sim/vivado/test_ddr_peek_poke_sv/xsim.dir/tb/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/muheet/Nova1/Custom_Logic/verif/sim/vivado/test_ddr_peek_poke_sv/webtalk.log
+# Journal file: /home/muheet/Nova1/Custom_Logic/verif/sim/vivado/test_ddr_peek_poke_sv/webtalk.jou
 #-----------------------------------------------------------
-source /home/muheet/update_bd/afi_check/Custom_Logic/verif/sim/vivado/test_ddr_peek_poke_sv/xsim.dir/tb/webtalk/xsim_webtalk.tcl -notrace
+source /home/muheet/Nova1/Custom_Logic/verif/sim/vivado/test_ddr_peek_poke_sv/xsim.dir/tb/webtalk/xsim_webtalk.tcl -notrace

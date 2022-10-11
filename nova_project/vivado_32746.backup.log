@@ -4,10 +4,10 @@
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
 # Start of session at: Wed Sep 14 05:55:16 2022
 # Process ID: 32746
-# Current directory: /home/muheet/update_bd/afi_check/nova_project
+# Current directory: /home/muheet/Nova1/nova_project
 # Command line: vivado nova_project.xpr
-# Log file: /home/muheet/update_bd/afi_check/nova_project/vivado.log
-# Journal file: /home/muheet/update_bd/afi_check/nova_project/vivado.jou
+# Log file: /home/muheet/Nova1/nova_project/vivado.log
+# Journal file: /home/muheet/Nova1/nova_project/vivado.jou
 #-----------------------------------------------------------
 Sourcing tcl script '/home/muheet/.Xilinx/Vivado/Vivado_init.tcl'
 no such variable
@@ -23,8 +23,8 @@ INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2021.1/data/ip'.
 open_project: Time (s): cpu = 00:00:20 ; elapsed = 00:00:08 . Memory (MB): peak = 7595.402 ; gain = 51.094 ; free physical = 36797 ; free virtual = 60826
-open_bd_design {/home/muheet/update_bd/afi_check/nova_project/nova_project.srcs/sources_1/bd/nova_project/nova_project.bd}
-Reading block design file </home/muheet/update_bd/afi_check/nova_project/nova_project.srcs/sources_1/bd/nova_project/nova_project.bd>...
+open_bd_design {/home/muheet/Nova1/nova_project/nova_project.srcs/sources_1/bd/nova_project/nova_project.bd}
+Reading block design file </home/muheet/Nova1/nova_project/nova_project.srcs/sources_1/bd/nova_project/nova_project.bd>...
 INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
 Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - axi_dwidth_converter_0
 Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - axi_protocol_convert_0
@@ -34,7 +34,7 @@ Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - axi_crossbar
 Adding component instance block -- xilinx.com:ip:axi_uartlite:2.0 - axi_uartlite_0
 Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - axi_protocol_convert_1
 Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - axi_dwidth_converter_1
-Successfully read diagram <nova_project> from block design file </home/muheet/update_bd/afi_check/nova_project/nova_project.srcs/sources_1/bd/nova_project/nova_project.bd>
+Successfully read diagram <nova_project> from block design file </home/muheet/Nova1/nova_project/nova_project.srcs/sources_1/bd/nova_project/nova_project.bd>
 update_compile_order -fileset sources_1
 exit
 INFO: [Common 17-206] Exiting Vivado at Wed Sep 14 05:56:33 2022...

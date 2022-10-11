@@ -1,1 +1,1 @@
-xsim {tb} -autoloadwcfg -tclbatch {/home/muheet/update_bd/afi_check/Custom_Logic/verif/scripts/waves.tcl} -runall
+xsim {tb} -autoloadwcfg -tclbatch {/home/muheet/Nova1/Custom_Logic/verif/scripts/waves.tcl} -runall

@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="55" Path="/home/muheet/update_bd/afi_check/nova_project/nova_project.xpr">
+<Project Version="7" Minor="55" Path="/home/muheet/Nova1/nova_project/nova_project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="e001659db4714a5d8d584e638b1d6c2f"/>

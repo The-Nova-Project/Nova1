@@ -54,7 +54,7 @@ assign vled_value='b0;
       forever begin
       if(!$feof(file_handler))begin
         tb.set_virtual_dip_switch(.dip(0));
-             file_handler=$fopen("/home/muheet/update_bd/afi_check/Custom_Logic/verif/tests/out.hex","r");
+             file_handler=$fopen("/home/muheet/Nova1/Custom_Logic/verif/tests/out.hex","r");
                   for(i = 0; i <= inc_data; i=i+1)begin
                             $fscanf(file_handler,"%h\n",A);
                             w_data = A;

@@ -245,7 +245,7 @@ create_lib_mappings()
   if [[ ($1 != "") ]]; then
     lib_map_path="$1"
   else
-    lib_map_path="/home/muheet/update_bd/afi_check/test_subsystem/test_subsystem.cache/compile_simlib/vcs"
+    lib_map_path="/home/muheet/Nova1/test_subsystem/test_subsystem.cache/compile_simlib/vcs"
   fi
 
   for (( i=0; i<${#design_libs[*]}; i++ )); do

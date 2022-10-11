@@ -4,16 +4,16 @@
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
 # Start of session at: Thu Oct  6 17:18:00 2022
 # Process ID: 15015
-# Current directory: /home/muheet/update_bd/afi_check/Custom_Logic/verif/sim/vivado/test_ddr_peek_poke_sv
+# Current directory: /home/muheet/Nova1/Custom_Logic/verif/sim/vivado/test_ddr_peek_poke_sv
 # Command line: xsim -log test_ddr_peek_poke.log -mode tcl -source {xsim.dir/tb/xsim_script.tcl}
-# Log file: /home/muheet/update_bd/afi_check/Custom_Logic/verif/sim/vivado/test_ddr_peek_poke_sv/test_ddr_peek_poke.log
-# Journal file: /home/muheet/update_bd/afi_check/Custom_Logic/verif/sim/vivado/test_ddr_peek_poke_sv/xsim.jou
+# Log file: /home/muheet/Nova1/Custom_Logic/verif/sim/vivado/test_ddr_peek_poke_sv/test_ddr_peek_poke.log
+# Journal file: /home/muheet/Nova1/Custom_Logic/verif/sim/vivado/test_ddr_peek_poke_sv/xsim.jou
 #-----------------------------------------------------------
 source xsim.dir/tb/xsim_script.tcl
-# xsim {tb} -autoloadwcfg -tclbatch {/home/muheet/update_bd/afi_check/Custom_Logic/verif/scripts/waves.tcl} -runall
+# xsim {tb} -autoloadwcfg -tclbatch {/home/muheet/Nova1/Custom_Logic/verif/scripts/waves.tcl} -runall
 Time resolution is 1 ps
 WARNING: [Simtcl 6-25] Warning: Both '-runall' and '-tclbatch' were specified. The '-runall' was ignored
-source /home/muheet/update_bd/afi_check/Custom_Logic/verif/scripts/waves.tcl
+source /home/muheet/Nova1/Custom_Logic/verif/scripts/waves.tcl
 ## set curr_wave [current_wave_config]
 ## if { [string length $curr_wave] == 0 } {
 ##   if { [llength [get_objects]] > 0} {
@@ -968,5 +968,5 @@ Info: [Unisim HPIO_VREF-1] Fabric Tune Value changed to 0011101. Instance: tb.ca
 ---------------------DUMP ASSEMBLY INTO DDR THROUGH DMA---------------------
 
 
-ERROR: File descriptor (0) passed to $feof in file /home/muheet/update_bd/afi_check/Custom_Logic/verif/tests/test_ddr_peek_poke.sv at line 55 is not valid.
+ERROR: File descriptor (0) passed to $feof in file /home/muheet/Nova1/Custom_Logic/verif/tests/test_ddr_peek_poke.sv at line 55 is not valid.
 Writing 0x97 to address 0x0000000000000000
