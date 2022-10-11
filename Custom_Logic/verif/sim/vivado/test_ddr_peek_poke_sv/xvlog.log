@@ -127,8 +127,8 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/Nova1/scalar-uni
 INFO: [VRFC 10-311] analyzing module ptw
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/Nova1/scalar-unit/sub/riscv_core/src/mmu_sv39/tlb.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module tlb
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/Nova1/matmul/hardware/sub/pulp_common/axi/src/axi_pkg.sv" into library xil_defaultlib
-WARNING: [VRFC 10-3609] overwriting previous definition of package 'axi_pkg' [/home/muheet/Nova1/matmul/hardware/sub/pulp_common/axi/src/axi_pkg.sv:21]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/update_bd/afi_check/matmul/hardware/sub/pulp_common/axi/src/axi_pkg.sv" into library xil_defaultlib
+WARNING: [VRFC 10-3609] overwriting previous definition of package 'axi_pkg' [/home/muheet/update_bd/afi_check/matmul/hardware/sub/pulp_common/axi/src/axi_pkg.sv:21]
 WARNING: [VRFC 10-3669] re-analyze package 'ariane_axi' since package 'axi_pkg' is overwritten or removed [/home/muheet/Nova1/scalar-unit/sub/riscv_core/src/include/ariane_axi_pkg.sv:18]
 WARNING: [VRFC 10-3669] re-analyze module 'ariane' since module 'ariane_axi' is overwritten or removed [/home/muheet/Nova1/scalar-unit/sub/riscv_core/src/ariane.sv:26]
 WARNING: [VRFC 10-3669] re-analyze module 'axi_shim' since module 'ariane_axi' is overwritten or removed [/home/muheet/Nova1/scalar-unit/sub/riscv_core/src/axi_shim.sv:22]
@@ -249,83 +249,85 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/Nova1/scalar-uni
 INFO: [VRFC 10-311] analyzing module dm_mem
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/Nova1/scalar-unit/sub/external/openhwgroup/cva6/src/riscv-dbg/src/dm_top.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module dm_top
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/Nova1/matmul/hardware/sub/pulp_common/axi/src/axi_err_slv.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/update_bd/afi_check/matmul/hardware/sub/pulp_common/axi/src/axi_err_slv.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module axi_err_slv
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/Nova1/scalar-unit/sub/external/openhwgroup/cva6/src/common_cells/src/spill_register.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/update_bd/afi_check/scalar-unit/sub/external/openhwgroup/cva6/src/common_cells/src/spill_register.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module spill_register
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/Nova1/matmul/hardware/sub/pulp_common/common_cells/src/delta_counter.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/update_bd/afi_check/matmul/hardware/sub/pulp_common/common_cells/src/delta_counter.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module delta_counter
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/Nova1/matmul/hardware/sub/pulp_common/common_cells/src/counter.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/update_bd/afi_check/matmul/hardware/sub/pulp_common/common_cells/src/counter.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module counter
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/Nova1/matmul/hardware/sub/pulp_common/common_cells/src/onehot_to_bin.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/update_bd/afi_check/matmul/hardware/sub/pulp_common/common_cells/src/onehot_to_bin.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module onehot_to_bin
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/Nova1/matmul/hardware/sub/pulp_common/common_cells/src/cf_math_pkg.sv" into library xil_defaultlib
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/Nova1/matmul/hardware/sub/pulp_common/common_cells/src/id_queue.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/update_bd/afi_check/matmul/hardware/sub/pulp_common/common_cells/src/cf_math_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/update_bd/afi_check/matmul/hardware/sub/pulp_common/common_cells/src/id_queue.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module id_queue
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/Nova1/matmul/hardware/sub/pulp_common/axi/src/axi_demux.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/update_bd/afi_check/matmul/hardware/sub/pulp_common/axi/src/axi_demux.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module axi_demux
 INFO: [VRFC 10-311] analyzing module axi_demux_id_counters
 INFO: [VRFC 10-311] analyzing module axi_demux_intf
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/Nova1/matmul/hardware/sub/pulp_common/common_cells/src/stream_register.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/update_bd/afi_check/matmul/hardware/sub/pulp_common/common_cells/src/stream_register.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module stream_register
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/Nova1/scalar-unit/sub/riscv_core/src/axi_shim.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/update_bd/afi_check/scalar-unit/sub/riscv_core/src/axi_shim.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module axi_shim
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/Nova1/scalar-unit/sub/riscv_core/src/cache_subsystem/wt_axi_adapter.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/update_bd/afi_check/scalar-unit/sub/riscv_core/src/cache_subsystem/wt_axi_adapter.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module wt_axi_adapter
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/Nova1/scalar-unit/sub/riscv_core/src/cache_subsystem/wt_cache_subsystem.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/update_bd/afi_check/scalar-unit/sub/riscv_core/src/cache_subsystem/wt_cache_subsystem.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module wt_cache_subsystem
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/Nova1/scalar-unit/sub/riscv_core/src/ariane.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/update_bd/afi_check/scalar-unit/sub/riscv_core/src/ariane.sv" into library xil_defaultlib
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'WT_DCACHE' [/home/muheet/update_bd/afi_check/scalar-unit/sub/riscv_core/src/ariane.sv:14]
 INFO: [VRFC 10-311] analyzing module ariane
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/Nova1/matmul/hardware/src/matmul_axi_pkg.sv" into library xil_defaultlib
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/Nova1/matmul/hardware/src/matmul_pkg.sv" into library xil_defaultlib
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/Nova1/matmul/hardware/src/mm_rif.sv" into library xil_defaultlib
+WARNING: [VRFC 10-3824] variable 'mode' must explicitly be declared as automatic or static [/home/muheet/update_bd/afi_check/scalar-unit/sub/riscv_core/src/ariane.sv:863]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/update_bd/afi_check/matmul/hardware/src/matmul_axi_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/update_bd/afi_check/matmul/hardware/src/matmul_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/update_bd/afi_check/matmul/hardware/src/mm_rif.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module mm_rif
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/Nova1/matmul/hardware/src/mm_task_sequencer.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/update_bd/afi_check/matmul/hardware/src/mm_task_sequencer.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module mm_task_sequencer
-WARNING: [VRFC 10-526] concatenation with unsized literal; will interpret as 32 bits [/home/muheet/Nova1/matmul/hardware/src/mm_task_sequencer.sv:111]
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/Nova1/matmul/hardware/src/mm_ld_controller.sv" into library xil_defaultlib
+WARNING: [VRFC 10-526] concatenation with unsized literal; will interpret as 32 bits [/home/muheet/update_bd/afi_check/matmul/hardware/src/mm_task_sequencer.sv:111]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/update_bd/afi_check/matmul/hardware/src/mm_ld_controller.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module mm_ld_controller
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/Nova1/matmul/hardware/src/mm_st_controller.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/update_bd/afi_check/matmul/hardware/src/mm_st_controller.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module mm_st_controller
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/Nova1/matmul/hardware/src/mm_inmem.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/update_bd/afi_check/matmul/hardware/src/mm_inmem.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module mm_inmem
-INFO: [VRFC 10-2458] undeclared symbol wr_en_a, assumed default net type wire [/home/muheet/Nova1/matmul/hardware/src/mm_inmem.sv:84]
-INFO: [VRFC 10-2458] undeclared symbol wr_en_b, assumed default net type wire [/home/muheet/Nova1/matmul/hardware/src/mm_inmem.sv:153]
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/Nova1/matmul/hardware/src/mm_acc.sv" into library xil_defaultlib
+INFO: [VRFC 10-2458] undeclared symbol wr_en_a, assumed default net type wire [/home/muheet/update_bd/afi_check/matmul/hardware/src/mm_inmem.sv:84]
+INFO: [VRFC 10-2458] undeclared symbol wr_en_b, assumed default net type wire [/home/muheet/update_bd/afi_check/matmul/hardware/src/mm_inmem.sv:153]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/update_bd/afi_check/matmul/hardware/src/mm_acc.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module mm_acc
-INFO: [VRFC 10-2458] undeclared symbol acc_rd_addr, assumed default net type wire [/home/muheet/Nova1/matmul/hardware/src/mm_acc.sv:73]
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/Nova1/matmul/hardware/src/mm_format.sv" into library xil_defaultlib
+INFO: [VRFC 10-2458] undeclared symbol acc_rd_addr, assumed default net type wire [/home/muheet/update_bd/afi_check/matmul/hardware/src/mm_acc.sv:73]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/update_bd/afi_check/matmul/hardware/src/mm_format.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module mm_format
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/Nova1/matmul/hardware/src/mm_rif_axi_lite.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/update_bd/afi_check/matmul/hardware/src/mm_rif_axi_lite.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module mm_rif_axi_lite
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/Nova1/matmul/hardware/src/mm_sram.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/update_bd/afi_check/matmul/hardware/src/mm_sram.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module mm_sram
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/Nova1/matmul/hardware/sub/pulp_common/axi/src/axi_to_axi_lite.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/update_bd/afi_check/matmul/hardware/sub/pulp_common/axi/src/axi_to_axi_lite.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module axi_to_axi_lite
 INFO: [VRFC 10-311] analyzing module axi_to_axi_lite_id_reflect
 INFO: [VRFC 10-311] analyzing module axi_to_axi_lite_intf
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/Nova1/matmul/hardware/sub/pulp_common/axi/src/axi_atop_filter.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/update_bd/afi_check/matmul/hardware/sub/pulp_common/axi/src/axi_atop_filter.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module axi_atop_filter
 INFO: [VRFC 10-311] analyzing module axi_atop_filter_intf
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/Nova1/matmul/hardware/sub/pulp_common/axi/src/axi_burst_splitter.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/update_bd/afi_check/matmul/hardware/sub/pulp_common/axi/src/axi_burst_splitter.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module axi_burst_splitter
 INFO: [VRFC 10-311] analyzing module axi_burst_splitter_ax_chan
 INFO: [VRFC 10-311] analyzing module axi_burst_splitter_counters
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/Nova1/matmul/hardware/sub/axi_vreader_vwriter/src/rm_aligner.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/update_bd/afi_check/matmul/hardware/sub/axi_vreader_vwriter/src/rm_aligner.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module lib_pipe_n
 INFO: [VRFC 10-311] analyzing module lib_rr_arb
 INFO: [VRFC 10-311] analyzing module rm_aligner
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/Nova1/matmul/hardware/sub/axi_vreader_vwriter/src/axi_vwriter.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/update_bd/afi_check/matmul/hardware/sub/axi_vreader_vwriter/src/axi_vwriter.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module axi_vwriter
-WARNING: [VRFC 10-3467] initial value of parameter 'AW' is omitted [/home/muheet/Nova1/matmul/hardware/sub/axi_vreader_vwriter/src/axi_vwriter.sv:23]
-WARNING: [VRFC 10-3467] initial value of parameter 'DW' is omitted [/home/muheet/Nova1/matmul/hardware/sub/axi_vreader_vwriter/src/axi_vwriter.sv:24]
-WARNING: [VRFC 10-3467] initial value of parameter 'RSPW' is omitted [/home/muheet/Nova1/matmul/hardware/sub/axi_vreader_vwriter/src/axi_vwriter.sv:29]
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/Nova1/matmul/hardware/sub/axi_vreader_vwriter/src/axi_vreader.sv" into library xil_defaultlib
+WARNING: [VRFC 10-3467] initial value of parameter 'AW' is omitted [/home/muheet/update_bd/afi_check/matmul/hardware/sub/axi_vreader_vwriter/src/axi_vwriter.sv:23]
+WARNING: [VRFC 10-3467] initial value of parameter 'DW' is omitted [/home/muheet/update_bd/afi_check/matmul/hardware/sub/axi_vreader_vwriter/src/axi_vwriter.sv:24]
+WARNING: [VRFC 10-3467] initial value of parameter 'RSPW' is omitted [/home/muheet/update_bd/afi_check/matmul/hardware/sub/axi_vreader_vwriter/src/axi_vwriter.sv:29]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/update_bd/afi_check/matmul/hardware/sub/axi_vreader_vwriter/src/axi_vreader.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module axi_vreader
-WARNING: [VRFC 10-3467] initial value of parameter 'AW' is omitted [/home/muheet/Nova1/matmul/hardware/sub/axi_vreader_vwriter/src/axi_vreader.sv:22]
-WARNING: [VRFC 10-3467] initial value of parameter 'DW' is omitted [/home/muheet/Nova1/matmul/hardware/sub/axi_vreader_vwriter/src/axi_vreader.sv:23]
-WARNING: [VRFC 10-3467] initial value of parameter 'RSPW' is omitted [/home/muheet/Nova1/matmul/hardware/sub/axi_vreader_vwriter/src/axi_vreader.sv:28]
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/Nova1/matmul/hardware/src/matmul_top.sv" into library xil_defaultlib
+WARNING: [VRFC 10-3467] initial value of parameter 'AW' is omitted [/home/muheet/update_bd/afi_check/matmul/hardware/sub/axi_vreader_vwriter/src/axi_vreader.sv:22]
+WARNING: [VRFC 10-3467] initial value of parameter 'DW' is omitted [/home/muheet/update_bd/afi_check/matmul/hardware/sub/axi_vreader_vwriter/src/axi_vreader.sv:23]
+WARNING: [VRFC 10-3467] initial value of parameter 'RSPW' is omitted [/home/muheet/update_bd/afi_check/matmul/hardware/sub/axi_vreader_vwriter/src/axi_vreader.sv:28]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/update_bd/afi_check/matmul/hardware/src/matmul_top.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module matmul_top
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/Nova1/scalar-unit/sub/riscv_core/corev_apu/tb/ariane_soc_pkg.sv" into library xil_defaultlib
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/muheet/Nova1/scalar-unit/src/hydra_su.sv" into library xil_defaultlib
