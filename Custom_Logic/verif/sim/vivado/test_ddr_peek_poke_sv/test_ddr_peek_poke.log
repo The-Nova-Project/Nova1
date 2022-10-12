@@ -2,8 +2,8 @@
 # xsim v2021.1 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Tue Oct 11 21:51:05 2022
-# Process ID: 25376
+# Start of session at: Wed Oct 12 06:56:33 2022
+# Process ID: 21559
 # Current directory: /home/muheet/Nova1/Custom_Logic/verif/sim/vivado/test_ddr_peek_poke_sv
 # Command line: xsim -log test_ddr_peek_poke.log -mode tcl -source {xsim.dir/tb/xsim_script.tcl}
 # Log file: /home/muheet/Nova1/Custom_Logic/verif/sim/vivado/test_ddr_peek_poke_sv/test_ddr_peek_poke.log
