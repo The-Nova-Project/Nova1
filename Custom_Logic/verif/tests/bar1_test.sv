@@ -38,14 +38,14 @@ int A;
 
 
    initial begin	
-      //file_handler=$fopen("/home/muheet/Nova1/Custom_Logic/verif/tests/text.txt","r");
+      //file_handler=$fopen("/home/muheet/update_bd/afi_check/Custom_Logic/verif/tests/text.txt","r");
       tb.power_up();
       tb.set_virtual_dip_switch(.dip(0));
       tb.set_virtual_dip_switch(.dip(2));
 
     forever begin
       if(!$feof(file_handler))begin
-             file_handler=$fopen("/home/muheet/Nova1/Custom_Logic/verif/tests/int_bringup_test.txt","r");
+             file_handler=$fopen("/home/muheet/update_bd/afi_check/Custom_Logic/verif/tests/int_bringup_test.txt","r");
                   for(i = 0; i <= inc_data; i=i+1)begin
                             $fscanf(file_handler,"%h\n",A);
                             w_data = A;

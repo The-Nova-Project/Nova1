@@ -12,6 +12,7 @@ focus on latest open-source tools and low-cost development methodologies
 git clone https://github.com/The-Nova-Project/Nova1
 cd nova1 
 git submodule update --init --recursive
+git clone https://github.com/The-Nova-Project/aws-fpga.git
 ```
 
  Create a `StableEnv` folder for setting up the system `/home/$USER/StableEnv` 
