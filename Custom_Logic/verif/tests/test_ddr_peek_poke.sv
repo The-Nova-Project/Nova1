@@ -29,7 +29,7 @@ module test_ddr_peek_poke();
    parameter [15:0] AXI_ID = 16'h0;
 logic [511:0] rdata;
 logic [63:0] r_addr;
-logic [7:0] w_data;
+logic [31:0] w_data;
 logic [63:0] w_addr = 64'h00;
 logic [63:0] inc_data = 0;
 int file_handler;
@@ -54,7 +54,7 @@ assign vled_value='b0;
       forever begin
       if(!$feof(file_handler))begin
         tb.set_virtual_dip_switch(.dip(0));
-             file_handler=$fopen("/home/muheet/Nova1/Custom_Logic/verif/tests/out.hex","r");
+             file_handler=$fopen("/home/muheet/update_bd/afi_check/Custom_Logic/verif/tests/out.hex","r");
                   for(i = 0; i <= inc_data; i=i+1)begin
                             $fscanf(file_handler,"%h\n",A);
                             w_data = A;
@@ -64,7 +64,7 @@ assign vled_value='b0;
       
         r_addr = w_addr;
         inc_data = inc_data + 1;
-        w_addr = w_addr + 1;
+        w_addr = w_addr + 4;
         
       end
       if ($feof(file_handler)) begin

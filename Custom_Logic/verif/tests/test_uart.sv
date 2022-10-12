@@ -38,32 +38,39 @@ logic [31:0] uart1_status;
    initial begin
 
       tb.power_up();
-      tb.poke(.addr(32'h8010_000C), .data(32'h10), .id(AXI_ID), .size(DataSize::UINT32), .intf(AxiPort::PORT_BAR1)); // enable interrupt for transmit data
-      $display ("Writing interrupt for read enable at address 32'h0004_000C ");
+      tb.peek(.addr(32'h0008_8008), .data(valid), .id(AXI_ID), .size(DataSize::UINT32), .intf(AxiPort::PORT_BAR1)); // read interrupt to check if rx done receiving
+      $display ("Reading data valid 0x%x from rx uart 0x%x", valid, 32'h0000_0008);
+      tb.poke(.addr(32'h0008_800C), .data(32'h10), .id(AXI_ID), .size(DataSize::UINT32), .intf(AxiPort::PORT_BAR1)); // enable interrupt for transmit data
+      $display ("Writing interrupt for read enable at address 32'h0008_800C ");
       #1200ns;
+      tb.peek(.addr(32'h0008_8008), .data(valid), .id(AXI_ID), .size(DataSize::UINT32), .intf(AxiPort::PORT_BAR1)); // read interrupt to check if rx done receiving
+      $display ("Reading data valid 0x%x from rx uart 0x%x", valid, 32'h0008_8008);
       //tb.peek(.addr(32'h0004_0008), .data(uart1_status), .id(AXI_ID), .size(DataSize::UINT32), .intf(AxiPort::PORT_BAR1));  //peek tx fifo is empty
       //$display ("Reading data from rx uart 0x%x", uart1_status);
-       tb.poke(.addr(32'h8010_0004), .data(32'haa), .id(AXI_ID), .size(DataSize::UINT32), .intf(AxiPort::PORT_BAR1)); // write tx data
-      $display ("Writing 32'haa to transmitter at address 32'h0004_0004");
-
+       tb.poke(.addr(32'h0008_8004), .data(32'haa), .id(AXI_ID), .size(DataSize::UINT32), .intf(AxiPort::PORT_BAR1)); // write tx data
+      $display ("Writing 32'haa to transmitter at address 32'h0008_8004");
+            tb.peek(.addr(32'h0008_8008), .data(valid), .id(AXI_ID), .size(DataSize::UINT32), .intf(AxiPort::PORT_BAR1)); // read interrupt to check if rx done receiving
+      $display ("Reading data valid 0x%x from rx uart 0x%x", valid, 32'h0008_8008);
       // tb.peek(.addr(32'h0004_0008), .data(uart1_status), .id(AXI_ID), .size(DataSize::UINT32), .intf(AxiPort::PORT_BAR1));  //peek tx fifo is empty
       //$display ("Reading data from rx uart 0x%x", uart1_status);
       #100000ns;
+      tb.peek(.addr(32'h0008_8008), .data(valid), .id(AXI_ID), .size(DataSize::UINT32), .intf(AxiPort::PORT_BAR1)); // read interrupt to check if rx done receiving
+      $display ("Reading data valid 0x%x from rx uart 0x%x", valid, 32'h0000_0008);
       // if (uart1_status[2] === 1'b1) begin                                                                                    //if empty means data transmitted
       //     tb.poke(.addr(32'h00_000C), .data(32'h0000_0010), .id(AXI_ID), .size(DataSize::UINT32), .intf(AxiPort::PORT_OCL)); // enable the intrrupt that data is transmitted
       //     tb.peek(.addr(32'h00_0008), .data(rdata), .id(AXI_ID), .size(DataSize::UINT32), .intf(AxiPort::PORT_OCL));         // start read data
       //     $display ("Reading data 0x%x from rx uart 0x%x", rdata, 32'h00_0008);
       // end
-      tb.poke(.addr(32'h8000_000C), .data(32'h10), .id(AXI_ID), .size(DataSize::UINT32), .intf(AxiPort::PORT_OCL)); // enable interrupt for transmit data
+      tb.poke(.addr(32'h0008_000C), .data(32'h10), .id(AXI_ID), .size(DataSize::UINT32), .intf(AxiPort::PORT_OCL)); // enable interrupt for transmit data
       //$display ("Writing interrupt for write enable at address 32'h0000_000C ");
-      tb.peek(.addr(32'h8000_0008), .data(valid), .id(AXI_ID), .size(DataSize::UINT32), .intf(AxiPort::PORT_OCL)); // read interrupt to check if rx done receiving
-      $display ("Reading data valid 0x%x from rx uart 0x%x", valid[0], 32'h0000_0008);
+      tb.peek(.addr(32'h0008_0008), .data(valid), .id(AXI_ID), .size(DataSize::UINT32), .intf(AxiPort::PORT_OCL)); // read interrupt to check if rx done receiving
+      $display ("Reading data valid OCL 8 0x%x from rx uart 0x%x", valid, 32'h0008_0008);
       // tb.peek(.addr(32'h00_0008), .data(valid[0]), .id(AXI_ID), .size(DataSize::UINT1), .intf(AxiPort::PORT_OCL));  // check if the receive FIFO has data
       // $display ("Reading data 0x%x from rx uart 0x%x", valid[0], 32'h00_0008);
       if (valid[0] === 1'b1)
-      tb.peek(.addr(32'h00_0000), .data(rdata), .id(AXI_ID), .size(DataSize::UINT32), .intf(AxiPort::PORT_OCL));         // start read data
+      tb.peek(.addr(32'h0008_0004), .data(rdata), .id(AXI_ID), .size(DataSize::UINT32), .intf(AxiPort::PORT_OCL));         // start read data
       $display ("Writing 32'haa to transmitter at address 32'h0004_0004");
-      $display ("Reading data 0x%x from rx uart 0x%x", rdata, 32'h00_0000);
+      $display ("Reading data 0x%x from rx uart 0x%x", rdata, 32'h08_0000);
 
       tb.kernel_reset();  
 
