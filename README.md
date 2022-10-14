@@ -35,6 +35,15 @@ Test Simulation On Vivado.
 cd verif/scripts/
 make TEST=test_file
 ```
+The Pre-built testbench `test_ddr_peek_poke` reads `the ddr_to_bram.hex` file which contains the test assembly.
+
+```
+make TEST=test_ddr_peek_poke
+```
+
+# Expected Output
+![image](https://user-images.githubusercontent.com/81433387/195928756-9597f8d3-59bc-45de-a7ae-a3afc6db75a0.png)
+
 
 Snapshot tb.
 ```
