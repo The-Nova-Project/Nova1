@@ -33,7 +33,7 @@ export CL_DIR=$(pwd)
 Test Simulation On Vivado.
 ```
 cd verif/scripts/
-make TEST=test_ddr_peek_poke
+make TEST=test_file
 ```
 
 Snapshot tb.
