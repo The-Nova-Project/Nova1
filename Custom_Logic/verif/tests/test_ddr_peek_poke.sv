@@ -20,24 +20,15 @@ module test_ddr_peek_poke();
 
    import tb_type_defines_pkg::*;
 
-   logic [63:0]  addr;
-
-   logic [511:0]  wide_read_data;
-
-   int           error_count;
-   int           fail;
-   parameter [15:0] AXI_ID = 16'h0;
-logic [511:0] rdata;
-logic [63:0] r_addr;
-logic [31:0] w_data;
-logic [63:0] w_addr = 64'h00;
-logic [63:0] inc_data = 0;
-int file_handler;
-int  i;
-int A;
-// logic [15:0] vdip_value;
-logic [15:0] vled_value;
-assign vled_value='b0;
+   parameter [15:0]    AXI_ID = 16'h0;
+   logic     [511:0]   rdata;
+   logic     [63:0]    r_addr;
+   logic     [31:0]    w_data;
+   logic     [63:0]    w_addr = 64'h00;
+   logic     [63:0]    inc_data = 0;
+   logic     [15:0]    vled_value;
+   int file_handler,i,A;
+   assign vled_value='b0;
 
    initial begin
 
@@ -54,7 +45,7 @@ assign vled_value='b0;
       forever begin
       if(!$feof(file_handler))begin
         tb.set_virtual_dip_switch(.dip(0));
-             file_handler=$fopen("/home/muheet/update_bd/afi_check/Custom_Logic/verif/tests/out.hex","r");
+             file_handler=$fopen("/home/$USER/Nova1/Custom_Logic/verif/tests/ddr_to_bram.hex","r");
                   for(i = 0; i <= inc_data; i=i+1)begin
                             $fscanf(file_handler,"%h\n",A);
                             w_data = A;
@@ -86,9 +77,6 @@ assign vled_value='b0;
            else $display("\n---------------------TEST FAIL---------------------\n");
            #5000ns;
            $display("end of file");
-          // tb.kernel_reset();
-          // tb.power_down();
-          // $finish();
          end
       
    end 
