@@ -45,7 +45,7 @@ int A;
 
     forever begin
       if(!$feof(file_handler))begin
-             file_handler=$fopen("/home/muheet/update_bd/afi_check/Custom_Logic/verif/tests/int_bringup_test.txt","r");
+             file_handler=$fopen("/home/$USER/Nova1/Custom_Logic/verif/tests/int_bringup_test.txt","r");
                   for(i = 0; i <= inc_data; i=i+1)begin
                             $fscanf(file_handler,"%h\n",A);
                             w_data = A;
@@ -62,7 +62,7 @@ int A;
          if ($feof(file_handler)) begin
            $display("\n---------------------END OF HEX FILE---------------------\n");
 
-           tb.poke(.addr(32'h86000120), .data(32'hdeadbeef), .id(AXI_ID), .size(DataSize::UINT32), .intf(AxiPort::PORT_BAR1));
+           tb.poke(.addr(32'h0008C120), .data(32'hdeadbeef), .id(AXI_ID), .size(DataSize::UINT32), .intf(AxiPort::PORT_BAR1));
            $display ("Writing deadbeef to address 00000120");
 
            tb.set_virtual_dip_switch(.dip(1));
@@ -70,7 +70,7 @@ int A;
            $display("\n---------------------RESET DISABLE!!!---------------------\n");
            #4664ns;
 	         $display ("Reading from address 00000120");
-           tb.peek(.addr(32'h86000120), .data(rdata), .id(AXI_ID), .size(DataSize::UINT32), .intf(AxiPort::PORT_BAR1));         // start read & write
+           tb.peek(.addr(32'h0008C120), .data(rdata), .id(AXI_ID), .size(DataSize::UINT32), .intf(AxiPort::PORT_BAR1));         // start read & write
            $display ("Reading 0x%x from address 00000120", rdata);
            
            if (rdata == 0) begin
