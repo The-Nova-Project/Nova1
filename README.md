@@ -12,11 +12,7 @@ focus on latest open-source tools and low-cost development methodologies
 git clone https://github.com/The-Nova-Project/Nova1
 cd nova1 
 git submodule update --init --recursive
-git clone https://github.com/The-Nova-Project/aws-fpga.git
 ```
-
- Create a `StableEnv` folder for setting up the system `/home/$USER/StableEnv` 
- Change the `$USER` name in this repo with your `$USER` name 
 
 ## Build Instruction
 To Build the CL-design, source the environment variables for **Scalar-Unit** and **AWS-FPGA** by runing the script:
@@ -36,4 +32,4 @@ make TEST = 'test_file'
 
 
 # Block Diagram
-![Block Diagram](https://user-images.githubusercontent.com/81433387/160123688-4e167296-8104-4c32-89f9-1c53b9c22632.png)
+![image](https://user-images.githubusercontent.com/81433387/195894746-7e0540c7-5104-45db-ac9b-973414a6f6f2.png)
