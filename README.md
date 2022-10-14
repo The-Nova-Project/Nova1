@@ -10,30 +10,38 @@ focus on latest open-source tools and low-cost development methodologies
 
 ```
 git clone https://github.com/The-Nova-Project/Nova1
-cd nova1 
+cd Nova1 
 git submodule update --init --recursive
-git clone https://github.com/The-Nova-Project/aws-fpga.git
 ```
-
- Create a `StableEnv` folder for setting up the system `/home/$USER/StableEnv` 
- Change the `$USER` name in this repo with your `$USER` name 
 
 ## Build Instruction
 To Build the CL-design, source the environment variables for **Scalar-Unit** and **AWS-FPGA** by runing the script:
 ```
-source source_file.sh
+cd aws-fpga
+source hdk_setup.sh
+source sdk_setup.sh
+cd ../scalar-unit
+source setup.bash
 ```
 
-Then change the directory for test
+Setup the Custom Logic directory Path.
 ```
-cd /home/$USER/StableEnv/CL/verif/scripts/
+cd ../Custom_Logic/
+export CL_DIR=$(pwd)
 ```
 
-Then make the environment for simulation and compilation
+Test Simulation On Vivado.
 ```
-make TEST = 'test_file'
+cd verif/scripts/
+make TEST=test_ddr_peek_poke
+```
+
+Snapshot tb.
+```
+cd ../sim/vivado/test_ddr_peek_poke_sv/
+xsim -gui tb
 ```
 
 
 # Block Diagram
-![Block Diagram](https://user-images.githubusercontent.com/81433387/160123688-4e167296-8104-4c32-89f9-1c53b9c22632.png)
+![image](https://user-images.githubusercontent.com/81433387/195894746-7e0540c7-5104-45db-ac9b-973414a6f6f2.png)
