@@ -6,6 +6,10 @@ focus on latest open-source tools and low-cost development methodologies
 - linux RISCV SystemVerilog Verilator
 - AWS-Cloud FPGA
 
+
+# Block Diagram
+![image](https://user-images.githubusercontent.com/81433387/195894746-7e0540c7-5104-45db-ac9b-973414a6f6f2.png)
+
 ## Build Prerequisites
 
 ```
@@ -51,6 +55,3 @@ cd ../sim/vivado/test_ddr_peek_poke_sv/
 xsim -gui tb
 ```
 
-
-# Block Diagram
-![image](https://user-images.githubusercontent.com/81433387/195894746-7e0540c7-5104-45db-ac9b-973414a6f6f2.png)
