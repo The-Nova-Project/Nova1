@@ -54,4 +54,6 @@ Snapshot tb.
 cd ../sim/vivado/test_ddr_peek_poke_sv/
 xsim -gui tb
 ```
+![image](https://user-images.githubusercontent.com/81433387/195996144-1a61f14f-e668-4ca3-8d51-8dcf930bb22f.png)
+
 
