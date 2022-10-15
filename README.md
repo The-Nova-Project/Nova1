@@ -1,10 +1,19 @@
 # Nova1
 
-Nova is a open source RISCV-based Application Class Core Bases SoC. its objective is to provide students with hands on development experience with latest technologies. and focus on latest open-source tools and low-cost development methodologies.
+[NOVA](https://the-nova-project.github.io/) is a open source RISCV-based Application Class Core Bases SoC. its objective is to provide students with hands on development experience with latest technologies. and focus on latest open-source tools and low-cost development methodologies.
 
-Nova1 is has been verified in AWS FPGA prototypes. We have released both the Verilog RTL code as well as synthesis and back-end flow.
+[NOVA](https://the-nova-project.github.io/) has been verified in AWS FPGA prototypes. We have released both the Verilog RTL code as well as synthesis and back-end flow.
 
-## Documentation
+### Objective: 
+To provide students with hands-on development experience with latest technologies. 
+Staffed by student team with industry mentors.
+Focus on latest open-source tools and low-cost development methodologies.
+
+    - Linux, RISCV, SystemVerilog, Verilator
+    - AWS Cloud FPGA
+
+
+### Documentation
 There are several detailed pieces of documentation about Nova1 in the docs folder listed below:
 
 - [AWS Cloud FPGA](https://github.com/aws/aws-fpga)
