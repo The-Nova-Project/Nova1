@@ -7,7 +7,7 @@ Nova1 is has been verified in AWS FPGA prototypes. We have released both the Ver
 ## Documentation
 There are several detailed pieces of documentation about Nova1 in the docs folder listed below:
 
-[Nova1 Simulation Presentation]
+- [Nova1 Simulation Presentation](https://github.com/Abdul-muheet-ghani/Nova1/blob/main/Docs/AWS%20EC2%20simulation%20ppt.pdf)
 
 
 # Block Diagram
