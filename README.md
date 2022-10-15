@@ -7,11 +7,11 @@ Nova1 is has been verified in AWS FPGA prototypes. We have released both the Ver
 ## Documentation
 There are several detailed pieces of documentation about Nova1 in the docs folder listed below:
 
-- [Nova1 Simulation Presentation](https://github.com/Abdul-muheet-ghani/Nova1/blob/main/Docs/AWS%20EC2%20simulation%20ppt.pdf)
-- [RTL Simulation for Verilog/VHDL Custom Logic Design with AWS HDK](https://github.com/aws/aws-fpga/blob/master/hdk/docs/RTL_Simulating_CL_Designs.md)
-- [NOVA Emulation Documentation](https://github.com/Abdul-muheet-ghani/Nova1/blob/main/Docs/NOVA%20EMULATION%20PROJECT%20Documentation.pdf)
 - [AWS Cloud FPGA](https://github.com/aws/aws-fpga)
 - [AXI Lite Interface](https://caslab.csl.yale.edu/courses/EENG428/19-20a/tutorials/axi4lite_interface_development.pdf)
+- [NOVA Emulation Documentation](https://github.com/Abdul-muheet-ghani/Nova1/blob/main/Docs/NOVA%20EMULATION%20PROJECT%20Documentation.pdf)
+- [Nova1 Simulation Presentation](https://github.com/Abdul-muheet-ghani/Nova1/blob/main/Docs/AWS%20EC2%20simulation%20ppt.pdf)
+- [RTL Simulation for Verilog/VHDL Custom Logic Design with AWS HDK](https://github.com/aws/aws-fpga/blob/master/hdk/docs/RTL_Simulating_CL_Designs.md)
 
 
 # Block Diagram
