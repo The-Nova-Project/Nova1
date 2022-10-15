@@ -1,10 +1,13 @@
 # Nova1
 
-Nova is a open source RISCV-based embedded AI platform its objective is to provide students with hands on development experience with latest technologies 
-focus on latest open-source tools and low-cost development methodologies
+Nova is a open source RISCV-based Application Class Core Bases SoC. its objective is to provide students with hands on development experience with latest technologies. and focus on latest open-source tools and low-cost development methodologies.
 
-- linux RISCV SystemVerilog Verilator
-- AWS-Cloud FPGA
+Nova1 is has been verified in AWS FPGA prototypes. We have released both the Verilog RTL code as well as synthesis and back-end flow.
+
+## Documentation
+There are several detailed pieces of documentation about Nova1 in the docs folder listed below:
+
+[Nova1 Simulation Presentation]
 
 
 # Block Diagram
@@ -54,4 +57,6 @@ Snapshot tb.
 cd ../sim/vivado/test_ddr_peek_poke_sv/
 xsim -gui tb
 ```
+![image](https://user-images.githubusercontent.com/81433387/195996144-1a61f14f-e668-4ca3-8d51-8dcf930bb22f.png)
+
 

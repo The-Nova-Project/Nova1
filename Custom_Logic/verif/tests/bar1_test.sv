@@ -21,7 +21,6 @@
 module test();
 
 import tb_type_defines_pkg::*;
-// `include "cl_common_defines.vh" // CL Defines with register addresses
 
 // AXI ID
 parameter [5:0] AXI_ID = 6'h0;
@@ -38,7 +37,6 @@ int A;
 
 
    initial begin	
-      //file_handler=$fopen("/home/muheet/update_bd/afi_check/Custom_Logic/verif/tests/text.txt","r");
       tb.power_up();
       tb.set_virtual_dip_switch(.dip(0));
       tb.set_virtual_dip_switch(.dip(2));
@@ -79,9 +77,6 @@ int A;
            else $display("\n---------------------TEST FAIL---------------------\n");
            #5000ns;
            $display("end of file");
-          // tb.kernel_reset();
-          // tb.power_down();
-          // $finish();
          end
         
     end
