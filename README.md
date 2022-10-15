@@ -9,6 +9,7 @@ There are several detailed pieces of documentation about Nova1 in the docs folde
 
 - [AWS Cloud FPGA](https://github.com/aws/aws-fpga)
 - [AXI Lite Interface](https://caslab.csl.yale.edu/courses/EENG428/19-20a/tutorials/axi4lite_interface_development.pdf)
+- [Booting Zephyr RTOS Kernel](https://github.com/Abdul-muheet-ghani/Nova1/blob/main/Docs/Porting%20Zephyr%20RTOS.pptx)
 - [NOVA Emulation Documentation](https://github.com/Abdul-muheet-ghani/Nova1/blob/main/Docs/NOVA%20EMULATION%20PROJECT%20Documentation.pdf)
 - [Nova1 Simulation Presentation](https://github.com/Abdul-muheet-ghani/Nova1/blob/main/Docs/AWS%20EC2%20simulation%20ppt.pdf)
 - [RTL Simulation for Verilog/VHDL Custom Logic Design with AWS HDK](https://github.com/aws/aws-fpga/blob/master/hdk/docs/RTL_Simulating_CL_Designs.md)
