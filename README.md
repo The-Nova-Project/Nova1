@@ -4,7 +4,7 @@
 
 We have released both the Verilog RTL code as well as synthesis and back-end flow with complete guiding documentaation.
 
-## Objective:
+## Objectives
 - To enable students to learn industry based hard skills and experience of the use of soft skills required in a group projects.
 - To provide students with hands-on implementation experience with latest technologies and environments.
 - To build an application class SoC Focused on latest open-source tools and low-cost development methodologies. 
