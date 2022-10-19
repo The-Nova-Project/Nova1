@@ -47,7 +47,6 @@ read_verilog -sv [glob $ENC_SRC_DIR/*.?v]
 read_verilog -sv [ list \
   $CL_DIR/design/nova_subsystem.v 
 ]
-
 read_verilog -sv [list \
   $SU_ROOT/sub/riscv_core/src/include/riscv_pkg.sv \
   $SU_ROOT/sub/riscv_core/src/include/std_cache_pkg.sv \
@@ -190,7 +189,6 @@ read_verilog -sv [list \
   $SU_ROOT/sub/riscv_core/common/submodules/common_cells/src/rstgen.sv \
   $SU_ROOT/sub/riscv_core/common/submodules/common_cells/src/rstgen_bypass.sv
 ]
-
 read_bd [ list \
   $VIVADO_NOVA/nova_project.srcs/sources_1/bd/nova_project/nova_project.bd 
 ]
