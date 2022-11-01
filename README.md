@@ -72,11 +72,74 @@ xsim -gui tb
 ```
 ![image](https://user-images.githubusercontent.com/81433387/195996144-1a61f14f-e668-4ca3-8d51-8dcf930bb22f.png)
 
+
+
 ## AWS-FPGA EC2 Porting
 To clear the AFI, use the following command will clear the FPGA image, including internal and external memories and expose the default AFI Vendor and Device Id, and display the final state for the given FPGA slot number.
 ```sudo fpga-clear-local-image -S 0 -H```
 
 To load the AFI, use the FPGA slot number and Amazon Global FPGA Image ID parameters; this command will wait for the AFI to transition to the "loaded" state. And expose the unique AFI Vendor and Device Id, and display the final state for the given FPGA slot number.
+
+
  ```sudo fpga-load-local-image -S 0 -I agfi-01e33810ff4c9d23c```
+
+### Expected Output
+```
+[muheet@ip-172-33-7-206 runtime]$ sudo fpga-clear-local-image -S 0 -H
+Type  FpgaImageSlot  FpgaImageId             StatusName    StatusCode   ErrorName    ErrorCode   ShVersion
+AFI          0       none                    cleared           1        ok               0       0x04261818
+Type  FpgaImageSlot  VendorId    DeviceId    DBDF
+AFIDEVICE    0       0x1d0f      0x1042      0000:00:1d.0
+
+
+[muheet@ip-172-33-7-206 runtime]$ sudo fpga-load-local-image -S 0 -I agfi-01e33810ff4c9d23c
+
+AFI          0       agfi-01e33810ff4c9d23c  loaded            0        ok               0       0x04261818
+AFIDEVICE    0       0x1d0f      0xf000      0000:00:1d.0
+
+```
+
+# Runtime Driver
+
+This repo contains [AWS-FPGA](https://github.com/aws/aws-fpga) compatible Runtime C Drivers that will drive the AWS-FPGA CL Designs to interract with the Cloud FPGA via AFI.
+
+# How to Run
+
+1. First Copy the Driver you want to run. (Considering the AFI is loaded in slot 0)
+2. Paste it in your design's `software/runtime` directory.
+3. Open Terminal in this directory.
+4. First type `make driverName` (for example if the driver is loader.c then type `make loader`)
+5. Then once the driver is compiled successfully type `sudo ./driverName` (for example if driver if bramLoader.c then type `sudo ./loader *args`)
+6. All the interactions that the driver has done with the FPGA will be shown on the terminal screen
+
+## Drivers
+This repo contains the following drivers
+
+| Driver | Format | Purpose |
+| ------------- | ------------- | ------------- |
+| Loader | ./BRAMLoader &lt;hex-file&gt;/&lt;elf-file&gt; dma/bram | Reads a hex/elf file and stores the data into BRAM/DMA (WORD aligned) |
+| UART   | ./uart_recieve | Transmit and Receive data through UART via OCL Interface |
+
+## Hello World Example
+Once the kernel is loaded in the DDR and after the reset is disabled, Hydra start fetching the kernel from DDR due to having DDR boot address set in it.
+We have two peripheral UART and BRAM to check the expected output of the main application.
+Hydra transmit the data on UART and uart is connect with OCL interface so we access the data through UART via OCL interface using runtime driver. 
+
+- sudo ./DDRLoader
+- sudo ./uart_recieve
+
+## Expected Output
+```
+[muheet@ip-172-33-7-206 runtime]$ sudo ./uart_receive 
+AFI PCI  Vendor ID: 0x1d0f, Device ID 0xf000
+
+ ----------------------------Receiving Data from Target UART---------------------------- 
+
+Hello_world
+
+ ------From CORE to UART1 and UART1 to UART2 transmission complete------
+
+```
+
 
 
