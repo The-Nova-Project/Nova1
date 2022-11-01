@@ -1,0 +1,1072 @@
+Debug: 1 1 openocd.c:242 setup_command_handler(): log_init: complete
+Debug: 2 1 command.c:201 script_debug(): command - add_usage_text find <file>
+Debug: 3 1 command.c:201 script_debug(): command - add_help_text find print full path to file according to OpenOCD search rules
+Debug: 4 1 command.c:201 script_debug(): command - add_help_text script filename of OpenOCD script (tcl) to run
+Debug: 5 1 command.c:201 script_debug(): command - add_usage_text script <file>
+Debug: 6 1 command.c:201 script_debug(): command - add_help_text power_restore Overridable procedure run when power restore is detected. Runs 'reset init' by default.
+Debug: 7 1 command.c:201 script_debug(): command - add_help_text srst_deasserted Overridable procedure run when srst deassert is detected. Runs 'reset init' by default.
+Debug: 8 1 command.c:201 script_debug(): command - add_help_text measure_clk Runs a test to measure the JTAG clk. Useful with RCLK / RTCK.
+Debug: 9 2 command.c:201 script_debug(): command - add_help_text program write an image to flash, address is only required for binary images. verify, reset, exit are optional
+Debug: 10 2 command.c:201 script_debug(): command - add_usage_text program <filename> [address] [pre-verify] [verify] [reset] [exit]
+Debug: 11 2 openocd.c:272 setup_command_handler(): command registration: complete
+Open On-Chip Debugger 0.11.0+dev-snapshot (2022-04-05-20:27)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+Debug: 14 2 options.c:244 add_default_dirs(): bindir=/tools_build/openocd_aws_f1_pcie_xvc/code/install/bin
+Debug: 15 2 options.c:245 add_default_dirs(): pkgdatadir=/tools_build/openocd_aws_f1_pcie_xvc/code/install/share/openocd
+Debug: 16 2 options.c:246 add_default_dirs(): exepath=/tools/experimental/openocd_aws_f1_xvc/bin
+Debug: 17 2 options.c:247 add_default_dirs(): bin2data=../share/openocd
+Debug: 18 2 configuration.c:44 add_script_search_dir(): adding /root/.config/openocd
+Debug: 19 2 configuration.c:44 add_script_search_dir(): adding /root/.openocd
+Debug: 20 2 configuration.c:44 add_script_search_dir(): adding /tools/experimental/openocd_aws_f1_xvc/bin/../share/openocd/site
+Debug: 21 2 configuration.c:44 add_script_search_dir(): adding /tools/experimental/openocd_aws_f1_xvc/bin/../share/openocd/scripts
+Debug: 22 2 command.c:201 script_debug(): command - ocd_find aws_f1_pcie_xvc.cfg
+Debug: 23 2 configuration.c:99 find_file(): found aws_f1_pcie_xvc.cfg
+Debug: 24 2 command.c:201 script_debug(): command - debug_level 4
+Debug: command - adapter driver aws_f1_pcie_xvc
+Debug: command - adapter driver aws_f1_pcie_xvc
+Debug: command - aws_f1_pcie_xvc_slot 0
+Debug: command - transport select
+Debug: command - transport select
+Info : auto-selecting first available session transport "jtag". To override use 'transport select <transport>'.
+Debug: command - transport select
+Debug: command - transport select
+Debug: command - jtag newtap riscv cpu -irlen 5 -expected-id 0xa003093
+Debug: command - jtag newtap riscv cpu -irlen 5 -expected-id 0xa003093
+Debug: Creating New Tap, Chip: riscv, Tap: cpu, Dotted: riscv.cpu, 4 params
+Debug: Processing option: -irlen
+Debug: Processing option: -expected-id
+Debug: Created Tap: riscv.cpu @ abs position 0, irlen 5, capture: 0x1 mask: 0x3
+Debug: command - target create riscv.cpu riscv -chain-position riscv.cpu
+Debug: command - target create riscv.cpu riscv -chain-position riscv.cpu
+Debug: freeing all working areas
+Debug: command - gdb_report_data_abort enable
+Debug: command - init
+Debug: command - target init
+Debug: command - target init
+Debug: command - target names
+Debug: command - target names
+Debug: command - riscv.cpu cget -event gdb-flash-erase-start
+Debug: command - riscv.cpu cget -event gdb-flash-erase-start
+Debug: command - riscv.cpu configure -event gdb-flash-erase-start reset init
+Debug: command - riscv.cpu configure -event gdb-flash-erase-start reset init
+Debug: command - riscv.cpu cget -event gdb-flash-write-end
+Debug: command - riscv.cpu cget -event gdb-flash-write-end
+Debug: command - riscv.cpu configure -event gdb-flash-write-end reset halt
+Debug: command - riscv.cpu configure -event gdb-flash-write-end reset halt
+Debug: command - riscv.cpu cget -event gdb-attach
+Debug: command - riscv.cpu cget -event gdb-attach
+Debug: command - riscv.cpu configure -event gdb-attach halt 1000
+Debug: command - riscv.cpu configure -event gdb-attach halt 1000
+Debug: Initializing targets...
+Debug: riscv_init_target()
+Debug:  
+Info : aws_f1_pcie_xvc_init: slot id is 0
+2022-10-06T10:06:59.792526Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci_sysfs.c +62: fpga_pci_get_id(): Error opening /sys/bus/pci/devices/./vendor: error_number=2
+2022-10-06T10:06:59.792591Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci_sysfs.c +285: fpga_pci_get_resource_map_ids(): Error retrieving vendor_id
+2022-10-06T10:06:59.792602Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci_sysfs.c +62: fpga_pci_get_id(): Error opening /sys/bus/pci/devices/../vendor: error_number=2
+2022-10-06T10:06:59.792605Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci_sysfs.c +285: fpga_pci_get_resource_map_ids(): Error retrieving vendor_id
+2022-10-06T10:06:59.793270Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci_sysfs.c +187: fpga_pci_get_pci_resource_info(): stat failed, path=/sys/bus/pci/devices/0000:00:1e.0/resource1: error_number=2
+2022-10-06T10:06:59.793285Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci_sysfs.c +239: fpga_pci_get_resources(): Unable to read resource information for 1
+2022-10-06T10:06:59.793513Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +171: fpga_pci_bar_attach(): enter
+2022-10-06T10:06:59.793527Z, undefined, INFO, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +182: fpga_pci_bar_attach(): vendor_id=0x1d0f, device_id=0x1041, DBDF:0000:00:1e.0, resource_num=2, size=16384, burstable=1
+2022-10-06T10:06:59.793532Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +141: fpga_pci_check_file_id(): path=/sys/bus/pci/devices/0000:00:1e.0/vendor
+2022-10-06T10:06:59.793555Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +141: fpga_pci_check_file_id(): path=/sys/bus/pci/devices/0000:00:1e.0/device
+2022-10-06T10:06:59.793578Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +240: fpga_pci_bar_attach(): Opening sysfs_name=/sys/bus/pci/devices/0000:00:1e.0/resource2
+2022-10-06T10:06:59.793612Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +95: fpga_pci_bar_alloc(): enter
+2022-10-06T10:06:59.793621Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +104: fpga_pci_bar_alloc(): allocated handle=0
+2022-10-06T10:06:59.793627Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +59: fpga_pci_bar_set_mem_base_size(): handle=0
+2022-10-06T10:06:59.793631Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+Info : This adapter doesn't support configurable speed
+Debug: Debug Adapter init complete
+Debug: command - transport init
+Debug: command - transport init
+Debug: handle_transport_init
+Debug: aws_f1_pcie_xvc_execute_command: cmd->type: 4
+Debug: reset trst: 0 srst: 0
+Debug: JTAG RESET deassert TRST, deassert SRST
+Debug: SRST line released
+Debug: TRST line released
+Debug: jtag event: TAP reset
+Debug: command - jtag arp_init
+Debug: command - jtag arp_init
+Debug: Init JTAG chain
+Debug: jtag event: TAP reset
+Debug: aws_f1_pcie_xvc_execute_command: cmd->type: 2
+Debug: statemove starting at (skip: 0) RESET end in RESET
+2022-10-06T10:06:59.793731Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x0, value=0x00000007
+2022-10-06T10:06:59.793736Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.793738Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.793741Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x4, value=0x0000007f
+2022-10-06T10:06:59.793744Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.793746Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.793749Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x8, value=0x00000000
+2022-10-06T10:06:59.793751Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.793754Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.793756Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x10, value=0x00000001
+2022-10-06T10:06:59.793759Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.793761Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.793763Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.793766Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.793769Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0x10, value=0x00000000
+Info : Transact num_bits: 7, tms: 7f, tdi: 0, tdo: <null>
+Debug: tap_set_state(RESET)
+Debug: JTAG TLR RESET to RESET
+Debug: DR scan interrogation for IDCODE/BYPASS
+Debug: jtag event: TAP reset
+Debug: aws_f1_pcie_xvc_execute_command: cmd->type: 1
+Debug: DRSCAN num_fields: 1
+Debug: fields[0].out_value[672]: 0xffffffffffffffff
+Debug: DR scan type 3 672 bits; starts in RESET end in DRPAUSE
+Debug: statemove starting at (skip: 0) RESET end in DRSHIFT
+2022-10-06T10:06:59.793798Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x0, value=0x00000007
+2022-10-06T10:06:59.793801Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.793803Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.793806Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x4, value=0x00000017
+2022-10-06T10:06:59.793808Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.793811Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.793813Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x8, value=0x00000000
+2022-10-06T10:06:59.793816Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.793818Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.793821Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x10, value=0x00000001
+2022-10-06T10:06:59.793823Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.793826Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.793828Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.793830Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.793834Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0x10, value=0x00000000
+Info : Transact num_bits: 7, tms: 17, tdi: 0, tdo: <null>
+Debug: tap_set_state(DRSHIFT)
+2022-10-06T10:06:59.793840Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x0, value=0x00000020
+2022-10-06T10:06:59.793842Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.793844Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.793847Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x4, value=0x00000000
+2022-10-06T10:06:59.793849Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.793851Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.793854Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x8, value=0xffffffff
+2022-10-06T10:06:59.793856Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.793858Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.793861Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x10, value=0x00000001
+2022-10-06T10:06:59.793864Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.793866Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.793868Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.793871Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.793874Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0x10, value=0x00000000
+2022-10-06T10:06:59.793876Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.793879Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.793882Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0xc, value=0x0a003093
+Info : Transact num_bits: 32, tms: 0, tdi: ffffffff, tdo: a003093
+2022-10-06T10:06:59.793887Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x0, value=0x00000020
+2022-10-06T10:06:59.793889Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.793891Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.793894Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x4, value=0x00000000
+2022-10-06T10:06:59.793897Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.793899Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.793901Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x8, value=0xffffffff
+2022-10-06T10:06:59.793904Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.793906Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.793908Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x10, value=0x00000001
+2022-10-06T10:06:59.793911Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.793913Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.793915Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.793918Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.793922Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0x10, value=0x00000000
+2022-10-06T10:06:59.793924Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.793926Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.793930Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0xc, value=0xffffffff
+Info : Transact num_bits: 32, tms: 0, tdi: ffffffff, tdo: ffffffff
+2022-10-06T10:06:59.793935Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x0, value=0x00000020
+2022-10-06T10:06:59.793937Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.793939Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.793942Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x4, value=0x00000000
+2022-10-06T10:06:59.793944Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.793946Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.793949Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x8, value=0xffffffff
+2022-10-06T10:06:59.793951Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.793954Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.793956Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x10, value=0x00000001
+2022-10-06T10:06:59.793958Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.793961Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.793963Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.793965Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.793968Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0x10, value=0x00000000
+2022-10-06T10:06:59.793971Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.793973Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.793976Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0xc, value=0xffffffff
+Info : Transact num_bits: 32, tms: 0, tdi: ffffffff, tdo: ffffffff
+2022-10-06T10:06:59.793980Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x0, value=0x00000020
+2022-10-06T10:06:59.793983Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.793985Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.793987Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x4, value=0x00000000
+2022-10-06T10:06:59.793990Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.793992Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.793994Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x8, value=0xffffffff
+2022-10-06T10:06:59.793997Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.793999Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794001Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x10, value=0x00000001
+2022-10-06T10:06:59.794004Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794006Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794008Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794010Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794015Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0x10, value=0x00000000
+2022-10-06T10:06:59.794017Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794020Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794023Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0xc, value=0xffffffff
+Info : Transact num_bits: 32, tms: 0, tdi: ffffffff, tdo: ffffffff
+2022-10-06T10:06:59.794027Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x0, value=0x00000020
+2022-10-06T10:06:59.794030Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794032Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794034Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x4, value=0x00000000
+2022-10-06T10:06:59.794037Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794039Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794041Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x8, value=0xffffffff
+2022-10-06T10:06:59.794043Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794046Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794048Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x10, value=0x00000001
+2022-10-06T10:06:59.794050Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794053Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794055Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794057Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794061Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0x10, value=0x00000000
+2022-10-06T10:06:59.794064Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794066Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794069Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0xc, value=0xffffffff
+Info : Transact num_bits: 32, tms: 0, tdi: ffffffff, tdo: ffffffff
+2022-10-06T10:06:59.794073Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x0, value=0x00000020
+2022-10-06T10:06:59.794075Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794078Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794080Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x4, value=0x00000000
+2022-10-06T10:06:59.794082Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794085Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794087Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x8, value=0xffffffff
+2022-10-06T10:06:59.794090Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794092Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794094Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x10, value=0x00000001
+2022-10-06T10:06:59.794097Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794099Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794101Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794104Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794107Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0x10, value=0x00000000
+2022-10-06T10:06:59.794110Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794112Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794115Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0xc, value=0xffffffff
+Info : Transact num_bits: 32, tms: 0, tdi: ffffffff, tdo: ffffffff
+2022-10-06T10:06:59.794119Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x0, value=0x00000020
+2022-10-06T10:06:59.794122Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794124Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794126Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x4, value=0x00000000
+2022-10-06T10:06:59.794128Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794131Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794133Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x8, value=0xffffffff
+2022-10-06T10:06:59.794135Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794138Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794140Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x10, value=0x00000001
+2022-10-06T10:06:59.794142Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794144Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794147Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794149Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794153Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0x10, value=0x00000000
+2022-10-06T10:06:59.794155Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794158Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794161Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0xc, value=0xffffffff
+Info : Transact num_bits: 32, tms: 0, tdi: ffffffff, tdo: ffffffff
+2022-10-06T10:06:59.794165Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x0, value=0x00000020
+2022-10-06T10:06:59.794168Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794170Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794172Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x4, value=0x00000000
+2022-10-06T10:06:59.794175Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794177Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794179Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x8, value=0xffffffff
+2022-10-06T10:06:59.794181Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794184Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794186Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x10, value=0x00000001
+2022-10-06T10:06:59.794188Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794190Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794193Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794195Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794198Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0x10, value=0x00000000
+2022-10-06T10:06:59.794200Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794203Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794206Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0xc, value=0xffffffff
+Info : Transact num_bits: 32, tms: 0, tdi: ffffffff, tdo: ffffffff
+2022-10-06T10:06:59.794210Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x0, value=0x00000020
+2022-10-06T10:06:59.794212Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794215Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794217Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x4, value=0x00000000
+2022-10-06T10:06:59.794219Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794221Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794224Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x8, value=0xffffffff
+2022-10-06T10:06:59.794226Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794229Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794231Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x10, value=0x00000001
+2022-10-06T10:06:59.794233Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794236Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794238Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794240Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794243Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0x10, value=0x00000000
+2022-10-06T10:06:59.794246Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794248Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794251Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0xc, value=0xffffffff
+Info : Transact num_bits: 32, tms: 0, tdi: ffffffff, tdo: ffffffff
+2022-10-06T10:06:59.794255Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x0, value=0x00000020
+2022-10-06T10:06:59.794257Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794260Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794262Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x4, value=0x00000000
+2022-10-06T10:06:59.794264Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794267Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794269Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x8, value=0xffffffff
+2022-10-06T10:06:59.794271Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794273Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794276Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x10, value=0x00000001
+2022-10-06T10:06:59.794278Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794280Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794283Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794285Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794288Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0x10, value=0x00000000
+2022-10-06T10:06:59.794291Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794293Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794296Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0xc, value=0xffffffff
+Info : Transact num_bits: 32, tms: 0, tdi: ffffffff, tdo: ffffffff
+2022-10-06T10:06:59.794300Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x0, value=0x00000020
+2022-10-06T10:06:59.794321Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794323Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794326Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x4, value=0x00000000
+2022-10-06T10:06:59.794328Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794330Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794333Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x8, value=0xffffffff
+2022-10-06T10:06:59.794335Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794338Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794340Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x10, value=0x00000001
+2022-10-06T10:06:59.794343Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794345Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794347Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794349Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794352Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0x10, value=0x00000000
+2022-10-06T10:06:59.794355Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794357Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794360Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0xc, value=0xffffffff
+Info : Transact num_bits: 32, tms: 0, tdi: ffffffff, tdo: ffffffff
+2022-10-06T10:06:59.794365Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x0, value=0x00000020
+2022-10-06T10:06:59.794367Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794369Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794371Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x4, value=0x00000000
+2022-10-06T10:06:59.794374Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794377Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794379Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x8, value=0xffffffff
+2022-10-06T10:06:59.794382Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794384Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794387Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x10, value=0x00000001
+2022-10-06T10:06:59.794389Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794391Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794394Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794396Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794399Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0x10, value=0x00000000
+2022-10-06T10:06:59.794401Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794404Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794407Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0xc, value=0xffffffff
+Info : Transact num_bits: 32, tms: 0, tdi: ffffffff, tdo: ffffffff
+2022-10-06T10:06:59.794411Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x0, value=0x00000020
+2022-10-06T10:06:59.794413Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794415Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794418Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x4, value=0x00000000
+2022-10-06T10:06:59.794420Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794422Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794425Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x8, value=0xffffffff
+2022-10-06T10:06:59.794427Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794429Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794431Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x10, value=0x00000001
+2022-10-06T10:06:59.794434Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794436Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794438Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794441Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794444Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0x10, value=0x00000000
+2022-10-06T10:06:59.794447Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794449Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794453Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0xc, value=0xffffffff
+Info : Transact num_bits: 32, tms: 0, tdi: ffffffff, tdo: ffffffff
+2022-10-06T10:06:59.794457Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x0, value=0x00000020
+2022-10-06T10:06:59.794460Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794462Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794464Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x4, value=0x00000000
+2022-10-06T10:06:59.794466Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794469Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794471Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x8, value=0xffffffff
+2022-10-06T10:06:59.794473Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794476Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794478Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x10, value=0x00000001
+2022-10-06T10:06:59.794480Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794482Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794485Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794487Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794490Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0x10, value=0x00000000
+2022-10-06T10:06:59.794492Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794495Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794498Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0xc, value=0xffffffff
+Info : Transact num_bits: 32, tms: 0, tdi: ffffffff, tdo: ffffffff
+2022-10-06T10:06:59.794502Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x0, value=0x00000020
+2022-10-06T10:06:59.794504Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794506Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794509Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x4, value=0x00000000
+2022-10-06T10:06:59.794512Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794514Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794516Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x8, value=0xffffffff
+2022-10-06T10:06:59.794519Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794521Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794524Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x10, value=0x00000001
+2022-10-06T10:06:59.794526Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794529Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794531Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794533Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794536Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0x10, value=0x00000000
+2022-10-06T10:06:59.794539Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794541Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794544Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0xc, value=0xffffffff
+Info : Transact num_bits: 32, tms: 0, tdi: ffffffff, tdo: ffffffff
+2022-10-06T10:06:59.794548Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x0, value=0x00000020
+2022-10-06T10:06:59.794551Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794553Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794555Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x4, value=0x00000000
+2022-10-06T10:06:59.794558Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794560Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794562Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x8, value=0xffffffff
+2022-10-06T10:06:59.794564Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794567Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794569Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x10, value=0x00000001
+2022-10-06T10:06:59.794571Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794574Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794576Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794579Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794582Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0x10, value=0x00000000
+2022-10-06T10:06:59.794584Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794587Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794590Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0xc, value=0xffffffff
+Info : Transact num_bits: 32, tms: 0, tdi: ffffffff, tdo: ffffffff
+2022-10-06T10:06:59.794594Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x0, value=0x00000020
+2022-10-06T10:06:59.794597Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794599Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794601Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x4, value=0x00000000
+2022-10-06T10:06:59.794604Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794606Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794608Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x8, value=0xffffffff
+2022-10-06T10:06:59.794611Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794613Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794615Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x10, value=0x00000001
+2022-10-06T10:06:59.794617Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794620Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794622Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794624Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794627Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0x10, value=0x00000000
+2022-10-06T10:06:59.794630Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794632Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794635Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0xc, value=0xffffffff
+Info : Transact num_bits: 32, tms: 0, tdi: ffffffff, tdo: ffffffff
+2022-10-06T10:06:59.794639Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x0, value=0x00000020
+2022-10-06T10:06:59.794642Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794644Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794647Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x4, value=0x00000000
+2022-10-06T10:06:59.794649Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794652Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794654Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x8, value=0xffffffff
+2022-10-06T10:06:59.794657Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794659Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794661Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x10, value=0x00000001
+2022-10-06T10:06:59.794664Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794666Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794668Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794671Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794674Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0x10, value=0x00000000
+2022-10-06T10:06:59.794676Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794678Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794681Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0xc, value=0xffffffff
+Info : Transact num_bits: 32, tms: 0, tdi: ffffffff, tdo: ffffffff
+2022-10-06T10:06:59.794686Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x0, value=0x00000020
+2022-10-06T10:06:59.794688Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794690Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794692Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x4, value=0x00000000
+2022-10-06T10:06:59.794695Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794697Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794699Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x8, value=0xffffffff
+2022-10-06T10:06:59.794702Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794704Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794706Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x10, value=0x00000001
+2022-10-06T10:06:59.794709Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794711Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794714Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794716Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794719Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0x10, value=0x00000000
+2022-10-06T10:06:59.794722Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794724Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794728Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0xc, value=0xffffffff
+Info : Transact num_bits: 32, tms: 0, tdi: ffffffff, tdo: ffffffff
+2022-10-06T10:06:59.794732Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x0, value=0x00000020
+2022-10-06T10:06:59.794734Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794736Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794739Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x4, value=0x00000000
+2022-10-06T10:06:59.794741Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794743Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794746Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x8, value=0xffffffff
+2022-10-06T10:06:59.794748Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794750Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794752Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x10, value=0x00000001
+2022-10-06T10:06:59.794755Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794757Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794759Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794762Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794765Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0x10, value=0x00000000
+2022-10-06T10:06:59.794767Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794769Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794772Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0xc, value=0xffffffff
+Info : Transact num_bits: 32, tms: 0, tdi: ffffffff, tdo: ffffffff
+2022-10-06T10:06:59.794777Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x0, value=0x00000020
+2022-10-06T10:06:59.794779Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794782Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794784Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x4, value=0x80000000
+2022-10-06T10:06:59.794787Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794789Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794792Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x8, value=0xffffffff
+2022-10-06T10:06:59.794794Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794796Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794799Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x10, value=0x00000001
+2022-10-06T10:06:59.794801Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794803Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794806Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794808Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794811Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0x10, value=0x00000000
+2022-10-06T10:06:59.794813Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794816Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794819Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0xc, value=0xffffffff
+Info : Transact num_bits: 32, tms: 80000000, tdi: ffffffff, tdo: ffffffff
+Debug: fields[0].in_value[672]: 0xffffffff0a003093
+Debug: statemove starting at (skip: 1) DRSHIFT end in DRPAUSE
+2022-10-06T10:06:59.794828Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x0, value=0x00000001
+2022-10-06T10:06:59.794830Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794833Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794835Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x4, value=0x00000000
+2022-10-06T10:06:59.794837Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794840Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794842Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x8, value=0x00000000
+2022-10-06T10:06:59.794844Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794846Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794849Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x10, value=0x00000001
+2022-10-06T10:06:59.794851Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794854Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794856Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794858Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794861Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0x10, value=0x00000000
+Info : Transact num_bits: 1, tms: 0, tdi: 0, tdo: <null>
+Debug: tap_set_state(DRPAUSE)
+Debug: aws_f1_pcie_xvc_execute_command: cmd->type: 2
+Debug: statemove starting at (skip: 0) DRPAUSE end in RESET
+2022-10-06T10:06:59.794871Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x0, value=0x00000007
+2022-10-06T10:06:59.794873Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794876Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794878Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x4, value=0x0000007f
+2022-10-06T10:06:59.794880Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794883Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794885Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x8, value=0x00000000
+2022-10-06T10:06:59.794887Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794890Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794892Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x10, value=0x00000001
+2022-10-06T10:06:59.794894Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794896Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794899Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794901Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794904Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0x10, value=0x00000000
+Info : Transact num_bits: 7, tms: 7f, tdi: 0, tdo: <null>
+Debug: tap_set_state(RESET)
+Debug: JTAG DR SCAN to DRPAUSE
+Debug:   672b out: ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+Debug:   672b  in: ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0a003093
+Debug: JTAG TLR RESET to RESET
+Info : JTAG tap: riscv.cpu tap/device found: 0x0a003093 (mfg: 0x049 (Xilinx), part: 0xa003, ver: 0x0)
+Debug: IR capture validation scan
+Debug: aws_f1_pcie_xvc_execute_command: cmd->type: 1
+Debug: IRSCAN num_fields: 1
+Debug: fields[0].out_value[7]: 0x7f
+Debug: IR scan type 3 7 bits; starts in RESET end in RUN/IDLE
+Debug: statemove starting at (skip: 0) RESET end in IRSHIFT
+2022-10-06T10:06:59.794940Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x0, value=0x00000007
+2022-10-06T10:06:59.794943Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794946Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794948Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x4, value=0x0000001b
+2022-10-06T10:06:59.794951Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794953Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794955Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x8, value=0x00000000
+2022-10-06T10:06:59.794958Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794960Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794962Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x10, value=0x00000001
+2022-10-06T10:06:59.794965Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794967Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794970Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794972Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794975Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0x10, value=0x00000000
+Info : Transact num_bits: 7, tms: 1b, tdi: 0, tdo: <null>
+Debug: tap_set_state(IRSHIFT)
+2022-10-06T10:06:59.794981Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x0, value=0x00000007
+2022-10-06T10:06:59.794983Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794986Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794988Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x4, value=0x00000040
+2022-10-06T10:06:59.794990Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794992Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.794995Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x8, value=0x0000007f
+2022-10-06T10:06:59.794997Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.794999Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.795002Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x10, value=0x00000001
+2022-10-06T10:06:59.795004Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.795006Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.795009Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.795012Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.795015Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0x10, value=0x00000000
+2022-10-06T10:06:59.795018Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.795020Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.795024Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0xc, value=0xffffffc9
+Info : Transact num_bits: 7, tms: 40, tdi: 7f, tdo: ffffffc9
+Debug: fields[0].in_value[7]: 0x49
+Debug: statemove starting at (skip: 1) IRSHIFT end in RUN/IDLE
+2022-10-06T10:06:59.795032Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x0, value=0x00000002
+2022-10-06T10:06:59.795035Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.795037Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.795039Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x4, value=0x00000001
+2022-10-06T10:06:59.795042Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.795044Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.795046Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x8, value=0x00000000
+2022-10-06T10:06:59.795049Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.795051Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.795053Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x10, value=0x00000001
+2022-10-06T10:06:59.795056Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.795058Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.795060Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.795062Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.795065Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0x10, value=0x00000000
+Info : Transact num_bits: 2, tms: 1, tdi: 0, tdo: <null>
+Debug: tap_set_state(RUN/IDLE)
+Debug: JTAG IR SCAN to RUN/IDLE
+Debug:   7b out: 7f
+Debug:   7b  in: 49
+Debug: riscv.cpu: IR capture 0x09
+Error: IR capture error at bit 5, saw 0x49 not 0x...3
+Debug: jtag event: TAP reset
+Debug: aws_f1_pcie_xvc_execute_command: cmd->type: 2
+Debug: statemove starting at (skip: 0) RUN/IDLE end in RESET
+2022-10-06T10:06:59.795087Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x0, value=0x00000007
+2022-10-06T10:06:59.795090Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.795093Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.795095Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x4, value=0x0000007f
+2022-10-06T10:06:59.795098Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.795100Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.795103Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x8, value=0x00000000
+2022-10-06T10:06:59.795105Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.795108Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.795110Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x10, value=0x00000001
+2022-10-06T10:06:59.795112Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.795115Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.795117Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.795119Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.795122Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0x10, value=0x00000000
+Info : Transact num_bits: 7, tms: 7f, tdi: 0, tdo: <null>
+Debug: tap_set_state(RESET)
+Debug: JTAG TLR RESET to RESET
+Warn : Bypassing JTAG setup events due to errors
+Debug: command - dap init
+Debug: command - dap init
+Debug: Initializing all DAPs ...
+Debug: Examining targets...
+Debug: target event 19 (examine-start) for core riscv.cpu
+Debug: riscv_examine()
+Debug: aws_f1_pcie_xvc_execute_command: cmd->type: 1
+Debug: IRSCAN num_fields: 1
+Debug: fields[0].out_value[5]: 0x10
+Debug: IR scan type 2 5 bits; starts in RESET end in RUN/IDLE
+Debug: statemove starting at (skip: 0) RESET end in IRSHIFT
+2022-10-06T10:06:59.795167Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x0, value=0x00000007
+2022-10-06T10:06:59.795170Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.795172Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.795174Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x4, value=0x0000001b
+2022-10-06T10:06:59.795177Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.795179Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.795181Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x8, value=0x00000000
+2022-10-06T10:06:59.795184Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.795186Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.795189Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x10, value=0x00000001
+2022-10-06T10:06:59.801128Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.801133Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.801135Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.801138Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.801141Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0x10, value=0x00000000
+Info : Transact num_bits: 7, tms: 1b, tdi: 0, tdo: <null>
+Debug: tap_set_state(IRSHIFT)
+2022-10-06T10:06:59.801148Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x0, value=0x00000005
+2022-10-06T10:06:59.801151Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.801153Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.801155Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x4, value=0x00000010
+2022-10-06T10:06:59.801158Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.801160Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.801162Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x8, value=0x00000010
+2022-10-06T10:06:59.801165Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.801167Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.801169Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x10, value=0x00000001
+2022-10-06T10:06:59.801172Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.801174Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.801176Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.801178Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.801181Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0x10, value=0x00000000
+Info : Transact num_bits: 5, tms: 10, tdi: 10, tdo: <null>
+Debug: statemove starting at (skip: 1) IRSHIFT end in RUN/IDLE
+2022-10-06T10:06:59.801188Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x0, value=0x00000002
+2022-10-06T10:06:59.801190Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.801193Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.801195Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x4, value=0x00000001
+2022-10-06T10:06:59.801197Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.801199Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.801202Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x8, value=0x00000000
+2022-10-06T10:06:59.801204Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.801207Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.801209Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x10, value=0x00000001
+2022-10-06T10:06:59.801211Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.801214Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.801216Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.801218Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.801221Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0x10, value=0x00000000
+Info : Transact num_bits: 2, tms: 1, tdi: 0, tdo: <null>
+Debug: tap_set_state(RUN/IDLE)
+Debug: aws_f1_pcie_xvc_execute_command: cmd->type: 1
+Debug: DRSCAN num_fields: 1
+Debug: fields[0].out_value[32]: 0x00000000
+Debug: DR scan type 3 32 bits; starts in RUN/IDLE end in RUN/IDLE
+Debug: statemove starting at (skip: 0) RUN/IDLE end in DRSHIFT
+2022-10-06T10:06:59.801237Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x0, value=0x00000003
+2022-10-06T10:06:59.801239Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.801241Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.801244Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x4, value=0x00000001
+2022-10-06T10:06:59.801246Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.801248Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.801251Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x8, value=0x00000000
+2022-10-06T10:06:59.801253Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.801255Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.801257Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x10, value=0x00000001
+2022-10-06T10:06:59.801260Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.801262Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.801264Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.801267Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.801270Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0x10, value=0x00000000
+Info : Transact num_bits: 3, tms: 1, tdi: 0, tdo: <null>
+Debug: tap_set_state(DRSHIFT)
+2022-10-06T10:06:59.801276Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x0, value=0x00000020
+2022-10-06T10:06:59.801279Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.801281Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.801283Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x4, value=0x80000000
+2022-10-06T10:06:59.801286Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.801289Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.801291Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x8, value=0x00000000
+2022-10-06T10:06:59.801293Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.801296Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.801298Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x10, value=0x00000001
+2022-10-06T10:06:59.801300Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.801319Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.801322Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.801324Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.801327Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0x10, value=0x00000000
+2022-10-06T10:06:59.801330Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.801332Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.801335Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0xc, value=0x00000000
+Info : Transact num_bits: 32, tms: 80000000, tdi: 0, tdo: 0
+Debug: fields[0].in_value[32]: 0x00000000
+Debug: statemove starting at (skip: 1) DRSHIFT end in RUN/IDLE
+2022-10-06T10:06:59.801344Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x0, value=0x00000002
+2022-10-06T10:06:59.801347Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.801349Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.801351Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x4, value=0x00000001
+2022-10-06T10:06:59.801354Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.801356Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.801358Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x8, value=0x00000000
+2022-10-06T10:06:59.801361Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.801363Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.801366Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x10, value=0x00000001
+2022-10-06T10:06:59.801368Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.801370Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.801373Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.801375Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.801378Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0x10, value=0x00000000
+Info : Transact num_bits: 2, tms: 1, tdi: 0, tdo: <null>
+Debug: tap_set_state(RUN/IDLE)
+Debug: aws_f1_pcie_xvc_execute_command: cmd->type: 1
+Debug: IRSCAN num_fields: 1
+Debug: fields[0].out_value[5]: 0x11
+Debug: IR scan type 2 5 bits; starts in RUN/IDLE end in RUN/IDLE
+Debug: statemove starting at (skip: 0) RUN/IDLE end in IRSHIFT
+2022-10-06T10:06:59.801393Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x0, value=0x00000004
+2022-10-06T10:06:59.801395Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.801397Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.801400Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x4, value=0x00000003
+2022-10-06T10:06:59.801402Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.801404Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.801407Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x8, value=0x00000000
+2022-10-06T10:06:59.801409Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.801411Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.801413Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x10, value=0x00000001
+2022-10-06T10:06:59.801416Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.801418Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.801420Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.801423Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.801426Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0x10, value=0x00000000
+Info : Transact num_bits: 4, tms: 3, tdi: 0, tdo: <null>
+Debug: tap_set_state(IRSHIFT)
+2022-10-06T10:06:59.801431Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x0, value=0x00000005
+2022-10-06T10:06:59.801434Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.801436Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.804143Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x4, value=0x00000010
+2022-10-06T10:06:59.804151Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.804155Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.804159Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x8, value=0x00000011
+2022-10-06T10:06:59.804163Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.804167Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.804170Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x10, value=0x00000001
+2022-10-06T10:06:59.804174Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.804178Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.804181Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.804185Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.804189Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0x10, value=0x00000000
+Info : Transact num_bits: 5, tms: 10, tdi: 11, tdo: <null>
+Debug: statemove starting at (skip: 1) IRSHIFT end in RUN/IDLE
+2022-10-06T10:06:59.804200Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x0, value=0x00000002
+2022-10-06T10:06:59.804205Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.804209Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.804214Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x4, value=0x00000001
+2022-10-06T10:06:59.804218Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.804222Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.804226Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x8, value=0x00000000
+2022-10-06T10:06:59.804231Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.804235Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.804241Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x10, value=0x00000001
+2022-10-06T10:06:59.804247Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.804252Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.804256Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.804261Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.804266Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0x10, value=0x00000000
+Info : Transact num_bits: 2, tms: 1, tdi: 0, tdo: <null>
+Debug: tap_set_state(RUN/IDLE)
+Debug: JTAG IR SCAN to RUN/IDLE
+Debug:   5b out: 10
+Debug: JTAG DR SCAN to RUN/IDLE
+Debug:   32b out: 00000000
+Debug:   32b  in: 00000000
+Debug: JTAG IR SCAN to RUN/IDLE
+Debug:   5b out: 11
+Debug: DTMCONTROL: 0x0 -> 0x0
+Debug: dtmcontrol=0x0
+Debug:   version=0x0
+Debug: init
+Debug: create register cache for 4194 registers
+Debug: aws_f1_pcie_xvc_execute_command: cmd->type: 1
+Debug: IRSCAN num_fields: 1
+Debug: fields[0].out_value[5]: 0x10
+Debug: IR scan type 2 5 bits; starts in RUN/IDLE end in RUN/IDLE
+Debug: statemove starting at (skip: 0) RUN/IDLE end in IRSHIFT
+2022-10-06T10:06:59.805648Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x0, value=0x00000004
+2022-10-06T10:06:59.805653Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.805656Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.805658Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x4, value=0x00000003
+2022-10-06T10:06:59.805661Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.805663Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.805665Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x8, value=0x00000000
+2022-10-06T10:06:59.805668Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.805670Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.805672Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x10, value=0x00000001
+2022-10-06T10:06:59.805675Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.805677Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.805680Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.805682Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.805685Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0x10, value=0x00000000
+Info : Transact num_bits: 4, tms: 3, tdi: 0, tdo: <null>
+Debug: tap_set_state(IRSHIFT)
+2022-10-06T10:06:59.805691Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x0, value=0x00000005
+2022-10-06T10:06:59.805694Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.805696Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.805699Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x4, value=0x00000010
+2022-10-06T10:06:59.805701Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.805703Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.805706Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x8, value=0x00000010
+2022-10-06T10:06:59.805708Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.805711Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.805714Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x10, value=0x00000001
+2022-10-06T10:06:59.805716Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.805719Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.805721Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.805723Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.805727Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0x10, value=0x00000000
+Info : Transact num_bits: 5, tms: 10, tdi: 10, tdo: <null>
+Debug: statemove starting at (skip: 1) IRSHIFT end in RUN/IDLE
+2022-10-06T10:06:59.805733Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x0, value=0x00000002
+2022-10-06T10:06:59.805735Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.805738Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.805740Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x4, value=0x00000001
+2022-10-06T10:06:59.805742Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.805745Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.805747Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x8, value=0x00000000
+2022-10-06T10:06:59.805749Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.805752Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.805754Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x10, value=0x00000001
+2022-10-06T10:06:59.805757Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.805759Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.805761Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.805763Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.805766Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0x10, value=0x00000000
+Info : Transact num_bits: 2, tms: 1, tdi: 0, tdo: <null>
+Debug: tap_set_state(RUN/IDLE)
+Debug: aws_f1_pcie_xvc_execute_command: cmd->type: 1
+Debug: DRSCAN num_fields: 1
+Debug: fields[0].out_value[32]: 0x00000000
+Debug: DR scan type 3 32 bits; starts in RUN/IDLE end in RUN/IDLE
+Debug: statemove starting at (skip: 0) RUN/IDLE end in DRSHIFT
+2022-10-06T10:06:59.805782Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x0, value=0x00000003
+2022-10-06T10:06:59.805784Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.805787Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.805789Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x4, value=0x00000001
+2022-10-06T10:06:59.805791Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.805794Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.805797Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x8, value=0x00000000
+2022-10-06T10:06:59.805799Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.805802Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.805804Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x10, value=0x00000001
+2022-10-06T10:06:59.805806Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.805809Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.805811Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.805814Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.805817Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0x10, value=0x00000000
+Info : Transact num_bits: 3, tms: 1, tdi: 0, tdo: <null>
+Debug: tap_set_state(DRSHIFT)
+2022-10-06T10:06:59.805823Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x0, value=0x00000020
+2022-10-06T10:06:59.805825Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.805828Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.805830Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x4, value=0x80000000
+2022-10-06T10:06:59.805832Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.805835Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.805837Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x8, value=0x00000000
+2022-10-06T10:06:59.805839Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.805842Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.805844Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x10, value=0x00000001
+2022-10-06T10:06:59.805846Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.805849Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.805851Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.805853Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.805856Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0x10, value=0x00000000
+2022-10-06T10:06:59.805858Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.805861Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.805864Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0xc, value=0x00000000
+Info : Transact num_bits: 32, tms: 80000000, tdi: 0, tdo: 0
+Debug: fields[0].in_value[32]: 0x00000000
+Debug: statemove starting at (skip: 1) DRSHIFT end in RUN/IDLE
+2022-10-06T10:06:59.805872Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x0, value=0x00000002
+2022-10-06T10:06:59.805875Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.805877Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.805879Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x4, value=0x00000001
+2022-10-06T10:06:59.805882Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.805885Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.805887Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x8, value=0x00000000
+2022-10-06T10:06:59.805890Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.805892Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.805894Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x10, value=0x00000001
+2022-10-06T10:06:59.805897Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.805900Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.805903Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.805905Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.805908Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0x10, value=0x00000000
+Info : Transact num_bits: 2, tms: 1, tdi: 0, tdo: <null>
+Debug: tap_set_state(RUN/IDLE)
+Debug: aws_f1_pcie_xvc_execute_command: cmd->type: 1
+Debug: IRSCAN num_fields: 1
+Debug: fields[0].out_value[5]: 0x11
+Debug: IR scan type 2 5 bits; starts in RUN/IDLE end in RUN/IDLE
+Debug: statemove starting at (skip: 0) RUN/IDLE end in IRSHIFT
+2022-10-06T10:06:59.805923Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x0, value=0x00000004
+2022-10-06T10:06:59.805925Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.805927Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.805930Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x4, value=0x00000003
+2022-10-06T10:06:59.805932Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.805934Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.805936Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x8, value=0x00000000
+2022-10-06T10:06:59.805939Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.805941Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.805943Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x10, value=0x00000001
+2022-10-06T10:06:59.805946Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.805948Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.805950Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.805952Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.805955Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0x10, value=0x00000000
+Info : Transact num_bits: 4, tms: 3, tdi: 0, tdo: <null>
+Debug: tap_set_state(IRSHIFT)
+2022-10-06T10:06:59.805961Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x0, value=0x00000005
+2022-10-06T10:06:59.805964Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.805966Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.805968Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x4, value=0x00000010
+2022-10-06T10:06:59.805971Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.805973Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.805975Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x8, value=0x00000011
+2022-10-06T10:06:59.805977Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.805980Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.805982Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x10, value=0x00000001
+2022-10-06T10:06:59.805984Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.805987Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.805989Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.805991Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.805994Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0x10, value=0x00000000
+Info : Transact num_bits: 5, tms: 10, tdi: 11, tdo: <null>
+Debug: statemove starting at (skip: 1) IRSHIFT end in RUN/IDLE
+2022-10-06T10:06:59.806000Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x0, value=0x00000002
+2022-10-06T10:06:59.806003Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.806005Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.806007Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x4, value=0x00000001
+2022-10-06T10:06:59.806009Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.806012Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.806014Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x8, value=0x00000000
+2022-10-06T10:06:59.806016Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.806019Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.806021Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +338: fpga_pci_poke(): handle=0, offset=0x10, value=0x00000001
+2022-10-06T10:06:59.806023Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.806026Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.806028Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +77: fpga_pci_bar_get_mem_at_offset(): handle=0
+2022-10-06T10:06:59.806030Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.806033Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +394: fpga_pci_peek(): handle=0, offset=0x10, value=0x00000000
+Info : Transact num_bits: 2, tms: 1, tdi: 0, tdo: <null>
+Debug: tap_set_state(RUN/IDLE)
+Debug: JTAG IR SCAN to RUN/IDLE
+Debug:   5b out: 10
+Debug: JTAG DR SCAN to RUN/IDLE
+Debug:   32b out: 00000000
+Debug:   32b  in: 00000000
+Debug: JTAG IR SCAN to RUN/IDLE
+Debug:   5b out: 11
+Debug: DTMCONTROL: 0x0 -> 0x0
+Debug: dtmcontrol=0x0
+Debug:   addrbits=0
+Debug:   version=0
+Debug:   idle=0
+Error: dtmcontrol is 0. Check JTAG connectivity/board power.
+Debug: target event 20 (examine-fail) for core riscv.cpu
+Warn : target riscv.cpu examination failed
+Debug: target examination failed
+Debug: command - flash init
+Debug: command - flash init
+Debug: Initializing flash devices...
+Debug: command - nand init
+Debug: command - nand init
+Debug: Initializing NAND devices...
+Debug: command - pld init
+Debug: command - pld init
+Debug: Initializing PLDs...
+Debug: command - tpiu init
+Debug: command - tpiu init
+Info : starting gdb server for riscv.cpu on 3333
+Info : Listening on port 3333 for gdb connections
+Debug: command - halt
+Debug: -
+Error: Target not examined yet
+Debug: Command 'halt' failed with error code -4
+
+Debug: riscv_deinit_target()
+Debug: riscv_deinit_target()
+Debug: freeing all working areas
+2022-10-06T10:06:59.806577Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +320: fpga_pci_detach(): handle=0
+2022-10-06T10:06:59.806591Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0
+2022-10-06T10:06:59.806607Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +121: fpga_pci_bar_free(): handle=0
+2022-10-06T10:06:59.806618Z, undefined, DEBUG, src/jtag/drivers/aws_f1_pcie_xvc/fpga_pci/fpga_pci.c +46: fpga_pci_bar_get(): handle=0

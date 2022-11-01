@@ -13,30 +13,28 @@
 # implied. See the License for the specific language governing permissions and
 # limitations under the License.
 
+VPATH = src:include:$(HDK_DIR)/common/software/src:$(HDK_DIR)/common/software/include
+
 INCLUDES = -I$(SDK_DIR)/userspace/include
+INCLUDES += -I $(HDK_DIR)/common/software/include
+INCLUDES += -I ./include
 
 CC = gcc
-CFLAGS = -DCONFIG_LOGLEVEL=4 -std=gnu11 -g -Wall -Werror $(INCLUDES)
+CFLAGS = -DCONFIG_LOGLEVEL=4 -g -Wall $(INCLUDES)
 
-LDLIBS = -lfpga_mgmt
+LDLIBS = -lfpga_mgmt -lrt -lpthread
 
-SRC = test_dram_dma_common.c test_dram_dma_retention.c test_dram_dma.c test_dram_dma_hwsw_cosim.c
+SRC = ${SDK_DIR}/userspace/utils/sh_dpi_tasks.c test_hello_world.c
 OBJ = $(SRC:.c=.o)
+BIN = test_hello_world
 
+all: $(BIN) check_env
 
-all: test_dram_dma check_env retention cosim $(BIN)
-
-test_dram_dma: $(OBJ)
-	$(CC) $(CFLAGS) -o test_dram_dma test_dram_dma.o test_dram_dma_common.o  $(LDFLAGS) $(LDLIBS)
-
-retention: $(OBJ)
-	$(CC) $(CFLAGS) -o test_dram_dma_retention test_dram_dma_retention.o test_dram_dma_common.o $(LDFLAGS) $(LDLIBS)
-
-cosim: $(OBJ)
-	$(CC) $(CFLAGS) -o test_dram_dma_hwsw_cosim test_dram_dma_hwsw_cosim.o test_dram_dma_common.o $(LDFLAGS) $(LDLIBS)
+$(BIN): $(OBJ)
+	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS) $(LDLIBS)
 
 clean:
-	rm -f *.o test_dram_dma_retention test_dram_dma test_dram_dma_hwsw_cosim
+	rm -f *.o $(BIN)
 
 check_env:
 ifndef SDK_DIR
