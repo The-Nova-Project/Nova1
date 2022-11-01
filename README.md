@@ -142,5 +142,21 @@ Hello_world
 ```
 ## Debugging 
 
+NOVA supports the RISC-V External Debug Draft Spec and hence you can debug (and program) the AWS-FPGA using OpenOCD. We provide two example scripts for OpenOCD below.
+
+To get started you require to run OpenOCD configuration file as the below command
+```
+/home/muheet/Nova1/Custom_Logic/software/runtime
+```
+In this is the case, you can go on and start openocd with the runtime/aws_f1_pcie_xvc.cfg configuration file below.
+
+```
+sudo /home/shared/tools/experimental/openocd_aws_f1_xvc_app_bar0/bin/openocd -f aws_f1_pcie_xvc.cfg
+```
+Then you will be able to either connect through telnet or with gdb:
+```
+riscv64-unknown-elf-gdb -ex "target extended-remote localhost:3333"
+```
+
 
 
