@@ -24,7 +24,8 @@ There are several detailed pieces of documentation about Nova1 in the docs folde
 - [RTL Simulation for Verilog/VHDL Custom Logic Design with AWS HDK](https://github.com/aws/aws-fpga/blob/master/hdk/docs/RTL_Simulating_CL_Designs.md)
 
 ## Block Diagram
-![image](https://user-images.githubusercontent.com/81433387/195894746-7e0540c7-5104-45db-ac9b-973414a6f6f2.png)
+![WhatsApp Image 2022-10-20 at 3 37 40 PM](https://user-images.githubusercontent.com/81433387/198314820-b93e14e2-9ede-4753-a61a-d59f514cb259.jpeg)
+
 
 ## Build Prerequisites
 ```
