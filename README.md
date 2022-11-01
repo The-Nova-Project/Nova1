@@ -72,4 +72,11 @@ xsim -gui tb
 ```
 ![image](https://user-images.githubusercontent.com/81433387/195996144-1a61f14f-e668-4ca3-8d51-8dcf930bb22f.png)
 
+## AWS-FPGA EC2 Porting
+To clear the AFI, use the following command will clear the FPGA image, including internal and external memories and expose the default AFI Vendor and Device Id, and display the final state for the given FPGA slot number.
+```sudo fpga-clear-local-image -S 0 -H```
+
+To load the AFI, use the FPGA slot number and Amazon Global FPGA Image ID parameters; this command will wait for the AFI to transition to the "loaded" state. And expose the unique AFI Vendor and Device Id, and display the final state for the given FPGA slot number.
+ ```sudo fpga-load-local-image -S 0 -I agfi-01e33810ff4c9d23c```
+
 
