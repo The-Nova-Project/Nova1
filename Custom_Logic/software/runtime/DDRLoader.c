@@ -134,14 +134,14 @@ int main(int argc, char **argv){
     uint32_t instructions_arr[TOTAL_INSTR];
     instrLoader(&instructions_arr, TOTAL_INSTR);
 
-    printf("===== Starting with writing into BRAM via BAR 01 =====\n");
+    printf("===== Starting with writing into DDR via DMA interface =====\n");
     
     int i = 0;
     for(i=0; i<TOTAL_INSTR; i++){
 
         instruction = instructions_arr[i];
 
-        printf("Writing 0x%08x to BRAM", instruction);
+        printf("Writing 0x%08x to DDR ", instruction);
         printf("ON ADDRESS 0x%08x", address);
         printf("\n");
 
