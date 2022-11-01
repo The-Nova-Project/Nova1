@@ -140,6 +140,7 @@ Hello_world
  ------From CORE to UART1 and UART1 to UART2 transmission complete------
 
 ```
+## Debugging 
 
 
 
