@@ -120,6 +120,42 @@ This repo contains the following drivers
 | Loader | ./BRAMLoader &lt;hex-file&gt;/&lt;elf-file&gt; dma/bram | Reads a hex/elf file and stores the data into BRAM/DMA (WORD aligned) |
 | UART   | ./uart_recieve | Transmit and Receive data through UART via OCL Interface |
 
+## Booting Zephyr RTOS
+[Zephyr](https://github.com/The-Nova-Project/zephyr) RTOS is based on a small footprint kernel design. Every Zephyr application is based on the zephyr kernel. The configurable nature of the kernel allows only those features needed by your application making it ideal for systems with limited amounts of memory (as small as 2 KB!).
+
+## Getting Started
+Welcome to Zephyr! See the [Introduction to Zephyr](https://docs.zephyrproject.org/latest/introduction/index.html) for a high-level overview, and the documentation's [Getting Started](https://docs.zephyrproject.org/latest/develop/getting_started/index.html) Guide to start developing.(Note make sure that you have clone zephyr from [The-Nova-Project](https://github.com/The-Nova-Project/zephyr))
+
+## Build and Configuration
+The configuration phase begins when the user generates a build system, specifying a board target and a source application directory.
+```
+$  cd zephyrproject/zephyr
+$  west build -b aws_fpga samples/uartlte/
+```
+
+**aws-fpga** is the board target and **samples/uartlite/** is the application directory. developer also create own application directory in samples/uartlite. samples/uartlite/main.c. After executing the above command build folder is generated which contains all the output files like .elf, .dis, .bin etc). 
+
+
+### Expected Output
+```
+[99/109] Linking C executable zephyr/zephyr_pre0.elf
+
+[103/109] Linking C executable zephyr/zephyr_pre1.elf
+
+[109/109] Linking C executable zephyr/zephyr.elf
+Memory region         Used Size  Region Size  %age Used
+             RAM:        3712 B      2050 MB      0.00%
+        IDT_LIST:          0 GB         2 KB      0.00%
+```
+
+After build the application with the zephyr kernel. We get zephyr.elf and .lst. By using objcopy extract verilog hex from .elf file. 
+```
+cd build/zephyr/
+riscv64-unknown-elf-objcopy -O verilog zephyr.elf hex.txt
+```
+
+Generated hex will be dumped on DDR-A from the shell DMA port. So we can simply fetch the data of BRAM from BAR_1 and UART data from OCL interface through the runtime driver.
+
 ## Hello World Example
 Once the kernel is loaded in the DDR and after the reset is disabled, Hydra start fetching the kernel from DDR due to having DDR boot address set in it.
 We have two peripheral UART and BRAM to check the expected output of the main application.
@@ -141,6 +177,22 @@ Hello_world
 
 ```
 ## Debugging 
+
+NOVA supports the RISC-V External Debug Draft Spec and hence you can debug (and program) the AWS-FPGA using OpenOCD. We provide two example scripts for OpenOCD below.
+
+To get started you require to run OpenOCD configuration file as the below command
+```
+/home/muheet/Nova1/Custom_Logic/software/runtime
+```
+In this is the case, you can go on and start openocd with the runtime/aws_f1_pcie_xvc.cfg configuration file below.
+
+```
+sudo /home/shared/tools/experimental/openocd_aws_f1_xvc_app_bar0/bin/openocd -f aws_f1_pcie_xvc.cfg
+```
+Then you will be able to either connect through telnet or with gdb:
+```
+riscv64-unknown-elf-gdb -ex "target extended-remote localhost:3333"
+```
 
 
 
